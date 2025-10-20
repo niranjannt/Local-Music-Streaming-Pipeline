@@ -1,0 +1,178 @@
+Circuit: * C:\Users\ashto\Dev\ECE445L\lab-7-and-10-project-nnat\hw\Filters.asc
+
+Direct Newton iteration failed to find .op point.  (Use ".option noopiter" to skip.)
+Starting Gmin stepping
+Gmin = 10
+Gmin = 1.07374
+Gmin = 0.115292
+Gmin = 0.0123794
+Gmin = 0.00132923
+vernier = 0.5
+Gmin = 0.000247786
+vernier = 0.25
+vernier = 0.125
+vernier = 0.0625
+vernier = 0.03125
+vernier = 0.015625
+Gmin = 0.000247786
+vernier = 0.0078125
+vernier = 0.00390625
+Gmin = 0.000243239
+vernier = 0.00520833
+Gmin = 0.000240407
+vernier = 0.00694444
+vernier = 0.00925925
+Gmin = 0.000235727
+vernier = 0.0123457
+vernier = 0.0164609
+Gmin = 0.000228457
+vernier = 0.0219478
+Gmin = 0.000217476
+vernier = 0.0292638
+vernier = 0.0390184
+Gmin = 0.000200241
+vernier = 0.0520245
+vernier = 0.0693659
+Gmin = 0.000175597
+vernier = 0.0924879
+Gmin = 0.000142917
+vernier = 0.123317
+vernier = 0.164423
+Gmin = 0.000101388
+vernier = 0.21923
+vernier = 0.292307
+Gmin = 5.89786e-05
+vernier = 0.389743
+Gmin = 2.54622e-05
+vernier = 0.519657
+vernier = 0.259828
+vernier = 0.129914
+vernier = 0.0649571
+vernier = 0.0324786
+Gmin = 1.38251e-05
+vernier = 0.0162393
+vernier = 0.00811964
+vernier = 0.00405982
+vernier = 0.00202991
+vernier = 0.00101495
+vernier = 0.000507477
+Gmin = 0
+Gmin stepping failed
+
+Starting source stepping with srcstepmethod=0
+Source Step = 3.0303%
+vernier = 0.25
+Source Step = 1.70455%
+Source Step = 3.59848%
+Source Step = 5.49242%
+Source Step = 7.05492%
+Source Step = 7.16738%
+Source Step = 7.19697%
+Source Step = 7.22656%
+Source Step = 7.25616%
+Source Step = 7.28575%
+Source Step = 7.31534%
+vernier = 0.00146484
+Source Step = 7.35825%
+Source Step = 7.40264%
+Source Step = 7.44703%
+Source Step = 7.49142%
+Source Step = 7.53581%
+vernier = 0.00219727
+Source Step = 7.59795%
+Source Step = 7.66454%
+Source Step = 7.73112%
+Source Step = 7.7977%
+Source Step = 7.86429%
+vernier = 0.0032959
+Source Step = 7.95418%
+Source Step = 8.05405%
+Source Step = 8.15393%
+Source Step = 8.2538%
+Source Step = 8.35368%
+vernier = 0.00494385
+Source Step = 8.48352%
+Source Step = 8.63333%
+Source Step = 8.78314%
+Source Step = 8.93296%
+Source Step = 9.08277%
+vernier = 0.00741577
+Source Step = 9.27004%
+Source Step = 9.49476%
+Source Step = 9.71948%
+Source Step = 9.9442%
+Source Step = 10.1689%
+vernier = 0.0111237
+Source Step = 10.4386%
+Source Step = 10.7757%
+Source Step = 11.1127%
+Source Step = 11.4498%
+Source Step = 11.7869%
+vernier = 0.0166855
+Source Step = 12.1745%
+Source Step = 12.6802%
+Source Step = 13.1858%
+Source Step = 13.6914%
+Source Step = 14.197%
+vernier = 0.0250282
+Source Step = 14.7532%
+Source Step = 15.5116%
+Source Step = 16.2701%
+Source Step = 17.0285%
+Source Step = 17.7869%
+vernier = 0.0375423
+Source Step = 18.5833%
+Source Step = 19.7209%
+Source Step = 20.8586%
+Source Step = 21.9962%
+Source Step = 23.1339%
+Source Step = 24.2715%
+vernier = 0.0563135
+Source Step = 25.978%
+Source Step = 27.6845%
+Source Step = 29.3909%
+Source Step = 31.0974%
+Source Step = 32.8039%
+vernier = 0.0844703
+Source Step = 35.2783%
+Source Step = 37.838%
+Source Step = 40.3977%
+Source Step = 42.9574%
+Source Step = 45.5171%
+vernier = 0.126705
+Source Step = 49.1007%
+Source Step = 52.9402%
+Source Step = 56.7798%
+Source Step = 60.6193%
+Source Step = 64.4589%
+vernier = 0.190058
+Source Step = 69.6423%
+Source Step = 75.4016%
+Source Step = 81.161%
+Source Step = 86.9203%
+Source Step = 90.3849%
+Starting source stepping with srcstepmethod=1
+Source Step = 3.0303%
+Source Step = 7.48106%
+Source stepping failed
+
+Pseudo Transient succeeded in finding the operating point at 664.74 ms.
+
+Date: Mon Oct 20 00:59:23 2025
+Total elapsed time: 46.698 seconds.
+
+tnom = 27
+temp = 27
+method = trap
+totiter = 560431
+traniter = 0
+tranpoints = 0
+accept = 0
+rejected = 13938
+matrix size = 853
+fillins = 2325
+solver = Normal
+Avg thread counts: 4.0/1.1/1.1/1.0
+Matrix Compiler1:   13069 opcodes  31.4/[11.4]/13.0
+Matrix Compiler2: 111.60 KB object code size  8.9/9.7/[8.0]
+
