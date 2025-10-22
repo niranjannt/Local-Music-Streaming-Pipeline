@@ -5,6 +5,130 @@
 	(uuid "a44d0095-23ca-4773-a538-bd99969cd29c")
 	(paper "A4")
 	(lib_symbols
+		(symbol "Device:R"
+			(pin_numbers
+				(hide yes)
+			)
+			(pin_names
+				(offset 0)
+			)
+			(exclude_from_sim no)
+			(in_bom yes)
+			(on_board yes)
+			(property "Reference" "R"
+				(at 2.032 0 90)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Value" "R"
+				(at 0 0 90)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Footprint" ""
+				(at -1.778 0 90)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "Datasheet" "~"
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "Description" "Resistor"
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "ki_keywords" "R res resistor"
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "ki_fp_filters" "R_*"
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(symbol "R_0_1"
+				(rectangle
+					(start -1.016 -2.54)
+					(end 1.016 2.54)
+					(stroke
+						(width 0.254)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+			)
+			(symbol "R_1_1"
+				(pin passive line
+					(at 0 3.81 270)
+					(length 1.27)
+					(name "~"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "1"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin passive line
+					(at 0 -3.81 90)
+					(length 1.27)
+					(name "~"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "2"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+			)
+			(embedded_fonts no)
+		)
 		(symbol "ECE445L:C"
 			(pin_numbers
 				(hide yes)
@@ -665,6 +789,222 @@
 			)
 			(embedded_fonts no)
 		)
+		(symbol "ti_LM4041CILPR:LM4041CILPR"
+			(pin_names
+				(offset 1.016)
+			)
+			(exclude_from_sim no)
+			(in_bom yes)
+			(on_board yes)
+			(property "Reference" "IC"
+				(at 2.7965 1.9067 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(justify left bottom)
+				)
+			)
+			(property "Value" "LM4041CILPR"
+				(at 2.796 -0.8896 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(justify left bottom)
+				)
+			)
+			(property "Footprint" "ECE445L:ti_LM4041CILPR"
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(justify bottom)
+					(hide yes)
+				)
+			)
+			(property "Datasheet" "https://www.ti.com/general/docs/suppproductinfo.tsp?distId=26&gotoUrl=https://www.ti.com/lit/gpn/lm4041a12"
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "Description" ""
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "Distributor" "Mouser"
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "Manufacturer" "Texas Instruments"
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "P/N" "LM4041CILPR"
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "LCSC Part #" ""
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "Cost" "0.78"
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(symbol "LM4041CILPR_0_0"
+				(polyline
+					(pts
+						(xy -1.27 1.524) (xy -1.27 1.143)
+					)
+					(stroke
+						(width 0.254)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy 0 1.524) (xy -1.27 1.524)
+					)
+					(stroke
+						(width 0.254)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy 0 1.524) (xy -1.27 -0.762) (xy 1.27 -0.762) (xy 0 1.524)
+					)
+					(stroke
+						(width 0.254)
+						(type default)
+					)
+					(fill
+						(type outline)
+					)
+				)
+				(polyline
+					(pts
+						(xy 1.27 1.905) (xy 1.27 1.524)
+					)
+					(stroke
+						(width 0.254)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy 1.27 1.524) (xy 0 1.524)
+					)
+					(stroke
+						(width 0.254)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(pin passive line
+					(at -2.54 0 0)
+					(length 2.54)
+					(name "~"
+						(effects
+							(font
+								(size 1.016 1.016)
+							)
+						)
+					)
+					(number "1"
+						(effects
+							(font
+								(size 1.016 1.016)
+							)
+						)
+					)
+				)
+				(pin passive line
+					(at 0 2.54 270)
+					(length 2.54)
+					(name "~"
+						(effects
+							(font
+								(size 1.016 1.016)
+							)
+						)
+					)
+					(number "2"
+						(effects
+							(font
+								(size 1.016 1.016)
+							)
+						)
+					)
+				)
+				(pin passive line
+					(at 0 -2.54 90)
+					(length 2.54)
+					(name "~"
+						(effects
+							(font
+								(size 1.016 1.016)
+							)
+						)
+					)
+					(number "3"
+						(effects
+							(font
+								(size 1.016 1.016)
+							)
+						)
+					)
+				)
+			)
+			(embedded_fonts no)
+		)
 	)
 	(text "+3V3 Regulator"
 		(exclude_from_sim no)
@@ -675,6 +1015,22 @@
 			)
 		)
 		(uuid "56e020e5-9468-40f5-8acd-05bbfdab2c52")
+	)
+	(text "Vref"
+		(exclude_from_sim no)
+		(at 54.229 73.66 0)
+		(effects
+			(font
+				(size 2.54 2.54)
+			)
+		)
+		(uuid "f6d9f411-4e8d-4683-9cc3-4ee2d7691da6")
+	)
+	(junction
+		(at 53.975 118.11)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "0b17e6da-babc-423c-88e6-6464409b073c")
 	)
 	(junction
 		(at 73.66 43.815)
@@ -687,6 +1043,12 @@
 		(diameter 0)
 		(color 0 0 0 0)
 		(uuid "5253206e-3e5b-412d-92d8-aa37514f6b5f")
+	)
+	(junction
+		(at 53.975 104.14)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "5a398701-897a-4bbe-af6f-42844f152e37")
 	)
 	(junction
 		(at 78.74 32.385)
@@ -712,6 +1074,16 @@
 	)
 	(wire
 		(pts
+			(xy 53.975 88.9) (xy 53.975 92.71)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "1a07f466-2329-456e-a14a-5047808fa503")
+	)
+	(wire
+		(pts
 			(xy 73.66 43.815) (xy 73.66 46.355)
 		)
 		(stroke
@@ -722,6 +1094,26 @@
 	)
 	(wire
 		(pts
+			(xy 53.975 130.81) (xy 53.975 134.62)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "21ddfa9e-0759-48cd-95f6-b12e1dc13671")
+	)
+	(wire
+		(pts
+			(xy 53.975 104.14) (xy 53.975 107.95)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "3ceb1d45-19af-42a0-9cca-e4776607e747")
+	)
+	(wire
+		(pts
 			(xy 78.74 28.575) (xy 78.74 32.385)
 		)
 		(stroke
@@ -729,6 +1121,36 @@
 			(type default)
 		)
 		(uuid "3d5d6a20-2fb5-474b-9334-ad4d07eabd19")
+	)
+	(wire
+		(pts
+			(xy 64.135 120.65) (xy 64.135 123.19)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "4108880a-a2ba-45ca-9fd6-04cf756755a1")
+	)
+	(wire
+		(pts
+			(xy 53.975 118.11) (xy 53.975 123.19)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "47a6d8b9-cfa9-4653-9f0e-99d48a2bd950")
+	)
+	(wire
+		(pts
+			(xy 64.135 104.14) (xy 53.975 104.14)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "496a5496-929b-492b-b9db-e5874ce5f84a")
 	)
 	(wire
 		(pts
@@ -749,6 +1171,16 @@
 			(type default)
 		)
 		(uuid "4c08b50d-db8e-45df-9bdd-9e69b1a3bd62")
+	)
+	(wire
+		(pts
+			(xy 50.165 118.11) (xy 53.975 118.11)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "53c958f4-9870-4349-b49a-d8b62efd81fc")
 	)
 	(wire
 		(pts
@@ -782,6 +1214,26 @@
 	)
 	(wire
 		(pts
+			(xy 53.975 115.57) (xy 53.975 118.11)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "8334a782-8139-4583-b55c-3d2518c105a1")
+	)
+	(wire
+		(pts
+			(xy 64.135 115.57) (xy 64.135 104.14)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "87be068a-b585-4d55-af59-3461a520f532")
+	)
+	(wire
+		(pts
 			(xy 33.655 32.385) (xy 28.575 32.385)
 		)
 		(stroke
@@ -809,6 +1261,16 @@
 			(type default)
 		)
 		(uuid "a517d089-268a-44dc-b4e5-eb0ece325bec")
+	)
+	(wire
+		(pts
+			(xy 53.975 100.33) (xy 53.975 104.14)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "b7be86cd-45d8-47e2-8066-726c5ab044ce")
 	)
 	(wire
 		(pts
@@ -842,6 +1304,16 @@
 	)
 	(wire
 		(pts
+			(xy 53.975 118.11) (xy 61.595 118.11)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "ed7306d0-0b1b-41c7-bc9c-f851a02354c0")
+	)
+	(wire
+		(pts
 			(xy 28.575 34.925) (xy 28.575 32.385)
 		)
 		(stroke
@@ -849,6 +1321,217 @@
 			(type default)
 		)
 		(uuid "faa52c75-3da9-4c83-9b45-f5357981cbe9")
+	)
+	(global_label "VRef"
+		(shape input)
+		(at 50.165 118.11 180)
+		(fields_autoplaced yes)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify right)
+		)
+		(uuid "6b272bb3-511e-48d5-bfbd-f258936b0683")
+		(property "Intersheetrefs" "${INTERSHEET_REFS}"
+			(at 43.0069 118.11 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify right)
+				(hide yes)
+			)
+		)
+	)
+	(symbol
+		(lib_id "Device:R")
+		(at 53.975 127 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "09ce5169-6538-4e30-9e3b-f916318b8bb1")
+		(property "Reference" "R5"
+			(at 56.515 125.7299 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Value" "10k"
+			(at 56.515 128.2699 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Footprint" ""
+			(at 52.197 127 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" "~"
+			(at 53.975 127 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" "Resistor"
+			(at 53.975 127 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "2"
+			(uuid "04d4c801-877a-4b0d-afd6-666c2ddf50b1")
+		)
+		(pin "1"
+			(uuid "b33dcd22-0c1f-4804-ada5-2139bb8078f3")
+		)
+		(instances
+			(project "ECE445L_Lab7"
+				(path "/69b823fd-c065-40ff-9bb9-c5835555f3eb/120cc903-6d6c-4a77-ad9c-c9f63dede169"
+					(reference "R5")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "ti_LM4041CILPR:LM4041CILPR")
+		(at 64.135 118.11 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "0dea8015-a8f1-40f0-ae70-883337393a17")
+		(property "Reference" "IC3"
+			(at 66.675 116.2684 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Value" "LM4041CILPR"
+			(at 66.675 118.8084 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Footprint" "ECE445L:ti_LM4041CILPR"
+			(at 64.135 118.11 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify bottom)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" "https://www.ti.com/general/docs/suppproductinfo.tsp?distId=26&gotoUrl=https://www.ti.com/lit/gpn/lm4041a12"
+			(at 64.135 118.11 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" ""
+			(at 64.135 118.11 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Distributor" "Mouser"
+			(at 64.135 118.11 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Manufacturer" "Texas Instruments"
+			(at 64.135 118.11 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "P/N" "LM4041CILPR"
+			(at 64.135 118.11 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "LCSC Part #" ""
+			(at 64.135 118.11 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Cost" "0.78"
+			(at 64.135 118.11 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "2"
+			(uuid "fd1919fe-e4b2-40a3-a2d6-d6a2e54d311c")
+		)
+		(pin "1"
+			(uuid "2c9c6456-9aa7-41ed-8921-b620431f657b")
+		)
+		(pin "3"
+			(uuid "f3159ef5-c234-4b4b-86ec-23583359d32c")
+		)
+		(instances
+			(project "ECE445L_Lab7"
+				(path "/69b823fd-c065-40ff-9bb9-c5835555f3eb/120cc903-6d6c-4a77-ad9c-c9f63dede169"
+					(reference "IC3")
+					(unit 1)
+				)
+			)
+		)
 	)
 	(symbol
 		(lib_id "power:GND")
@@ -977,6 +1660,142 @@
 			(project "ECE445L_Lab7"
 				(path "/69b823fd-c065-40ff-9bb9-c5835555f3eb/120cc903-6d6c-4a77-ad9c-c9f63dede169"
 					(reference "#PWR029")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "power:+3V3")
+		(at 53.975 88.9 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "409346c7-2abd-42b1-8fa3-9a6f19838c27")
+		(property "Reference" "#PWR015"
+			(at 53.975 92.71 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Value" "+3V3"
+			(at 53.975 83.82 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" ""
+			(at 53.975 88.9 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" ""
+			(at 53.975 88.9 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" "Power symbol creates a global label with name \"+3V3\""
+			(at 53.975 88.9 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "d63853e5-bad3-46d5-83db-012f02abbd94")
+		)
+		(instances
+			(project "ECE445L_Lab7"
+				(path "/69b823fd-c065-40ff-9bb9-c5835555f3eb/120cc903-6d6c-4a77-ad9c-c9f63dede169"
+					(reference "#PWR015")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "Device:R")
+		(at 53.975 111.76 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "4a58e3ee-15c5-40df-8de0-3bbf3e87f077")
+		(property "Reference" "R4"
+			(at 56.515 110.4899 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Value" "47k"
+			(at 56.515 113.0299 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Footprint" ""
+			(at 52.197 111.76 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" "~"
+			(at 53.975 111.76 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" "Resistor"
+			(at 53.975 111.76 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "2"
+			(uuid "ab47d807-f7cb-4493-9822-af22922fb522")
+		)
+		(pin "1"
+			(uuid "6b3557f8-4c45-4fac-a1a9-b24211081a85")
+		)
+		(instances
+			(project "ECE445L_Lab7"
+				(path "/69b823fd-c065-40ff-9bb9-c5835555f3eb/120cc903-6d6c-4a77-ad9c-c9f63dede169"
+					(reference "R4")
 					(unit 1)
 				)
 			)
@@ -1119,6 +1938,72 @@
 		)
 	)
 	(symbol
+		(lib_id "power:GND")
+		(at 53.975 134.62 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "c0dfe457-b1a2-414b-8a05-ba075de4741d")
+		(property "Reference" "#PWR016"
+			(at 53.975 140.97 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Value" "GND"
+			(at 53.975 139.7 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" ""
+			(at 53.975 134.62 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" ""
+			(at 53.975 134.62 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" "Power symbol creates a global label with name \"GND\" , ground"
+			(at 53.975 134.62 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "5da4bcc0-9f0c-40a0-a25b-f42232fb51fe")
+		)
+		(instances
+			(project "ECE445L_Lab7"
+				(path "/69b823fd-c065-40ff-9bb9-c5835555f3eb/120cc903-6d6c-4a77-ad9c-c9f63dede169"
+					(reference "#PWR016")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
 		(lib_id "ECE445L:C")
 		(at 78.74 38.735 0)
 		(unit 1)
@@ -1198,8 +2083,8 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "d79577ff-8a22-4bf8-a4af-a14162867355")
-		(property "Reference" "IC1"
-			(at 48.895 24.765 0)
+		(property "Reference" "U2"
+			(at 48.895 25.4 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -1207,7 +2092,7 @@
 			)
 		)
 		(property "Value" "LP2950-33LPRE3"
-			(at 48.895 27.305 0)
+			(at 48.895 27.94 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -1305,7 +2190,7 @@
 		(instances
 			(project "ECE445L_Lab7"
 				(path "/69b823fd-c065-40ff-9bb9-c5835555f3eb/120cc903-6d6c-4a77-ad9c-c9f63dede169"
-					(reference "IC1")
+					(reference "U2")
 					(unit 1)
 				)
 			)
@@ -1383,6 +2268,72 @@
 	)
 	(symbol
 		(lib_id "power:GND")
+		(at 64.135 123.19 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "e1b8a1c0-2d8c-4574-9ed5-39ddcccff671")
+		(property "Reference" "#PWR017"
+			(at 64.135 129.54 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Value" "GND"
+			(at 64.135 128.27 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" ""
+			(at 64.135 123.19 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" ""
+			(at 64.135 123.19 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" "Power symbol creates a global label with name \"GND\" , ground"
+			(at 64.135 123.19 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "e32b7fc0-22eb-483a-97fc-de3f2d7fa127")
+		)
+		(instances
+			(project "ECE445L_Lab7"
+				(path "/69b823fd-c065-40ff-9bb9-c5835555f3eb/120cc903-6d6c-4a77-ad9c-c9f63dede169"
+					(reference "#PWR017")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "power:GND")
 		(at 48.26 43.815 0)
 		(unit 1)
 		(exclude_from_sim no)
@@ -1441,6 +2392,76 @@
 			(project "ECE445L_Lab7"
 				(path "/69b823fd-c065-40ff-9bb9-c5835555f3eb/120cc903-6d6c-4a77-ad9c-c9f63dede169"
 					(reference "#PWR031")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "Device:R")
+		(at 53.975 96.52 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "ed9a0c2e-6049-4502-afcb-7629e6138f2d")
+		(property "Reference" "R3"
+			(at 56.515 95.2499 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Value" "1k"
+			(at 56.515 97.7899 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Footprint" ""
+			(at 52.197 96.52 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" "~"
+			(at 53.975 96.52 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" "Resistor"
+			(at 53.975 96.52 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "2"
+			(uuid "40cb7ed0-4628-4342-864a-b6a545efe529")
+		)
+		(pin "1"
+			(uuid "49096d5f-9a2c-4e91-b9be-c94aa4d4a773")
+		)
+		(instances
+			(project "ECE445L_Lab7"
+				(path "/69b823fd-c065-40ff-9bb9-c5835555f3eb/120cc903-6d6c-4a77-ad9c-c9f63dede169"
+					(reference "R3")
 					(unit 1)
 				)
 			)

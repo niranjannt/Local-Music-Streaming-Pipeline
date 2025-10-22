@@ -384,6 +384,48 @@
 		)
 	)
 	(sheet
+		(at 210.185 102.87)
+		(size 31.75 17.145)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(stroke
+			(width 0.1524)
+			(type solid)
+		)
+		(fill
+			(color 248 169 255 1.0000)
+		)
+		(uuid "8e43ed7d-abc3-4582-a9a6-069be8f9db2b")
+		(property "Sheetname" "Lab7_LeftAudio"
+			(at 210.185 102.1584 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left bottom)
+			)
+		)
+		(property "Sheetfile" "Lab7_LeftAudio.kicad_sch"
+			(at 210.185 120.5996 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left top)
+			)
+		)
+		(instances
+			(project "ECE445L_Lab7"
+				(path "/69b823fd-c065-40ff-9bb9-c5835555f3eb"
+					(page "7")
+				)
+			)
+		)
+	)
+	(sheet
 		(at 169.545 102.87)
 		(size 35.56 16.51)
 		(exclude_from_sim no)
