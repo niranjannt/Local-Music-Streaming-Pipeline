@@ -129,6 +129,197 @@
 			)
 			(embedded_fonts no)
 		)
+		(symbol "ECE445L:Potentiometer"
+			(exclude_from_sim no)
+			(in_bom yes)
+			(on_board yes)
+			(property "Reference" "R"
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Value" "10k"
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Footprint" "ECE445L:Potentiometer"
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "Datasheet" ""
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "Description" ""
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(symbol "Potentiometer_0_1"
+				(polyline
+					(pts
+						(xy 1.905 2.54) (xy 1.905 2.286)
+					)
+					(stroke
+						(width 0)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy 1.905 2.286) (xy 2.921 1.905) (xy 1.905 1.524) (xy 0.889 1.143) (xy 1.905 0.762)
+					)
+					(stroke
+						(width 0)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy 1.905 0.762) (xy 2.921 0.381) (xy 1.905 0) (xy 0.889 -0.381) (xy 1.905 -0.762)
+					)
+					(stroke
+						(width 0)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy 1.905 -0.762) (xy 2.921 -1.143) (xy 1.905 -1.524) (xy 0.889 -1.905) (xy 1.905 -2.286)
+					)
+					(stroke
+						(width 0)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy 1.905 -2.286) (xy 1.905 -2.54)
+					)
+					(stroke
+						(width 0)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy 3.048 0) (xy 4.191 0.508) (xy 4.191 -0.508) (xy 3.048 0)
+					)
+					(stroke
+						(width 0)
+						(type default)
+					)
+					(fill
+						(type outline)
+					)
+				)
+				(polyline
+					(pts
+						(xy 4.445 0) (xy 3.429 0)
+					)
+					(stroke
+						(width 0)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+			)
+			(symbol "Potentiometer_1_1"
+				(pin passive line
+					(at 1.905 3.81 270)
+					(length 1.27)
+					(name "1"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "1"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin passive line
+					(at 1.905 -3.81 90)
+					(length 1.27)
+					(name "3"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "3"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin passive line
+					(at 5.715 0 180)
+					(length 1.27)
+					(name "2"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "2"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+			)
+			(embedded_fonts no)
+		)
 		(symbol "ECE445L:SW_Push"
 			(pin_numbers
 				(hide yes)
@@ -507,6 +698,66 @@
 			(embedded_fonts no)
 		)
 	)
+	(text "Mid"
+		(exclude_from_sim no)
+		(at 233.045 48.895 0)
+		(effects
+			(font
+				(size 2.54 2.54)
+			)
+		)
+		(uuid "160cb344-3522-450d-b255-824c32e80ebc")
+	)
+	(text "Distortion\nKnob"
+		(exclude_from_sim no)
+		(at 165.1 49.53 0)
+		(effects
+			(font
+				(size 2.54 2.54)
+			)
+		)
+		(uuid "32275d1b-b792-4b19-ae30-351c815cc839")
+	)
+	(text "Volume"
+		(exclude_from_sim no)
+		(at 260.35 90.805 0)
+		(effects
+			(font
+				(size 2.54 2.54)
+			)
+		)
+		(uuid "428e7722-14a7-468c-b497-43b157102a47")
+	)
+	(text "Treble"
+		(exclude_from_sim no)
+		(at 259.715 49.53 0)
+		(effects
+			(font
+				(size 2.54 2.54)
+			)
+		)
+		(uuid "5c03edd9-c0a0-4945-9da9-6b9a814599fb")
+	)
+	(text "Flanger Potentiometers"
+		(exclude_from_sim no)
+		(at 123.19 46.99 0)
+		(effects
+			(font
+				(size 2.54 2.54)
+			)
+		)
+		(uuid "828b23c3-b97e-4c39-897e-2efec7f7fb83")
+	)
+	(text "Bass"
+		(exclude_from_sim no)
+		(at 203.835 48.895 0)
+		(effects
+			(font
+				(size 2.54 2.54)
+			)
+		)
+		(uuid "cabc1c24-9311-4b29-a5c5-638a203ea9b3")
+	)
 	(text_box "Pushbuttons"
 		(exclude_from_sim no)
 		(at 34.925 29.845 0)
@@ -542,6 +793,12 @@
 		(uuid "6cce8afd-3e89-4e43-8975-0d5d94eec0cc")
 	)
 	(junction
+		(at 120.65 59.055)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "6f1e3e63-f08d-4853-bc0f-18369cbd491c")
+	)
+	(junction
 		(at 72.39 93.345)
 		(diameter 0)
 		(color 0 0 0 0)
@@ -558,6 +815,12 @@
 		(diameter 0)
 		(color 0 0 0 0)
 		(uuid "7ff36489-1eb8-48dd-bafd-b4a9d6c2524c")
+	)
+	(junction
+		(at 122.555 75.565)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "835d462c-23c2-4f9b-ac59-90dabd5dbabc")
 	)
 	(junction
 		(at 50.8 76.2)
@@ -617,6 +880,26 @@
 	)
 	(wire
 		(pts
+			(xy 260.35 102.87) (xy 260.35 106.045)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "16b13ec1-2c9c-44bf-ab91-8ec5f9c11b9d")
+	)
+	(wire
+		(pts
+			(xy 263.525 68.58) (xy 266.7 68.58)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "1d05bb4a-9a51-49c1-8434-1e813312a1db")
+	)
+	(wire
+		(pts
 			(xy 62.23 57.785) (xy 72.39 57.785)
 		)
 		(stroke
@@ -624,6 +907,56 @@
 			(type default)
 		)
 		(uuid "22a3ec28-1a8b-408d-958a-45a81b7ee3e5")
+	)
+	(wire
+		(pts
+			(xy 264.16 109.855) (xy 267.335 109.855)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "24fe935c-5c0c-491e-92b7-4e6a4823363f")
+	)
+	(wire
+		(pts
+			(xy 165.1 72.39) (xy 165.1 76.2)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "2e7c3926-6e6d-49db-934f-1e488034ed57")
+	)
+	(wire
+		(pts
+			(xy 128.905 75.565) (xy 122.555 75.565)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "32ce9f41-32cb-4db5-a06c-890f594d30fa")
+	)
+	(wire
+		(pts
+			(xy 115.57 75.565) (xy 115.57 72.39)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "335cabfe-e894-4cbb-bc17-bfc4280be793")
+	)
+	(wire
+		(pts
+			(xy 259.715 72.39) (xy 259.715 76.2)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "36f57e76-9a09-4c62-aac6-e6219e476cef")
 	)
 	(wire
 		(pts
@@ -637,6 +970,16 @@
 	)
 	(wire
 		(pts
+			(xy 120.65 59.055) (xy 115.57 59.055)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "3b803f3d-dbe1-4826-9d02-21c9c94921ab")
+	)
+	(wire
+		(pts
 			(xy 62.23 52.705) (xy 62.23 57.785)
 		)
 		(stroke
@@ -644,6 +987,16 @@
 			(type default)
 		)
 		(uuid "464b6f5d-095f-4d34-b4f7-786eea16a720")
+	)
+	(wire
+		(pts
+			(xy 122.555 75.565) (xy 122.555 77.47)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "4ce5d4f1-2a3a-484a-a00a-a7397a9dd716")
 	)
 	(wire
 		(pts
@@ -677,6 +1030,16 @@
 	)
 	(wire
 		(pts
+			(xy 168.91 68.58) (xy 172.085 68.58)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "5ba1ba95-2f1b-41d9-bf69-0cb9eb239d60")
+	)
+	(wire
+		(pts
 			(xy 62.23 57.785) (xy 62.23 62.23)
 		)
 		(stroke
@@ -697,6 +1060,46 @@
 	)
 	(wire
 		(pts
+			(xy 203.835 60.96) (xy 203.835 64.135)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "6a30f874-414d-4faa-98f3-294bb3cd41f0")
+	)
+	(wire
+		(pts
+			(xy 236.855 67.945) (xy 240.03 67.945)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "6aef306f-05f5-4405-8d86-7c3c0684fa42")
+	)
+	(wire
+		(pts
+			(xy 115.57 59.055) (xy 115.57 64.77)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "78c788d0-0cb0-4bca-891f-5314362f95dc")
+	)
+	(wire
+		(pts
+			(xy 120.65 59.055) (xy 128.905 59.055)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "829fa130-472c-4eb8-814b-86edbc8062d8")
+	)
+	(wire
+		(pts
 			(xy 62.23 76.2) (xy 62.23 83.185)
 		)
 		(stroke
@@ -707,6 +1110,16 @@
 	)
 	(wire
 		(pts
+			(xy 203.835 71.755) (xy 203.835 75.565)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "8cdd8517-4ce4-46b6-be7c-6393a5c92a68")
+	)
+	(wire
+		(pts
 			(xy 62.23 93.345) (xy 62.23 95.885)
 		)
 		(stroke
@@ -714,6 +1127,26 @@
 			(type default)
 		)
 		(uuid "8cf8917f-0fc0-42e3-917c-a743a69f80ab")
+	)
+	(wire
+		(pts
+			(xy 128.905 59.055) (xy 128.905 64.77)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "8f7d3345-6f6c-48ca-b8f5-77f6ee0dbae8")
+	)
+	(wire
+		(pts
+			(xy 207.645 67.945) (xy 210.82 67.945)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "91384bd9-4856-4164-b6a8-0ede7ef5c77a")
 	)
 	(wire
 		(pts
@@ -747,6 +1180,26 @@
 	)
 	(wire
 		(pts
+			(xy 109.22 68.58) (xy 111.76 68.58)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "9c4d15ea-0b99-4572-8294-5c035939cf7e")
+	)
+	(wire
+		(pts
+			(xy 233.045 60.96) (xy 233.045 64.135)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "a0e25508-9521-4bb0-98ff-663b9b1ace0b")
+	)
+	(wire
+		(pts
 			(xy 62.23 93.345) (xy 72.39 93.345)
 		)
 		(stroke
@@ -767,6 +1220,16 @@
 	)
 	(wire
 		(pts
+			(xy 233.045 71.755) (xy 233.045 75.565)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "a55a1de5-cc80-41cb-a7ea-dd171c4693e9")
+	)
+	(wire
+		(pts
 			(xy 83.82 70.485) (xy 83.82 76.2)
 		)
 		(stroke
@@ -774,6 +1237,16 @@
 			(type default)
 		)
 		(uuid "a90911d4-88a3-400f-9f3d-8847174eaa46")
+	)
+	(wire
+		(pts
+			(xy 259.715 61.595) (xy 259.715 64.77)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "aea79654-a5bd-48b4-82fd-04b9fbe06669")
 	)
 	(wire
 		(pts
@@ -794,6 +1267,16 @@
 			(type default)
 		)
 		(uuid "b5c682c7-261a-48c0-bfe1-82f9972f795a")
+	)
+	(wire
+		(pts
+			(xy 260.35 113.665) (xy 260.35 117.475)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "b87cacc5-1497-4e5b-ba39-351b6c619318")
 	)
 	(wire
 		(pts
@@ -857,6 +1340,16 @@
 	)
 	(wire
 		(pts
+			(xy 128.905 72.39) (xy 128.905 75.565)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "eb33dfff-ab8b-4d66-b075-1deace75c28e")
+	)
+	(wire
+		(pts
 			(xy 40.64 62.23) (xy 40.64 57.785)
 		)
 		(stroke
@@ -864,6 +1357,16 @@
 			(type default)
 		)
 		(uuid "eb875fd0-4d94-4109-86d5-f43be1248fdc")
+	)
+	(wire
+		(pts
+			(xy 122.555 75.565) (xy 115.57 75.565)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "ec19b28f-4e8e-470b-925f-6f63813a5ab4")
 	)
 	(wire
 		(pts
@@ -887,6 +1390,16 @@
 	)
 	(wire
 		(pts
+			(xy 132.715 68.58) (xy 135.89 68.58)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "f31852f3-e8e7-4eaf-8c3e-6c7bff66d0bb")
+	)
+	(wire
+		(pts
 			(xy 50.8 93.345) (xy 62.23 93.345)
 		)
 		(stroke
@@ -894,6 +1407,16 @@
 			(type default)
 		)
 		(uuid "f3cd1be7-b38a-4350-9ecd-f0878f8209f1")
+	)
+	(wire
+		(pts
+			(xy 165.1 61.595) (xy 165.1 64.77)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "ff049e90-bec0-4246-8444-c0530ce8e451")
 	)
 	(label "SW_RIGHT"
 		(at 72.39 83.185 0)
@@ -994,6 +1517,50 @@
 			)
 		)
 	)
+	(global_label "PE1"
+		(shape passive)
+		(at 266.7 68.58 0)
+		(fields_autoplaced yes)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left)
+		)
+		(uuid "45e24739-a9b6-44f8-806f-caf855f9810d")
+		(property "Intersheetrefs" "${INTERSHEET_REFS}"
+			(at 272.2024 68.58 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+				(hide yes)
+			)
+		)
+	)
+	(global_label "PE1"
+		(shape passive)
+		(at 267.335 109.855 0)
+		(fields_autoplaced yes)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left)
+		)
+		(uuid "4999db22-cc35-4459-a874-2fb81f59b781")
+		(property "Intersheetrefs" "${INTERSHEET_REFS}"
+			(at 272.8374 109.855 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+				(hide yes)
+			)
+		)
+	)
 	(global_label "PB0"
 		(shape passive)
 		(at 38.1 76.2 180)
@@ -1012,6 +1579,28 @@
 					(size 1.27 1.27)
 				)
 				(justify right)
+				(hide yes)
+			)
+		)
+	)
+	(global_label "PE2"
+		(shape passive)
+		(at 135.89 68.58 0)
+		(fields_autoplaced yes)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left)
+		)
+		(uuid "566eb3a1-d004-44b0-a0a7-88080e80f383")
+		(property "Intersheetrefs" "${INTERSHEET_REFS}"
+			(at 141.3924 68.58 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
 				(hide yes)
 			)
 		)
@@ -1038,6 +1627,50 @@
 			)
 		)
 	)
+	(global_label "PE1"
+		(shape passive)
+		(at 210.82 67.945 0)
+		(fields_autoplaced yes)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left)
+		)
+		(uuid "8af55101-6184-4ccc-9c8e-7705bb0df4ce")
+		(property "Intersheetrefs" "${INTERSHEET_REFS}"
+			(at 216.3224 67.945 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+				(hide yes)
+			)
+		)
+	)
+	(global_label "PE1"
+		(shape passive)
+		(at 240.03 67.945 0)
+		(fields_autoplaced yes)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left)
+		)
+		(uuid "91780b78-333b-4296-8bc9-9044cd13255f")
+		(property "Intersheetrefs" "${INTERSHEET_REFS}"
+			(at 245.5324 67.945 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+				(hide yes)
+			)
+		)
+	)
 	(global_label "PB3"
 		(shape passive)
 		(at 69.85 76.2 180)
@@ -1056,6 +1689,50 @@
 					(size 1.27 1.27)
 				)
 				(justify right)
+				(hide yes)
+			)
+		)
+	)
+	(global_label "PE3"
+		(shape passive)
+		(at 109.22 68.58 180)
+		(fields_autoplaced yes)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify right)
+		)
+		(uuid "b3b3e9b1-da80-4d83-ac92-a3e01aac038b")
+		(property "Intersheetrefs" "${INTERSHEET_REFS}"
+			(at 103.7176 68.58 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify right)
+				(hide yes)
+			)
+		)
+	)
+	(global_label "PE1"
+		(shape passive)
+		(at 172.085 68.58 0)
+		(fields_autoplaced yes)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left)
+		)
+		(uuid "cd8712a6-8ea9-48ca-8eb6-ee7625df5372")
+		(property "Intersheetrefs" "${INTERSHEET_REFS}"
+			(at 177.5874 68.58 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
 				(hide yes)
 			)
 		)
@@ -1201,6 +1878,284 @@
 		)
 	)
 	(symbol
+		(lib_id "power:GND")
+		(at 233.045 75.565 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "15b15b1c-4527-443c-8bd2-e097fa8c6789")
+		(property "Reference" "#PWR086"
+			(at 233.045 81.915 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Value" "GND"
+			(at 233.045 80.645 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" ""
+			(at 233.045 75.565 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" ""
+			(at 233.045 75.565 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" "Power symbol creates a global label with name \"GND\" , ground"
+			(at 233.045 75.565 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "cef07db8-bc29-4b87-bf6c-f1827d8e9ee3")
+		)
+		(instances
+			(project "ECE445L_Lab7"
+				(path "/69b823fd-c065-40ff-9bb9-c5835555f3eb/e9432827-5ece-4de0-90fe-13c05c5c04a5"
+					(reference "#PWR086")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "ECE445L:Potentiometer")
+		(at 258.445 109.855 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "214c651c-48a4-4cb8-a91e-f7af6b25b801")
+		(property "Reference" "R55"
+			(at 257.81 108.5849 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify right)
+			)
+		)
+		(property "Value" "10k"
+			(at 257.81 111.1249 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify right)
+			)
+		)
+		(property "Footprint" "ECE445L:Potentiometer"
+			(at 258.445 109.855 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" ""
+			(at 258.445 109.855 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" ""
+			(at 258.445 109.855 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "2"
+			(uuid "1edd26b6-bc81-480b-bd44-e0084d39e5f1")
+		)
+		(pin "1"
+			(uuid "debc1294-1c70-450e-be7e-d658b9a784c7")
+		)
+		(pin "3"
+			(uuid "c7a6f74e-143f-4c52-aabc-202667bedaf0")
+		)
+		(instances
+			(project "ECE445L_Lab7"
+				(path "/69b823fd-c065-40ff-9bb9-c5835555f3eb/e9432827-5ece-4de0-90fe-13c05c5c04a5"
+					(reference "R55")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "power:+3V3")
+		(at 233.045 60.96 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "2585b402-c41d-49a9-b2f0-2ca1b2f927cd")
+		(property "Reference" "#PWR085"
+			(at 233.045 64.77 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Value" "+3V3"
+			(at 233.045 56.515 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" ""
+			(at 233.045 60.96 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" ""
+			(at 233.045 60.96 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" "Power symbol creates a global label with name \"+3V3\""
+			(at 233.045 60.96 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "263a4139-37f4-4752-b28d-9f2978d3bd4e")
+		)
+		(instances
+			(project "ECE445L_Lab7"
+				(path "/69b823fd-c065-40ff-9bb9-c5835555f3eb/e9432827-5ece-4de0-90fe-13c05c5c04a5"
+					(reference "#PWR085")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "ECE445L:Potentiometer")
+		(at 201.93 67.945 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "3245165c-ff6d-4b77-a30c-5c4dcbc097b3")
+		(property "Reference" "R52"
+			(at 201.295 66.6749 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify right)
+			)
+		)
+		(property "Value" "10k"
+			(at 201.295 69.2149 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify right)
+			)
+		)
+		(property "Footprint" "ECE445L:Potentiometer"
+			(at 201.93 67.945 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" ""
+			(at 201.93 67.945 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" ""
+			(at 201.93 67.945 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "2"
+			(uuid "5ff969d2-7ad5-4417-b2aa-352cc3a1d18f")
+		)
+		(pin "1"
+			(uuid "48767b04-047a-4821-8223-9fefd5779981")
+		)
+		(pin "3"
+			(uuid "7f50430f-8d3a-4694-a27f-751f68f84cf9")
+		)
+		(instances
+			(project "ECE445L_Lab7"
+				(path "/69b823fd-c065-40ff-9bb9-c5835555f3eb/e9432827-5ece-4de0-90fe-13c05c5c04a5"
+					(reference "R52")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
 		(lib_id "Device:R")
 		(at 50.8 66.04 0)
 		(unit 1)
@@ -1337,6 +2292,204 @@
 		)
 	)
 	(symbol
+		(lib_id "power:+3V3")
+		(at 120.65 59.055 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "4309a75d-ce04-425f-bab8-67922c8ddba8")
+		(property "Reference" "#PWR079"
+			(at 120.65 62.865 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Value" "+3V3"
+			(at 120.65 54.61 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" ""
+			(at 120.65 59.055 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" ""
+			(at 120.65 59.055 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" "Power symbol creates a global label with name \"+3V3\""
+			(at 120.65 59.055 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "3a5830ce-11b1-4959-898c-c99de8f6bb1e")
+		)
+		(instances
+			(project ""
+				(path "/69b823fd-c065-40ff-9bb9-c5835555f3eb/e9432827-5ece-4de0-90fe-13c05c5c04a5"
+					(reference "#PWR079")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "power:+3V3")
+		(at 260.35 102.87 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "43850b4a-8a82-4fbf-8f38-52e2b8d2c98f")
+		(property "Reference" "#PWR089"
+			(at 260.35 106.68 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Value" "+3V3"
+			(at 260.35 98.425 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" ""
+			(at 260.35 102.87 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" ""
+			(at 260.35 102.87 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" "Power symbol creates a global label with name \"+3V3\""
+			(at 260.35 102.87 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "db0e23b6-cf51-4fe4-81de-2eda4b2cc173")
+		)
+		(instances
+			(project "ECE445L_Lab7"
+				(path "/69b823fd-c065-40ff-9bb9-c5835555f3eb/e9432827-5ece-4de0-90fe-13c05c5c04a5"
+					(reference "#PWR089")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "power:+3V3")
+		(at 203.835 60.96 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "65265b99-a033-4b7f-b02b-19d32eb5a290")
+		(property "Reference" "#PWR083"
+			(at 203.835 64.77 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Value" "+3V3"
+			(at 203.835 56.515 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" ""
+			(at 203.835 60.96 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" ""
+			(at 203.835 60.96 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" "Power symbol creates a global label with name \"+3V3\""
+			(at 203.835 60.96 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "094f8481-c3f9-4b21-bfa1-8c59fb15d97c")
+		)
+		(instances
+			(project "ECE445L_Lab7"
+				(path "/69b823fd-c065-40ff-9bb9-c5835555f3eb/e9432827-5ece-4de0-90fe-13c05c5c04a5"
+					(reference "#PWR083")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
 		(lib_id "ECE445L:SW_Push")
 		(at 72.39 88.265 90)
 		(unit 1)
@@ -1401,6 +2554,79 @@
 			(project "Lab7"
 				(path "/69b823fd-c065-40ff-9bb9-c5835555f3eb/e9432827-5ece-4de0-90fe-13c05c5c04a5"
 					(reference "SW4")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "ECE445L:Potentiometer")
+		(at 117.475 68.58 0)
+		(mirror y)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(uuid "71a74d49-7ecc-4ec8-9b91-602bbb5b5d1f")
+		(property "Reference" "R49"
+			(at 118.11 67.3099 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify right)
+			)
+		)
+		(property "Value" "10k"
+			(at 118.11 69.8499 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify right)
+			)
+		)
+		(property "Footprint" "ECE445L:Potentiometer"
+			(at 117.475 68.58 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" ""
+			(at 117.475 68.58 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" ""
+			(at 117.475 68.58 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "2"
+			(uuid "e743c3d2-2e85-4519-a582-5337027cc034")
+		)
+		(pin "1"
+			(uuid "8f10614e-1824-4553-9d55-71addf041063")
+		)
+		(pin "3"
+			(uuid "1682583d-d7c6-499b-bd15-781b62fed46e")
+		)
+		(instances
+			(project ""
+				(path "/69b823fd-c065-40ff-9bb9-c5835555f3eb/e9432827-5ece-4de0-90fe-13c05c5c04a5"
+					(reference "R49")
 					(unit 1)
 				)
 			)
@@ -1477,6 +2703,218 @@
 		)
 	)
 	(symbol
+		(lib_id "ECE445L:Potentiometer")
+		(at 127 68.58 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "85e65e8e-6bb8-463f-af6f-adca50fe2914")
+		(property "Reference" "R50"
+			(at 126.365 67.3099 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify right)
+			)
+		)
+		(property "Value" "10k"
+			(at 126.365 69.8499 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify right)
+			)
+		)
+		(property "Footprint" "ECE445L:Potentiometer"
+			(at 127 68.58 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" ""
+			(at 127 68.58 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" ""
+			(at 127 68.58 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "2"
+			(uuid "1e1099f1-ec5b-456e-b55c-b6f273819eab")
+		)
+		(pin "1"
+			(uuid "0737f362-c862-46f9-88f7-95b66500389f")
+		)
+		(pin "3"
+			(uuid "bceff6d6-8a6c-478e-99d9-8b6ca08f95da")
+		)
+		(instances
+			(project "ECE445L_Lab7"
+				(path "/69b823fd-c065-40ff-9bb9-c5835555f3eb/e9432827-5ece-4de0-90fe-13c05c5c04a5"
+					(reference "R50")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "power:GND")
+		(at 122.555 77.47 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "8c9c7b9f-acf3-45ad-ba67-0160d09b1361")
+		(property "Reference" "#PWR080"
+			(at 122.555 83.82 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Value" "GND"
+			(at 122.555 82.55 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" ""
+			(at 122.555 77.47 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" ""
+			(at 122.555 77.47 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" "Power symbol creates a global label with name \"GND\" , ground"
+			(at 122.555 77.47 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "2f5d09e6-7fcf-43dc-8c96-9e0bde822fb8")
+		)
+		(instances
+			(project "ECE445L_Lab7"
+				(path "/69b823fd-c065-40ff-9bb9-c5835555f3eb/e9432827-5ece-4de0-90fe-13c05c5c04a5"
+					(reference "#PWR080")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "ECE445L:Potentiometer")
+		(at 231.14 67.945 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "8f9034fb-b735-4136-ac77-fef0fa61c366")
+		(property "Reference" "R53"
+			(at 230.505 66.6749 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify right)
+			)
+		)
+		(property "Value" "10k"
+			(at 230.505 69.2149 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify right)
+			)
+		)
+		(property "Footprint" "ECE445L:Potentiometer"
+			(at 231.14 67.945 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" ""
+			(at 231.14 67.945 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" ""
+			(at 231.14 67.945 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "2"
+			(uuid "ffb11b7b-18e4-4bc9-9587-4a0d28b3c27c")
+		)
+		(pin "1"
+			(uuid "1bd0cd09-3499-4b35-b9d6-2fd5d9841642")
+		)
+		(pin "3"
+			(uuid "86dc26b9-25f8-4303-a0a5-098cb76a5869")
+		)
+		(instances
+			(project "ECE445L_Lab7"
+				(path "/69b823fd-c065-40ff-9bb9-c5835555f3eb/e9432827-5ece-4de0-90fe-13c05c5c04a5"
+					(reference "R53")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
 		(lib_id "power:+3V3")
 		(at 62.23 52.705 0)
 		(unit 1)
@@ -1537,6 +2975,145 @@
 			(project ""
 				(path "/69b823fd-c065-40ff-9bb9-c5835555f3eb/e9432827-5ece-4de0-90fe-13c05c5c04a5"
 					(reference "#PWR076")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "ECE445L:Potentiometer")
+		(at 257.81 68.58 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "93f3cdf7-fa9e-4b35-9652-50486b0a0749")
+		(property "Reference" "R54"
+			(at 257.175 67.3099 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify right)
+			)
+		)
+		(property "Value" "10k"
+			(at 257.175 69.8499 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify right)
+			)
+		)
+		(property "Footprint" "ECE445L:Potentiometer"
+			(at 257.81 68.58 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" ""
+			(at 257.81 68.58 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" ""
+			(at 257.81 68.58 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "2"
+			(uuid "41338f27-0fb0-455f-9e85-1e77a9940ff7")
+		)
+		(pin "1"
+			(uuid "bb35d7ec-ca97-42fc-bcd5-fcb4847d827e")
+		)
+		(pin "3"
+			(uuid "c8d0b331-96f6-49ad-99c1-684d2f0d9ad6")
+		)
+		(instances
+			(project "ECE445L_Lab7"
+				(path "/69b823fd-c065-40ff-9bb9-c5835555f3eb/e9432827-5ece-4de0-90fe-13c05c5c04a5"
+					(reference "R54")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "power:+3V3")
+		(at 165.1 61.595 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "970dabcd-692f-475b-995f-5256ccf2b02a")
+		(property "Reference" "#PWR081"
+			(at 165.1 65.405 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Value" "+3V3"
+			(at 165.1 57.15 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" ""
+			(at 165.1 61.595 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" ""
+			(at 165.1 61.595 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" "Power symbol creates a global label with name \"+3V3\""
+			(at 165.1 61.595 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "01b41f8a-733d-41a7-8662-5a2f0404f7b4")
+		)
+		(instances
+			(project "ECE445L_Lab7"
+				(path "/69b823fd-c065-40ff-9bb9-c5835555f3eb/e9432827-5ece-4de0-90fe-13c05c5c04a5"
+					(reference "#PWR081")
 					(unit 1)
 				)
 			)
@@ -1607,6 +3184,211 @@
 			(project "Lab7"
 				(path "/69b823fd-c065-40ff-9bb9-c5835555f3eb/e9432827-5ece-4de0-90fe-13c05c5c04a5"
 					(reference "SW1")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "ECE445L:Potentiometer")
+		(at 163.195 68.58 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "a1f62b04-01e9-4dd5-91d8-09ea058ba44f")
+		(property "Reference" "R51"
+			(at 162.56 67.3099 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify right)
+			)
+		)
+		(property "Value" "10k"
+			(at 162.56 69.8499 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify right)
+			)
+		)
+		(property "Footprint" "ECE445L:Potentiometer"
+			(at 163.195 68.58 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" ""
+			(at 163.195 68.58 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" ""
+			(at 163.195 68.58 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "2"
+			(uuid "1fa7a63d-5e7b-4ab2-a7f1-35f9046991f2")
+		)
+		(pin "1"
+			(uuid "091db727-c3d1-4ce9-a069-6f110e957dad")
+		)
+		(pin "3"
+			(uuid "19eeea49-3c31-4e99-9bfd-965802f0560b")
+		)
+		(instances
+			(project "ECE445L_Lab7"
+				(path "/69b823fd-c065-40ff-9bb9-c5835555f3eb/e9432827-5ece-4de0-90fe-13c05c5c04a5"
+					(reference "R51")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "power:GND")
+		(at 260.35 117.475 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "b539b22b-0c68-48fb-9932-ac7b3a86c246")
+		(property "Reference" "#PWR090"
+			(at 260.35 123.825 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Value" "GND"
+			(at 260.35 122.555 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" ""
+			(at 260.35 117.475 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" ""
+			(at 260.35 117.475 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" "Power symbol creates a global label with name \"GND\" , ground"
+			(at 260.35 117.475 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "3126a0fe-b086-40be-81df-e3688ac53519")
+		)
+		(instances
+			(project "ECE445L_Lab7"
+				(path "/69b823fd-c065-40ff-9bb9-c5835555f3eb/e9432827-5ece-4de0-90fe-13c05c5c04a5"
+					(reference "#PWR090")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "power:GND")
+		(at 259.715 76.2 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "b60c1161-8dce-4a7f-9a66-2a4f9267776d")
+		(property "Reference" "#PWR088"
+			(at 259.715 82.55 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Value" "GND"
+			(at 259.715 81.28 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" ""
+			(at 259.715 76.2 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" ""
+			(at 259.715 76.2 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" "Power symbol creates a global label with name \"GND\" , ground"
+			(at 259.715 76.2 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "e1470172-7a7a-4a71-b635-1b676949bd4f")
+		)
+		(instances
+			(project "ECE445L_Lab7"
+				(path "/69b823fd-c065-40ff-9bb9-c5835555f3eb/e9432827-5ece-4de0-90fe-13c05c5c04a5"
+					(reference "#PWR088")
 					(unit 1)
 				)
 			)
@@ -1747,6 +3529,204 @@
 			(project ""
 				(path "/69b823fd-c065-40ff-9bb9-c5835555f3eb/e9432827-5ece-4de0-90fe-13c05c5c04a5"
 					(reference "R44")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "power:+3V3")
+		(at 259.715 61.595 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "e5bb708a-8f64-4c6b-a814-3ae80d021ae4")
+		(property "Reference" "#PWR087"
+			(at 259.715 65.405 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Value" "+3V3"
+			(at 259.715 57.15 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" ""
+			(at 259.715 61.595 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" ""
+			(at 259.715 61.595 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" "Power symbol creates a global label with name \"+3V3\""
+			(at 259.715 61.595 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "f3e64f23-4458-49ea-b5ef-4703f8912c1a")
+		)
+		(instances
+			(project "ECE445L_Lab7"
+				(path "/69b823fd-c065-40ff-9bb9-c5835555f3eb/e9432827-5ece-4de0-90fe-13c05c5c04a5"
+					(reference "#PWR087")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "power:GND")
+		(at 203.835 75.565 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "e79db9f3-5241-4b8b-a60d-128f018ed957")
+		(property "Reference" "#PWR084"
+			(at 203.835 81.915 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Value" "GND"
+			(at 203.835 80.645 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" ""
+			(at 203.835 75.565 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" ""
+			(at 203.835 75.565 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" "Power symbol creates a global label with name \"GND\" , ground"
+			(at 203.835 75.565 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "2182169f-6a86-463f-9f9b-6db1b6c93ffa")
+		)
+		(instances
+			(project "ECE445L_Lab7"
+				(path "/69b823fd-c065-40ff-9bb9-c5835555f3eb/e9432827-5ece-4de0-90fe-13c05c5c04a5"
+					(reference "#PWR084")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "power:GND")
+		(at 165.1 76.2 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "f21157a2-564d-440f-bd22-1e89c9f29123")
+		(property "Reference" "#PWR082"
+			(at 165.1 82.55 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Value" "GND"
+			(at 165.1 81.28 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" ""
+			(at 165.1 76.2 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" ""
+			(at 165.1 76.2 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" "Power symbol creates a global label with name \"GND\" , ground"
+			(at 165.1 76.2 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "e07577e2-1bb3-4d26-a00d-b3da08628965")
+		)
+		(instances
+			(project "ECE445L_Lab7"
+				(path "/69b823fd-c065-40ff-9bb9-c5835555f3eb/e9432827-5ece-4de0-90fe-13c05c5c04a5"
+					(reference "#PWR082")
 					(unit 1)
 				)
 			)

@@ -9501,7 +9501,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "56b1ed1d-3e16-45de-991e-bce29b101d23")
-		(property "Reference" "U7"
+		(property "Reference" "U2"
 			(at 83.82 29.21 0)
 			(effects
 				(font
@@ -9637,7 +9637,7 @@
 		(instances
 			(project ""
 				(path "/69b823fd-c065-40ff-9bb9-c5835555f3eb/c4445928-c95f-4ef5-82c7-58ae1ba9c5bb"
-					(reference "U7")
+					(reference "U2")
 					(unit 1)
 				)
 			)
@@ -9787,8 +9787,8 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "62a97134-c0b7-430f-8b2e-22eb9ad425d3")
-		(property "Reference" "U11"
-			(at 127.635 161.925 0)
+		(property "Reference" "U3"
+			(at 127.635 162.56 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -9796,7 +9796,7 @@
 			)
 		)
 		(property "Value" "FT2322R"
-			(at 127.635 164.465 0)
+			(at 127.635 165.1 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -9845,7 +9845,7 @@
 		(instances
 			(project ""
 				(path "/69b823fd-c065-40ff-9bb9-c5835555f3eb/c4445928-c95f-4ef5-82c7-58ae1ba9c5bb"
-					(reference "U11")
+					(reference "U3")
 					(unit 1)
 				)
 			)
