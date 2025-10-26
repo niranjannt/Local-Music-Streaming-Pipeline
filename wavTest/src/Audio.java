@@ -23,7 +23,7 @@ public class Audio {
         FileInputStream wavInputStream = new FileInputStream(wavFile);
         setAudioFormat(wavInputStream);
         audioInputStream = new AudioInputStream(wavInputStream, audioFormat, wavFile.length());
-        serialPort = new SerialPort("/dev/cu.usbserial-A106DAXQ");       //mac dependent if running on windows find your port
+        serialPort = new SerialPort("COM12");       //mac dependent if running on windows find your port
         sendInitData();
     }
 
