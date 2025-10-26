@@ -5,28 +5,25 @@ import java.io.FileInputStream;
 import java.io.IOException;
 import jssc.SerialPort;
 import jssc.SerialPortException;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 
 // Receiving an 'R' to the serial port requests data and causes Audio class to send back data for both channels
 // 00 - Halting sending data
-// 01 - Right channel info
-// 10 - Left channel info
+// 01 - Right channel data
+// 10 - Left channel data
 // 11 - Init info
 
 public class Audio {
+    private static final Logger log = LoggerFactory.getLogger(Audio.class);
     private String path;
     private AudioFormat audioFormat;
     private AudioInputStream audioInputStream;
     private SerialPort serialPort;
 
-    Audio(String path) throws IOException {
-        File wavFile = new File(path);
-        FileInputStream wavInputStream = new FileInputStream(wavFile);
-        setAudioFormat(wavInputStream);
-        audioInputStream = new AudioInputStream(wavInputStream, audioFormat, wavFile.length());
-        serialPort = new SerialPort("/dev/cu.usbserial-A106DAXQ");       //mac dependent if running on windows find your port
-        sendInitData();
-    }
-
+    /*
+        Sets the AudioFormat attribute with the data specified in the given WAV file's header
+     */
     private void setAudioFormat(FileInputStream wavInputStream) throws IOException {
         byte[] headerArr = new byte[4];
         byte[] chunkArr = new byte[4];
@@ -89,7 +86,6 @@ public class Audio {
                 System.out.println("Stereo");
         }
 
-        //TODO FIX BIT MANIPULATION FOR ALL
         byte[] sampleRateArr = new byte[4];
         wavInputStream.read(sampleRateArr, 0, 4);
         int sampleRate = ((sampleRateArr[0] & 0xFF) | ((sampleRateArr[1] & 0xFF) << 8)| ((sampleRateArr[2] & 0xFF) << 16) | ((sampleRateArr[3] & 0xFF) << 24));
@@ -122,51 +118,86 @@ public class Audio {
         this.audioFormat = new AudioFormat(encoding, sampleRate, bitsPerSample, numChannels, blockAlign, sampleRate, false);
     }
 
-    private void sendInitData() {
-        System.out.println("sending sample rate");
+    /*
+        Opens and sets parameters for the SerialPort
+     */
+    private void openPort() {
         try {
             this.serialPort.openPort();
             this.serialPort.setParams(
-                    SerialPort.BAUDRATE_9600,
+                    3_000_000,
                     SerialPort.DATABITS_8,
                     SerialPort.STOPBITS_1,
                     SerialPort.PARITY_NONE);
+        } catch (SerialPortException e) {
+            throw new RuntimeException(e);
+        }
+    }
+
+    /*
+        Sends sample data in three bytes:
+        Header byte: 0xC0 (header of 11) tells ESP that we're about to send two bytes of data
+        Byte 0: First byte of sample rate
+        Byte 1: Second byte of sample rate
+        Sample rate = (Byte1 << 8) | Byte0
+     */
+    private void sendSampleRate() {
+        System.out.println("sending sample rate");
+        try {
 
             int frameRate = (int) this.audioFormat.getFrameRate();
             byte header = (byte) 0xC0;
             byte byte0 = (byte) (frameRate & 0xFF);
             byte byte1 = (byte) ((frameRate >> 8) & 0xFF);
-            byte[] sampleRateArr = {byte0, byte1};
-
-            serialPort.writeBytes(new byte[]{header, byte1, byte0});
-
-            int bytesPerSample = audioFormat.getSampleSizeInBits() / 8;
-            int shiftAmount = audioFormat.getSampleSizeInBits() - 14;
-            boolean channel = false;
-            for (int i = 0; i < 1000; i++) {
-                //read one sample
-                byte[] data = serialPort.readBytes(bytesPerSample);
-
-                //turn sample into int form
-                int sample = 0;
-                for (int j = 0; j < bytesPerSample; j++) {
-                    sample |= (data[j] & 0xFF) << (8 * j);
-                }
-
-                //scale down to 14 bits and add header
-                sample >>= shiftAmount;
-                sample |= channel ? 0x80 : 0x40;
-                channel = !channel;
-
-                for (int k = 0; k < bytesPerSample; k++) {
-                    data[k] = (byte) ((sample >> (8 * k)) & 0xFF);
-                }
-                //add header in top two bits. 10 - left channel, 01 - right channel
-                serialPort.writeBytes(data);
-            }
+            serialPort.writeBytes(new byte[]{header, byte0, byte1});
         }
         catch (SerialPortException ex) {
-            System.out.println(ex);
+            log.error("e: ", ex);
         }
+    }
+
+    /*
+        Sends the first thousand samples
+        Each sample is two bytes, lower 14 bits are data and top 2 bits are header as defined below
+        01 - Right channel data
+        10 - Left channel data
+     */
+    private void sendInitData() throws IOException {
+        int bytesPerSample = audioFormat.getSampleSizeInBits() / 8;
+        int shiftAmount = audioFormat.getSampleSizeInBits() - 14;
+        boolean channel = false;
+        byte[] data = new byte[bytesPerSample];
+        for (int i = 0; i < 1000; i++) {
+            //read one sample
+            int bytesRead = audioInputStream.read(data, 0, bytesPerSample);
+
+            //turn sample into int form
+            int sample = 0;
+            for (int j = 0; j < bytesPerSample; j++) {
+                sample |= (data[j] & 0xFF) << (8 * j);
+            }
+
+            //scale down to 14 bits and add header
+            sample = (sample >> shiftAmount) & 0x3FFF;
+            sample |= channel ? 0x8000 : 0x4000;
+            channel = !channel;
+
+            for (int k = 0; k < bytesPerSample; k++) {
+                data[k] = (byte) ((sample >> (8 * k)) & 0xFF);
+            }
+            //add header in top two bits. 10 - left channel, 01 - right channel
+            serialPort.writeBytes(data);
+        }
+    }
+
+    Audio(String path) throws IOException {
+        File wavFile = new File(path);
+        FileInputStream wavInputStream = new FileInputStream(wavFile);
+        setAudioFormat(wavInputStream);
+        audioInputStream = new AudioInputStream(wavInputStream, audioFormat, wavFile.length());
+        serialPort = new SerialPort("/dev/cu.usbserial-A106DAXQ");       //mac dependent if running on windows find your port
+        openPort();
+        sendSampleRate();
+        sendInitData();
     }
 }
