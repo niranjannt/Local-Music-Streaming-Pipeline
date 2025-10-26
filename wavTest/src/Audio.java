@@ -184,7 +184,7 @@ public class Audio {
         10 - Left channel data
      */
     private void sendInitData() throws IOException {
-g        channel = false;
+        channel = false;
         byte[] data = new byte[bytesPerSample];
         for (int i = 0; i < 1000; i++) {
             //read one sample
