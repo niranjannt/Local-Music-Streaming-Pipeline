@@ -669,20 +669,20 @@
       "Lab7_microcontroller"
     ],
     [
-      "e9432827-5ece-4de0-90fe-13c05c5c04a5",
-      "Lab7_Input"
-    ],
-    [
       "9e7b1dfa-492f-407a-9f72-cee77954c346",
-      "Lab7_analog"
-    ],
-    [
-      "a500a078-11dc-409b-bff9-a8c35e1dabf8",
-      "Lab7_Output"
+      "Lab7_RightAudio"
     ],
     [
       "8e43ed7d-abc3-4582-a9a6-069be8f9db2b",
       "Lab7_LeftAudio"
+    ],
+    [
+      "e9432827-5ece-4de0-90fe-13c05c5c04a5",
+      "Lab7_Input"
+    ],
+    [
+      "a500a078-11dc-409b-bff9-a8c35e1dabf8",
+      "Lab7_Output"
     ]
   ],
   "text_variables": {}

@@ -448,12 +448,12 @@
 			)
 			(embedded_fonts no)
 		)
-		(symbol "ECE445L:LP2950-33LPRE3"
+		(symbol "ECE445L:LM2937ET-3.3_NOPB"
 			(exclude_from_sim no)
 			(in_bom yes)
 			(on_board yes)
 			(property "Reference" "IC"
-				(at 17.145 -2.54 0)
+				(at 12.065 1.905 0)
 				(effects
 					(font
 						(size 1.27 1.27)
@@ -461,8 +461,8 @@
 					(justify left top)
 				)
 			)
-			(property "Value" "LP2950-33LPRE3"
-				(at 8.255 4.445 0)
+			(property "Value" "LM2937ET-3.3_NOPB"
+				(at 5.08 4.445 0)
 				(effects
 					(font
 						(size 1.27 1.27)
@@ -470,18 +470,8 @@
 					(justify left top)
 				)
 			)
-			(property "Footprint" "ECE445L:TL431CLPM"
-				(at 26.67 -94.92 0)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-					(justify left top)
-					(hide yes)
-				)
-			)
-			(property "Datasheet" "http://www.ti.com/lit/gpn/lp2950"
-				(at 26.67 -194.92 0)
+			(property "Footprint" "ECE445L:TO254P470X1028X1955-3P"
+				(at 21.59 -94.92 0)
 				(effects
 					(font
 						(size 1.27 1.27)
@@ -490,7 +480,17 @@
 					(hide yes)
 				)
 			)
-			(property "Description" "Adjustable Micropower Voltage Regulator With Shutdown"
+			(property "Datasheet" "http://www.ti.com/general/docs/suppproductinfo.tsp?distId=10&gotoUrl=http%3A%2F%2Fwww.ti.com%2Flit%2Fgpn%2Flm2937"
+				(at 21.59 -194.92 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(justify left top)
+					(hide yes)
+				)
+			)
+			(property "Description" "400mA and 500mA Voltage Regulator"
 				(at 0 0 0)
 				(effects
 					(font
@@ -499,8 +499,8 @@
 					(hide yes)
 				)
 			)
-			(property "Height" "9.34"
-				(at 26.67 -394.92 0)
+			(property "Height" "4.7"
+				(at 21.59 -394.92 0)
 				(effects
 					(font
 						(size 1.27 1.27)
@@ -509,8 +509,8 @@
 					(hide yes)
 				)
 			)
-			(property "Mouser Part Number" "595-LP2950-33LPRE3"
-				(at 26.67 -494.92 0)
+			(property "Mouser Part Number" "926-LM2937ET-3.3NOPB"
+				(at 21.59 -494.92 0)
 				(effects
 					(font
 						(size 1.27 1.27)
@@ -519,8 +519,8 @@
 					(hide yes)
 				)
 			)
-			(property "Mouser Price/Stock" "https://www.mouser.co.uk/ProductDetail/Texas-Instruments/LP2950-33LPRE3?qs=iSMark9AYDUagDsOL8Eqdw%3D%3D"
-				(at 26.67 -594.92 0)
+			(property "Mouser Price/Stock" "https://www.mouser.co.uk/ProductDetail/Texas-Instruments/LM2937ET-3.3-NOPB?qs=X1J7HmVL2ZEMUke2IfNR4w%3D%3D"
+				(at 21.59 -594.92 0)
 				(effects
 					(font
 						(size 1.27 1.27)
@@ -530,7 +530,7 @@
 				)
 			)
 			(property "Manufacturer_Name" "Texas Instruments"
-				(at 26.67 -694.92 0)
+				(at 21.59 -694.92 0)
 				(effects
 					(font
 						(size 1.27 1.27)
@@ -539,8 +539,8 @@
 					(hide yes)
 				)
 			)
-			(property "Manufacturer_Part_Number" "LP2950-33LPRE3"
-				(at 26.67 -794.92 0)
+			(property "Manufacturer_Part_Number" "LM2937ET-3.3/NOPB"
+				(at 21.59 -794.92 0)
 				(effects
 					(font
 						(size 1.27 1.27)
@@ -549,10 +549,10 @@
 					(hide yes)
 				)
 			)
-			(symbol "LP2950-33LPRE3_1_1"
+			(symbol "LM2937ET-3.3_NOPB_1_1"
 				(rectangle
 					(start 5.08 2.54)
-					(end 25.4 -5.08)
+					(end 20.32 -7.62)
 					(stroke
 						(width 0.254)
 						(type default)
@@ -562,7 +562,7 @@
 					)
 				)
 				(pin power_in line
-					(at 0 0 0)
+					(at 0 -1.905 0)
 					(length 5.08)
 					(name "INPUT"
 						(effects
@@ -571,7 +571,7 @@
 							)
 						)
 					)
-					(number "3"
+					(number "1"
 						(effects
 							(font
 								(size 1.27 1.27)
@@ -580,7 +580,7 @@
 					)
 				)
 				(pin passive line
-					(at 14.605 -10.16 90)
+					(at 12.7 -12.7 90)
 					(length 5.08)
 					(name "GND"
 						(effects
@@ -598,7 +598,7 @@
 					)
 				)
 				(pin power_out line
-					(at 30.48 0 180)
+					(at 25.4 -1.905 180)
 					(length 5.08)
 					(name "OUTPUT"
 						(effects
@@ -607,7 +607,278 @@
 							)
 						)
 					)
+					(number "3"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+			)
+			(embedded_fonts no)
+		)
+		(symbol "ECE445L:Testpoint"
+			(pin_names
+				(offset 0)
+				(hide yes)
+			)
+			(exclude_from_sim no)
+			(in_bom yes)
+			(on_board yes)
+			(property "Reference" "TP"
+				(at 0 2.794 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Value" "TP"
+				(at 0 -2.286 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Footprint" "ECE445L:Testpoint_1x02_P2.54mm"
+				(at 0 5.715 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "Datasheet" "~"
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "Description" "Testpoint"
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "ki_keywords" "Testpoint"
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "ki_fp_filters" "Jumper* TestPoint*2Pads* TestPoint*Bridge*"
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(symbol "Testpoint_0_1"
+				(arc
+					(start 0.0001 4.4451)
+					(mid 1.3471 3.8871)
+					(end 1.9051 2.5401)
+					(stroke
+						(width 0)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(arc
+					(start -1.905 2.54)
+					(mid -1.347 3.887)
+					(end 0 4.445)
+					(stroke
+						(width 0)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+			)
+			(symbol "Testpoint_1_1"
+				(pin passive line
+					(at -1.905 0 90)
+					(length 2.54)
+					(name "A"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
 					(number "1"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin passive line
+					(at 1.905 0 90)
+					(length 2.54)
+					(name "B"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "2"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+			)
+			(embedded_fonts no)
+		)
+		(symbol "Switch:SW_SPST"
+			(pin_names
+				(offset 0)
+				(hide yes)
+			)
+			(exclude_from_sim no)
+			(in_bom yes)
+			(on_board yes)
+			(property "Reference" "SW8"
+				(at 0 6.985 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Value" "SW_SPST"
+				(at 0 4.445 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Footprint" ""
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "Datasheet" "~"
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "Description" "Single Pole Single Throw (SPST) switch"
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "ki_keywords" "switch lever"
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(symbol "SW_SPST_0_0"
+				(circle
+					(center -2.032 0)
+					(radius 0.508)
+					(stroke
+						(width 0)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy -1.524 0.254) (xy 1.524 1.778)
+					)
+					(stroke
+						(width 0)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(circle
+					(center 2.032 0)
+					(radius 0.508)
+					(stroke
+						(width 0)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+			)
+			(symbol "SW_SPST_1_1"
+				(pin passive line
+					(at -5.08 0 0)
+					(length 2.54)
+					(name "A"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "1"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin passive line
+					(at 5.08 0 180)
+					(length 2.54)
+					(name "B"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "2"
 						(effects
 							(font
 								(size 1.27 1.27)
@@ -969,6 +1240,107 @@
 			)
 			(embedded_fonts no)
 		)
+		(symbol "power:PWR_FLAG"
+			(power)
+			(pin_numbers
+				(hide yes)
+			)
+			(pin_names
+				(offset 0)
+				(hide yes)
+			)
+			(exclude_from_sim no)
+			(in_bom yes)
+			(on_board yes)
+			(property "Reference" "#FLG"
+				(at 0 1.905 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "Value" "PWR_FLAG"
+				(at 0 3.81 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Footprint" ""
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "Datasheet" "~"
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "Description" "Special symbol for telling ERC where power comes from"
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "ki_keywords" "flag power"
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(symbol "PWR_FLAG_0_0"
+				(pin power_out line
+					(at 0 0 90)
+					(length 0)
+					(name "~"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "1"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+			)
+			(symbol "PWR_FLAG_0_1"
+				(polyline
+					(pts
+						(xy 0 0) (xy 0 1.27) (xy -1.016 1.905) (xy 0 2.54) (xy 1.016 1.905) (xy 0 1.27)
+					)
+					(stroke
+						(width 0)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+			)
+			(embedded_fonts no)
+		)
 		(symbol "ti_LM4041CILPR:LM4041CILPR"
 			(pin_names
 				(offset 1.016)
@@ -1188,7 +1560,7 @@
 	)
 	(text "+3V3 Regulator"
 		(exclude_from_sim no)
-		(at 48.26 20.955 0)
+		(at 48.26 19.05 0)
 		(effects
 			(font
 				(size 2.54 2.54)
@@ -1223,16 +1595,22 @@
 		(uuid "0b17e6da-babc-423c-88e6-6464409b073c")
 	)
 	(junction
+		(at 151.13 34.925)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "2be6a77f-2a43-4611-b238-f4073fef6171")
+	)
+	(junction
+		(at 70.485 31.75)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "42250783-7d72-4a80-bdd4-4a5f752f1436")
+	)
+	(junction
 		(at 73.66 43.815)
 		(diameter 0)
 		(color 0 0 0 0)
 		(uuid "4653e7a3-d86c-42f7-8d6f-bec0ac0b88f9")
-	)
-	(junction
-		(at 28.575 32.385)
-		(diameter 0)
-		(color 0 0 0 0)
-		(uuid "5253206e-3e5b-412d-92d8-aa37514f6b5f")
 	)
 	(junction
 		(at 248.92 126.365)
@@ -1241,26 +1619,52 @@
 		(uuid "5a398701-897a-4bbe-af6f-42844f152e37")
 	)
 	(junction
-		(at 78.74 32.385)
+		(at 74.295 31.75)
 		(diameter 0)
 		(color 0 0 0 0)
-		(uuid "c2f1c2ab-9f1c-4b15-91a7-7a56af3ea0dc")
+		(uuid "68c879f8-c245-48e8-b3b6-a3c712f441d4")
 	)
 	(junction
-		(at 67.945 32.385)
+		(at 154.94 34.925)
 		(diameter 0)
 		(color 0 0 0 0)
-		(uuid "f0f00080-647a-4867-aa2e-544db23a9c25")
+		(uuid "7793f6a7-8d18-448c-9be4-57b7cb28f4d7")
 	)
-	(wire
-		(pts
-			(xy 64.135 32.385) (xy 67.945 32.385)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "0885caf5-b237-4947-a479-6ff14d00b1c0")
+	(junction
+		(at 243.84 140.335)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "9002301b-482e-42dd-a435-7edb370233f4")
+	)
+	(junction
+		(at 159.385 34.925)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "a1635721-f7ed-411e-847e-22b0cac1c18b")
+	)
+	(junction
+		(at 28.575 31.75)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "c021b5bd-f0dc-4085-8a55-e86652692861")
+	)
+	(junction
+		(at 78.74 31.75)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "c2ad6841-6e96-4623-9e00-107bd8f38830")
+	)
+	(junction
+		(at 67.945 31.75)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "dacd01ef-feae-4263-9739-5ace90488b84")
+	)
+	(junction
+		(at 240.03 140.335)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "e0b9784c-0b04-4665-b7a0-a9f294baec46")
 	)
 	(wire
 		(pts
@@ -1304,6 +1708,16 @@
 	)
 	(wire
 		(pts
+			(xy 70.485 31.75) (xy 67.945 31.75)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "23a0cb2b-9c10-4859-88d6-de99a4d17ad7")
+	)
+	(wire
+		(pts
 			(xy 135.89 40.005) (xy 133.35 40.005)
 		)
 		(stroke
@@ -1314,13 +1728,13 @@
 	)
 	(wire
 		(pts
-			(xy 135.89 34.925) (xy 133.35 34.925)
+			(xy 151.13 34.925) (xy 154.94 34.925)
 		)
 		(stroke
 			(width 0)
 			(type default)
 		)
-		(uuid "2ca1d087-adf8-480c-82b3-d0b663a41038")
+		(uuid "2fd4a804-12ec-46f6-9fd2-b817039cdad9")
 	)
 	(wire
 		(pts
@@ -1334,7 +1748,7 @@
 	)
 	(wire
 		(pts
-			(xy 78.74 28.575) (xy 78.74 32.385)
+			(xy 78.74 28.575) (xy 78.74 31.75)
 		)
 		(stroke
 			(width 0)
@@ -1374,7 +1788,17 @@
 	)
 	(wire
 		(pts
-			(xy 78.74 32.385) (xy 67.945 32.385)
+			(xy 240.03 140.335) (xy 243.84 140.335)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "497e7fab-4b6b-4fef-a222-52f25127edd5")
+	)
+	(wire
+		(pts
+			(xy 78.74 31.75) (xy 74.295 31.75)
 		)
 		(stroke
 			(width 0)
@@ -1384,17 +1808,17 @@
 	)
 	(wire
 		(pts
-			(xy 78.74 32.385) (xy 78.74 34.925)
+			(xy 133.35 34.925) (xy 137.16 34.925)
 		)
 		(stroke
 			(width 0)
 			(type default)
 		)
-		(uuid "4c08b50d-db8e-45df-9bdd-9e69b1a3bd62")
+		(uuid "4abe1870-5c85-4b64-80d5-3c479f52dd4c")
 	)
 	(wire
 		(pts
-			(xy 245.11 140.335) (xy 248.92 140.335)
+			(xy 235.585 140.335) (xy 240.03 140.335)
 		)
 		(stroke
 			(width 0)
@@ -1404,7 +1828,7 @@
 	)
 	(wire
 		(pts
-			(xy 135.89 34.925) (xy 135.89 33.655)
+			(xy 159.385 34.925) (xy 159.385 33.02)
 		)
 		(stroke
 			(width 0)
@@ -1424,7 +1848,7 @@
 	)
 	(wire
 		(pts
-			(xy 28.575 32.385) (xy 28.575 29.845)
+			(xy 28.575 31.75) (xy 28.575 34.925)
 		)
 		(stroke
 			(width 0)
@@ -1434,13 +1858,13 @@
 	)
 	(wire
 		(pts
-			(xy 67.945 34.925) (xy 67.945 32.385)
+			(xy 78.74 31.75) (xy 78.74 34.925)
 		)
 		(stroke
 			(width 0)
 			(type default)
 		)
-		(uuid "7da9fe06-b21c-4429-9643-5eba1a0bb023")
+		(uuid "76e89612-42dc-4071-b78b-6dcdf95c50a4")
 	)
 	(wire
 		(pts
@@ -1464,13 +1888,13 @@
 	)
 	(wire
 		(pts
-			(xy 33.655 32.385) (xy 28.575 32.385)
+			(xy 154.94 34.925) (xy 159.385 34.925)
 		)
 		(stroke
 			(width 0)
 			(type default)
 		)
-		(uuid "8e19729c-2f69-41f6-8d75-226058c57db5")
+		(uuid "946f3feb-c90c-401f-847d-fd500ba92773")
 	)
 	(wire
 		(pts
@@ -1494,6 +1918,16 @@
 	)
 	(wire
 		(pts
+			(xy 243.84 140.335) (xy 248.92 140.335)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "b0d2dd1b-458c-4a1c-8b94-1213c0b08b9c")
+	)
+	(wire
+		(pts
 			(xy 248.92 122.555) (xy 248.92 126.365)
 		)
 		(stroke
@@ -1501,6 +1935,26 @@
 			(type default)
 		)
 		(uuid "b7be86cd-45d8-47e2-8066-726c5ab044ce")
+	)
+	(wire
+		(pts
+			(xy 60.96 31.75) (xy 67.945 31.75)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "bbac7b40-a5e9-4c18-ab47-abd4f1f27930")
+	)
+	(wire
+		(pts
+			(xy 147.32 34.925) (xy 151.13 34.925)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "c00a2ec3-4e90-4f57-b806-7ccd4e104803")
 	)
 	(wire
 		(pts
@@ -1524,6 +1978,26 @@
 	)
 	(wire
 		(pts
+			(xy 28.575 31.75) (xy 35.56 31.75)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "c941cfe5-b26f-4139-af9c-bc288ba5fc35")
+	)
+	(wire
+		(pts
+			(xy 67.945 31.75) (xy 67.945 34.925)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "d28e50a3-a256-42b4-92f5-fc5d48b55e24")
+	)
+	(wire
+		(pts
 			(xy 73.66 43.815) (xy 78.74 43.815)
 		)
 		(stroke
@@ -1531,6 +2005,16 @@
 			(type default)
 		)
 		(uuid "d413a4e1-7b41-4c59-aa19-7f43070c5772")
+	)
+	(wire
+		(pts
+			(xy 70.485 31.75) (xy 74.295 31.75)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "ed3927ec-ef22-40bd-876d-c0344600365d")
 	)
 	(wire
 		(pts
@@ -1544,17 +2028,17 @@
 	)
 	(wire
 		(pts
-			(xy 28.575 34.925) (xy 28.575 32.385)
+			(xy 28.575 31.75) (xy 28.575 27.94)
 		)
 		(stroke
 			(width 0)
 			(type default)
 		)
-		(uuid "faa52c75-3da9-4c83-9b45-f5357981cbe9")
+		(uuid "f3fa54a6-4c50-454b-94ec-02605aa6533c")
 	)
 	(global_label "VRef"
 		(shape input)
-		(at 245.11 140.335 180)
+		(at 235.585 140.335 180)
 		(fields_autoplaced yes)
 		(effects
 			(font
@@ -1564,13 +2048,81 @@
 		)
 		(uuid "6b272bb3-511e-48d5-bfbd-f258936b0683")
 		(property "Intersheetrefs" "${INTERSHEET_REFS}"
-			(at 237.9519 140.335 0)
+			(at 228.4269 140.335 0)
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
 				(justify right)
 				(hide yes)
+			)
+		)
+	)
+	(symbol
+		(lib_id "Switch:SW_SPST")
+		(at 142.24 34.925 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "050477b6-646d-40ab-b99f-bde580f5524b")
+		(property "Reference" "SW8"
+			(at 142.24 27.94 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "SW_SPST"
+			(at 142.24 30.48 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" ""
+			(at 142.24 34.925 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" "~"
+			(at 142.24 34.925 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" "Single Pole Single Throw (SPST) switch"
+			(at 142.24 34.925 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "a6c3dd5a-5d56-415d-b1da-9e36d974b898")
+		)
+		(pin "2"
+			(uuid "d167500a-3b86-473f-aab0-9288a68a7798")
+		)
+		(instances
+			(project ""
+				(path "/69b823fd-c065-40ff-9bb9-c5835555f3eb/120cc903-6d6c-4a77-ad9c-c9f63dede169"
+					(reference "SW8")
+					(unit 1)
+				)
 			)
 		)
 	)
@@ -1584,7 +2136,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "09ce5169-6538-4e30-9e3b-f916318b8bb1")
-		(property "Reference" "R5"
+		(property "Reference" "R62"
 			(at 251.46 147.9549 0)
 			(effects
 				(font
@@ -1638,7 +2190,7 @@
 		(instances
 			(project "ECE445L_Lab7"
 				(path "/69b823fd-c065-40ff-9bb9-c5835555f3eb/120cc903-6d6c-4a77-ad9c-c9f63dede169"
-					(reference "R5")
+					(reference "R62")
 					(unit 1)
 				)
 			)
@@ -1830,8 +2382,77 @@
 		)
 	)
 	(symbol
+		(lib_id "ECE445L:Testpoint")
+		(at 241.935 140.335 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(uuid "296de1a4-dd89-4d02-a09e-c4ae7183955f")
+		(property "Reference" "TP13"
+			(at 234.95 135.255 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Value" "+VRef"
+			(at 233.68 137.16 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Footprint" "ECE445L:Testpoint_1x02_P2.54mm"
+			(at 241.935 134.62 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" "~"
+			(at 241.935 140.335 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" "Testpoint"
+			(at 241.935 140.335 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "65007b1a-d5a7-4231-bd95-83d8a631efaf")
+		)
+		(pin "2"
+			(uuid "1ca669b8-6d7e-4ad5-97ae-30113b65552f")
+		)
+		(instances
+			(project "ECE445L_Lab7"
+				(path "/69b823fd-c065-40ff-9bb9-c5835555f3eb/120cc903-6d6c-4a77-ad9c-c9f63dede169"
+					(reference "TP13")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
 		(lib_id "power:+5V")
-		(at 28.575 29.845 0)
+		(at 28.575 27.94 0)
 		(unit 1)
 		(exclude_from_sim no)
 		(in_bom yes)
@@ -1840,7 +2461,7 @@
 		(fields_autoplaced yes)
 		(uuid "2c5fb34c-c9be-4197-848b-003cf2f139ce")
 		(property "Reference" "#PWR029"
-			(at 28.575 33.655 0)
+			(at 28.575 31.75 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -1848,16 +2469,17 @@
 				(hide yes)
 			)
 		)
-		(property "Value" "+VBat"
-			(at 28.575 25.4 0)
+		(property "Value" "+VRail"
+			(at 30.48 26.6699 0)
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
+				(justify left)
 			)
 		)
 		(property "Footprint" ""
-			(at 28.575 29.845 0)
+			(at 28.575 27.94 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -1866,7 +2488,7 @@
 			)
 		)
 		(property "Datasheet" ""
-			(at 28.575 29.845 0)
+			(at 28.575 27.94 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -1875,7 +2497,7 @@
 			)
 		)
 		(property "Description" "Power symbol creates a global label with name \"+5V\""
-			(at 28.575 29.845 0)
+			(at 28.575 27.94 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -1890,6 +2512,74 @@
 			(project "ECE445L_Lab7"
 				(path "/69b823fd-c065-40ff-9bb9-c5835555f3eb/120cc903-6d6c-4a77-ad9c-c9f63dede169"
 					(reference "#PWR029")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "power:PWR_FLAG")
+		(at 159.385 34.925 270)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "31ebe4c7-974f-41cd-9d97-f9a40b307425")
+		(property "Reference" "#FLG01"
+			(at 161.29 34.925 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Value" "PWR_FLAG"
+			(at 163.195 34.925 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+				(hide yes)
+			)
+		)
+		(property "Footprint" ""
+			(at 159.385 34.925 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" "~"
+			(at 159.385 34.925 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" "Special symbol for telling ERC where power comes from"
+			(at 159.385 34.925 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "bdc98ba4-29de-486b-8548-40a5f51019b7")
+		)
+		(instances
+			(project "ECE445L_Lab7"
+				(path "/69b823fd-c065-40ff-9bb9-c5835555f3eb/120cc903-6d6c-4a77-ad9c-c9f63dede169"
+					(reference "#FLG01")
 					(unit 1)
 				)
 			)
@@ -1971,7 +2661,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "4a58e3ee-15c5-40df-8de0-3bbf3e87f077")
-		(property "Reference" "R4"
+		(property "Reference" "R61"
 			(at 251.46 132.7149 0)
 			(effects
 				(font
@@ -2025,7 +2715,130 @@
 		(instances
 			(project "ECE445L_Lab7"
 				(path "/69b823fd-c065-40ff-9bb9-c5835555f3eb/120cc903-6d6c-4a77-ad9c-c9f63dede169"
-					(reference "R4")
+					(reference "R61")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "ECE445L:LM2937ET-3.3_NOPB")
+		(at 35.56 29.845 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "4e5ea00f-b072-420d-9e4b-06cfe5f64b20")
+		(property "Reference" "U4"
+			(at 48.26 22.86 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "LM2937ET-3.3_NOPB"
+			(at 48.26 25.4 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" "ECE445L:TO254P470X1028X1955-3P"
+			(at 57.15 124.765 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left top)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" "http://www.ti.com/general/docs/suppproductinfo.tsp?distId=10&gotoUrl=http%3A%2F%2Fwww.ti.com%2Flit%2Fgpn%2Flm2937"
+			(at 57.15 224.765 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left top)
+				(hide yes)
+			)
+		)
+		(property "Description" "400mA and 500mA Voltage Regulator"
+			(at 35.56 29.845 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Height" "4.7"
+			(at 57.15 424.765 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left top)
+				(hide yes)
+			)
+		)
+		(property "Mouser Part Number" "926-LM2937ET-3.3NOPB"
+			(at 57.15 524.765 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left top)
+				(hide yes)
+			)
+		)
+		(property "Mouser Price/Stock" "https://www.mouser.co.uk/ProductDetail/Texas-Instruments/LM2937ET-3.3-NOPB?qs=X1J7HmVL2ZEMUke2IfNR4w%3D%3D"
+			(at 57.15 624.765 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left top)
+				(hide yes)
+			)
+		)
+		(property "Manufacturer_Name" "Texas Instruments"
+			(at 57.15 724.765 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left top)
+				(hide yes)
+			)
+		)
+		(property "Manufacturer_Part_Number" "LM2937ET-3.3/NOPB"
+			(at 57.15 824.765 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left top)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "d7d5dfa1-3ebd-4b5b-9c0d-54b8659c1377")
+		)
+		(pin "3"
+			(uuid "88ffeae7-385a-4c83-b347-c5a41e83e560")
+		)
+		(pin "2"
+			(uuid "448bd508-81cd-4b27-b847-654ec5ea752e")
+		)
+		(instances
+			(project ""
+				(path "/69b823fd-c065-40ff-9bb9-c5835555f3eb/120cc903-6d6c-4a77-ad9c-c9f63dede169"
+					(reference "U4")
 					(unit 1)
 				)
 			)
@@ -2041,8 +2854,8 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "59671668-0193-4962-8358-6f56196eaaf5")
-		(property "Reference" "C11"
-			(at 32.385 37.4649 0)
+		(property "Reference" "C12"
+			(at 31.75 37.4649 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -2051,7 +2864,7 @@
 			)
 		)
 		(property "Value" "4.7u"
-			(at 32.385 40.0049 0)
+			(at 31.75 40.0049 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -2059,7 +2872,7 @@
 				(justify left)
 			)
 		)
-		(property "Footprint" "ECE445L:C_Axial_200mil"
+		(property "Footprint" "Capacitor_SMD:C_0805_2012Metric"
 			(at 29.5402 42.545 0)
 			(effects
 				(font
@@ -2095,7 +2908,146 @@
 		(instances
 			(project "ECE445L_Lab7"
 				(path "/69b823fd-c065-40ff-9bb9-c5835555f3eb/120cc903-6d6c-4a77-ad9c-c9f63dede169"
-					(reference "C11")
+					(reference "C12")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "ECE445L:Testpoint")
+		(at 72.39 31.75 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(uuid "79829cf5-6e01-46d2-bd17-8755005aa88d")
+		(property "Reference" "TP2"
+			(at 67.945 25.4 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Value" "3V3"
+			(at 66.675 27.94 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Footprint" "ECE445L:Testpoint_1x02_P2.54mm"
+			(at 72.39 26.035 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" "~"
+			(at 72.39 31.75 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" "Testpoint"
+			(at 72.39 31.75 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "c114bd05-5bb5-4d41-bf8c-4963fd9cf600")
+		)
+		(pin "2"
+			(uuid "3dbeec4d-9758-4012-87d9-23083f908477")
+		)
+		(instances
+			(project "ECE445L_Lab7"
+				(path "/69b823fd-c065-40ff-9bb9-c5835555f3eb/120cc903-6d6c-4a77-ad9c-c9f63dede169"
+					(reference "TP2")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "ECE445L:Testpoint")
+		(at 153.035 34.925 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "8331a4aa-4379-4797-a26a-642447f426b8")
+		(property "Reference" "TP1"
+			(at 156.21 30.1623 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Value" "+VRail"
+			(at 156.21 32.7023 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Footprint" "ECE445L:Testpoint_1x02_P2.54mm"
+			(at 153.035 29.21 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" "~"
+			(at 153.035 34.925 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" "Testpoint"
+			(at 153.035 34.925 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "f7915b78-95f9-4aee-bcd2-517b48f265b9")
+		)
+		(pin "2"
+			(uuid "e38e5668-8142-463e-929d-ec042db181b1")
+		)
+		(instances
+			(project ""
+				(path "/69b823fd-c065-40ff-9bb9-c5835555f3eb/120cc903-6d6c-4a77-ad9c-c9f63dede169"
+					(reference "TP1")
 					(unit 1)
 				)
 			)
@@ -2103,7 +3055,7 @@
 	)
 	(symbol
 		(lib_id "power:+5V")
-		(at 135.89 33.655 0)
+		(at 159.385 33.02 0)
 		(unit 1)
 		(exclude_from_sim no)
 		(in_bom yes)
@@ -2112,7 +3064,7 @@
 		(fields_autoplaced yes)
 		(uuid "93e2e0b0-7fa8-4a50-8b44-0e854b71d598")
 		(property "Reference" "#PWR077"
-			(at 135.89 37.465 0)
+			(at 159.385 36.83 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -2120,16 +3072,17 @@
 				(hide yes)
 			)
 		)
-		(property "Value" "+VBat"
-			(at 135.89 29.21 0)
+		(property "Value" "+VRail"
+			(at 161.29 31.7499 0)
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
+				(justify left)
 			)
 		)
 		(property "Footprint" ""
-			(at 135.89 33.655 0)
+			(at 159.385 33.02 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -2138,7 +3091,7 @@
 			)
 		)
 		(property "Datasheet" ""
-			(at 135.89 33.655 0)
+			(at 159.385 33.02 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -2147,7 +3100,7 @@
 			)
 		)
 		(property "Description" "Power symbol creates a global label with name \"+5V\""
-			(at 135.89 33.655 0)
+			(at 159.385 33.02 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -2309,7 +3262,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "d049b0b9-95a7-48c1-aa98-5b39151c52f0")
-		(property "Reference" "C13"
+		(property "Reference" "C14"
 			(at 82.55 37.4649 0)
 			(effects
 				(font
@@ -2327,7 +3280,7 @@
 				(justify left)
 			)
 		)
-		(property "Footprint" "ECE445L:C_Axial_200mil"
+		(property "Footprint" "Capacitor_SMD:C_0603_1608Metric"
 			(at 79.7052 42.545 0)
 			(effects
 				(font
@@ -2363,130 +3316,7 @@
 		(instances
 			(project "ECE445L_Lab7"
 				(path "/69b823fd-c065-40ff-9bb9-c5835555f3eb/120cc903-6d6c-4a77-ad9c-c9f63dede169"
-					(reference "C13")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
-		(lib_id "ECE445L:LP2950-33LPRE3")
-		(at 33.655 32.385 0)
-		(unit 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(dnp no)
-		(fields_autoplaced yes)
-		(uuid "d79577ff-8a22-4bf8-a4af-a14162867355")
-		(property "Reference" "U4"
-			(at 48.895 25.4 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Value" "LP2950-33LPRE3"
-			(at 48.895 27.94 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Footprint" "ECE445L:TL431CLPM"
-			(at 60.325 127.305 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left top)
-				(hide yes)
-			)
-		)
-		(property "Datasheet" "http://www.ti.com/lit/gpn/lp2950"
-			(at 60.325 227.305 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left top)
-				(hide yes)
-			)
-		)
-		(property "Description" "Adjustable Micropower Voltage Regulator With Shutdown"
-			(at 33.655 32.385 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Height" "9.34"
-			(at 60.325 427.305 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left top)
-				(hide yes)
-			)
-		)
-		(property "Mouser Part Number" "595-LP2950-33LPRE3"
-			(at 60.325 527.305 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left top)
-				(hide yes)
-			)
-		)
-		(property "Mouser Price/Stock" "https://www.mouser.co.uk/ProductDetail/Texas-Instruments/LP2950-33LPRE3?qs=iSMark9AYDUagDsOL8Eqdw%3D%3D"
-			(at 60.325 627.305 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left top)
-				(hide yes)
-			)
-		)
-		(property "Manufacturer_Name" "Texas Instruments"
-			(at 60.325 727.305 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left top)
-				(hide yes)
-			)
-		)
-		(property "Manufacturer_Part_Number" "LP2950-33LPRE3"
-			(at 60.325 827.305 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left top)
-				(hide yes)
-			)
-		)
-		(pin "1"
-			(uuid "c980c4ec-6e4b-4899-8b10-1f95824f2883")
-		)
-		(pin "2"
-			(uuid "0011cbae-8270-4f6f-bc22-3c4ebe378b52")
-		)
-		(pin "3"
-			(uuid "aeaf94f0-c906-48d2-acca-2f2a783c3759")
-		)
-		(instances
-			(project "ECE445L_Lab7"
-				(path "/69b823fd-c065-40ff-9bb9-c5835555f3eb/120cc903-6d6c-4a77-ad9c-c9f63dede169"
-					(reference "U4")
+					(reference "C14")
 					(unit 1)
 				)
 			)
@@ -2502,8 +3332,8 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "e01ebc45-1fca-4d55-8b41-a49a2881ef54")
-		(property "Reference" "C12"
-			(at 71.755 37.4649 0)
+		(property "Reference" "C13"
+			(at 71.12 37.4649 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -2512,7 +3342,7 @@
 			)
 		)
 		(property "Value" "4.7u"
-			(at 71.755 40.0049 0)
+			(at 71.12 40.0049 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -2520,7 +3350,7 @@
 				(justify left)
 			)
 		)
-		(property "Footprint" "ECE445L:C_Axial_200mil"
+		(property "Footprint" "Capacitor_SMD:C_0805_2012Metric"
 			(at 68.9102 42.545 0)
 			(effects
 				(font
@@ -2556,7 +3386,7 @@
 		(instances
 			(project "ECE445L_Lab7"
 				(path "/69b823fd-c065-40ff-9bb9-c5835555f3eb/120cc903-6d6c-4a77-ad9c-c9f63dede169"
-					(reference "C12")
+					(reference "C13")
 					(unit 1)
 				)
 			)
@@ -2704,7 +3534,7 @@
 		(fields_autoplaced yes)
 		(uuid "e79903e3-87a4-4c6b-b4ca-599e1cd7b684")
 		(property "Reference" "J3"
-			(at 125.73 28.575 0)
+			(at 125.73 29.21 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -2712,7 +3542,7 @@
 			)
 		)
 		(property "Value" "Barrel_Jack"
-			(at 125.73 31.115 0)
+			(at 125.73 31.75 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -2836,7 +3666,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "ed9a0c2e-6049-4502-afcb-7629e6138f2d")
-		(property "Reference" "R3"
+		(property "Reference" "R60"
 			(at 251.46 117.4749 0)
 			(effects
 				(font
@@ -2890,7 +3720,7 @@
 		(instances
 			(project "ECE445L_Lab7"
 				(path "/69b823fd-c065-40ff-9bb9-c5835555f3eb/120cc903-6d6c-4a77-ad9c-c9f63dede169"
-					(reference "R3")
+					(reference "R60")
 					(unit 1)
 				)
 			)
