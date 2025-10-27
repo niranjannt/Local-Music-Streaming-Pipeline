@@ -45,7 +45,6 @@ void Timer2A_Init(void(*task)(void), uint32_t period, uint32_t priority){
 // interrupts enabled in the main program after all devices initialized
 // vector number 39, interrupt number 23
   NVIC_EN0_R = 1<<23;           // 9) enable IRQ 23 in NVIC
-  TIMER2_CTL_R = 0x00000001;    // 10) enable timer2A
 }
 
 void Timer2A_Handler(void){
@@ -56,4 +55,8 @@ void Timer2A_Handler(void){
 void Timer2A_Stop(void){
   NVIC_DIS0_R = 1<<23;        // 9) disable interrupt 23 in NVIC
   TIMER2_CTL_R = 0x00000000;  // 10) disable timer2A
+}
+
+void Timer2A_Start() {
+    TIMER2_CTL_R = 0x00000001;
 }
