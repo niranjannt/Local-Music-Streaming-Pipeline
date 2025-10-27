@@ -52,6 +52,7 @@ int main(void){
 
   EnableInterrupts();
   while(1){
+      UpdateLCD();
    }
 }
    
