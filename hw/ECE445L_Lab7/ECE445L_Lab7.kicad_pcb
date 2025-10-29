@@ -12918,7 +12918,7 @@
 	(footprint "ECE445L:MountingHole_4_40"
 		(layer "F.Cu")
 		(uuid "6eaa09b0-40e5-4490-b2c5-1aa308f50669")
-		(at 320.294 194.818)
+		(at 319.024 195.072)
 		(descr "Mounting Hole 0.125in")
 		(tags "mounting hole 0.125in 4_40")
 		(property "Reference" "H4"
@@ -17769,7 +17769,7 @@
 	(footprint "ECE445L:MountingHole_4_40"
 		(layer "F.Cu")
 		(uuid "89bcbdbc-8f50-4b77-90ea-99cd4a32fe01")
-		(at 136.652 77.724)
+		(at 136.652 78.232)
 		(descr "Mounting Hole 0.125in")
 		(tags "mounting hole 0.125in 4_40")
 		(property "Reference" "H2"
@@ -21870,7 +21870,7 @@
 	(footprint "ECE445L:MountingHole_4_40"
 		(layer "F.Cu")
 		(uuid "a4279b39-4993-4fab-9e99-861a2d3bb829")
-		(at 135.636 195.326)
+		(at 136.652 195.072)
 		(descr "Mounting Hole 0.125in")
 		(tags "mounting hole 0.125in 4_40")
 		(property "Reference" "H1"
@@ -32455,7 +32455,7 @@
 	(footprint "ECE445L:MountingHole_4_40"
 		(layer "F.Cu")
 		(uuid "fbdc262a-daff-4bda-bf64-0a5581549ba2")
-		(at 319.278 78.486)
+		(at 319.024 78.232)
 		(descr "Mounting Hole 0.125in")
 		(tags "mounting hole 0.125in 4_40")
 		(property "Reference" "H3"
@@ -37606,50 +37606,6 @@
 			(fill no)
 			(layer "B.SilkS")
 			(uuid "d31f7b9b-2803-48c9-860a-0554ecb7fb4c")
-		)
-		(fp_circle
-			(center 12.43 23.86)
-			(end 12.43 22.36)
-			(stroke
-				(width 0.1)
-				(type default)
-			)
-			(fill no)
-			(layer "Edge.Cuts")
-			(uuid "c7453a47-91d2-4ad2-ab09-dca2ef0cd17f")
-		)
-		(fp_circle
-			(center 12.43 -22.14)
-			(end 12.43 -23.64)
-			(stroke
-				(width 0.1)
-				(type default)
-			)
-			(fill no)
-			(layer "Edge.Cuts")
-			(uuid "b7741549-0e69-4095-8f5f-9bc9ebce9df8")
-		)
-		(fp_circle
-			(center -10.57 23.86)
-			(end -10.57 22.36)
-			(stroke
-				(width 0.1)
-				(type default)
-			)
-			(fill no)
-			(layer "Edge.Cuts")
-			(uuid "965ea4bb-9cfc-4fba-ae55-695d56b1f80e")
-		)
-		(fp_circle
-			(center -10.57 -22.14)
-			(end -10.57 -23.64)
-			(stroke
-				(width 0.1)
-				(type default)
-			)
-			(fill no)
-			(layer "Edge.Cuts")
-			(uuid "cfdf39b9-9d82-4081-b1c4-32763fc6d7f9")
 		)
 		(fp_text user "GPIO13"
 			(at -11 -12.5 0)
