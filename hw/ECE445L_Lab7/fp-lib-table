@@ -1,0 +1,4 @@
+(fp_lib_table
+  (version 7)
+  (lib (name "ECE445L")(type "KiCad")(uri "C:/Users/ashto/Dev/ECE445L/lab-7-and-10-project-nnat/hw/Part Libraries/ECE445L.pretty")(options "")(descr ""))
+)

@@ -1639,6 +1639,12 @@
 		(uuid "b2793cb4-e3a8-4e4d-bf12-ff1bfe7946e6")
 	)
 	(junction
+		(at 226.695 112.395)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "b3bf3a97-744e-4141-97c1-3af94ff0e7bc")
+	)
+	(junction
 		(at 60.325 163.83)
 		(diameter 0)
 		(color 0 0 0 0)
@@ -1709,12 +1715,6 @@
 		(diameter 0)
 		(color 0 0 0 0)
 		(uuid "efe2ae0a-9b30-4084-b136-1087a2be1a8b")
-	)
-	(junction
-		(at 226.695 112.395)
-		(diameter 0)
-		(color 0 0 0 0)
-		(uuid "f36f041e-1546-4c24-a667-c46e8ff2bafd")
 	)
 	(junction
 		(at 247.015 146.05)
@@ -2220,16 +2220,6 @@
 	)
 	(wire
 		(pts
-			(xy 226.695 109.855) (xy 226.695 112.395)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "4451a97d-11e4-4a4e-b1ce-c78c2bc910c4")
-	)
-	(wire
-		(pts
 			(xy 92.71 104.775) (xy 92.71 107.315)
 		)
 		(stroke
@@ -2640,6 +2630,16 @@
 	)
 	(wire
 		(pts
+			(xy 226.695 99.695) (xy 226.695 102.235)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "79bb4f4e-488f-4e73-8a1b-ba9821ce93c7")
+	)
+	(wire
+		(pts
 			(xy 271.78 158.75) (xy 259.715 158.75)
 		)
 		(stroke
@@ -3000,16 +3000,6 @@
 	)
 	(wire
 		(pts
-			(xy 226.695 99.695) (xy 226.695 102.235)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "a42a95bb-6cc5-410a-8f52-7c28ba001b9c")
-	)
-	(wire
-		(pts
 			(xy 99.06 104.775) (xy 104.14 104.775)
 		)
 		(stroke
@@ -3177,6 +3167,16 @@
 			(type default)
 		)
 		(uuid "b8124483-2bd4-46d7-b745-b809cee551c6")
+	)
+	(wire
+		(pts
+			(xy 226.695 109.855) (xy 226.695 112.395)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "b9bbfab8-e6a2-4397-aaef-c00e8903c7dd")
 	)
 	(wire
 		(pts
@@ -4088,7 +4088,7 @@
 			)
 		)
 	)
-	(global_label "Vin"
+	(global_label "Vin_R"
 		(shape input)
 		(at 70.485 92.075 180)
 		(fields_autoplaced yes)
@@ -4100,7 +4100,7 @@
 		)
 		(uuid "298b2f96-9cae-4238-b489-468568fabb03")
 		(property "Intersheetrefs" "${INTERSHEET_REFS}"
-			(at 64.6574 92.075 0)
+			(at 62.4198 92.075 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -4374,7 +4374,7 @@
 			)
 		)
 	)
-	(global_label "Vin"
+	(global_label "Vin_R"
 		(shape input)
 		(at 20.955 38.1 180)
 		(fields_autoplaced yes)
@@ -4386,7 +4386,7 @@
 		)
 		(uuid "a02800fb-4def-4b57-89e0-b5631f815939")
 		(property "Intersheetrefs" "${INTERSHEET_REFS}"
-			(at 15.1274 38.1 0)
+			(at 12.8898 38.1 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -4616,7 +4616,7 @@
 			)
 		)
 	)
-	(global_label "Vin_L"
+	(global_label "Vin_R"
 		(shape input)
 		(at 21.59 151.765 180)
 		(fields_autoplaced yes)
@@ -4628,7 +4628,7 @@
 		)
 		(uuid "ef0117f1-38f4-4ec3-afe6-70d649874c9b")
 		(property "Intersheetrefs" "${INTERSHEET_REFS}"
-			(at 13.7667 151.765 0)
+			(at 13.5248 151.765 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -4840,7 +4840,7 @@
 				(justify right)
 			)
 		)
-		(property "Footprint" "Capacitor_SMD:C_0805_2012Metric"
+		(property "Footprint" "Capacitor_SMD:C_0603_1608Metric"
 			(at 167.9448 27.94 0)
 			(effects
 				(font
@@ -4909,7 +4909,7 @@
 				(justify right)
 			)
 		)
-		(property "Footprint" "Capacitor_SMD:C_0805_2012Metric"
+		(property "Footprint" "Capacitor_SMD:C_0603_1608Metric"
 			(at 148.8948 29.21 0)
 			(effects
 				(font
@@ -4976,7 +4976,7 @@
 				)
 			)
 		)
-		(property "Footprint" "Resistor_SMD:R_0805_2012Metric"
+		(property "Footprint" "Resistor_SMD:R_0603_1608Metric"
 			(at 100.838 111.125 90)
 			(effects
 				(font
@@ -5466,7 +5466,7 @@
 				(justify right)
 			)
 		)
-		(property "Footprint" "Capacitor_SMD:C_0805_2012Metric"
+		(property "Footprint" "Capacitor_SMD:C_0603_1608Metric"
 			(at 130.4798 29.21 0)
 			(effects
 				(font
@@ -5535,7 +5535,7 @@
 				(justify left)
 			)
 		)
-		(property "Footprint" "Resistor_SMD:R_0805_2012Metric"
+		(property "Footprint" "Resistor_SMD:R_0603_1608Metric"
 			(at 31.877 27.305 90)
 			(effects
 				(font
@@ -5813,7 +5813,7 @@
 				(justify left)
 			)
 		)
-		(property "Footprint" ""
+		(property "Footprint" "Resistor_SMD:R_0603_1608Metric"
 			(at 100.457 170.18 90)
 			(effects
 				(font
@@ -6470,7 +6470,7 @@
 				)
 			)
 		)
-		(property "Footprint" "Resistor_SMD:R_0805_2012Metric"
+		(property "Footprint" "Resistor_SMD:R_0603_1608Metric"
 			(at 52.197 170.18 90)
 			(effects
 				(font
@@ -6537,7 +6537,7 @@
 				)
 			)
 		)
-		(property "Footprint" "Resistor_SMD:R_0805_2012Metric"
+		(property "Footprint" "Resistor_SMD:R_0603_1608Metric"
 			(at 119.38 96.393 90)
 			(effects
 				(font
@@ -6736,7 +6736,7 @@
 				(justify left)
 			)
 		)
-		(property "Footprint" "Capacitor_SMD:C_0805_2012Metric"
+		(property "Footprint" "Capacitor_SMD:C_0603_1608Metric"
 			(at 36.5252 146.685 0)
 			(effects
 				(font
@@ -7052,7 +7052,7 @@
 				)
 			)
 		)
-		(property "Footprint" "Resistor_SMD:R_0805_2012Metric"
+		(property "Footprint" "Resistor_SMD:R_0603_1608Metric"
 			(at 41.275 153.543 90)
 			(effects
 				(font
@@ -7119,7 +7119,7 @@
 				)
 			)
 		)
-		(property "Footprint" "Resistor_SMD:R_0805_2012Metric"
+		(property "Footprint" "Resistor_SMD:R_0603_1608Metric"
 			(at 90.932 111.125 90)
 			(effects
 				(font
@@ -7163,7 +7163,7 @@
 	)
 	(symbol
 		(lib_id "Device:R")
-		(at 226.695 106.045 180)
+		(at 226.695 106.045 0)
 		(unit 1)
 		(exclude_from_sim no)
 		(in_bom yes)
@@ -7171,7 +7171,7 @@
 		(dnp no)
 		(uuid "729119ca-828c-4120-b167-80424e757795")
 		(property "Reference" "R24"
-			(at 224.155 107.95 90)
+			(at 229.235 104.14 90)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -7180,7 +7180,7 @@
 			)
 		)
 		(property "Value" "100k"
-			(at 226.695 108.585 90)
+			(at 226.695 103.505 90)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -7188,8 +7188,8 @@
 				(justify right)
 			)
 		)
-		(property "Footprint" "Resistor_SMD:R_0805_2012Metric"
-			(at 228.473 106.045 90)
+		(property "Footprint" "Resistor_SMD:R_0603_1608Metric"
+			(at 224.917 106.045 90)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -7323,7 +7323,7 @@
 				(justify right)
 			)
 		)
-		(property "Footprint" "Resistor_SMD:R_0805_2012Metric"
+		(property "Footprint" "Resistor_SMD:R_0603_1608Metric"
 			(at 47.498 33.02 90)
 			(effects
 				(font
@@ -7465,7 +7465,7 @@
 				)
 			)
 		)
-		(property "Footprint" "Resistor_SMD:R_0805_2012Metric"
+		(property "Footprint" "Resistor_SMD:R_0603_1608Metric"
 			(at 61.468 56.515 90)
 			(effects
 				(font
@@ -7532,7 +7532,7 @@
 				)
 			)
 		)
-		(property "Footprint" "Resistor_SMD:R_0805_2012Metric"
+		(property "Footprint" "Resistor_SMD:R_0603_1608Metric"
 			(at 175.26 134.493 90)
 			(effects
 				(font
@@ -7601,7 +7601,7 @@
 				(justify left)
 			)
 		)
-		(property "Footprint" ""
+		(property "Footprint" "Resistor_SMD:R_0603_1608Metric"
 			(at 110.49 177.673 90)
 			(effects
 				(font
@@ -7844,7 +7844,7 @@
 				)
 			)
 		)
-		(property "Footprint" "Resistor_SMD:R_0805_2012Metric"
+		(property "Footprint" "Resistor_SMD:R_0603_1608Metric"
 			(at 62.103 170.18 90)
 			(effects
 				(font
@@ -7977,7 +7977,7 @@
 				)
 			)
 		)
-		(property "Footprint" "Resistor_SMD:R_0805_2012Metric"
+		(property "Footprint" "Resistor_SMD:R_0603_1608Metric"
 			(at 175.26 123.698 90)
 			(effects
 				(font
@@ -8112,7 +8112,7 @@
 				(justify left)
 			)
 		)
-		(property "Footprint" "Capacitor_SMD:C_0805_2012Metric"
+		(property "Footprint" "Capacitor_SMD:C_0603_1608Metric"
 			(at 47.3202 168.91 0)
 			(effects
 				(font
@@ -8181,7 +8181,7 @@
 				(justify right)
 			)
 		)
-		(property "Footprint" "Resistor_SMD:R_0805_2012Metric"
+		(property "Footprint" "Resistor_SMD:R_0603_1608Metric"
 			(at 247.142 150.495 90)
 			(effects
 				(font
@@ -8320,7 +8320,7 @@
 				(justify right)
 			)
 		)
-		(property "Footprint" "Resistor_SMD:R_0805_2012Metric"
+		(property "Footprint" "Resistor_SMD:R_0603_1608Metric"
 			(at 47.498 51.435 90)
 			(effects
 				(font
@@ -8523,7 +8523,7 @@
 				)
 			)
 		)
-		(property "Footprint" "Capacitor_SMD:C_0805_2012Metric"
+		(property "Footprint" "Capacitor_SMD:C_0603_1608Metric"
 			(at 32.385 37.1348 0)
 			(effects
 				(font
@@ -8745,7 +8745,7 @@
 				(justify left)
 			)
 		)
-		(property "Footprint" "ECE445L:C_Axial_200mil"
+		(property "Footprint" "Capacitor_SMD:C_0603_1608Metric"
 			(at 263.8552 51.435 0)
 			(effects
 				(font
@@ -8967,7 +8967,7 @@
 				)
 			)
 		)
-		(property "Footprint" "Capacitor_SMD:C_0805_2012Metric"
+		(property "Footprint" "Capacitor_SMD:C_0603_1608Metric"
 			(at 44.45 37.1348 0)
 			(effects
 				(font
@@ -9036,7 +9036,7 @@
 				(justify right)
 			)
 		)
-		(property "Footprint" "Resistor_SMD:R_0805_2012Metric"
+		(property "Footprint" "Resistor_SMD:R_0603_1608Metric"
 			(at 228.6 126.238 90)
 			(effects
 				(font
@@ -9171,7 +9171,7 @@
 				(justify right)
 			)
 		)
-		(property "Footprint" "Resistor_SMD:R_0805_2012Metric"
+		(property "Footprint" "Resistor_SMD:R_0603_1608Metric"
 			(at 86.233 98.425 90)
 			(effects
 				(font
@@ -9457,7 +9457,7 @@
 				(justify right)
 			)
 		)
-		(property "Footprint" "Resistor_SMD:R_0805_2012Metric"
+		(property "Footprint" "Resistor_SMD:R_0603_1608Metric"
 			(at 219.583 134.62 90)
 			(effects
 				(font
@@ -9526,7 +9526,7 @@
 				(justify right)
 			)
 		)
-		(property "Footprint" "Resistor_SMD:R_0805_2012Metric"
+		(property "Footprint" "Resistor_SMD:R_0603_1608Metric"
 			(at 219.583 105.41 90)
 			(effects
 				(font
@@ -9680,7 +9680,7 @@
 				(justify right)
 			)
 		)
-		(property "Footprint" "Resistor_SMD:R_0805_2012Metric"
+		(property "Footprint" "Resistor_SMD:R_0603_1608Metric"
 			(at 233.68 110.617 90)
 			(effects
 				(font
@@ -9813,7 +9813,7 @@
 				)
 			)
 		)
-		(property "Footprint" "Resistor_SMD:R_0805_2012Metric"
+		(property "Footprint" "Resistor_SMD:R_0603_1608Metric"
 			(at 69.215 165.608 90)
 			(effects
 				(font
@@ -10175,7 +10175,7 @@
 				)
 			)
 		)
-		(property "Footprint" "Resistor_SMD:R_0805_2012Metric"
+		(property "Footprint" "Resistor_SMD:R_0603_1608Metric"
 			(at 175.895 112.903 90)
 			(effects
 				(font
@@ -10244,7 +10244,7 @@
 				(justify right)
 			)
 		)
-		(property "Footprint" "Capacitor_SMD:C_0805_2012Metric"
+		(property "Footprint" "Capacitor_SMD:C_0603_1608Metric"
 			(at 186.9948 27.94 0)
 			(effects
 				(font
@@ -10379,7 +10379,7 @@
 				(justify right)
 			)
 		)
-		(property "Footprint" "Resistor_SMD:R_0805_2012Metric"
+		(property "Footprint" "Resistor_SMD:R_0603_1608Metric"
 			(at 243.332 150.495 90)
 			(effects
 				(font
@@ -10511,7 +10511,7 @@
 				)
 			)
 		)
-		(property "Footprint" "Resistor_SMD:R_0805_2012Metric"
+		(property "Footprint" "Resistor_SMD:R_0603_1608Metric"
 			(at 51.562 56.515 90)
 			(effects
 				(font
@@ -10580,7 +10580,7 @@
 				(justify right)
 			)
 		)
-		(property "Footprint" "Resistor_SMD:R_0805_2012Metric"
+		(property "Footprint" "Resistor_SMD:R_0603_1608Metric"
 			(at 270.002 150.495 90)
 			(effects
 				(font
@@ -10799,7 +10799,7 @@
 				)
 			)
 		)
-		(property "Footprint" "Resistor_SMD:R_0805_2012Metric"
+		(property "Footprint" "Resistor_SMD:R_0603_1608Metric"
 			(at 68.58 51.943 90)
 			(effects
 				(font
@@ -10867,7 +10867,7 @@
 				)
 			)
 		)
-		(property "Footprint" "Resistor_SMD:R_0805_2012Metric"
+		(property "Footprint" "Resistor_SMD:R_0603_1608Metric"
 			(at 29.21 149.987 90)
 			(effects
 				(font
@@ -10936,7 +10936,7 @@
 				(justify right)
 			)
 		)
-		(property "Footprint" "Resistor_SMD:R_0805_2012Metric"
+		(property "Footprint" "Resistor_SMD:R_0603_1608Metric"
 			(at 257.937 150.495 90)
 			(effects
 				(font
@@ -11006,7 +11006,7 @@
 				(justify right)
 			)
 		)
-		(property "Footprint" "Capacitor_SMD:C_0805_2012Metric"
+		(property "Footprint" "Capacitor_SMD:C_0603_1608Metric"
 			(at 126.0348 97.79 0)
 			(effects
 				(font
@@ -11075,7 +11075,7 @@
 				(justify right)
 			)
 		)
-		(property "Footprint" "Resistor_SMD:R_0805_2012Metric"
+		(property "Footprint" "Resistor_SMD:R_0603_1608Metric"
 			(at 86.233 86.995 90)
 			(effects
 				(font
@@ -11218,7 +11218,7 @@
 				)
 			)
 		)
-		(property "Footprint" "Capacitor_SMD:C_0805_2012Metric"
+		(property "Footprint" "Capacitor_SMD:C_0603_1608Metric"
 			(at 80.645 91.1098 0)
 			(effects
 				(font
@@ -11351,7 +11351,7 @@
 				)
 			)
 		)
-		(property "Footprint" "Resistor_SMD:R_0805_2012Metric"
+		(property "Footprint" "Resistor_SMD:R_0603_1608Metric"
 			(at 107.95 106.553 90)
 			(effects
 				(font

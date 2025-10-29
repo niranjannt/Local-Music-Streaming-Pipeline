@@ -3989,6 +3989,131 @@
 			)
 			(embedded_fonts no)
 		)
+		(symbol "power:+5V"
+			(power)
+			(pin_numbers
+				(hide yes)
+			)
+			(pin_names
+				(offset 0)
+				(hide yes)
+			)
+			(exclude_from_sim no)
+			(in_bom yes)
+			(on_board yes)
+			(property "Reference" "#PWR"
+				(at 0 -3.81 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "Value" "+5V"
+				(at 0 3.556 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Footprint" ""
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "Datasheet" ""
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "Description" "Power symbol creates a global label with name \"+5V\""
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "ki_keywords" "global power"
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(symbol "+5V_0_1"
+				(polyline
+					(pts
+						(xy -0.762 1.27) (xy 0 2.54)
+					)
+					(stroke
+						(width 0)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy 0 2.54) (xy 0.762 1.27)
+					)
+					(stroke
+						(width 0)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy 0 0) (xy 0 2.54)
+					)
+					(stroke
+						(width 0)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+			)
+			(symbol "+5V_1_1"
+				(pin power_in line
+					(at 0 0 90)
+					(length 0)
+					(name "~"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "1"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+			)
+			(embedded_fonts no)
+		)
 		(symbol "power:GND"
 			(power)
 			(pin_numbers
@@ -4192,6 +4317,16 @@
 			(embedded_fonts no)
 		)
 	)
+	(text "Connect Directly to Wallwart "
+		(exclude_from_sim no)
+		(at 87.63 25.4 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+		)
+		(uuid "b06906c9-5a92-4d54-8090-452a4c2e91b3")
+	)
 	(text "Work on pinout"
 		(exclude_from_sim no)
 		(at 55.88 109.22 0)
@@ -4363,10 +4498,6 @@
 		(uuid "377f1614-4690-4ef1-a643-7918a0559ffd")
 	)
 	(no_connect
-		(at 68.58 89.535)
-		(uuid "3d154a9e-5900-4be8-992b-b499b6b4aaa7")
-	)
-	(no_connect
 		(at 68.58 47.625)
 		(uuid "50f151d1-145f-41d1-8c62-2beabc8e4b3f")
 	)
@@ -4393,6 +4524,10 @@
 	(no_connect
 		(at 99.06 36.195)
 		(uuid "7e861966-a9a9-4ea3-8803-eece4ef87759")
+	)
+	(no_connect
+		(at 99.06 89.535)
+		(uuid "8e044ff4-7271-4055-acee-991a509b24f0")
 	)
 	(no_connect
 		(at 59.055 128.27)
@@ -4616,13 +4751,13 @@
 	)
 	(wire
 		(pts
-			(xy 63.5 34.925) (xy 63.5 36.195)
+			(xy 55.88 86.995) (xy 55.88 89.535)
 		)
 		(stroke
 			(width 0)
 			(type default)
 		)
-		(uuid "1bce09d9-ee89-41e3-b50e-fac9a814dc10")
+		(uuid "1bf91049-c810-4e52-853e-72f38efabbcb")
 	)
 	(wire
 		(pts
@@ -4713,6 +4848,16 @@
 			(type default)
 		)
 		(uuid "259f8aba-0916-4b62-a861-bb323fbe07fb")
+	)
+	(wire
+		(pts
+			(xy 99.06 43.815) (xy 107.95 43.815)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "284888f7-2961-4532-8a50-1118c511c2f8")
 	)
 	(wire
 		(pts
@@ -4916,13 +5061,13 @@
 	)
 	(wire
 		(pts
-			(xy 113.665 89.535) (xy 113.665 87.63)
+			(xy 63.5 36.195) (xy 68.58 36.195)
 		)
 		(stroke
 			(width 0)
 			(type default)
 		)
-		(uuid "3eced684-b38c-4330-849a-277e187387d9")
+		(uuid "40b3b285-5169-4db1-a20e-1598a375dddd")
 	)
 	(wire
 		(pts
@@ -5063,6 +5208,16 @@
 			(type default)
 		)
 		(uuid "4d3f0c03-afa9-4b01-882e-eacd782bfdb0")
+	)
+	(wire
+		(pts
+			(xy 99.06 70.485) (xy 107.95 70.485)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "4f1e7861-89c5-4cb7-bb67-01eeb2e627b1")
 	)
 	(wire
 		(pts
@@ -5253,16 +5408,6 @@
 			(type default)
 		)
 		(uuid "67766997-de17-4007-b4a8-b9c2f3f45a29")
-	)
-	(wire
-		(pts
-			(xy 99.06 66.675) (xy 107.95 66.675)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "68c1675d-ea32-4e27-b6f3-2b3496bbb9b4")
 	)
 	(wire
 		(pts
@@ -5556,16 +5701,6 @@
 	)
 	(wire
 		(pts
-			(xy 99.06 43.815) (xy 107.95 43.815)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "89e11bf7-bfdc-4ba5-85bf-bd827217633a")
-	)
-	(wire
-		(pts
 			(xy 60.96 125.73) (xy 59.055 125.73)
 		)
 		(stroke
@@ -5593,16 +5728,6 @@
 			(type default)
 		)
 		(uuid "8c9a975e-83b0-43fb-9527-91b529a61735")
-	)
-	(wire
-		(pts
-			(xy 99.06 47.625) (xy 107.95 47.625)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "8d1ad0ea-9402-4d7d-949e-13ae08d55fa0")
 	)
 	(wire
 		(pts
@@ -5683,6 +5808,16 @@
 			(type default)
 		)
 		(uuid "930fc2b1-db56-4596-8c3f-1e3582d5366d")
+	)
+	(wire
+		(pts
+			(xy 63.5 34.29) (xy 63.5 36.195)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "94dd9053-b86c-4072-b6b5-7a92b9e48e5d")
 	)
 	(wire
 		(pts
@@ -5916,16 +6051,6 @@
 	)
 	(wire
 		(pts
-			(xy 113.665 89.535) (xy 99.06 89.535)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "b5437cf7-febf-4016-b1fa-0d7a55b57c4d")
-	)
-	(wire
-		(pts
 			(xy 19.05 148.59) (xy 23.495 148.59)
 		)
 		(stroke
@@ -6066,16 +6191,6 @@
 	)
 	(wire
 		(pts
-			(xy 99.06 70.485) (xy 107.95 70.485)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "c97a924b-e5cb-4531-8ae5-6dc7853059f9")
-	)
-	(wire
-		(pts
 			(xy 181.61 131.445) (xy 181.61 135.255)
 		)
 		(stroke
@@ -6176,6 +6291,16 @@
 	)
 	(wire
 		(pts
+			(xy 99.06 47.625) (xy 107.95 47.625)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "d89ddff1-7e99-480a-bd44-4f02cfd4d66f")
+	)
+	(wire
+		(pts
 			(xy 217.17 90.805) (xy 217.17 100.965)
 		)
 		(stroke
@@ -6203,16 +6328,6 @@
 			(type default)
 		)
 		(uuid "db091b30-7fed-457a-99a0-e9a5f8629a08")
-	)
-	(wire
-		(pts
-			(xy 63.5 36.195) (xy 68.58 36.195)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "dbbabf5a-df0e-4b11-8bf4-782ae58b07c9")
 	)
 	(wire
 		(pts
@@ -6393,6 +6508,26 @@
 			(type default)
 		)
 		(uuid "f3a023ae-b114-4dc0-adc7-127d61f9f811")
+	)
+	(wire
+		(pts
+			(xy 99.06 66.675) (xy 107.95 66.675)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "f4f30c91-fedb-473e-b8c2-9b4296ba828c")
+	)
+	(wire
+		(pts
+			(xy 55.88 89.535) (xy 68.58 89.535)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "f67a752c-275b-4f07-99a0-74ab1400a8a2")
 	)
 	(wire
 		(pts
@@ -6734,28 +6869,6 @@
 			)
 		)
 	)
-	(global_label "ESP_OUT_USB_IN"
-		(shape input)
-		(at 107.95 47.625 0)
-		(fields_autoplaced yes)
-		(effects
-			(font
-				(size 1.27 1.27)
-			)
-			(justify left)
-		)
-		(uuid "0f0a4e8d-87a4-4170-8d60-42701c2fd775")
-		(property "Intersheetrefs" "${INTERSHEET_REFS}"
-			(at 126.8404 47.625 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left)
-				(hide yes)
-			)
-		)
-	)
 	(global_label "LAUDIO_CLK"
 		(shape input)
 		(at 63.5 81.915 180)
@@ -6778,7 +6891,7 @@
 			)
 		)
 	)
-	(global_label "ESP_IN_USB_OUT"
+	(global_label "ESP_OUT_USB_IN"
 		(shape input)
 		(at 116.205 178.435 180)
 		(fields_autoplaced yes)
@@ -6976,6 +7089,28 @@
 			)
 		)
 	)
+	(global_label "TM4C_OUT_ESP_IN"
+		(shape input)
+		(at 107.95 47.625 0)
+		(fields_autoplaced yes)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left)
+		)
+		(uuid "344d0f52-6644-490e-a455-b8dbe23cbc7a")
+		(property "Intersheetrefs" "${INTERSHEET_REFS}"
+			(at 127.9289 47.625 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+				(hide yes)
+			)
+		)
+	)
 	(global_label "PA6"
 		(shape passive)
 		(at 181.61 135.255 270)
@@ -7082,6 +7217,50 @@
 					(size 1.27 1.27)
 				)
 				(justify right)
+				(hide yes)
+			)
+		)
+	)
+	(global_label "TM4C_IN_ESP_OUT"
+		(shape input)
+		(at 107.95 43.815 0)
+		(fields_autoplaced yes)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left)
+		)
+		(uuid "413e0e2d-1e7f-4d64-9c4c-8ea371a02cbe")
+		(property "Intersheetrefs" "${INTERSHEET_REFS}"
+			(at 127.9289 43.815 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+				(hide yes)
+			)
+		)
+	)
+	(global_label "ESP_OUT_USB_IN"
+		(shape input)
+		(at 107.95 70.485 0)
+		(fields_autoplaced yes)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left)
+		)
+		(uuid "45cca177-cadd-4248-bb48-1deb8c4fad6f")
+		(property "Intersheetrefs" "${INTERSHEET_REFS}"
+			(at 126.8404 70.485 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
 				(hide yes)
 			)
 		)
@@ -7341,6 +7520,28 @@
 		(uuid "6d1355ea-20af-4455-bf01-70dc90605b36")
 		(property "Intersheetrefs" "${INTERSHEET_REFS}"
 			(at 181.61 33.1116 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+				(hide yes)
+			)
+		)
+	)
+	(global_label "ESP_IN_USB_OUT"
+		(shape input)
+		(at 107.95 66.675 0)
+		(fields_autoplaced yes)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left)
+		)
+		(uuid "70702af7-2c03-457c-a78d-0037ba720067")
+		(property "Intersheetrefs" "${INTERSHEET_REFS}"
+			(at 126.8404 66.675 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -7627,28 +7828,6 @@
 		(uuid "9818dc85-6d0e-4cb8-9060-08dd5807a161")
 		(property "Intersheetrefs" "${INTERSHEET_REFS}"
 			(at 220.2534 78.105 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left)
-				(hide yes)
-			)
-		)
-	)
-	(global_label "ESP_IN_USB_OUT"
-		(shape input)
-		(at 107.95 43.815 0)
-		(fields_autoplaced yes)
-		(effects
-			(font
-				(size 1.27 1.27)
-			)
-			(justify left)
-		)
-		(uuid "9b8c8a98-defe-4bcd-b581-25256edf67dd")
-		(property "Intersheetrefs" "${INTERSHEET_REFS}"
-			(at 126.8404 43.815 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -7966,28 +8145,6 @@
 			)
 		)
 	)
-	(global_label "TM4C_IN_ESP_OUT"
-		(shape input)
-		(at 107.95 66.675 0)
-		(fields_autoplaced yes)
-		(effects
-			(font
-				(size 1.27 1.27)
-			)
-			(justify left)
-		)
-		(uuid "d362ffc7-31bc-4602-8b16-1d62a8fb7999")
-		(property "Intersheetrefs" "${INTERSHEET_REFS}"
-			(at 127.9289 66.675 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left)
-				(hide yes)
-			)
-		)
-	)
 	(global_label "PB6"
 		(shape passive)
 		(at 156.21 67.945 180)
@@ -8028,28 +8185,6 @@
 					(size 1.27 1.27)
 				)
 				(justify right)
-				(hide yes)
-			)
-		)
-	)
-	(global_label "TM4C_OUT_ESP_IN"
-		(shape input)
-		(at 107.95 70.485 0)
-		(fields_autoplaced yes)
-		(effects
-			(font
-				(size 1.27 1.27)
-			)
-			(justify left)
-		)
-		(uuid "d5ce31c2-060d-4c9a-9290-5687c6b7acd4")
-		(property "Intersheetrefs" "${INTERSHEET_REFS}"
-			(at 127.9289 70.485 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left)
 				(hide yes)
 			)
 		)
@@ -8546,7 +8681,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "0f8ee47d-e130-40ee-abdd-2821f7f8a8b2")
-		(property "Reference" "SW7"
+		(property "Reference" "SW8"
 			(at 234.95 117.4749 90)
 			(effects
 				(font
@@ -8600,7 +8735,7 @@
 		(instances
 			(project "ECE445L_Lab7"
 				(path "/69b823fd-c065-40ff-9bb9-c5835555f3eb/c4445928-c95f-4ef5-82c7-58ae1ba9c5bb"
-					(reference "SW7")
+					(reference "SW8")
 					(unit 1)
 				)
 			)
@@ -8631,7 +8766,7 @@
 				)
 			)
 		)
-		(property "Footprint" "ECE445L:C_Axial_200mil"
+		(property "Footprint" "Capacitor_SMD:C_0603_1608Metric"
 			(at 241.3 91.1098 0)
 			(effects
 				(font
@@ -8830,7 +8965,7 @@
 				(justify left)
 			)
 		)
-		(property "Footprint" "ECE445L:C_Axial_200mil"
+		(property "Footprint" "Capacitor_SMD:C_0603_1608Metric"
 			(at 144.4752 102.235 0)
 			(effects
 				(font
@@ -8899,7 +9034,7 @@
 				(justify left)
 			)
 		)
-		(property "Footprint" "ECE445L:CP_Radial_Tantal200mil"
+		(property "Footprint" "Capacitor_SMD:C_1206_3216Metric"
 			(at 175.26 26.035 0)
 			(effects
 				(font
@@ -9262,7 +9397,7 @@
 				(justify left)
 			)
 		)
-		(property "Footprint" "ECE445L:R_Axial_DIN0204_L3.6mm_D1.6mm_P7.62mm_Horizontal"
+		(property "Footprint" "Resistor_SMD:R_0603_1608Metric"
 			(at 233.68 108.585 0)
 			(effects
 				(font
@@ -9331,7 +9466,7 @@
 				(justify left)
 			)
 		)
-		(property "Footprint" "ECE445L:R_Axial_DIN0204_L3.6mm_D1.6mm_P7.62mm_Horizontal"
+		(property "Footprint" "Resistor_SMD:R_0603_1608Metric"
 			(at 209.55 127.635 0)
 			(effects
 				(font
@@ -9400,7 +9535,7 @@
 				(justify left)
 			)
 		)
-		(property "Footprint" "ECE445L:C_Axial_200mil"
+		(property "Footprint" "Capacitor_SMD:C_0603_1608Metric"
 			(at 190.1952 29.845 0)
 			(effects
 				(font
@@ -9592,7 +9727,7 @@
 				(justify left)
 			)
 		)
-		(property "Footprint" "ECE445L:C_Axial_200mil"
+		(property "Footprint" "Capacitor_SMD:C_0603_1608Metric"
 			(at 263.8552 88.265 0)
 			(effects
 				(font
@@ -9965,7 +10100,7 @@
 				)
 			)
 		)
-		(property "Footprint" ""
+		(property "Footprint" "ECE445L:ESP32_30pin"
 			(at 83.82 62.865 0)
 			(effects
 				(font
@@ -10183,7 +10318,7 @@
 				(justify left)
 			)
 		)
-		(property "Footprint" "ECE445L:C_Axial_200mil"
+		(property "Footprint" "Capacitor_SMD:C_0603_1608Metric"
 			(at 174.9552 154.305 0)
 			(effects
 				(font
@@ -10251,7 +10386,7 @@
 				)
 			)
 		)
-		(property "Footprint" ""
+		(property "Footprint" "Connector_PinHeader_1.00mm:PinHeader_1x04_P1.00mm_Vertical"
 			(at 127 174.625 0)
 			(effects
 				(font
@@ -10522,7 +10657,7 @@
 				(justify left)
 			)
 		)
-		(property "Footprint" "ECE445L:C_Axial_200mil"
+		(property "Footprint" "Capacitor_SMD:C_0603_1608Metric"
 			(at 183.8452 29.845 0)
 			(effects
 				(font
@@ -10654,7 +10789,7 @@
 				)
 			)
 		)
-		(property "Footprint" "ECE445L:C_Axial_200mil"
+		(property "Footprint" "Capacitor_SMD:C_0603_1608Metric"
 			(at 241.3 80.9498 0)
 			(effects
 				(font
@@ -10957,16 +11092,16 @@
 		)
 	)
 	(symbol
-		(lib_id "power:+3V3")
-		(at 113.665 87.63 0)
+		(lib_id "power:+5V")
+		(at 63.5 34.29 0)
 		(unit 1)
 		(exclude_from_sim no)
 		(in_bom yes)
 		(on_board yes)
 		(dnp no)
-		(uuid "9dfb055c-a9d0-4e4c-b645-ca64b109633e")
-		(property "Reference" "#PWR069"
-			(at 113.665 91.44 0)
+		(uuid "a0d9677b-bb12-4453-a00e-76ada4394e0a")
+		(property "Reference" "#PWR074"
+			(at 63.5 38.1 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -10975,15 +11110,16 @@
 			)
 		)
 		(property "Value" "+3V3"
-			(at 113.665 83.82 0)
+			(at 55.88 33.02 0)
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
+				(justify left)
 			)
 		)
 		(property "Footprint" ""
-			(at 113.665 87.63 0)
+			(at 63.5 34.29 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -10992,7 +11128,7 @@
 			)
 		)
 		(property "Datasheet" ""
-			(at 113.665 87.63 0)
+			(at 63.5 34.29 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -11000,8 +11136,8 @@
 				(hide yes)
 			)
 		)
-		(property "Description" "Power symbol creates a global label with name \"+3V3\""
-			(at 113.665 87.63 0)
+		(property "Description" "Power symbol creates a global label with name \"+5V\""
+			(at 63.5 34.29 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -11010,12 +11146,12 @@
 			)
 		)
 		(pin "1"
-			(uuid "882a3368-1b14-4c73-8217-892a1d18a0a9")
+			(uuid "4df67f54-31d1-4a4e-9a18-a501de5c5dfe")
 		)
 		(instances
 			(project "ECE445L_Lab7"
 				(path "/69b823fd-c065-40ff-9bb9-c5835555f3eb/c4445928-c95f-4ef5-82c7-58ae1ba9c5bb"
-					(reference "#PWR069")
+					(reference "#PWR074")
 					(unit 1)
 				)
 			)
@@ -11048,7 +11184,7 @@
 				(justify left)
 			)
 		)
-		(property "Footprint" "ECE445L:C_Axial_200mil"
+		(property "Footprint" "Capacitor_SMD:C_0603_1608Metric"
 			(at 190.1952 154.305 0)
 			(effects
 				(font
@@ -11460,7 +11596,7 @@
 				(justify left)
 			)
 		)
-		(property "Footprint" "ECE445L:C_Axial_200mil"
+		(property "Footprint" "Capacitor_SMD:C_0603_1608Metric"
 			(at 143.2052 75.565 0)
 			(effects
 				(font
@@ -11562,6 +11698,72 @@
 			(project "ECE445L_Lab7"
 				(path "/69b823fd-c065-40ff-9bb9-c5835555f3eb/c4445928-c95f-4ef5-82c7-58ae1ba9c5bb"
 					(reference "#PWR070")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "power:+5V")
+		(at 55.88 86.995 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(uuid "d0ded89e-fdc0-4142-83e9-68f60409ff32")
+		(property "Reference" "#PWR069"
+			(at 55.88 90.805 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Value" "+VRail"
+			(at 48.26 85.725 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Footprint" ""
+			(at 55.88 86.995 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" ""
+			(at 55.88 86.995 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" "Power symbol creates a global label with name \"+5V\""
+			(at 55.88 86.995 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "05905fbe-6d02-42ac-b9c2-b200ba2944c2")
+		)
+		(instances
+			(project "ECE445L_Lab7"
+				(path "/69b823fd-c065-40ff-9bb9-c5835555f3eb/c4445928-c95f-4ef5-82c7-58ae1ba9c5bb"
+					(reference "#PWR069")
 					(unit 1)
 				)
 			)
@@ -11855,7 +12057,7 @@
 				(justify left)
 			)
 		)
-		(property "Footprint" "ECE445L:C_Axial_200mil"
+		(property "Footprint" "Capacitor_SMD:C_0603_1608Metric"
 			(at 183.8452 154.305 0)
 			(effects
 				(font
@@ -11892,71 +12094,6 @@
 			(project "ECE445L_Lab7"
 				(path "/69b823fd-c065-40ff-9bb9-c5835555f3eb/c4445928-c95f-4ef5-82c7-58ae1ba9c5bb"
 					(reference "C2")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
-		(lib_id "power:+3V3")
-		(at 63.5 34.925 0)
-		(unit 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(dnp no)
-		(uuid "f01fd38e-f12f-4c69-a26b-d578770e866c")
-		(property "Reference" "#PWR074"
-			(at 63.5 38.735 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Value" "+3V3"
-			(at 63.5 31.115 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Footprint" ""
-			(at 63.5 34.925 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Datasheet" ""
-			(at 63.5 34.925 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Description" "Power symbol creates a global label with name \"+3V3\""
-			(at 63.5 34.925 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(pin "1"
-			(uuid "9b09714a-da40-434d-9996-889cfd5e4815")
-		)
-		(instances
-			(project "ECE445L_Lab7"
-				(path "/69b823fd-c065-40ff-9bb9-c5835555f3eb/c4445928-c95f-4ef5-82c7-58ae1ba9c5bb"
-					(reference "#PWR074")
 					(unit 1)
 				)
 			)

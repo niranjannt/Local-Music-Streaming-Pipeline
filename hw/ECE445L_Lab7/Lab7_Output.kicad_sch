@@ -2401,7 +2401,7 @@
 				(justify left)
 			)
 		)
-		(property "Footprint" "ECE445L:C_Axial_200mil"
+		(property "Footprint" "Capacitor_SMD:C_0603_1608Metric"
 			(at 190.8302 55.245 0)
 			(effects
 				(font
@@ -2605,7 +2605,7 @@
 				(justify left)
 			)
 		)
-		(property "Footprint" "ECE445L:C_Axial_200mil"
+		(property "Footprint" "Capacitor_SMD:C_0603_1608Metric"
 			(at 181.3052 55.245 0)
 			(effects
 				(font
@@ -2747,7 +2747,7 @@
 				(justify right)
 			)
 		)
-		(property "Footprint" "Resistor_SMD:R_0805_2012Metric"
+		(property "Footprint" "Resistor_SMD:R_0603_1608Metric"
 			(at 29.972 80.645 90)
 			(effects
 				(font
@@ -2904,7 +2904,7 @@
 				(justify right)
 			)
 		)
-		(property "Footprint" "Resistor_SMD:R_0805_2012Metric"
+		(property "Footprint" "Resistor_SMD:R_0603_1608Metric"
 			(at 42.672 80.645 90)
 			(effects
 				(font
@@ -2973,7 +2973,7 @@
 				(justify right)
 			)
 		)
-		(property "Footprint" "Resistor_SMD:R_0805_2012Metric"
+		(property "Footprint" "Resistor_SMD:R_0603_1608Metric"
 			(at 39.37 31.877 90)
 			(effects
 				(font
@@ -3245,7 +3245,7 @@
 				(justify right)
 			)
 		)
-		(property "Footprint" "Resistor_SMD:R_0805_2012Metric"
+		(property "Footprint" "Resistor_SMD:R_0603_1608Metric"
 			(at 38.735 52.832 90)
 			(effects
 				(font
