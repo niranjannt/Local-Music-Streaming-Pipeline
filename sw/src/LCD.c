@@ -27,3 +27,11 @@ void InitLCD() {
 void UpdateLCD() {
 
 }
+
+
+void ADC_Init(){
+
+
+
+    
+}

@@ -137,7 +137,7 @@
             <DriverSelection>4097</DriverSelection>
           </Flash1>
           <bUseTDR>1</bUseTDR>
-          <Flash2>BIN\lmidk-agdi.dll</Flash2>
+          <Flash2>BIN\UL2CM3.DLL</Flash2>
           <Flash3></Flash3>
           <Flash4></Flash4>
           <pFcarmOut></pFcarmOut>
@@ -390,21 +390,6 @@
               <FilePath>.\startup.s</FilePath>
             </File>
             <File>
-              <FileName>Lab5.c</FileName>
-              <FileType>1</FileType>
-              <FilePath>.\Lab5.c</FilePath>
-            </File>
-            <File>
-              <FileName>music.c</FileName>
-              <FileType>1</FileType>
-              <FilePath>.\music.c</FilePath>
-            </File>
-            <File>
-              <FileName>mailbox.c</FileName>
-              <FileType>1</FileType>
-              <FilePath>.\mailbox.c</FilePath>
-            </File>
-            <File>
               <FileName>Switch.c</FileName>
               <FileType>1</FileType>
               <FilePath>.\Switch.c</FilePath>
@@ -428,6 +413,11 @@
               <FileName>SysTickInts.c</FileName>
               <FileType>1</FileType>
               <FilePath>..\inc\SysTickInts.c</FilePath>
+            </File>
+            <File>
+              <FileName>Visualizer.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>.\Visualizer.c</FilePath>
             </File>
           </Files>
         </Group>

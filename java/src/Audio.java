@@ -31,7 +31,7 @@ public class Audio {
         FileInputStream wavInputStream = new FileInputStream(wavFile);
         setAudioFormat(wavInputStream);
         audioInputStream = new AudioInputStream(wavInputStream, audioFormat, wavFile.length());
-        serialPort = new SerialPort("/dev/cu.usbserial-A106DAXQ");       //mac dependent if running on windows find your port
+        serialPort = new SerialPort("COM12");       //mac dependent if running on windows find your port
 
         bytesPerSample = audioFormat.getSampleSizeInBits() / 8;
         shiftAmount = audioFormat.getSampleSizeInBits() - 14;
@@ -147,7 +147,7 @@ public class Audio {
         try {
             this.serialPort.openPort();
             this.serialPort.setParams(
-                    3_000_000,
+                    2_000_000,
                     SerialPort.DATABITS_8,
                     SerialPort.STOPBITS_1,
                     SerialPort.PARITY_NONE);
