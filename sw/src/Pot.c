@@ -9,7 +9,7 @@
 /*
  * AIN0 - PE3 - Flanger0
  * AIN1 - PE2 - Flanger1
- * AIN2 - PE1 - Distortion
+ * AIN2 - PE1 - Disactitortion
  * AIN3 - PE0 - Bass In
  * AIN4 - PD3 - Bass Volume
  * AIN5 - PD2 - Mid Volume

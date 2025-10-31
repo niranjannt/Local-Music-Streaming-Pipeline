@@ -95,7 +95,7 @@ public class Audio {
                 encoding = AudioFormat.Encoding.ULAW;
                 break;
             default:
-                System.out.println("Unhandled case");
+                System.out.println("Unhandled case: " + format);
         }
 
         byte[] numChannelsArr = new byte[2];
@@ -184,6 +184,7 @@ public class Audio {
         10 - Left channel data
      */
     private void sendInitData() throws IOException {
+        System.out.println("sending init data");
         channel = false;
         byte[] data = new byte[bytesPerSample];
         for (int i = 0; i < 1000; i++) {
