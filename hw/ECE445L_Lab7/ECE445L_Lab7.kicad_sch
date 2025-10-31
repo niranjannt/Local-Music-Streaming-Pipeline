@@ -6,9 +6,10 @@
 	(paper "A4")
 	(title_block
 		(title "ECE 445L Lab7")
-		(date "2025-01-13")
+		(date "2025-10-31")
 		(rev "v1.0.0")
 		(company "The University of Texas at Austin")
+		(comment 1 "Drawn By Ashton Knecht - atk836")
 	)
 	(lib_symbols
 		(symbol "ECE445L:MountingHole"
