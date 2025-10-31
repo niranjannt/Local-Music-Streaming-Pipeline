@@ -1,0 +1,143 @@
+(footprint "P120PK-Y25BR10K"
+	(version 20241229)
+	(generator "pcbnew")
+	(generator_version "9.0")
+	(layer "F.Cu")
+	(property "Reference" "REF**"
+		(at 0 -14 0)
+		(unlocked yes)
+		(layer "F.SilkS")
+		(uuid "97364e4f-5eb4-4814-8f29-b1c7a35538f3")
+		(effects
+			(font
+				(size 1 1)
+				(thickness 0.1)
+			)
+		)
+	)
+	(property "Value" "P120PK-Y25BR10K"
+		(at 0 -2.5 0)
+		(unlocked yes)
+		(layer "F.Fab")
+		(uuid "b925a007-07bf-48a0-9d8f-f2be4ad9bc37")
+		(effects
+			(font
+				(size 1 1)
+				(thickness 0.15)
+			)
+		)
+	)
+	(property "Datasheet" ""
+		(at 0 0 0)
+		(unlocked yes)
+		(layer "F.Fab")
+		(hide yes)
+		(uuid "f4928416-e6a1-44ee-bf50-25a2249712c9")
+		(effects
+			(font
+				(size 1 1)
+				(thickness 0.15)
+			)
+		)
+	)
+	(property "Description" ""
+		(at 0 0 0)
+		(unlocked yes)
+		(layer "F.Fab")
+		(hide yes)
+		(uuid "a3dcfc11-ed4a-4dfe-970a-1b3685fd1008")
+		(effects
+			(font
+				(size 1 1)
+				(thickness 0.15)
+			)
+		)
+	)
+	(attr through_hole)
+	(fp_rect
+		(start -8.5 -14)
+		(end 8.5 3)
+		(stroke
+			(width 0.05)
+			(type default)
+		)
+		(fill no)
+		(layer "B.CrtYd")
+		(uuid "01ddc6b8-839c-4c54-82a8-359d06c009ab")
+	)
+	(fp_rect
+		(start -8.5 -14)
+		(end 8.5 3)
+		(stroke
+			(width 0.05)
+			(type default)
+		)
+		(fill no)
+		(layer "F.CrtYd")
+		(uuid "d73380c6-43ab-40b3-9e9b-9898418d1ef6")
+	)
+	(fp_text user "${REFERENCE}"
+		(at 0 -5.5 0)
+		(unlocked yes)
+		(layer "F.Fab")
+		(uuid "66574cf8-a26a-43b1-8b20-edbd1439d43b")
+		(effects
+			(font
+				(size 1 1)
+				(thickness 0.15)
+			)
+		)
+	)
+	(pad "1" thru_hole circle
+		(at -3.75 0)
+		(size 2 2)
+		(drill 1.2)
+		(layers "*.Cu" "*.Mask")
+		(remove_unused_layers no)
+		(uuid "1f0f37c0-d969-43bd-b3a4-b0c1d5eece23")
+	)
+	(pad "2" thru_hole circle
+		(at 0 0)
+		(size 2 2)
+		(drill 1.2)
+		(layers "*.Cu" "*.Mask")
+		(remove_unused_layers no)
+		(uuid "6c92e7aa-7507-44b8-90ef-4faa5d7350bc")
+	)
+	(pad "3" thru_hole circle
+		(at 3.75 0)
+		(size 2 2)
+		(drill 1.2)
+		(layers "*.Cu" "*.Mask")
+		(remove_unused_layers no)
+		(uuid "3cfbe04b-cbe8-47dd-a64f-532ff4c34c77")
+	)
+	(pad "4" thru_hole oval
+		(at -5.1 -10)
+		(size 2.8 3.8)
+		(drill oval 2 3)
+		(layers "*.Cu" "*.Mask")
+		(remove_unused_layers no)
+		(uuid "99656091-7653-4f2b-b4a3-a130c4ec5893")
+	)
+	(pad "5" thru_hole oval
+		(at 5.1 -10)
+		(size 2.8 3.8)
+		(drill oval 2 3)
+		(layers "*.Cu" "*.Mask")
+		(remove_unused_layers no)
+		(uuid "29989341-6616-4ff6-89a5-a3195a93ece0")
+	)
+	(embedded_fonts no)
+	(model "C:/Users/ashto/Dev/ECE445L/lab-7-and-10-project-nnat/hw/Part Libraries/models/P120PK-Y25BR10K.stp"
+		(offset
+			(xyz 0 10 9.25)
+		)
+		(scale
+			(xyz 1 1 1)
+		)
+		(rotate
+			(xyz -90 -0 -180)
+		)
+	)
+)

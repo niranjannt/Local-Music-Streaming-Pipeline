@@ -4,6 +4,13 @@
 	(generator_version "9.0")
 	(uuid "6ae75f33-8ca1-464e-b5e7-f90dd0f418b3")
 	(paper "A4")
+	(title_block
+		(title "ECE 445L Lab7")
+		(date "2025-10-31")
+		(rev "v1.0.0")
+		(company "The University of Texas at Austin")
+		(comment 1 "Drawn By Ashton Knecht - atk836")
+	)
 	(lib_symbols
 		(symbol "Device:R"
 			(pin_numbers
@@ -777,141 +784,6 @@
 			)
 			(embedded_fonts no)
 		)
-		(symbol "ECE445L:Testpoint"
-			(pin_names
-				(offset 0)
-				(hide yes)
-			)
-			(exclude_from_sim no)
-			(in_bom yes)
-			(on_board yes)
-			(property "Reference" "TP"
-				(at 0 2.794 0)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-				)
-			)
-			(property "Value" "TP"
-				(at 0 -2.286 0)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-				)
-			)
-			(property "Footprint" "ECE445L:Testpoint_1x02_P2.54mm"
-				(at 0 5.715 0)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-					(hide yes)
-				)
-			)
-			(property "Datasheet" "~"
-				(at 0 0 0)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-					(hide yes)
-				)
-			)
-			(property "Description" "Testpoint"
-				(at 0 0 0)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-					(hide yes)
-				)
-			)
-			(property "ki_keywords" "Testpoint"
-				(at 0 0 0)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-					(hide yes)
-				)
-			)
-			(property "ki_fp_filters" "Jumper* TestPoint*2Pads* TestPoint*Bridge*"
-				(at 0 0 0)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-					(hide yes)
-				)
-			)
-			(symbol "Testpoint_0_1"
-				(arc
-					(start 0.0001 4.4451)
-					(mid 1.3471 3.8871)
-					(end 1.9051 2.5401)
-					(stroke
-						(width 0)
-						(type default)
-					)
-					(fill
-						(type none)
-					)
-				)
-				(arc
-					(start -1.905 2.54)
-					(mid -1.347 3.887)
-					(end 0 4.445)
-					(stroke
-						(width 0)
-						(type default)
-					)
-					(fill
-						(type none)
-					)
-				)
-			)
-			(symbol "Testpoint_1_1"
-				(pin passive line
-					(at -1.905 0 90)
-					(length 2.54)
-					(name "A"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-					(number "1"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-				)
-				(pin passive line
-					(at 1.905 0 90)
-					(length 2.54)
-					(name "B"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-					(number "2"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-				)
-			)
-			(embedded_fonts no)
-		)
 		(symbol "Transistor_BJT:PZT2222A"
 			(pin_names
 				(offset 0)
@@ -1477,6 +1349,12 @@
 		(uuid "1416d467-f430-4709-ad67-d15e3d91be02")
 	)
 	(junction
+		(at 186.69 132.715)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "1a13da5c-66f7-4413-b640-eb0eb2cbabe0")
+	)
+	(junction
 		(at 217.805 124.46)
 		(diameter 0)
 		(color 0 0 0 0)
@@ -1487,12 +1365,6 @@
 		(diameter 0)
 		(color 0 0 0 0)
 		(uuid "2a6135d0-9a34-4793-9b01-327148d6c5ae")
-	)
-	(junction
-		(at 203.835 124.46)
-		(diameter 0)
-		(color 0 0 0 0)
-		(uuid "2ab7a2e2-4081-41c8-9df8-04bbcb8adc46")
 	)
 	(junction
 		(at 115.57 94.615)
@@ -1507,16 +1379,16 @@
 		(uuid "2e00c3e1-e3ad-4794-9c70-50ca365357cf")
 	)
 	(junction
+		(at 205.74 124.46)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "40ef7ecd-73ae-473d-bc53-2a6300868ff0")
+	)
+	(junction
 		(at 57.15 191.135)
 		(diameter 0)
 		(color 0 0 0 0)
 		(uuid "427a175c-e088-49f2-947b-1f7aac498683")
-	)
-	(junction
-		(at 102.235 175.895)
-		(diameter 0)
-		(color 0 0 0 0)
-		(uuid "46c70712-8e51-4238-a668-705791b9e795")
 	)
 	(junction
 		(at 127 94.615)
@@ -1531,28 +1403,10 @@
 		(uuid "4c34dbc7-0cd1-4c97-99ac-61aef3e9dd5f")
 	)
 	(junction
-		(at 112.395 31.75)
-		(diameter 0)
-		(color 0 0 0 0)
-		(uuid "51b23013-66ed-47d8-aa93-3e2639859e9b")
-	)
-	(junction
-		(at 183.515 152.4)
-		(diameter 0)
-		(color 0 0 0 0)
-		(uuid "51ecaec9-49b2-4802-942c-62178a30bd39")
-	)
-	(junction
 		(at 92.71 104.775)
 		(diameter 0)
 		(color 0 0 0 0)
 		(uuid "597b93b2-d7ad-4820-ab5d-c0c198080d52")
-	)
-	(junction
-		(at 203.835 132.715)
-		(diameter 0)
-		(color 0 0 0 0)
-		(uuid "5efce4cd-6364-4dca-bb06-bceff286a446")
 	)
 	(junction
 		(at 154.94 23.495)
@@ -1591,12 +1445,6 @@
 		(uuid "85b4f039-e38c-4b65-a9b3-15996354c969")
 	)
 	(junction
-		(at 183.515 146.05)
-		(diameter 0)
-		(color 0 0 0 0)
-		(uuid "8620783b-ec97-43f9-b8aa-7410ce236ac3")
-	)
-	(junction
 		(at 193.675 41.91)
 		(diameter 0)
 		(color 0 0 0 0)
@@ -1619,12 +1467,6 @@
 		(diameter 0)
 		(color 0 0 0 0)
 		(uuid "9e6980dd-4052-4d64-a729-1d778bf6011c")
-	)
-	(junction
-		(at 112.395 25.4)
-		(diameter 0)
-		(color 0 0 0 0)
-		(uuid "a3af8ce8-05bb-42e3-97cc-9baae0d0d468")
 	)
 	(junction
 		(at 101.6 43.18)
@@ -1651,22 +1493,16 @@
 		(uuid "b47c804f-45b5-4c12-b721-3f2183c1afdf")
 	)
 	(junction
-		(at 102.235 165.1)
+		(at 84.455 92.075)
 		(diameter 0)
 		(color 0 0 0 0)
-		(uuid "bd98e208-0627-4e8c-a64d-f457f804d544")
+		(uuid "b70c2277-5b20-4636-9817-99b60d7736a4")
 	)
 	(junction
 		(at 174.625 23.495)
 		(diameter 0)
 		(color 0 0 0 0)
 		(uuid "bf61cf91-31c6-44f7-a287-56efebae8381")
-	)
-	(junction
-		(at 112.395 19.05)
-		(diameter 0)
-		(color 0 0 0 0)
-		(uuid "c7e47c54-d7e6-4118-b51c-4e0b52be3161")
 	)
 	(junction
 		(at 33.655 38.1)
@@ -1691,6 +1527,12 @@
 		(diameter 0)
 		(color 0 0 0 0)
 		(uuid "d822482c-4e60-4faa-9135-11c66f0eaf4f")
+	)
+	(junction
+		(at 205.74 132.715)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "de550b0b-29e0-4b86-9bb4-b0c1e2429a0d")
 	)
 	(junction
 		(at 193.675 23.495)
@@ -1770,6 +1612,16 @@
 	)
 	(wire
 		(pts
+			(xy 84.455 92.075) (xy 84.455 94.615)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "066cdc20-fe3d-433e-ba12-f427e0b16a45")
+	)
+	(wire
+		(pts
 			(xy 123.19 94.615) (xy 127 94.615)
 		)
 		(stroke
@@ -1777,6 +1629,16 @@
 			(type default)
 		)
 		(uuid "07236d27-1725-4040-a888-55892673611d")
+	)
+	(wire
+		(pts
+			(xy 186.69 142.875) (xy 186.69 144.78)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "08c15a79-2068-460d-b204-acd6a5c3d48c")
 	)
 	(wire
 		(pts
@@ -2090,16 +1952,6 @@
 	)
 	(wire
 		(pts
-			(xy 177.165 146.05) (xy 183.515 146.05)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "2ec1f9f6-0178-4734-acd0-6cbd4af50a85")
-	)
-	(wire
-		(pts
 			(xy 45.72 29.21) (xy 45.72 28.575)
 		)
 		(stroke
@@ -2230,16 +2082,6 @@
 	)
 	(wire
 		(pts
-			(xy 84.455 90.805) (xy 84.455 94.615)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "451133f0-94fb-4c17-a0b7-6c421dde5ca7")
-	)
-	(wire
-		(pts
 			(xy 115.57 94.615) (xy 112.395 94.615)
 		)
 		(stroke
@@ -2317,6 +2159,16 @@
 			(type default)
 		)
 		(uuid "4b620838-5e2a-4ce5-87d2-260e851a084e")
+	)
+	(wire
+		(pts
+			(xy 84.455 92.075) (xy 97.155 92.075)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "4b81bc38-3251-484f-8be6-b292ce88a9be")
 	)
 	(wire
 		(pts
@@ -2410,16 +2262,6 @@
 	)
 	(wire
 		(pts
-			(xy 107.315 19.05) (xy 112.395 19.05)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "58e498b6-e489-4018-9880-8afbf6ae6f0c")
-	)
-	(wire
-		(pts
 			(xy 251.46 62.865) (xy 251.46 64.135)
 		)
 		(stroke
@@ -2427,6 +2269,16 @@
 			(type default)
 		)
 		(uuid "595d9b3a-8fe2-40a5-ad50-616214dfcbd0")
+	)
+	(wire
+		(pts
+			(xy 203.835 124.46) (xy 205.74 124.46)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "5aa94b13-b60b-47b1-94f9-d3b98c1052d5")
 	)
 	(wire
 		(pts
@@ -2490,6 +2342,16 @@
 	)
 	(wire
 		(pts
+			(xy 205.74 132.715) (xy 205.74 135.89)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "663b7600-0bca-4926-85e2-9d644df28576")
+	)
+	(wire
+		(pts
 			(xy 53.34 50.165) (xy 53.34 52.705)
 		)
 		(stroke
@@ -2497,16 +2359,6 @@
 			(type default)
 		)
 		(uuid "688b8811-08a1-4d86-b0a8-356a13342199")
-	)
-	(wire
-		(pts
-			(xy 203.835 124.46) (xy 207.01 124.46)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "6a01bfc3-ce8b-4084-9daa-4b4229dc6f79")
 	)
 	(wire
 		(pts
@@ -2550,16 +2402,6 @@
 	)
 	(wire
 		(pts
-			(xy 102.235 173.99) (xy 102.235 175.895)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "6f1519e4-98e9-44c7-ac63-a8d451bc3f85")
-	)
-	(wire
-		(pts
 			(xy 188.595 127) (xy 186.69 127)
 		)
 		(stroke
@@ -2587,6 +2429,16 @@
 			(type default)
 		)
 		(uuid "70fbc3ca-222f-4d3e-9315-0c7d24a7a132")
+	)
+	(wire
+		(pts
+			(xy 168.275 111.125) (xy 172.085 111.125)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "72102d8e-61fc-4c11-9b57-337d01b3dff5")
 	)
 	(wire
 		(pts
@@ -2650,13 +2502,13 @@
 	)
 	(wire
 		(pts
-			(xy 106.68 31.75) (xy 112.395 31.75)
+			(xy 84.455 90.805) (xy 84.455 92.075)
 		)
 		(stroke
 			(width 0)
 			(type default)
 		)
-		(uuid "7a6aed38-bace-460e-a7df-51b15c1f27dc")
+		(uuid "7b477a3d-5bb5-419f-a6ea-f700fb26ca7b")
 	)
 	(wire
 		(pts
@@ -2700,16 +2552,6 @@
 	)
 	(wire
 		(pts
-			(xy 102.235 165.1) (xy 102.235 166.37)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "7e0d0dd0-a4b0-450e-b8fc-733f7bf95c10")
-	)
-	(wire
-		(pts
 			(xy 60.325 191.135) (xy 57.15 191.135)
 		)
 		(stroke
@@ -2747,16 +2589,6 @@
 			(type default)
 		)
 		(uuid "834f85e1-67ca-498b-950c-0b2bc0ff8825")
-	)
-	(wire
-		(pts
-			(xy 112.395 25.4) (xy 116.205 25.4)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "83f320b7-94ce-4c7d-93de-5b3e86582e67")
 	)
 	(wire
 		(pts
@@ -2827,6 +2659,16 @@
 			(type default)
 		)
 		(uuid "8b8435d7-931b-44f8-b4b0-d2a0f0d6a01d")
+	)
+	(wire
+		(pts
+			(xy 200.66 132.715) (xy 205.74 132.715)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "8ec205a7-71c1-4b8e-ae94-d952b337588e")
 	)
 	(wire
 		(pts
@@ -2920,6 +2762,16 @@
 	)
 	(wire
 		(pts
+			(xy 205.74 124.46) (xy 207.01 124.46)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "9b483ec1-3b07-4b8e-bc65-7c67a768854c")
+	)
+	(wire
+		(pts
 			(xy 137.16 41.91) (xy 137.16 43.815)
 		)
 		(stroke
@@ -2990,13 +2842,23 @@
 	)
 	(wire
 		(pts
-			(xy 203.835 132.715) (xy 203.835 124.46)
+			(xy 205.74 124.46) (xy 205.74 132.715)
 		)
 		(stroke
 			(width 0)
 			(type default)
 		)
 		(uuid "a3fddf72-2d09-44a9-a0cc-807171758f72")
+	)
+	(wire
+		(pts
+			(xy 179.705 111.125) (xy 182.88 111.125)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "a4634a78-d19a-4942-b0ab-e410511c425b")
 	)
 	(wire
 		(pts
@@ -3007,6 +2869,16 @@
 			(type default)
 		)
 		(uuid "a60ca62e-852d-46a7-984c-bd40d23b3ccf")
+	)
+	(wire
+		(pts
+			(xy 186.69 132.715) (xy 186.69 135.255)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "ab8fafb3-d87e-4826-bed7-5318608d67cc")
 	)
 	(wire
 		(pts
@@ -3150,7 +3022,7 @@
 	)
 	(wire
 		(pts
-			(xy 80.645 92.075) (xy 97.155 92.075)
+			(xy 80.645 92.075) (xy 84.455 92.075)
 		)
 		(stroke
 			(width 0)
@@ -3230,16 +3102,6 @@
 	)
 	(wire
 		(pts
-			(xy 112.395 19.05) (xy 116.205 19.05)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "bf009eb1-976e-4e5b-bd67-7df7c49e8cfc")
-	)
-	(wire
-		(pts
 			(xy 193.675 41.91) (xy 193.675 44.45)
 		)
 		(stroke
@@ -3247,16 +3109,6 @@
 			(type default)
 		)
 		(uuid "bf27b68c-b3eb-45ef-9480-7a5e4616e96d")
-	)
-	(wire
-		(pts
-			(xy 183.515 152.4) (xy 187.325 152.4)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "bf7ff16f-abb4-4d9b-aa8f-925e60ea5abb")
 	)
 	(wire
 		(pts
@@ -3337,16 +3189,6 @@
 			(type default)
 		)
 		(uuid "c437edda-927a-4f20-8dcc-89dcd22aff0f")
-	)
-	(wire
-		(pts
-			(xy 186.69 132.715) (xy 203.835 132.715)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "c4c363d6-1e5b-436b-9c7b-99ca91abf05f")
 	)
 	(wire
 		(pts
@@ -3470,16 +3312,6 @@
 	)
 	(wire
 		(pts
-			(xy 112.395 31.75) (xy 116.205 31.75)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "d0f7dfc6-cacc-4109-aa39-7e7dff583f18")
-	)
-	(wire
-		(pts
 			(xy 154.305 97.155) (xy 156.845 97.155)
 		)
 		(stroke
@@ -3540,16 +3372,6 @@
 	)
 	(wire
 		(pts
-			(xy 177.165 152.4) (xy 183.515 152.4)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "d6a96531-4b07-408d-b887-d10cca0624a5")
-	)
-	(wire
-		(pts
 			(xy 60.325 163.83) (xy 65.405 163.83)
 		)
 		(stroke
@@ -3567,16 +3389,6 @@
 			(type default)
 		)
 		(uuid "d8996328-49cc-4c36-a6b7-04f51ed1d044")
-	)
-	(wire
-		(pts
-			(xy 179.705 111.125) (xy 182.88 111.125)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "d9dc5f52-4ddb-49c4-a300-69ea1fd209aa")
 	)
 	(wire
 		(pts
@@ -3720,16 +3532,6 @@
 	)
 	(wire
 		(pts
-			(xy 203.835 132.715) (xy 203.835 135.89)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "e7058ec3-6bb2-44dc-a3b2-36ec5afa2cfb")
-	)
-	(wire
-		(pts
 			(xy 137.16 25.4) (xy 137.16 23.495)
 		)
 		(stroke
@@ -3830,26 +3632,6 @@
 	)
 	(wire
 		(pts
-			(xy 168.275 111.125) (xy 172.085 111.125)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "f0faefb5-0c19-470c-bb7b-1da4762d6626")
-	)
-	(wire
-		(pts
-			(xy 183.515 146.05) (xy 187.325 146.05)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "f0fed468-6e5e-44b3-baae-27a9216ca13c")
-	)
-	(wire
-		(pts
 			(xy 179.07 132.715) (xy 182.88 132.715)
 		)
 		(stroke
@@ -3910,13 +3692,13 @@
 	)
 	(wire
 		(pts
-			(xy 106.68 25.4) (xy 112.395 25.4)
+			(xy 186.69 132.715) (xy 193.04 132.715)
 		)
 		(stroke
 			(width 0)
 			(type default)
 		)
-		(uuid "f95a5a69-bcbb-4873-8510-0e9c9e744ce8")
+		(uuid "f962286b-1c7d-41cf-bd5b-013d6a96586d")
 	)
 	(wire
 		(pts
@@ -4044,28 +3826,6 @@
 			)
 		)
 	)
-	(global_label "R_Treble"
-		(shape input)
-		(at 106.68 31.75 180)
-		(fields_autoplaced yes)
-		(effects
-			(font
-				(size 1.27 1.27)
-			)
-			(justify right)
-		)
-		(uuid "1dbf233c-fac3-479d-aab5-a3fafd9e191a")
-		(property "Intersheetrefs" "${INTERSHEET_REFS}"
-			(at 95.712 31.75 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify right)
-				(hide yes)
-			)
-		)
-	)
 	(global_label "PB5"
 		(shape passive)
 		(at 109.22 121.285 0)
@@ -4101,28 +3861,6 @@
 		(uuid "298b2f96-9cae-4238-b489-468568fabb03")
 		(property "Intersheetrefs" "${INTERSHEET_REFS}"
 			(at 62.4198 92.075 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify right)
-				(hide yes)
-			)
-		)
-	)
-	(global_label "R_Bass"
-		(shape input)
-		(at 107.315 19.05 180)
-		(fields_autoplaced yes)
-		(effects
-			(font
-				(size 1.27 1.27)
-			)
-			(justify right)
-		)
-		(uuid "29be842e-231a-45b1-bb26-67322ada4c61")
-		(property "Intersheetrefs" "${INTERSHEET_REFS}"
-			(at 97.617 19.05 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -4332,7 +4070,7 @@
 	)
 	(global_label "R_Buff"
 		(shape input)
-		(at 203.835 135.89 270)
+		(at 205.74 135.89 270)
 		(fields_autoplaced yes)
 		(effects
 			(font
@@ -4342,7 +4080,7 @@
 		)
 		(uuid "9cacb49c-57cf-4431-9425-bae735a00cad")
 		(property "Intersheetrefs" "${INTERSHEET_REFS}"
-			(at 203.835 144.9832 90)
+			(at 205.74 144.9832 90)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -4440,50 +4178,6 @@
 			)
 		)
 	)
-	(global_label "R_AudioOut"
-		(shape input)
-		(at 177.165 152.4 180)
-		(fields_autoplaced yes)
-		(effects
-			(font
-				(size 1.27 1.27)
-			)
-			(justify right)
-		)
-		(uuid "b60cca45-29ec-42b0-bcd4-729e24a92d33")
-		(property "Intersheetrefs" "${INTERSHEET_REFS}"
-			(at 163.5966 152.4 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify right)
-				(hide yes)
-			)
-		)
-	)
-	(global_label "R_Mid"
-		(shape input)
-		(at 106.68 25.4 180)
-		(fields_autoplaced yes)
-		(effects
-			(font
-				(size 1.27 1.27)
-			)
-			(justify right)
-		)
-		(uuid "b7888954-6721-42f6-ae79-dc3c318e3b4f")
-		(property "Intersheetrefs" "${INTERSHEET_REFS}"
-			(at 98.252 25.4 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify right)
-				(hide yes)
-			)
-		)
-	)
 	(global_label "RAUDIO_FS"
 		(shape input)
 		(at 212.09 62.865 180)
@@ -4497,28 +4191,6 @@
 		(uuid "c1102712-32b9-41c2-af14-62da10de88a8")
 		(property "Intersheetrefs" "${INTERSHEET_REFS}"
 			(at 198.9447 62.865 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify right)
-				(hide yes)
-			)
-		)
-	)
-	(global_label "R_Buff"
-		(shape input)
-		(at 177.165 146.05 180)
-		(fields_autoplaced yes)
-		(effects
-			(font
-				(size 1.27 1.27)
-			)
-			(justify right)
-		)
-		(uuid "c8673c87-f3a5-4c1d-bff2-4f912b60b610")
-		(property "Intersheetrefs" "${INTERSHEET_REFS}"
-			(at 168.0718 146.05 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -4691,7 +4363,7 @@
 		(on_board yes)
 		(dnp no)
 		(uuid "005b38de-cbca-4c2e-81b8-725a9fb159b4")
-		(property "Reference" "#PWR023"
+		(property "Reference" "#PWR048"
 			(at 174.625 26.035 0)
 			(effects
 				(font
@@ -4741,7 +4413,7 @@
 		(instances
 			(project "ECE445L_Lab7"
 				(path "/69b823fd-c065-40ff-9bb9-c5835555f3eb/9e7b1dfa-492f-407a-9f72-cee77954c346"
-					(reference "#PWR023")
+					(reference "#PWR048")
 					(unit 1)
 				)
 			)
@@ -4757,7 +4429,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "05279b7a-496a-43b5-b79f-e6a8bc1b4fea")
-		(property "Reference" "#PWR024"
+		(property "Reference" "#PWR049"
 			(at 174.625 50.8 0)
 			(effects
 				(font
@@ -4807,7 +4479,7 @@
 		(instances
 			(project "ECE445L_Lab7"
 				(path "/69b823fd-c065-40ff-9bb9-c5835555f3eb/9e7b1dfa-492f-407a-9f72-cee77954c346"
-					(reference "#PWR024")
+					(reference "#PWR049")
 					(unit 1)
 				)
 			)
@@ -4822,7 +4494,7 @@
 		(on_board yes)
 		(dnp no)
 		(uuid "05d153af-727e-4fdf-a69c-fc29e6165116")
-		(property "Reference" "C24"
+		(property "Reference" "C23"
 			(at 165.735 29.21 0)
 			(effects
 				(font
@@ -4840,7 +4512,7 @@
 				(justify right)
 			)
 		)
-		(property "Footprint" "Capacitor_SMD:C_0603_1608Metric"
+		(property "Footprint" "Capacitor_SMD:C_0603_1608Metric_Pad1.08x0.95mm_HandSolder"
 			(at 167.9448 27.94 0)
 			(effects
 				(font
@@ -4876,7 +4548,7 @@
 		(instances
 			(project "ECE445L_Lab7"
 				(path "/69b823fd-c065-40ff-9bb9-c5835555f3eb/9e7b1dfa-492f-407a-9f72-cee77954c346"
-					(reference "C24")
+					(reference "C23")
 					(unit 1)
 				)
 			)
@@ -4891,7 +4563,7 @@
 		(on_board yes)
 		(dnp no)
 		(uuid "0c14b772-aec4-4ac8-bba8-4ed7e5faaa60")
-		(property "Reference" "C23"
+		(property "Reference" "C22"
 			(at 146.685 30.48 0)
 			(effects
 				(font
@@ -4909,7 +4581,7 @@
 				(justify right)
 			)
 		)
-		(property "Footprint" "Capacitor_SMD:C_0603_1608Metric"
+		(property "Footprint" "Capacitor_SMD:C_0603_1608Metric_Pad1.08x0.95mm_HandSolder"
 			(at 148.8948 29.21 0)
 			(effects
 				(font
@@ -4945,7 +4617,7 @@
 		(instances
 			(project "ECE445L_Lab7"
 				(path "/69b823fd-c065-40ff-9bb9-c5835555f3eb/9e7b1dfa-492f-407a-9f72-cee77954c346"
-					(reference "C23")
+					(reference "C22")
 					(unit 1)
 				)
 			)
@@ -4960,7 +4632,7 @@
 		(on_board yes)
 		(dnp no)
 		(uuid "0f95b5ac-244b-4419-b817-aba2c3b38cdb")
-		(property "Reference" "R10"
+		(property "Reference" "R21"
 			(at 100.965 107.315 0)
 			(effects
 				(font
@@ -4976,7 +4648,7 @@
 				)
 			)
 		)
-		(property "Footprint" "Resistor_SMD:R_0603_1608Metric"
+		(property "Footprint" "Resistor_SMD:R_0603_1608Metric_Pad0.98x0.95mm_HandSolder"
 			(at 100.838 111.125 90)
 			(effects
 				(font
@@ -5012,7 +4684,7 @@
 		(instances
 			(project "ECE445L_Lab7"
 				(path "/69b823fd-c065-40ff-9bb9-c5835555f3eb/9e7b1dfa-492f-407a-9f72-cee77954c346"
-					(reference "R10")
+					(reference "R21")
 					(unit 1)
 				)
 			)
@@ -5028,7 +4700,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "11f02721-6d36-4fa5-9cd3-895da0077d67")
-		(property "Reference" "U8"
+		(property "Reference" "U7"
 			(at 90.805 147.32 0)
 			(effects
 				(font
@@ -5098,7 +4770,7 @@
 		(instances
 			(project "ECE445L_Lab7"
 				(path "/69b823fd-c065-40ff-9bb9-c5835555f3eb/9e7b1dfa-492f-407a-9f72-cee77954c346"
-					(reference "U8")
+					(reference "U7")
 					(unit 2)
 				)
 			)
@@ -5114,7 +4786,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "11f9770d-3cff-4525-81c4-f0ea195d84db")
-		(property "Reference" "#PWR014"
+		(property "Reference" "#PWR038"
 			(at 56.515 83.82 0)
 			(effects
 				(font
@@ -5164,76 +4836,7 @@
 		(instances
 			(project "ECE445L_Lab7"
 				(path "/69b823fd-c065-40ff-9bb9-c5835555f3eb/9e7b1dfa-492f-407a-9f72-cee77954c346"
-					(reference "#PWR014")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
-		(lib_id "ECE445L:Testpoint")
-		(at 185.42 152.4 0)
-		(unit 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(dnp no)
-		(uuid "145c5235-aee4-4c05-a6c9-26e294273750")
-		(property "Reference" "TP7"
-			(at 187.96 147.6373 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left)
-			)
-		)
-		(property "Value" "R_Out"
-			(at 187.96 150.1773 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left)
-			)
-		)
-		(property "Footprint" "ECE445L:Testpoint_1x02_P2.54mm"
-			(at 185.42 146.685 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Datasheet" "~"
-			(at 185.42 152.4 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Description" "Testpoint"
-			(at 185.42 152.4 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(pin "1"
-			(uuid "3f5c8ba5-bd74-47ab-a856-8b7efaaf09b3")
-		)
-		(pin "2"
-			(uuid "11fa9f45-be4c-4907-aa1f-18fac339c092")
-		)
-		(instances
-			(project "ECE445L_Lab7"
-				(path "/69b823fd-c065-40ff-9bb9-c5835555f3eb/9e7b1dfa-492f-407a-9f72-cee77954c346"
-					(reference "TP7")
+					(reference "#PWR038")
 					(unit 1)
 				)
 			)
@@ -5249,7 +4852,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "148e3e40-5032-40c2-8c56-32e68515b311")
-		(property "Reference" "#PWR010"
+		(property "Reference" "#PWR053"
 			(at 217.17 73.025 0)
 			(effects
 				(font
@@ -5299,7 +4902,7 @@
 		(instances
 			(project "ECE445L_Lab7"
 				(path "/69b823fd-c065-40ff-9bb9-c5835555f3eb/9e7b1dfa-492f-407a-9f72-cee77954c346"
-					(reference "#PWR010")
+					(reference "#PWR053")
 					(unit 1)
 				)
 			)
@@ -5314,7 +4917,7 @@
 		(on_board yes)
 		(dnp no)
 		(uuid "14b0c1a2-064f-428d-a8c0-d16ca628b88b")
-		(property "Reference" "#PWR093"
+		(property "Reference" "#PWR056"
 			(at 237.49 120.015 0)
 			(effects
 				(font
@@ -5364,41 +4967,39 @@
 		(instances
 			(project "ECE445L_Lab7"
 				(path "/69b823fd-c065-40ff-9bb9-c5835555f3eb/9e7b1dfa-492f-407a-9f72-cee77954c346"
-					(reference "#PWR093")
+					(reference "#PWR056")
 					(unit 1)
 				)
 			)
 		)
 	)
 	(symbol
-		(lib_id "ECE445L:Testpoint")
-		(at 185.42 146.05 0)
+		(lib_id "Device:R")
+		(at 196.85 132.715 90)
 		(unit 1)
 		(exclude_from_sim no)
 		(in_bom yes)
 		(on_board yes)
 		(dnp no)
-		(uuid "1e72b963-c8c7-44c3-a707-6995ce2e558b")
-		(property "Reference" "TP6"
-			(at 187.96 141.2873 0)
+		(uuid "1967feb0-1267-40ef-9dcc-fd3a4f8c215f")
+		(property "Reference" "R29"
+			(at 196.85 130.81 90)
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
-				(justify left)
 			)
 		)
-		(property "Value" "R_Buff"
-			(at 187.96 143.8273 0)
+		(property "Value" "3.3k"
+			(at 196.85 132.715 90)
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
-				(justify left)
 			)
 		)
-		(property "Footprint" "ECE445L:Testpoint_1x02_P2.54mm"
-			(at 185.42 140.335 0)
+		(property "Footprint" "Resistor_SMD:R_0603_1608Metric_Pad0.98x0.95mm_HandSolder"
+			(at 196.85 134.493 90)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -5407,7 +5008,7 @@
 			)
 		)
 		(property "Datasheet" "~"
-			(at 185.42 146.05 0)
+			(at 196.85 132.715 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -5415,8 +5016,8 @@
 				(hide yes)
 			)
 		)
-		(property "Description" "Testpoint"
-			(at 185.42 146.05 0)
+		(property "Description" "Resistor"
+			(at 196.85 132.715 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -5425,15 +5026,15 @@
 			)
 		)
 		(pin "1"
-			(uuid "151f7491-3d21-41a6-b1c5-3d29b0f7249c")
+			(uuid "e08362bd-bc2b-4a52-a03e-b5b49c11fbf8")
 		)
 		(pin "2"
-			(uuid "b8b95b26-e782-4a17-be74-cb1237baa775")
+			(uuid "c433ae70-8aaf-4465-bff5-862c1cb1b448")
 		)
 		(instances
 			(project "ECE445L_Lab7"
 				(path "/69b823fd-c065-40ff-9bb9-c5835555f3eb/9e7b1dfa-492f-407a-9f72-cee77954c346"
-					(reference "TP6")
+					(reference "R29")
 					(unit 1)
 				)
 			)
@@ -5448,7 +5049,7 @@
 		(on_board yes)
 		(dnp no)
 		(uuid "2420733b-e750-427a-b8dc-afb2f2f341fd")
-		(property "Reference" "C22"
+		(property "Reference" "C21"
 			(at 128.27 30.48 0)
 			(effects
 				(font
@@ -5466,7 +5067,7 @@
 				(justify right)
 			)
 		)
-		(property "Footprint" "Capacitor_SMD:C_0603_1608Metric"
+		(property "Footprint" "Capacitor_SMD:C_0603_1608Metric_Pad1.08x0.95mm_HandSolder"
 			(at 130.4798 29.21 0)
 			(effects
 				(font
@@ -5502,7 +5103,7 @@
 		(instances
 			(project "ECE445L_Lab7"
 				(path "/69b823fd-c065-40ff-9bb9-c5835555f3eb/9e7b1dfa-492f-407a-9f72-cee77954c346"
-					(reference "C22")
+					(reference "C21")
 					(unit 1)
 				)
 			)
@@ -5517,7 +5118,7 @@
 		(on_board yes)
 		(dnp no)
 		(uuid "2a6728e6-de99-4fa7-abb1-40a0dcf09284")
-		(property "Reference" "R12"
+		(property "Reference" "R8"
 			(at 35.56 26.0349 0)
 			(effects
 				(font
@@ -5535,7 +5136,7 @@
 				(justify left)
 			)
 		)
-		(property "Footprint" "Resistor_SMD:R_0603_1608Metric"
+		(property "Footprint" "Resistor_SMD:R_0603_1608Metric_Pad0.98x0.95mm_HandSolder"
 			(at 31.877 27.305 90)
 			(effects
 				(font
@@ -5571,7 +5172,7 @@
 		(instances
 			(project "ECE445L_Lab7"
 				(path "/69b823fd-c065-40ff-9bb9-c5835555f3eb/9e7b1dfa-492f-407a-9f72-cee77954c346"
-					(reference "R12")
+					(reference "R8")
 					(unit 1)
 				)
 			)
@@ -5587,7 +5188,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "2b053b55-2c62-4958-9578-d2e12111c1bf")
-		(property "Reference" "U5"
+		(property "Reference" "U10"
 			(at 234.95 47.625 0)
 			(effects
 				(font
@@ -5704,7 +5305,7 @@
 		(instances
 			(project "ECE445L_Lab7"
 				(path "/69b823fd-c065-40ff-9bb9-c5835555f3eb/9e7b1dfa-492f-407a-9f72-cee77954c346"
-					(reference "U5")
+					(reference "U10")
 					(unit 1)
 				)
 			)
@@ -5720,7 +5321,7 @@
 		(on_board yes)
 		(dnp no)
 		(uuid "2b2640ca-2db8-47b7-9e87-f422606f5838")
-		(property "Reference" "Q4"
+		(property "Reference" "Q6"
 			(at 105.41 118.11 0)
 			(effects
 				(font
@@ -5780,41 +5381,24 @@
 		(instances
 			(project "ECE445L_Lab7"
 				(path "/69b823fd-c065-40ff-9bb9-c5835555f3eb/9e7b1dfa-492f-407a-9f72-cee77954c346"
-					(reference "Q4")
+					(reference "Q6")
 					(unit 1)
 				)
 			)
 		)
 	)
 	(symbol
-		(lib_id "Device:R")
-		(at 102.235 170.18 0)
+		(lib_id "power:GND")
+		(at 186.69 144.78 0)
 		(unit 1)
 		(exclude_from_sim no)
 		(in_bom yes)
 		(on_board yes)
 		(dnp no)
-		(uuid "33adb531-03ed-49e8-9745-4a5b8654d175")
-		(property "Reference" "R83"
-			(at 100.33 172.085 90)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left)
-			)
-		)
-		(property "Value" "0"
-			(at 102.235 170.815 90)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left)
-			)
-		)
-		(property "Footprint" "Resistor_SMD:R_0603_1608Metric"
-			(at 100.457 170.18 90)
+		(fields_autoplaced yes)
+		(uuid "30d9b485-d907-44d9-a0f7-b02952148ecf")
+		(property "Reference" "#PWR050"
+			(at 186.69 151.13 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -5822,8 +5406,16 @@
 				(hide yes)
 			)
 		)
-		(property "Datasheet" "~"
-			(at 102.235 170.18 0)
+		(property "Value" "GND"
+			(at 186.69 149.86 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" ""
+			(at 186.69 144.78 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -5831,8 +5423,17 @@
 				(hide yes)
 			)
 		)
-		(property "Description" "Resistor"
-			(at 102.235 170.18 0)
+		(property "Datasheet" ""
+			(at 186.69 144.78 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" "Power symbol creates a global label with name \"GND\" , ground"
+			(at 186.69 144.78 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -5841,15 +5442,12 @@
 			)
 		)
 		(pin "1"
-			(uuid "46085c7a-60f7-43ab-bf2e-abf70fe5c42e")
-		)
-		(pin "2"
-			(uuid "7ed59654-2119-47c6-ab03-0b17ac3330be")
+			(uuid "dded2b04-7484-4201-84f3-4271c488159e")
 		)
 		(instances
 			(project "ECE445L_Lab7"
 				(path "/69b823fd-c065-40ff-9bb9-c5835555f3eb/9e7b1dfa-492f-407a-9f72-cee77954c346"
-					(reference "R83")
+					(reference "#PWR050")
 					(unit 1)
 				)
 			)
@@ -5865,7 +5463,7 @@
 		(on_board yes)
 		(dnp no)
 		(uuid "3c429c72-5d09-47c8-b6c8-5725b2dc1ed5")
-		(property "Reference" "#PWR091"
+		(property "Reference" "#PWR054"
 			(at 217.805 101.6 0)
 			(effects
 				(font
@@ -5915,77 +5513,7 @@
 		(instances
 			(project "ECE445L_Lab7"
 				(path "/69b823fd-c065-40ff-9bb9-c5835555f3eb/9e7b1dfa-492f-407a-9f72-cee77954c346"
-					(reference "#PWR091")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
-		(lib_id "ECE445L:Testpoint")
-		(at 114.3 31.75 0)
-		(unit 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(dnp no)
-		(fields_autoplaced yes)
-		(uuid "3fa30f4f-30bc-4cd9-abb6-73858147fe7f")
-		(property "Reference" "TP5"
-			(at 116.84 26.9873 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left)
-			)
-		)
-		(property "Value" "R_Treble"
-			(at 116.84 29.5273 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left)
-			)
-		)
-		(property "Footprint" "ECE445L:Testpoint_1x02_P2.54mm"
-			(at 114.3 26.035 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Datasheet" "~"
-			(at 114.3 31.75 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Description" "Testpoint"
-			(at 114.3 31.75 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(pin "1"
-			(uuid "7e18d921-cae2-4ac5-9436-700954814e54")
-		)
-		(pin "2"
-			(uuid "7218ade3-9295-41c6-aaf8-d88e7e2adaa7")
-		)
-		(instances
-			(project "ECE445L_Lab7"
-				(path "/69b823fd-c065-40ff-9bb9-c5835555f3eb/9e7b1dfa-492f-407a-9f72-cee77954c346"
-					(reference "TP5")
+					(reference "#PWR054")
 					(unit 1)
 				)
 			)
@@ -6001,7 +5529,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "42454446-1ff4-4265-abe9-562a0590ceac")
-		(property "Reference" "U9"
+		(property "Reference" "U8"
 			(at 146.685 86.995 0)
 			(effects
 				(font
@@ -6071,7 +5599,7 @@
 		(instances
 			(project "ECE445L_Lab7"
 				(path "/69b823fd-c065-40ff-9bb9-c5835555f3eb/9e7b1dfa-492f-407a-9f72-cee77954c346"
-					(reference "U9")
+					(reference "U8")
 					(unit 2)
 				)
 			)
@@ -6087,7 +5615,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "434a1c72-26c1-4699-9dca-19595a5b0999")
-		(property "Reference" "#PWR09"
+		(property "Reference" "#PWR058"
 			(at 254 45.085 0)
 			(effects
 				(font
@@ -6137,7 +5665,7 @@
 		(instances
 			(project "ECE445L_Lab7"
 				(path "/69b823fd-c065-40ff-9bb9-c5835555f3eb/9e7b1dfa-492f-407a-9f72-cee77954c346"
-					(reference "#PWR09")
+					(reference "#PWR058")
 					(unit 1)
 				)
 			)
@@ -6153,7 +5681,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "43cc4a64-692b-46b9-813a-69062de7d27c")
-		(property "Reference" "#PWR092"
+		(property "Reference" "#PWR055"
 			(at 217.805 147.32 0)
 			(effects
 				(font
@@ -6203,7 +5731,7 @@
 		(instances
 			(project "ECE445L_Lab7"
 				(path "/69b823fd-c065-40ff-9bb9-c5835555f3eb/9e7b1dfa-492f-407a-9f72-cee77954c346"
-					(reference "#PWR092")
+					(reference "#PWR055")
 					(unit 1)
 				)
 			)
@@ -6293,7 +5821,7 @@
 		(on_board yes)
 		(dnp no)
 		(uuid "4e030d13-f5d9-44c8-a73a-24368d8b0bf6")
-		(property "Reference" "Q3"
+		(property "Reference" "Q5"
 			(at 86.36 118.11 0)
 			(effects
 				(font
@@ -6353,7 +5881,7 @@
 		(instances
 			(project "ECE445L_Lab7"
 				(path "/69b823fd-c065-40ff-9bb9-c5835555f3eb/9e7b1dfa-492f-407a-9f72-cee77954c346"
-					(reference "Q3")
+					(reference "Q5")
 					(unit 1)
 				)
 			)
@@ -6369,7 +5897,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "5230415d-275e-4b8f-b3e6-2979f73a81d8")
-		(property "Reference" "U9"
+		(property "Reference" "U8"
 			(at 104.775 84.455 0)
 			(effects
 				(font
@@ -6439,7 +5967,7 @@
 		(instances
 			(project "ECE445L_Lab7"
 				(path "/69b823fd-c065-40ff-9bb9-c5835555f3eb/9e7b1dfa-492f-407a-9f72-cee77954c346"
-					(reference "U9")
+					(reference "U8")
 					(unit 1)
 				)
 			)
@@ -6448,14 +5976,15 @@
 	(symbol
 		(lib_id "Device:R")
 		(at 53.975 170.18 0)
+		(mirror y)
 		(unit 1)
 		(exclude_from_sim no)
 		(in_bom yes)
 		(on_board yes)
 		(dnp no)
 		(uuid "53984419-57ae-4ed7-a430-57417b7b5b67")
-		(property "Reference" "R5"
-			(at 55.88 166.37 0)
+		(property "Reference" "R13"
+			(at 52.07 166.37 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -6470,8 +5999,8 @@
 				)
 			)
 		)
-		(property "Footprint" "Resistor_SMD:R_0603_1608Metric"
-			(at 52.197 170.18 90)
+		(property "Footprint" "Resistor_SMD:R_0603_1608Metric_Pad0.98x0.95mm_HandSolder"
+			(at 55.753 170.18 90)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -6506,7 +6035,7 @@
 		(instances
 			(project "ECE445L_Lab7"
 				(path "/69b823fd-c065-40ff-9bb9-c5835555f3eb/9e7b1dfa-492f-407a-9f72-cee77954c346"
-					(reference "R5")
+					(reference "R13")
 					(unit 1)
 				)
 			)
@@ -6521,7 +6050,7 @@
 		(on_board yes)
 		(dnp no)
 		(uuid "5597fe4a-e986-435d-8bf4-470275720a7f")
-		(property "Reference" "R8"
+		(property "Reference" "R24"
 			(at 119.38 92.71 90)
 			(effects
 				(font
@@ -6537,7 +6066,7 @@
 				)
 			)
 		)
-		(property "Footprint" "Resistor_SMD:R_0603_1608Metric"
+		(property "Footprint" "Resistor_SMD:R_0603_1608Metric_Pad0.98x0.95mm_HandSolder"
 			(at 119.38 96.393 90)
 			(effects
 				(font
@@ -6573,7 +6102,7 @@
 		(instances
 			(project "ECE445L_Lab7"
 				(path "/69b823fd-c065-40ff-9bb9-c5835555f3eb/9e7b1dfa-492f-407a-9f72-cee77954c346"
-					(reference "R8")
+					(reference "R24")
 					(unit 1)
 				)
 			)
@@ -6588,7 +6117,7 @@
 		(on_board yes)
 		(dnp no)
 		(uuid "57f951e8-b872-4fbe-a55a-71cb00dc036f")
-		(property "Reference" "#PWR026"
+		(property "Reference" "#PWR044"
 			(at 137.16 26.035 0)
 			(effects
 				(font
@@ -6638,7 +6167,7 @@
 		(instances
 			(project "ECE445L_Lab7"
 				(path "/69b823fd-c065-40ff-9bb9-c5835555f3eb/9e7b1dfa-492f-407a-9f72-cee77954c346"
-					(reference "#PWR026")
+					(reference "#PWR044")
 					(unit 1)
 				)
 			)
@@ -6653,7 +6182,7 @@
 		(on_board yes)
 		(dnp no)
 		(uuid "5aa7737e-3788-408e-9484-d04c9c95fe50")
-		(property "Reference" "#PWR028"
+		(property "Reference" "#PWR046"
 			(at 154.94 26.035 0)
 			(effects
 				(font
@@ -6703,7 +6232,7 @@
 		(instances
 			(project "ECE445L_Lab7"
 				(path "/69b823fd-c065-40ff-9bb9-c5835555f3eb/9e7b1dfa-492f-407a-9f72-cee77954c346"
-					(reference "#PWR028")
+					(reference "#PWR046")
 					(unit 1)
 				)
 			)
@@ -6718,7 +6247,7 @@
 		(on_board yes)
 		(dnp no)
 		(uuid "6353653f-c421-490d-8e9f-b53ef1dbc78a")
-		(property "Reference" "C15"
+		(property "Reference" "C16"
 			(at 36.83 140.335 0)
 			(effects
 				(font
@@ -6727,7 +6256,7 @@
 				(justify left)
 			)
 		)
-		(property "Value" "27n"
+		(property "Value" "30n"
 			(at 38.735 142.875 0)
 			(effects
 				(font
@@ -6736,7 +6265,7 @@
 				(justify left)
 			)
 		)
-		(property "Footprint" "Capacitor_SMD:C_0603_1608Metric"
+		(property "Footprint" "Capacitor_SMD:C_0603_1608Metric_Pad1.08x0.95mm_HandSolder"
 			(at 36.5252 146.685 0)
 			(effects
 				(font
@@ -6772,7 +6301,7 @@
 		(instances
 			(project "ECE445L_Lab7"
 				(path "/69b823fd-c065-40ff-9bb9-c5835555f3eb/9e7b1dfa-492f-407a-9f72-cee77954c346"
-					(reference "C15")
+					(reference "C16")
 					(unit 1)
 				)
 			)
@@ -6788,7 +6317,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "64ce0218-853b-4ab0-af88-286a62dc9b62")
-		(property "Reference" "U9"
+		(property "Reference" "U8"
 			(at 175.26 31.1149 0)
 			(effects
 				(font
@@ -6860,7 +6389,7 @@
 		(instances
 			(project "ECE445L_Lab7"
 				(path "/69b823fd-c065-40ff-9bb9-c5835555f3eb/9e7b1dfa-492f-407a-9f72-cee77954c346"
-					(reference "U9")
+					(reference "U8")
 					(unit 3)
 				)
 			)
@@ -6875,7 +6404,7 @@
 		(on_board yes)
 		(dnp no)
 		(uuid "66cfede8-688a-4825-a51c-c30f6d50628d")
-		(property "Reference" "U14"
+		(property "Reference" "U9"
 			(at 261.62 114.3 0)
 			(effects
 				(font
@@ -6945,7 +6474,7 @@
 		(instances
 			(project "ECE445L_Lab7"
 				(path "/69b823fd-c065-40ff-9bb9-c5835555f3eb/9e7b1dfa-492f-407a-9f72-cee77954c346"
-					(reference "U14")
+					(reference "U9")
 					(unit 2)
 				)
 			)
@@ -7036,7 +6565,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "69bef2a5-98bd-4885-b951-254a15a47e23")
-		(property "Reference" "R2"
+		(property "Reference" "R9"
 			(at 41.275 146.05 90)
 			(effects
 				(font
@@ -7052,7 +6581,7 @@
 				)
 			)
 		)
-		(property "Footprint" "Resistor_SMD:R_0603_1608Metric"
+		(property "Footprint" "Resistor_SMD:R_0603_1608Metric_Pad0.98x0.95mm_HandSolder"
 			(at 41.275 153.543 90)
 			(effects
 				(font
@@ -7088,7 +6617,7 @@
 		(instances
 			(project "ECE445L_Lab7"
 				(path "/69b823fd-c065-40ff-9bb9-c5835555f3eb/9e7b1dfa-492f-407a-9f72-cee77954c346"
-					(reference "R2")
+					(reference "R9")
 					(unit 1)
 				)
 			)
@@ -7103,7 +6632,7 @@
 		(on_board yes)
 		(dnp no)
 		(uuid "719972e9-0614-4a89-983f-30dfa4543467")
-		(property "Reference" "R11"
+		(property "Reference" "R20"
 			(at 94.615 107.315 0)
 			(effects
 				(font
@@ -7119,7 +6648,7 @@
 				)
 			)
 		)
-		(property "Footprint" "Resistor_SMD:R_0603_1608Metric"
+		(property "Footprint" "Resistor_SMD:R_0603_1608Metric_Pad0.98x0.95mm_HandSolder"
 			(at 90.932 111.125 90)
 			(effects
 				(font
@@ -7155,7 +6684,7 @@
 		(instances
 			(project "ECE445L_Lab7"
 				(path "/69b823fd-c065-40ff-9bb9-c5835555f3eb/9e7b1dfa-492f-407a-9f72-cee77954c346"
-					(reference "R11")
+					(reference "R20")
 					(unit 1)
 				)
 			)
@@ -7170,7 +6699,7 @@
 		(on_board yes)
 		(dnp no)
 		(uuid "729119ca-828c-4120-b167-80424e757795")
-		(property "Reference" "R24"
+		(property "Reference" "R32"
 			(at 229.235 104.14 90)
 			(effects
 				(font
@@ -7188,7 +6717,7 @@
 				(justify right)
 			)
 		)
-		(property "Footprint" "Resistor_SMD:R_0603_1608Metric"
+		(property "Footprint" "Resistor_SMD:R_0603_1608Metric_Pad0.98x0.95mm_HandSolder"
 			(at 224.917 106.045 90)
 			(effects
 				(font
@@ -7224,7 +6753,7 @@
 		(instances
 			(project "ECE445L_Lab7"
 				(path "/69b823fd-c065-40ff-9bb9-c5835555f3eb/9e7b1dfa-492f-407a-9f72-cee77954c346"
-					(reference "R24")
+					(reference "R32")
 					(unit 1)
 				)
 			)
@@ -7240,7 +6769,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "729712d9-8c27-4f85-8806-07da65266730")
-		(property "Reference" "#PWR022"
+		(property "Reference" "#PWR043"
 			(at 127 113.665 0)
 			(effects
 				(font
@@ -7290,7 +6819,7 @@
 		(instances
 			(project "ECE445L_Lab7"
 				(path "/69b823fd-c065-40ff-9bb9-c5835555f3eb/9e7b1dfa-492f-407a-9f72-cee77954c346"
-					(reference "#PWR022")
+					(reference "#PWR043")
 					(unit 1)
 				)
 			)
@@ -7305,7 +6834,7 @@
 		(on_board yes)
 		(dnp no)
 		(uuid "746d21bf-75d8-4c1e-a7e0-014bd4373e89")
-		(property "Reference" "R15"
+		(property "Reference" "R10"
 			(at 47.625 33.02 0)
 			(effects
 				(font
@@ -7323,7 +6852,7 @@
 				(justify right)
 			)
 		)
-		(property "Footprint" "Resistor_SMD:R_0603_1608Metric"
+		(property "Footprint" "Resistor_SMD:R_0603_1608Metric_Pad0.98x0.95mm_HandSolder"
 			(at 47.498 33.02 90)
 			(effects
 				(font
@@ -7359,7 +6888,7 @@
 		(instances
 			(project "ECE445L_Lab7"
 				(path "/69b823fd-c065-40ff-9bb9-c5835555f3eb/9e7b1dfa-492f-407a-9f72-cee77954c346"
-					(reference "R15")
+					(reference "R10")
 					(unit 1)
 				)
 			)
@@ -7374,7 +6903,7 @@
 		(on_board yes)
 		(dnp no)
 		(uuid "7987d1c5-88ea-4119-9ac7-b79478b4478b")
-		(property "Reference" "Q1"
+		(property "Reference" "Q2"
 			(at 47.625 180.34 0)
 			(effects
 				(font
@@ -7434,7 +6963,7 @@
 		(instances
 			(project "ECE445L_Lab7"
 				(path "/69b823fd-c065-40ff-9bb9-c5835555f3eb/9e7b1dfa-492f-407a-9f72-cee77954c346"
-					(reference "Q1")
+					(reference "Q2")
 					(unit 1)
 				)
 			)
@@ -7465,7 +6994,7 @@
 				)
 			)
 		)
-		(property "Footprint" "Resistor_SMD:R_0603_1608Metric"
+		(property "Footprint" "Resistor_SMD:R_0603_1608Metric_Pad0.98x0.95mm_HandSolder"
 			(at 61.468 56.515 90)
 			(effects
 				(font
@@ -7516,7 +7045,7 @@
 		(on_board yes)
 		(dnp no)
 		(uuid "7f3bdcd2-87ea-49fd-b3ed-efd7bed98d9f")
-		(property "Reference" "R20"
+		(property "Reference" "R26"
 			(at 175.26 130.81 90)
 			(effects
 				(font
@@ -7532,7 +7061,7 @@
 				)
 			)
 		)
-		(property "Footprint" "Resistor_SMD:R_0603_1608Metric"
+		(property "Footprint" "Resistor_SMD:R_0603_1608Metric_Pad0.98x0.95mm_HandSolder"
 			(at 175.26 134.493 90)
 			(effects
 				(font
@@ -7568,7 +7097,7 @@
 		(instances
 			(project "ECE445L_Lab7"
 				(path "/69b823fd-c065-40ff-9bb9-c5835555f3eb/9e7b1dfa-492f-407a-9f72-cee77954c346"
-					(reference "R20")
+					(reference "R26")
 					(unit 1)
 				)
 			)
@@ -7583,7 +7112,7 @@
 		(on_board yes)
 		(dnp no)
 		(uuid "84026df8-a5de-4890-96f0-c4a7bf73e11e")
-		(property "Reference" "R77"
+		(property "Reference" "R23"
 			(at 112.395 178.435 90)
 			(effects
 				(font
@@ -7601,7 +7130,7 @@
 				(justify left)
 			)
 		)
-		(property "Footprint" "Resistor_SMD:R_0603_1608Metric"
+		(property "Footprint" "Resistor_SMD:R_0603_1608Metric_Pad0.98x0.95mm_HandSolder"
 			(at 110.49 177.673 90)
 			(effects
 				(font
@@ -7637,7 +7166,7 @@
 		(instances
 			(project "ECE445L_Lab7"
 				(path "/69b823fd-c065-40ff-9bb9-c5835555f3eb/9e7b1dfa-492f-407a-9f72-cee77954c346"
-					(reference "R77")
+					(reference "R23")
 					(unit 1)
 				)
 			)
@@ -7653,7 +7182,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "840b1999-bb34-4ec6-98c1-8bbc9f7cb171")
-		(property "Reference" "U10"
+		(property "Reference" "U7"
 			(at 156.21 31.1149 0)
 			(effects
 				(font
@@ -7725,7 +7254,7 @@
 		(instances
 			(project "ECE445L_Lab7"
 				(path "/69b823fd-c065-40ff-9bb9-c5835555f3eb/9e7b1dfa-492f-407a-9f72-cee77954c346"
-					(reference "U10")
+					(reference "U7")
 					(unit 3)
 				)
 			)
@@ -7741,7 +7270,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "8a385f6f-c680-48f0-a808-dc43582ee076")
-		(property "Reference" "U14"
+		(property "Reference" "U9"
 			(at 194.945 31.1149 0)
 			(effects
 				(font
@@ -7813,7 +7342,7 @@
 		(instances
 			(project "ECE445L_Lab7"
 				(path "/69b823fd-c065-40ff-9bb9-c5835555f3eb/9e7b1dfa-492f-407a-9f72-cee77954c346"
-					(reference "U14")
+					(reference "U9")
 					(unit 3)
 				)
 			)
@@ -7828,7 +7357,7 @@
 		(on_board yes)
 		(dnp no)
 		(uuid "8e8d3d2d-028a-4784-8d74-8629846da80d")
-		(property "Reference" "R3"
+		(property "Reference" "R15"
 			(at 62.23 166.37 0)
 			(effects
 				(font
@@ -7844,7 +7373,7 @@
 				)
 			)
 		)
-		(property "Footprint" "Resistor_SMD:R_0603_1608Metric"
+		(property "Footprint" "Resistor_SMD:R_0603_1608Metric_Pad0.98x0.95mm_HandSolder"
 			(at 62.103 170.18 90)
 			(effects
 				(font
@@ -7880,7 +7409,7 @@
 		(instances
 			(project "ECE445L_Lab7"
 				(path "/69b823fd-c065-40ff-9bb9-c5835555f3eb/9e7b1dfa-492f-407a-9f72-cee77954c346"
-					(reference "R3")
+					(reference "R15")
 					(unit 1)
 				)
 			)
@@ -7896,7 +7425,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "8effed09-9bc1-40b7-bcba-0d63f8543fc0")
-		(property "Reference" "#PWR020"
+		(property "Reference" "#PWR041"
 			(at 84.455 108.585 0)
 			(effects
 				(font
@@ -7946,7 +7475,7 @@
 		(instances
 			(project "ECE445L_Lab7"
 				(path "/69b823fd-c065-40ff-9bb9-c5835555f3eb/9e7b1dfa-492f-407a-9f72-cee77954c346"
-					(reference "#PWR020")
+					(reference "#PWR041")
 					(unit 1)
 				)
 			)
@@ -7961,7 +7490,7 @@
 		(on_board yes)
 		(dnp no)
 		(uuid "91db07da-e89f-47f3-a941-30062f04e7c2")
-		(property "Reference" "R19"
+		(property "Reference" "R25"
 			(at 175.26 120.015 90)
 			(effects
 				(font
@@ -7969,7 +7498,7 @@
 				)
 			)
 		)
-		(property "Value" "10k"
+		(property "Value" "7.5k"
 			(at 175.26 121.92 90)
 			(effects
 				(font
@@ -7977,7 +7506,7 @@
 				)
 			)
 		)
-		(property "Footprint" "Resistor_SMD:R_0603_1608Metric"
+		(property "Footprint" "Resistor_SMD:R_0603_1608Metric_Pad0.98x0.95mm_HandSolder"
 			(at 175.26 123.698 90)
 			(effects
 				(font
@@ -8013,7 +7542,7 @@
 		(instances
 			(project "ECE445L_Lab7"
 				(path "/69b823fd-c065-40ff-9bb9-c5835555f3eb/9e7b1dfa-492f-407a-9f72-cee77954c346"
-					(reference "R19")
+					(reference "R25")
 					(unit 1)
 				)
 			)
@@ -8028,7 +7557,7 @@
 		(on_board yes)
 		(dnp no)
 		(uuid "9446eef7-e5e8-4062-8a1d-81b08c14f375")
-		(property "Reference" "#PWR025"
+		(property "Reference" "#PWR045"
 			(at 137.16 50.165 0)
 			(effects
 				(font
@@ -8078,7 +7607,7 @@
 		(instances
 			(project "ECE445L_Lab7"
 				(path "/69b823fd-c065-40ff-9bb9-c5835555f3eb/9e7b1dfa-492f-407a-9f72-cee77954c346"
-					(reference "#PWR025")
+					(reference "#PWR045")
 					(unit 1)
 				)
 			)
@@ -8094,7 +7623,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "9a17fd81-3104-499a-8336-18ec448ede29")
-		(property "Reference" "C16"
+		(property "Reference" "C18"
 			(at 49.53 163.8299 0)
 			(effects
 				(font
@@ -8103,7 +7632,7 @@
 				(justify left)
 			)
 		)
-		(property "Value" "27n"
+		(property "Value" "30n"
 			(at 49.53 166.3699 0)
 			(effects
 				(font
@@ -8112,7 +7641,7 @@
 				(justify left)
 			)
 		)
-		(property "Footprint" "Capacitor_SMD:C_0603_1608Metric"
+		(property "Footprint" "Capacitor_SMD:C_0603_1608Metric_Pad1.08x0.95mm_HandSolder"
 			(at 47.3202 168.91 0)
 			(effects
 				(font
@@ -8148,7 +7677,7 @@
 		(instances
 			(project "ECE445L_Lab7"
 				(path "/69b823fd-c065-40ff-9bb9-c5835555f3eb/9e7b1dfa-492f-407a-9f72-cee77954c346"
-					(reference "C16")
+					(reference "C18")
 					(unit 1)
 				)
 			)
@@ -8163,7 +7692,7 @@
 		(on_board yes)
 		(dnp no)
 		(uuid "9b614aae-f222-494e-9f41-912e09a2b9f5")
-		(property "Reference" "R27"
+		(property "Reference" "R36"
 			(at 251.46 148.59 90)
 			(effects
 				(font
@@ -8181,7 +7710,7 @@
 				(justify right)
 			)
 		)
-		(property "Footprint" "Resistor_SMD:R_0603_1608Metric"
+		(property "Footprint" "Resistor_SMD:R_0603_1608Metric_Pad0.98x0.95mm_HandSolder"
 			(at 247.142 150.495 90)
 			(effects
 				(font
@@ -8217,77 +7746,7 @@
 		(instances
 			(project "ECE445L_Lab7"
 				(path "/69b823fd-c065-40ff-9bb9-c5835555f3eb/9e7b1dfa-492f-407a-9f72-cee77954c346"
-					(reference "R27")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
-		(lib_id "ECE445L:Testpoint")
-		(at 114.3 25.4 0)
-		(unit 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(dnp no)
-		(fields_autoplaced yes)
-		(uuid "9c73f968-3ef7-4c96-9056-e23c53445908")
-		(property "Reference" "TP4"
-			(at 116.84 20.6373 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left)
-			)
-		)
-		(property "Value" "R_Mid"
-			(at 116.84 23.1773 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left)
-			)
-		)
-		(property "Footprint" "ECE445L:Testpoint_1x02_P2.54mm"
-			(at 114.3 19.685 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Datasheet" "~"
-			(at 114.3 25.4 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Description" "Testpoint"
-			(at 114.3 25.4 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(pin "1"
-			(uuid "e13b21ac-cf81-4838-acff-e709a0d74b7b")
-		)
-		(pin "2"
-			(uuid "d4df6adc-4f14-4517-a9c0-f0ba5283a4c3")
-		)
-		(instances
-			(project "ECE445L_Lab7"
-				(path "/69b823fd-c065-40ff-9bb9-c5835555f3eb/9e7b1dfa-492f-407a-9f72-cee77954c346"
-					(reference "TP4")
+					(reference "R36")
 					(unit 1)
 				)
 			)
@@ -8302,7 +7761,7 @@
 		(on_board yes)
 		(dnp no)
 		(uuid "9dff36e5-d0da-400a-8eec-455f4a9d35b9")
-		(property "Reference" "R16"
+		(property "Reference" "R11"
 			(at 48.26 50.1649 0)
 			(effects
 				(font
@@ -8320,7 +7779,7 @@
 				(justify right)
 			)
 		)
-		(property "Footprint" "Resistor_SMD:R_0603_1608Metric"
+		(property "Footprint" "Resistor_SMD:R_0603_1608Metric_Pad0.98x0.95mm_HandSolder"
 			(at 47.498 51.435 90)
 			(effects
 				(font
@@ -8356,76 +7815,7 @@
 		(instances
 			(project "ECE445L_Lab7"
 				(path "/69b823fd-c065-40ff-9bb9-c5835555f3eb/9e7b1dfa-492f-407a-9f72-cee77954c346"
-					(reference "R16")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
-		(lib_id "ECE445L:Testpoint")
-		(at 114.3 19.05 0)
-		(unit 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(dnp no)
-		(uuid "a28c188b-0835-4cf8-bbef-c19a4919f979")
-		(property "Reference" "TP3"
-			(at 116.84 14.2873 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left)
-			)
-		)
-		(property "Value" "R_Bass"
-			(at 116.84 16.8273 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left)
-			)
-		)
-		(property "Footprint" "ECE445L:Testpoint_1x02_P2.54mm"
-			(at 114.3 13.335 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Datasheet" "~"
-			(at 114.3 19.05 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Description" "Testpoint"
-			(at 114.3 19.05 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(pin "1"
-			(uuid "de84a72e-79c6-4cca-91da-1b0e9956e7b6")
-		)
-		(pin "2"
-			(uuid "564e5592-f0e2-4312-9c9b-ca54b067fe99")
-		)
-		(instances
-			(project "ECE445L_Lab7"
-				(path "/69b823fd-c065-40ff-9bb9-c5835555f3eb/9e7b1dfa-492f-407a-9f72-cee77954c346"
-					(reference "TP3")
+					(reference "R11")
 					(unit 1)
 				)
 			)
@@ -8441,7 +7831,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "a5bb50da-7c34-4adb-a43c-a6e6954adc9d")
-		(property "Reference" "#PWR0101"
+		(property "Reference" "#PWR057"
 			(at 251.46 70.485 0)
 			(effects
 				(font
@@ -8491,7 +7881,7 @@
 		(instances
 			(project "ECE445L_Lab7"
 				(path "/69b823fd-c065-40ff-9bb9-c5835555f3eb/9e7b1dfa-492f-407a-9f72-cee77954c346"
-					(reference "#PWR0101")
+					(reference "#PWR057")
 					(unit 1)
 				)
 			)
@@ -8507,7 +7897,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "a7a0a992-7a0b-42ed-bd2e-1c9365b2b6a5")
-		(property "Reference" "C19"
+		(property "Reference" "C15"
 			(at 28.575 30.48 90)
 			(effects
 				(font
@@ -8523,7 +7913,7 @@
 				)
 			)
 		)
-		(property "Footprint" "Capacitor_SMD:C_0603_1608Metric"
+		(property "Footprint" "Capacitor_SMD:C_0603_1608Metric_Pad1.08x0.95mm_HandSolder"
 			(at 32.385 37.1348 0)
 			(effects
 				(font
@@ -8559,7 +7949,7 @@
 		(instances
 			(project "ECE445L_Lab7"
 				(path "/69b823fd-c065-40ff-9bb9-c5835555f3eb/9e7b1dfa-492f-407a-9f72-cee77954c346"
-					(reference "C19")
+					(reference "C15")
 					(unit 1)
 				)
 			)
@@ -8575,7 +7965,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "ac9ce6e4-8b95-4118-b57e-b12680bb0b0f")
-		(property "Reference" "#PWR019"
+		(property "Reference" "#PWR040"
 			(at 84.455 85.725 0)
 			(effects
 				(font
@@ -8625,7 +8015,7 @@
 		(instances
 			(project "ECE445L_Lab7"
 				(path "/69b823fd-c065-40ff-9bb9-c5835555f3eb/9e7b1dfa-492f-407a-9f72-cee77954c346"
-					(reference "#PWR019")
+					(reference "#PWR040")
 					(unit 1)
 				)
 			)
@@ -8641,7 +8031,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "ae6c36a6-67f4-49de-97c5-891a13934d6e")
-		(property "Reference" "U10"
+		(property "Reference" "U6"
 			(at 61.595 30.48 0)
 			(effects
 				(font
@@ -8711,7 +8101,7 @@
 		(instances
 			(project "ECE445L_Lab7"
 				(path "/69b823fd-c065-40ff-9bb9-c5835555f3eb/9e7b1dfa-492f-407a-9f72-cee77954c346"
-					(reference "U10")
+					(reference "U6")
 					(unit 1)
 				)
 			)
@@ -8745,7 +8135,7 @@
 				(justify left)
 			)
 		)
-		(property "Footprint" "Capacitor_SMD:C_0603_1608Metric"
+		(property "Footprint" "Capacitor_SMD:C_0603_1608Metric_Pad1.08x0.95mm_HandSolder"
 			(at 263.8552 51.435 0)
 			(effects
 				(font
@@ -8797,7 +8187,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "b54cd249-6ca8-4bc6-9ee8-64b8c0c4103a")
-		(property "Reference" "U14"
+		(property "Reference" "U9"
 			(at 196.215 114.935 0)
 			(effects
 				(font
@@ -8867,7 +8257,7 @@
 		(instances
 			(project "ECE445L_Lab7"
 				(path "/69b823fd-c065-40ff-9bb9-c5835555f3eb/9e7b1dfa-492f-407a-9f72-cee77954c346"
-					(reference "U14")
+					(reference "U9")
 					(unit 1)
 				)
 			)
@@ -8883,8 +8273,8 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "b5c902e3-83f2-4de9-9a98-4f96982414b0")
-		(property "Reference" "C21"
-			(at 210.82 117.475 90)
+		(property "Reference" "C25"
+			(at 210.82 116.84 90)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -8892,14 +8282,14 @@
 			)
 		)
 		(property "Value" "10u"
-			(at 210.82 120.015 90)
+			(at 210.82 119.38 90)
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
 			)
 		)
-		(property "Footprint" "Capacitor_SMD:C_0805_2012Metric"
+		(property "Footprint" "Capacitor_SMD:C_0805_2012Metric_Pad1.18x1.45mm_HandSolder"
 			(at 214.63 123.4948 0)
 			(effects
 				(font
@@ -8935,7 +8325,7 @@
 		(instances
 			(project "ECE445L_Lab7"
 				(path "/69b823fd-c065-40ff-9bb9-c5835555f3eb/9e7b1dfa-492f-407a-9f72-cee77954c346"
-					(reference "C21")
+					(reference "C25")
 					(unit 1)
 				)
 			)
@@ -8951,7 +8341,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "b6825300-52e0-4520-b075-2df06fcdb2b1")
-		(property "Reference" "C20"
+		(property "Reference" "C17"
 			(at 40.64 30.48 90)
 			(effects
 				(font
@@ -8967,7 +8357,7 @@
 				)
 			)
 		)
-		(property "Footprint" "Capacitor_SMD:C_0603_1608Metric"
+		(property "Footprint" "Capacitor_SMD:C_0603_1608Metric_Pad1.08x0.95mm_HandSolder"
 			(at 44.45 37.1348 0)
 			(effects
 				(font
@@ -9003,7 +8393,7 @@
 		(instances
 			(project "ECE445L_Lab7"
 				(path "/69b823fd-c065-40ff-9bb9-c5835555f3eb/9e7b1dfa-492f-407a-9f72-cee77954c346"
-					(reference "C20")
+					(reference "C17")
 					(unit 1)
 				)
 			)
@@ -9018,7 +8408,7 @@
 		(on_board yes)
 		(dnp no)
 		(uuid "b6f444cc-c5ac-4fae-a7ec-620df8dc2aa7")
-		(property "Reference" "R23"
+		(property "Reference" "R33"
 			(at 226.695 121.92 90)
 			(effects
 				(font
@@ -9036,7 +8426,7 @@
 				(justify right)
 			)
 		)
-		(property "Footprint" "Resistor_SMD:R_0603_1608Metric"
+		(property "Footprint" "Resistor_SMD:R_0603_1608Metric_Pad0.98x0.95mm_HandSolder"
 			(at 228.6 126.238 90)
 			(effects
 				(font
@@ -9072,7 +8462,7 @@
 		(instances
 			(project "ECE445L_Lab7"
 				(path "/69b823fd-c065-40ff-9bb9-c5835555f3eb/9e7b1dfa-492f-407a-9f72-cee77954c346"
-					(reference "R23")
+					(reference "R33")
 					(unit 1)
 				)
 			)
@@ -9088,7 +8478,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "b7d8b072-5e43-4d20-9958-63ae7d77f7e6")
-		(property "Reference" "#PWR013"
+		(property "Reference" "#PWR036"
 			(at 45.72 65.405 0)
 			(effects
 				(font
@@ -9138,7 +8528,7 @@
 		(instances
 			(project "ECE445L_Lab7"
 				(path "/69b823fd-c065-40ff-9bb9-c5835555f3eb/9e7b1dfa-492f-407a-9f72-cee77954c346"
-					(reference "#PWR013")
+					(reference "#PWR036")
 					(unit 1)
 				)
 			)
@@ -9153,7 +8543,7 @@
 		(on_board yes)
 		(dnp no)
 		(uuid "b923e2a0-42b7-4dc3-b21b-4ff794b19f7c")
-		(property "Reference" "R7"
+		(property "Reference" "R19"
 			(at 82.55 99.695 90)
 			(effects
 				(font
@@ -9171,7 +8561,7 @@
 				(justify right)
 			)
 		)
-		(property "Footprint" "Resistor_SMD:R_0603_1608Metric"
+		(property "Footprint" "Resistor_SMD:R_0603_1608Metric_Pad0.98x0.95mm_HandSolder"
 			(at 86.233 98.425 90)
 			(effects
 				(font
@@ -9207,7 +8597,7 @@
 		(instances
 			(project "ECE445L_Lab7"
 				(path "/69b823fd-c065-40ff-9bb9-c5835555f3eb/9e7b1dfa-492f-407a-9f72-cee77954c346"
-					(reference "R7")
+					(reference "R19")
 					(unit 1)
 				)
 			)
@@ -9223,7 +8613,7 @@
 		(on_board yes)
 		(dnp no)
 		(uuid "bab7f851-2c6a-4cdc-b345-3f99710d7f82")
-		(property "Reference" "Q6"
+		(property "Reference" "Q3"
 			(at 66.04 66.675 0)
 			(effects
 				(font
@@ -9283,7 +8673,7 @@
 		(instances
 			(project "ECE445L_Lab7"
 				(path "/69b823fd-c065-40ff-9bb9-c5835555f3eb/9e7b1dfa-492f-407a-9f72-cee77954c346"
-					(reference "Q6")
+					(reference "Q3")
 					(unit 1)
 				)
 			)
@@ -9374,7 +8764,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "bd486017-1ad7-4e1e-be90-0eafd3f4b927")
-		(property "Reference" "#PWR07"
+		(property "Reference" "#PWR052"
 			(at 193.675 50.8 0)
 			(effects
 				(font
@@ -9424,7 +8814,7 @@
 		(instances
 			(project "ECE445L_Lab7"
 				(path "/69b823fd-c065-40ff-9bb9-c5835555f3eb/9e7b1dfa-492f-407a-9f72-cee77954c346"
-					(reference "#PWR07")
+					(reference "#PWR052")
 					(unit 1)
 				)
 			)
@@ -9439,7 +8829,7 @@
 		(on_board yes)
 		(dnp no)
 		(uuid "bde508e2-e283-461b-99f1-3cb17205c08c")
-		(property "Reference" "R22"
+		(property "Reference" "R31"
 			(at 215.265 136.525 90)
 			(effects
 				(font
@@ -9457,7 +8847,7 @@
 				(justify right)
 			)
 		)
-		(property "Footprint" "Resistor_SMD:R_0603_1608Metric"
+		(property "Footprint" "Resistor_SMD:R_0603_1608Metric_Pad0.98x0.95mm_HandSolder"
 			(at 219.583 134.62 90)
 			(effects
 				(font
@@ -9493,7 +8883,7 @@
 		(instances
 			(project "ECE445L_Lab7"
 				(path "/69b823fd-c065-40ff-9bb9-c5835555f3eb/9e7b1dfa-492f-407a-9f72-cee77954c346"
-					(reference "R22")
+					(reference "R31")
 					(unit 1)
 				)
 			)
@@ -9508,7 +8898,7 @@
 		(on_board yes)
 		(dnp no)
 		(uuid "bf36447b-59c0-4c5c-bbd7-dde7c1904597")
-		(property "Reference" "R21"
+		(property "Reference" "R30"
 			(at 215.265 107.315 90)
 			(effects
 				(font
@@ -9526,7 +8916,7 @@
 				(justify right)
 			)
 		)
-		(property "Footprint" "Resistor_SMD:R_0603_1608Metric"
+		(property "Footprint" "Resistor_SMD:R_0603_1608Metric_Pad0.98x0.95mm_HandSolder"
 			(at 219.583 105.41 90)
 			(effects
 				(font
@@ -9562,7 +8952,7 @@
 		(instances
 			(project "ECE445L_Lab7"
 				(path "/69b823fd-c065-40ff-9bb9-c5835555f3eb/9e7b1dfa-492f-407a-9f72-cee77954c346"
-					(reference "R21")
+					(reference "R30")
 					(unit 1)
 				)
 			)
@@ -9577,7 +8967,7 @@
 		(on_board yes)
 		(dnp no)
 		(uuid "c154443c-f5d7-4bd4-a40c-df65b96773f1")
-		(property "Reference" "U10"
+		(property "Reference" "U6"
 			(at 90.17 33.02 0)
 			(effects
 				(font
@@ -9647,7 +9037,7 @@
 		(instances
 			(project "ECE445L_Lab7"
 				(path "/69b823fd-c065-40ff-9bb9-c5835555f3eb/9e7b1dfa-492f-407a-9f72-cee77954c346"
-					(reference "U10")
+					(reference "U6")
 					(unit 2)
 				)
 			)
@@ -9662,7 +9052,7 @@
 		(on_board yes)
 		(dnp no)
 		(uuid "c3ae567b-0809-43f6-a9b5-c64ead0c45ba")
-		(property "Reference" "R25"
+		(property "Reference" "R34"
 			(at 235.585 114.935 90)
 			(effects
 				(font
@@ -9680,7 +9070,7 @@
 				(justify right)
 			)
 		)
-		(property "Footprint" "Resistor_SMD:R_0603_1608Metric"
+		(property "Footprint" "Resistor_SMD:R_0603_1608Metric_Pad0.98x0.95mm_HandSolder"
 			(at 233.68 110.617 90)
 			(effects
 				(font
@@ -9716,7 +9106,7 @@
 		(instances
 			(project "ECE445L_Lab7"
 				(path "/69b823fd-c065-40ff-9bb9-c5835555f3eb/9e7b1dfa-492f-407a-9f72-cee77954c346"
-					(reference "R25")
+					(reference "R34")
 					(unit 1)
 				)
 			)
@@ -9732,7 +9122,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "c4f3ade2-fa0d-4265-b59a-92af89f784e0")
-		(property "Reference" "#PWR018"
+		(property "Reference" "#PWR035"
 			(at 45.72 32.385 0)
 			(effects
 				(font
@@ -9782,7 +9172,7 @@
 		(instances
 			(project "ECE445L_Lab7"
 				(path "/69b823fd-c065-40ff-9bb9-c5835555f3eb/9e7b1dfa-492f-407a-9f72-cee77954c346"
-					(reference "#PWR018")
+					(reference "#PWR035")
 					(unit 1)
 				)
 			)
@@ -9797,7 +9187,7 @@
 		(on_board yes)
 		(dnp no)
 		(uuid "c9fd3bdd-9f65-48b7-b912-e0a34b874431")
-		(property "Reference" "R4"
+		(property "Reference" "R17"
 			(at 69.215 161.925 90)
 			(effects
 				(font
@@ -9813,7 +9203,7 @@
 				)
 			)
 		)
-		(property "Footprint" "Resistor_SMD:R_0603_1608Metric"
+		(property "Footprint" "Resistor_SMD:R_0603_1608Metric_Pad0.98x0.95mm_HandSolder"
 			(at 69.215 165.608 90)
 			(effects
 				(font
@@ -9849,7 +9239,7 @@
 		(instances
 			(project "ECE445L_Lab7"
 				(path "/69b823fd-c065-40ff-9bb9-c5835555f3eb/9e7b1dfa-492f-407a-9f72-cee77954c346"
-					(reference "R4")
+					(reference "R17")
 					(unit 1)
 				)
 			)
@@ -9865,7 +9255,7 @@
 		(on_board yes)
 		(dnp no)
 		(uuid "cbbf6c5a-d7fe-4633-9f02-33a49b6fe4a2")
-		(property "Reference" "Q2"
+		(property "Reference" "Q4"
 			(at 66.675 180.34 0)
 			(effects
 				(font
@@ -9925,7 +9315,7 @@
 		(instances
 			(project "ECE445L_Lab7"
 				(path "/69b823fd-c065-40ff-9bb9-c5835555f3eb/9e7b1dfa-492f-407a-9f72-cee77954c346"
-					(reference "Q2")
+					(reference "Q4")
 					(unit 1)
 				)
 			)
@@ -9940,7 +9330,7 @@
 		(on_board yes)
 		(dnp no)
 		(uuid "cdbcaa72-052e-47d1-a87c-ec13a3f73680")
-		(property "Reference" "#PWR0102"
+		(property "Reference" "#PWR059"
 			(at 262.89 59.055 0)
 			(effects
 				(font
@@ -9990,7 +9380,7 @@
 		(instances
 			(project "ECE445L_Lab7"
 				(path "/69b823fd-c065-40ff-9bb9-c5835555f3eb/9e7b1dfa-492f-407a-9f72-cee77954c346"
-					(reference "#PWR0102")
+					(reference "#PWR059")
 					(unit 1)
 				)
 			)
@@ -10006,7 +9396,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "d12202ce-8834-4e9a-8bfa-5bbd6ab5414c")
-		(property "Reference" "#PWR02"
+		(property "Reference" "#PWR051"
 			(at 193.675 26.035 0)
 			(effects
 				(font
@@ -10056,7 +9446,7 @@
 		(instances
 			(project "ECE445L_Lab7"
 				(path "/69b823fd-c065-40ff-9bb9-c5835555f3eb/9e7b1dfa-492f-407a-9f72-cee77954c346"
-					(reference "#PWR02")
+					(reference "#PWR051")
 					(unit 1)
 				)
 			)
@@ -10072,7 +9462,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "d217d55d-0425-4225-8f62-f78aa70e1148")
-		(property "Reference" "U8"
+		(property "Reference" "U6"
 			(at 137.795 31.7499 0)
 			(effects
 				(font
@@ -10144,7 +9534,7 @@
 		(instances
 			(project "ECE445L_Lab7"
 				(path "/69b823fd-c065-40ff-9bb9-c5835555f3eb/9e7b1dfa-492f-407a-9f72-cee77954c346"
-					(reference "U8")
+					(reference "U6")
 					(unit 3)
 				)
 			)
@@ -10152,14 +9542,14 @@
 	)
 	(symbol
 		(lib_id "Device:R")
-		(at 175.895 111.125 90)
+		(at 175.895 111.125 270)
 		(unit 1)
 		(exclude_from_sim no)
 		(in_bom yes)
 		(on_board yes)
 		(dnp no)
 		(uuid "d2b995f1-1354-468b-ab1a-fcd60c9f64ed")
-		(property "Reference" "R18"
+		(property "Reference" "R27"
 			(at 175.895 109.22 90)
 			(effects
 				(font
@@ -10175,8 +9565,8 @@
 				)
 			)
 		)
-		(property "Footprint" "Resistor_SMD:R_0603_1608Metric"
-			(at 175.895 112.903 90)
+		(property "Footprint" "Resistor_SMD:R_0603_1608Metric_Pad0.98x0.95mm_HandSolder"
+			(at 175.895 109.347 90)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -10211,7 +9601,7 @@
 		(instances
 			(project "ECE445L_Lab7"
 				(path "/69b823fd-c065-40ff-9bb9-c5835555f3eb/9e7b1dfa-492f-407a-9f72-cee77954c346"
-					(reference "R18")
+					(reference "R27")
 					(unit 1)
 				)
 			)
@@ -10226,7 +9616,7 @@
 		(on_board yes)
 		(dnp no)
 		(uuid "d7bc52eb-2e72-418b-8ad4-691660162453")
-		(property "Reference" "C25"
+		(property "Reference" "C24"
 			(at 184.785 29.21 0)
 			(effects
 				(font
@@ -10244,7 +9634,7 @@
 				(justify right)
 			)
 		)
-		(property "Footprint" "Capacitor_SMD:C_0603_1608Metric"
+		(property "Footprint" "Capacitor_SMD:C_0603_1608Metric_Pad1.08x0.95mm_HandSolder"
 			(at 186.9948 27.94 0)
 			(effects
 				(font
@@ -10280,7 +9670,7 @@
 		(instances
 			(project "ECE445L_Lab7"
 				(path "/69b823fd-c065-40ff-9bb9-c5835555f3eb/9e7b1dfa-492f-407a-9f72-cee77954c346"
-					(reference "C25")
+					(reference "C24")
 					(unit 1)
 				)
 			)
@@ -10296,7 +9686,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "d8fa779e-ad16-4d3a-90e3-7afdf237b376")
-		(property "Reference" "#PWR012"
+		(property "Reference" "#PWR039"
 			(at 57.15 197.485 0)
 			(effects
 				(font
@@ -10346,7 +9736,7 @@
 		(instances
 			(project "ECE445L_Lab7"
 				(path "/69b823fd-c065-40ff-9bb9-c5835555f3eb/9e7b1dfa-492f-407a-9f72-cee77954c346"
-					(reference "#PWR012")
+					(reference "#PWR039")
 					(unit 1)
 				)
 			)
@@ -10361,7 +9751,7 @@
 		(on_board yes)
 		(dnp no)
 		(uuid "dd3500c6-6222-4f50-8634-b8253bc05727")
-		(property "Reference" "R26"
+		(property "Reference" "R35"
 			(at 242.57 148.59 90)
 			(effects
 				(font
@@ -10379,7 +9769,7 @@
 				(justify right)
 			)
 		)
-		(property "Footprint" "Resistor_SMD:R_0603_1608Metric"
+		(property "Footprint" "Resistor_SMD:R_0603_1608Metric_Pad0.98x0.95mm_HandSolder"
 			(at 243.332 150.495 90)
 			(effects
 				(font
@@ -10415,7 +9805,7 @@
 		(instances
 			(project "ECE445L_Lab7"
 				(path "/69b823fd-c065-40ff-9bb9-c5835555f3eb/9e7b1dfa-492f-407a-9f72-cee77954c346"
-					(reference "R26")
+					(reference "R35")
 					(unit 1)
 				)
 			)
@@ -10430,7 +9820,7 @@
 		(on_board yes)
 		(dnp no)
 		(uuid "de921d00-22c2-455c-a724-41453e97a342")
-		(property "Reference" "#PWR027"
+		(property "Reference" "#PWR047"
 			(at 154.94 48.895 0)
 			(effects
 				(font
@@ -10480,7 +9870,7 @@
 		(instances
 			(project "ECE445L_Lab7"
 				(path "/69b823fd-c065-40ff-9bb9-c5835555f3eb/9e7b1dfa-492f-407a-9f72-cee77954c346"
-					(reference "#PWR027")
+					(reference "#PWR047")
 					(unit 1)
 				)
 			)
@@ -10495,7 +9885,7 @@
 		(on_board yes)
 		(dnp no)
 		(uuid "e2009990-597c-4e8f-a5bf-140c369a2b68")
-		(property "Reference" "R17"
+		(property "Reference" "R12"
 			(at 55.245 52.705 0)
 			(effects
 				(font
@@ -10511,7 +9901,7 @@
 				)
 			)
 		)
-		(property "Footprint" "Resistor_SMD:R_0603_1608Metric"
+		(property "Footprint" "Resistor_SMD:R_0603_1608Metric_Pad0.98x0.95mm_HandSolder"
 			(at 51.562 56.515 90)
 			(effects
 				(font
@@ -10547,7 +9937,7 @@
 		(instances
 			(project "ECE445L_Lab7"
 				(path "/69b823fd-c065-40ff-9bb9-c5835555f3eb/9e7b1dfa-492f-407a-9f72-cee77954c346"
-					(reference "R17")
+					(reference "R12")
 					(unit 1)
 				)
 			)
@@ -10562,7 +9952,7 @@
 		(on_board yes)
 		(dnp no)
 		(uuid "e3091102-ae02-4d09-868b-c0101cf4b426")
-		(property "Reference" "R28"
+		(property "Reference" "R38"
 			(at 274.32 148.59 90)
 			(effects
 				(font
@@ -10580,7 +9970,7 @@
 				(justify right)
 			)
 		)
-		(property "Footprint" "Resistor_SMD:R_0603_1608Metric"
+		(property "Footprint" "Resistor_SMD:R_0603_1608Metric_Pad0.98x0.95mm_HandSolder"
 			(at 270.002 150.495 90)
 			(effects
 				(font
@@ -10616,7 +10006,7 @@
 		(instances
 			(project "ECE445L_Lab7"
 				(path "/69b823fd-c065-40ff-9bb9-c5835555f3eb/9e7b1dfa-492f-407a-9f72-cee77954c346"
-					(reference "R28")
+					(reference "R38")
 					(unit 1)
 				)
 			)
@@ -10632,7 +10022,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "e3e1b3df-38ad-4525-ba72-8ad59ea5cb07")
-		(property "Reference" "U8"
+		(property "Reference" "U7"
 			(at 62.23 144.78 0)
 			(effects
 				(font
@@ -10702,7 +10092,7 @@
 		(instances
 			(project "ECE445L_Lab7"
 				(path "/69b823fd-c065-40ff-9bb9-c5835555f3eb/9e7b1dfa-492f-407a-9f72-cee77954c346"
-					(reference "U8")
+					(reference "U7")
 					(unit 1)
 				)
 			)
@@ -10718,7 +10108,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "ecaa3302-43d3-4b83-b96c-bc9e66e56867")
-		(property "Reference" "#PWR011"
+		(property "Reference" "#PWR037"
 			(at 46.355 179.07 0)
 			(effects
 				(font
@@ -10768,7 +10158,7 @@
 		(instances
 			(project "ECE445L_Lab7"
 				(path "/69b823fd-c065-40ff-9bb9-c5835555f3eb/9e7b1dfa-492f-407a-9f72-cee77954c346"
-					(reference "#PWR011")
+					(reference "#PWR037")
 					(unit 1)
 				)
 			)
@@ -10783,7 +10173,7 @@
 		(on_board yes)
 		(dnp no)
 		(uuid "f0824e4d-73f8-4fc5-b902-f5db4cef7f33")
-		(property "Reference" "R13"
+		(property "Reference" "R16"
 			(at 68.58 48.26 90)
 			(effects
 				(font
@@ -10799,7 +10189,7 @@
 				)
 			)
 		)
-		(property "Footprint" "Resistor_SMD:R_0603_1608Metric"
+		(property "Footprint" "Resistor_SMD:R_0603_1608Metric_Pad0.98x0.95mm_HandSolder"
 			(at 68.58 51.943 90)
 			(effects
 				(font
@@ -10835,7 +10225,7 @@
 		(instances
 			(project "ECE445L_Lab7"
 				(path "/69b823fd-c065-40ff-9bb9-c5835555f3eb/9e7b1dfa-492f-407a-9f72-cee77954c346"
-					(reference "R13")
+					(reference "R16")
 					(unit 1)
 				)
 			)
@@ -10851,7 +10241,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "f514776e-c882-439a-9141-c268ab4948d8")
-		(property "Reference" "R1"
+		(property "Reference" "R7"
 			(at 29.21 146.05 90)
 			(effects
 				(font
@@ -10867,7 +10257,7 @@
 				)
 			)
 		)
-		(property "Footprint" "Resistor_SMD:R_0603_1608Metric"
+		(property "Footprint" "Resistor_SMD:R_0603_1608Metric_Pad0.98x0.95mm_HandSolder"
 			(at 29.21 149.987 90)
 			(effects
 				(font
@@ -10903,7 +10293,7 @@
 		(instances
 			(project "ECE445L_Lab7"
 				(path "/69b823fd-c065-40ff-9bb9-c5835555f3eb/9e7b1dfa-492f-407a-9f72-cee77954c346"
-					(reference "R1")
+					(reference "R7")
 					(unit 1)
 				)
 			)
@@ -10918,7 +10308,7 @@
 		(on_board yes)
 		(dnp no)
 		(uuid "f5f5508d-8d26-4058-8ec7-d4810da77dde")
-		(property "Reference" "R82"
+		(property "Reference" "R37"
 			(at 262.255 148.59 90)
 			(effects
 				(font
@@ -10936,7 +10326,7 @@
 				(justify right)
 			)
 		)
-		(property "Footprint" "Resistor_SMD:R_0603_1608Metric"
+		(property "Footprint" "Resistor_SMD:R_0603_1608Metric_Pad0.98x0.95mm_HandSolder"
 			(at 257.937 150.495 90)
 			(effects
 				(font
@@ -10972,7 +10362,7 @@
 		(instances
 			(project "ECE445L_Lab7"
 				(path "/69b823fd-c065-40ff-9bb9-c5835555f3eb/9e7b1dfa-492f-407a-9f72-cee77954c346"
-					(reference "R82")
+					(reference "R37")
 					(unit 1)
 				)
 			)
@@ -10988,7 +10378,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "fa6bb386-231d-4a6b-9149-a98d32eb2ca7")
-		(property "Reference" "C18"
+		(property "Reference" "C20"
 			(at 130.81 100.3299 0)
 			(effects
 				(font
@@ -10997,7 +10387,7 @@
 				(justify right)
 			)
 		)
-		(property "Value" "3.5n"
+		(property "Value" "3.7n"
 			(at 130.81 102.8699 0)
 			(effects
 				(font
@@ -11006,7 +10396,7 @@
 				(justify right)
 			)
 		)
-		(property "Footprint" "Capacitor_SMD:C_0603_1608Metric"
+		(property "Footprint" "Capacitor_SMD:C_0603_1608Metric_Pad1.08x0.95mm_HandSolder"
 			(at 126.0348 97.79 0)
 			(effects
 				(font
@@ -11042,7 +10432,7 @@
 		(instances
 			(project "ECE445L_Lab7"
 				(path "/69b823fd-c065-40ff-9bb9-c5835555f3eb/9e7b1dfa-492f-407a-9f72-cee77954c346"
-					(reference "C18")
+					(reference "C20")
 					(unit 1)
 				)
 			)
@@ -11057,7 +10447,7 @@
 		(on_board yes)
 		(dnp no)
 		(uuid "fb3ed915-72fd-4274-be64-5fbe9cbec3e5")
-		(property "Reference" "R6"
+		(property "Reference" "R18"
 			(at 81.915 88.9 90)
 			(effects
 				(font
@@ -11075,7 +10465,7 @@
 				(justify right)
 			)
 		)
-		(property "Footprint" "Resistor_SMD:R_0603_1608Metric"
+		(property "Footprint" "Resistor_SMD:R_0603_1608Metric_Pad0.98x0.95mm_HandSolder"
 			(at 86.233 86.995 90)
 			(effects
 				(font
@@ -11111,7 +10501,7 @@
 		(instances
 			(project "ECE445L_Lab7"
 				(path "/69b823fd-c065-40ff-9bb9-c5835555f3eb/9e7b1dfa-492f-407a-9f72-cee77954c346"
-					(reference "R6")
+					(reference "R18")
 					(unit 1)
 				)
 			)
@@ -11126,7 +10516,7 @@
 		(on_board yes)
 		(dnp no)
 		(uuid "fcc6d9f5-9ba8-4e29-a0f0-4179ab60ce37")
-		(property "Reference" "Q5"
+		(property "Reference" "Q1"
 			(at 46.99 66.675 0)
 			(effects
 				(font
@@ -11186,7 +10576,74 @@
 		(instances
 			(project "ECE445L_Lab7"
 				(path "/69b823fd-c065-40ff-9bb9-c5835555f3eb/9e7b1dfa-492f-407a-9f72-cee77954c346"
-					(reference "Q5")
+					(reference "Q1")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "Device:R")
+		(at 186.69 139.065 180)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(uuid "fd212821-33cf-4c66-9aca-a4a372b16b81")
+		(property "Reference" "R28"
+			(at 184.785 139.065 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "40k"
+			(at 186.69 139.065 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" "Resistor_SMD:R_0603_1608Metric_Pad0.98x0.95mm_HandSolder"
+			(at 188.468 139.065 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" "~"
+			(at 186.69 139.065 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" "Resistor"
+			(at 186.69 139.065 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "2bcaba39-333d-4b9f-8128-2233c39ae08f")
+		)
+		(pin "2"
+			(uuid "458be5cd-449e-4715-a739-75d7b7ed2e5e")
+		)
+		(instances
+			(project "ECE445L_Lab7"
+				(path "/69b823fd-c065-40ff-9bb9-c5835555f3eb/9e7b1dfa-492f-407a-9f72-cee77954c346"
+					(reference "R28")
 					(unit 1)
 				)
 			)
@@ -11202,7 +10659,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "fd54223c-1410-48da-87d7-2a9f9d0b3eab")
-		(property "Reference" "C17"
+		(property "Reference" "C19"
 			(at 76.835 85.09 90)
 			(effects
 				(font
@@ -11210,7 +10667,7 @@
 				)
 			)
 		)
-		(property "Value" "10n"
+		(property "Value" "9.5n"
 			(at 76.835 87.63 90)
 			(effects
 				(font
@@ -11218,7 +10675,7 @@
 				)
 			)
 		)
-		(property "Footprint" "Capacitor_SMD:C_0603_1608Metric"
+		(property "Footprint" "Capacitor_SMD:C_0603_1608Metric_Pad1.08x0.95mm_HandSolder"
 			(at 80.645 91.1098 0)
 			(effects
 				(font
@@ -11254,7 +10711,7 @@
 		(instances
 			(project "ECE445L_Lab7"
 				(path "/69b823fd-c065-40ff-9bb9-c5835555f3eb/9e7b1dfa-492f-407a-9f72-cee77954c346"
-					(reference "C17")
+					(reference "C19")
 					(unit 1)
 				)
 			)
@@ -11270,7 +10727,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "ff02792b-1723-4965-a570-4f77884b5df4")
-		(property "Reference" "#PWR021"
+		(property "Reference" "#PWR042"
 			(at 95.885 135.255 0)
 			(effects
 				(font
@@ -11320,7 +10777,7 @@
 		(instances
 			(project "ECE445L_Lab7"
 				(path "/69b823fd-c065-40ff-9bb9-c5835555f3eb/9e7b1dfa-492f-407a-9f72-cee77954c346"
-					(reference "#PWR021")
+					(reference "#PWR042")
 					(unit 1)
 				)
 			)
@@ -11335,7 +10792,7 @@
 		(on_board yes)
 		(dnp no)
 		(uuid "ff309a58-56d3-42fb-90dc-8735e2e79df4")
-		(property "Reference" "R9"
+		(property "Reference" "R22"
 			(at 107.95 102.87 90)
 			(effects
 				(font
@@ -11351,7 +10808,7 @@
 				)
 			)
 		)
-		(property "Footprint" "Resistor_SMD:R_0603_1608Metric"
+		(property "Footprint" "Resistor_SMD:R_0603_1608Metric_Pad0.98x0.95mm_HandSolder"
 			(at 107.95 106.553 90)
 			(effects
 				(font
@@ -11387,7 +10844,7 @@
 		(instances
 			(project "ECE445L_Lab7"
 				(path "/69b823fd-c065-40ff-9bb9-c5835555f3eb/9e7b1dfa-492f-407a-9f72-cee77954c346"
-					(reference "R9")
+					(reference "R22")
 					(unit 1)
 				)
 			)
