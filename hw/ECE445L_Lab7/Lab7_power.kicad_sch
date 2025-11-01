@@ -1712,7 +1712,7 @@
 		)
 		(uuid "0b88d33b-565c-497b-92b5-0b29e0e613ab")
 	)
-	(text "Wallwort Part Number : HKA01105021-XE\nInput : 100V-240V ~50/60Hz 0.5A\nOutput : 5.0V 2.1 A\n\n+VRail Current Draw :\n+3V3 Current + ESP Current Draw\n322.1718 mA + 100 mA = 422.1718 mA"
+	(text "Wallwort Part Number : HKA01105021-XE\nInput : 100V-240V ~50/60Hz 0.5A\nOutput : 5.0V 2.1 A\n\n+VRail Current Draw :\n+3V3 Current + ESP Current Draw\n352.1718 mA + 100 mA = 452.1718 mA"
 		(exclude_from_sim no)
 		(at 102.235 67.31 0)
 		(effects
@@ -1723,7 +1723,7 @@
 		)
 		(uuid "32a4df8a-c0f6-49c7-8195-61e00a5228c4")
 	)
-	(text "VRef Current Consumption :\n3V3 / (1k + 47k + 10k) = 0.0568 mA\n\nLM2937 Linaear Regulator (+VRAIL):\n2mA\n"
+	(text "Power Sheet Current Consumption\n\nVRef Current Consumption :\n3V3 / (1k + 47k + 10k) = 0.0568 mA\n\nLM2937 Linaear Regulator (+VRAIL):\n2mA\n"
 		(exclude_from_sim no)
 		(at 200.025 115.57 0)
 		(effects
@@ -1754,6 +1754,17 @@
 		)
 		(uuid "94455956-ed81-4f24-bbc8-a06089c0b166")
 	)
+	(text "+5V Laptop Current Consumption (Only FT2322R) :\n15 mA"
+		(exclude_from_sim no)
+		(at 97.79 82.55 0)
+		(effects
+			(font
+				(size 1.905 1.905)
+			)
+			(justify left)
+		)
+		(uuid "b13b9a0e-bfe1-401d-aba4-895686777f13")
+	)
 	(text "USB-C Power"
 		(exclude_from_sim no)
 		(at 126.365 22.225 0)
@@ -1764,7 +1775,7 @@
 		)
 		(uuid "bd624049-2db5-4b3f-8feb-2ae1806f9820")
 	)
-	(text "Current Per Sheet :\nOverview : 0mA\nPower : 0.0568 mA\nRight Audio (+3V3) : 61.6825 mA\nLeft Audio (+3V3) : 61.6825 mA\nInputs (+3V3) : 4.95 mA\nOuputs (+3V3) : 193.8 mA \n\nTotal (+3V) : 322.1718 mA\n"
+	(text "Current Per Sheet :\nOverview : 0mA\nPower : 0.0568 mA\nMicrocontroller : 30 mA \nRight Audio (+3V3) : 61.6825 mA\nLeft Audio (+3V3) : 61.6825 mA\nInputs (+3V3) : 4.95 mA\nOuputs (+3V3) : 193.8 mA \n\nTotal (+3V) : 352.1718 mA\n"
 		(exclude_from_sim no)
 		(at 15.875 180.34 0)
 		(effects
@@ -1774,6 +1785,16 @@
 			(justify left)
 		)
 		(uuid "c59e8832-4789-4515-8b32-0927151b3815")
+	)
+	(text "Total Current Consumption for each Voltage :\n+3V3 : 352.1718 mA\n+VRAIL (+5V) : 452.1718 mA\n+5V Laptop : 15 mA"
+		(exclude_from_sim no)
+		(at 127.635 175.895 0)
+		(effects
+			(font
+				(size 2.54 2.54)
+			)
+		)
+		(uuid "dd798b29-86aa-4111-aacf-479812dbd5f5")
 	)
 	(text "Vref"
 		(exclude_from_sim no)

@@ -705,7 +705,7 @@
 			(embedded_fonts no)
 		)
 	)
-	(text "Current Per Switch :\n+3V3 / 10k = 0.33 mA\n\nCurrent Per Pot :\n+3V3 / 10k = 0.33 mA\n\nSwitches : 7 * (0.33 mA) = 2.31 mA\nPots : 8 * (0.33 mA) = 2.64 mA\n\nTotal : 4.95 mA"
+	(text "Inputs Current Consumption\n\nCurrent Per Switch :\n+3V3 / 10k = 0.33 mA\n\nCurrent Per Pot :\n+3V3 / 10k = 0.33 mA\n\nSwitches : 7 * (0.33 mA) = 2.31 mA\nPots : 8 * (0.33 mA) = 2.64 mA\n\nTotal : 4.95 mA"
 		(exclude_from_sim no)
 		(at 36.195 182.88 0)
 		(effects

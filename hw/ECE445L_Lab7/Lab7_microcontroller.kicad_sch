@@ -4174,7 +4174,7 @@
 			(embedded_fonts no)
 		)
 	)
-	(text "TM4C Current Consumption (+3V3)\n30.0 mA\n\nFT2322R Current Consumption (+5V Laptop)\n15 mA\n\nESP32 (+VRAIL)\n~100 mA"
+	(text "Microcontroller Sheet Current Consumption\n\nTM4C Current Consumption (+3V3)\n30.0 mA\n\nFT2322R Current Consumption (+5V Laptop)\n15 mA\n\nESP32 (+VRAIL)\n~100 mA"
 		(exclude_from_sim no)
 		(at 93.98 132.08 0)
 		(effects

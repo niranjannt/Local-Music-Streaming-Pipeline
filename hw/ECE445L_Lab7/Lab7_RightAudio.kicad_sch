@@ -1247,7 +1247,7 @@
 		)
 		(uuid "6eb617f7-dd72-40d8-9893-7c0ccbec7d37")
 	)
-	(text "Current per 100k Ohm Resitor Divider\n+3V3 / (100k + 100k) = 0.0165 mA\n\nCurrent per 200k Ohm Resistor Divider\n+3V3 / (200k + 200k) = 0.00825 mA\n\nCurrent per 10k Ohm Resitor Divider\n+3V3 / (10k + 10k) = 0.165 mA\n\nCurrent per 75k Load\n+3V3 / 75k = 0.044 mA\n\nQuiescent Current (Per Amplifier - 2x per chip)\n7.5 mA\n\nCurrent Per TLV5616\n1.1 mA\n"
+	(text "Right Audio Current Consumption\n\nCurrent per 100k Ohm Resitor Divider\n+3V3 / (100k + 100k) = 0.0165 mA\n\nCurrent per 200k Ohm Resistor Divider\n+3V3 / (200k + 200k) = 0.00825 mA\n\nCurrent per 10k Ohm Resitor Divider\n+3V3 / (10k + 10k) = 0.165 mA\n\nCurrent per 75k Load\n+3V3 / 75k = 0.044 mA\n\nQuiescent Current (Per Amplifier - 2x per chip)\n7.5 mA\n\nCurrent Per TLV5616\n1.1 mA\n"
 		(exclude_from_sim no)
 		(at 118.745 155.575 0)
 		(effects
