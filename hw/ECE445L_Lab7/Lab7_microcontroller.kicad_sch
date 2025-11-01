@@ -4174,6 +4174,27 @@
 			(embedded_fonts no)
 		)
 	)
+	(text "TM4C Current Consumption (+3V3)\n30.0 mA\n\nFT2322R Current Consumption (+5V Laptop)\n15 mA\n\nESP32 (+VRAIL)\n~100 mA"
+		(exclude_from_sim no)
+		(at 93.98 132.08 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left)
+		)
+		(uuid "6f424c6d-580b-4816-affd-2b90bf2a659f")
+	)
+	(text "TM4C Current Consumption: 38.1 mA\nTM4C Voltage : 3V3"
+		(exclude_from_sim no)
+		(at 238.76 119.38 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+		)
+		(uuid "819caa02-4c31-4649-ac42-0d84cb6e520e")
+	)
 	(text "Connect Directly to Wallwart "
 		(exclude_from_sim no)
 		(at 87.63 25.4 0)

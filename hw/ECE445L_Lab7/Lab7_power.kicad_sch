@@ -1701,6 +1701,39 @@
 			(embedded_fonts no)
 		)
 	)
+	(text "Max Output Current : 500 mA\nVoltage : 3V3\n\nMax +3V3 Current Consumption : 322.1718 mA"
+		(exclude_from_sim no)
+		(at 24.765 62.23 0)
+		(effects
+			(font
+				(size 1.905 1.905)
+			)
+			(justify left)
+		)
+		(uuid "0b88d33b-565c-497b-92b5-0b29e0e613ab")
+	)
+	(text "Wallwort Part Number : HKA01105021-XE\nInput : 100V-240V ~50/60Hz 0.5A\nOutput : 5.0V 2.1 A\n\n+VRail Current Draw :\n+3V3 Current + ESP Current Draw\n322.1718 mA + 100 mA = 422.1718 mA"
+		(exclude_from_sim no)
+		(at 102.235 67.31 0)
+		(effects
+			(font
+				(size 1.905 1.905)
+			)
+			(justify left)
+		)
+		(uuid "32a4df8a-c0f6-49c7-8195-61e00a5228c4")
+	)
+	(text "VRef Current Consumption :\n3V3 / (1k + 47k + 10k) = 0.0568 mA\n\nLM2937 Linaear Regulator (+VRAIL):\n2mA\n"
+		(exclude_from_sim no)
+		(at 200.025 115.57 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left)
+		)
+		(uuid "37f11bab-7384-4db3-bc9f-8668bb255557")
+	)
 	(text "+3V3 Regulator"
 		(exclude_from_sim no)
 		(at 48.26 19.05 0)
@@ -1711,6 +1744,16 @@
 		)
 		(uuid "56e020e5-9468-40f5-8acd-05bbfdab2c52")
 	)
+	(text "Output Voltage 5V\n"
+		(exclude_from_sim no)
+		(at 124.46 50.165 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+		)
+		(uuid "94455956-ed81-4f24-bbc8-a06089c0b166")
+	)
 	(text "USB-C Power"
 		(exclude_from_sim no)
 		(at 126.365 22.225 0)
@@ -1720,6 +1763,17 @@
 			)
 		)
 		(uuid "bd624049-2db5-4b3f-8feb-2ae1806f9820")
+	)
+	(text "Current Per Sheet :\nOverview : 0mA\nPower : 0.0568 mA\nRight Audio (+3V3) : 61.6825 mA\nLeft Audio (+3V3) : 61.6825 mA\nInputs (+3V3) : 4.95 mA\nOuputs (+3V3) : 193.8 mA \n\nTotal (+3V) : 322.1718 mA\n"
+		(exclude_from_sim no)
+		(at 15.875 180.34 0)
+		(effects
+			(font
+				(size 1.905 1.905)
+			)
+			(justify left)
+		)
+		(uuid "c59e8832-4789-4515-8b32-0927151b3815")
 	)
 	(text "Vref"
 		(exclude_from_sim no)

@@ -1331,6 +1331,17 @@
 			(embedded_fonts no)
 		)
 	)
+	(text "Current Per Speaker (Assuming Short) :\n3V3 / 50 = 66 mA\n\nCurrent Per ST7735R :\n50 mA\n\nCurrent Per LED :\n(3V3 - 1V5) / 2k = 0.9 mA\n\nSpeakers : 2 * (66 mA) = 132 mA\nST7735R : 1 * (50 mA) = 50 mA\nLEDs : 2 * (0.9mA) = 1.8 mA\n\nTotal : 193.8 mA\n"
+		(exclude_from_sim no)
+		(at 23.495 127 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left)
+		)
+		(uuid "8c8403d0-0090-4de6-ba69-6583cc27c201")
+	)
 	(text_box "TFT Display"
 		(exclude_from_sim no)
 		(at 132.08 26.035 0)

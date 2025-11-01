@@ -1246,6 +1246,17 @@
 		)
 		(uuid "329ccd42-6b79-467e-a1e2-69c6367c58a3")
 	)
+	(text "100k Ohm Resistor Dividers : 2 * (0.0165 mA) = 0.033 mA\n200k Ohm Resistor Dividers : 1 * 0.00825 = 0.00825 mA\n10k Ohm Resitor Dividers : 3 * (0.165 mA) = 0.5 mA\n75k Ohm Loads : 1 * (0.044 mA) = 0.044 mA\nOPA2350s : 8 * (7.5 mA) = 60 mA\nTLV5616s : 1 * (1.1mA) = 1.1 mA\n\nTotal : 61.6825 mA"
+		(exclude_from_sim no)
+		(at 117.475 185.42 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left)
+		)
+		(uuid "41e49e66-4ec0-40d9-9d59-9dc4230df32a")
+	)
 	(text "Bass Channel"
 		(exclude_from_sim no)
 		(at 60.96 133.35 0)
@@ -1255,6 +1266,17 @@
 			)
 		)
 		(uuid "556210df-a584-431f-96d5-3961abde8568")
+	)
+	(text "Current per 100k Ohm Resitor Divider\n+3V3 / (100k + 100k) = 0.0165 mA\n\nCurrent per 200k Ohm Resistor Divider\n+3V3 / (200k + 200k) = 0.00825 mA\n\nCurrent per 10k Ohm Resitor Divider\n+3V3 / (10k + 10k) = 0.165 mA\n\nCurrent per 75k Load\n+3V3 / 75k = 0.044 mA\n\nQuiescent Current (Per Amplifier - 2x per chip)\n7.5 mA\n\nCurrent Per TLV5616\n1.1 mA\n"
+		(exclude_from_sim no)
+		(at 118.11 156.845 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left)
+		)
+		(uuid "80677126-46d8-437a-963d-d4e4acbf7fba")
 	)
 	(text "Mid Channel"
 		(exclude_from_sim no)
