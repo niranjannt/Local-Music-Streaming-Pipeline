@@ -1744,6 +1744,16 @@
 		)
 		(uuid "56e020e5-9468-40f5-8acd-05bbfdab2c52")
 	)
+	(text "Power Switch"
+		(exclude_from_sim no)
+		(at 166.37 25.4 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+		)
+		(uuid "61dc1e76-45c9-42d8-8333-2afe2b37c0ff")
+	)
 	(text "Output Voltage 5V\n"
 		(exclude_from_sim no)
 		(at 124.46 50.165 0)
@@ -1823,6 +1833,12 @@
 		(uuid "0b17e6da-babc-423c-88e6-6464409b073c")
 	)
 	(junction
+		(at 154.305 51.435)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "21c996cf-c63a-4e34-8629-5e01ccfc1a37")
+	)
+	(junction
 		(at 174.625 35.56)
 		(diameter 0)
 		(color 0 0 0 0)
@@ -1847,6 +1863,12 @@
 		(uuid "5a398701-897a-4bbe-af6f-42844f152e37")
 	)
 	(junction
+		(at 240.665 126.365)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "65a64b51-281e-461b-9297-f26dae02d8b3")
+	)
+	(junction
 		(at 74.295 31.75)
 		(diameter 0)
 		(color 0 0 0 0)
@@ -1859,12 +1881,6 @@
 		(uuid "7793f6a7-8d18-448c-9be4-57b7cb28f4d7")
 	)
 	(junction
-		(at 243.84 140.335)
-		(diameter 0)
-		(color 0 0 0 0)
-		(uuid "9002301b-482e-42dd-a435-7edb370233f4")
-	)
-	(junction
 		(at 182.88 35.56)
 		(diameter 0)
 		(color 0 0 0 0)
@@ -1875,6 +1891,12 @@
 		(diameter 0)
 		(color 0 0 0 0)
 		(uuid "b10d3d7f-6780-4a26-8b76-0e6ab91be98b")
+	)
+	(junction
+		(at 154.305 47.625)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "b9c531a5-73fe-4dc8-ae64-3d6799905f72")
 	)
 	(junction
 		(at 28.575 31.75)
@@ -1901,10 +1923,10 @@
 		(uuid "dacd01ef-feae-4263-9739-5ace90488b84")
 	)
 	(junction
-		(at 240.03 140.335)
+		(at 244.475 126.365)
 		(diameter 0)
 		(color 0 0 0 0)
-		(uuid "e0b9784c-0b04-4665-b7a0-a9f294baec46")
+		(uuid "dbfac8db-ba5c-4d92-9036-642b4b41c865")
 	)
 	(junction
 		(at 154.305 45.72)
@@ -1937,6 +1959,16 @@
 			(type default)
 		)
 		(uuid "05953534-d631-4d46-9bdc-f672e3a62ad8")
+	)
+	(wire
+		(pts
+			(xy 236.22 126.365) (xy 240.665 126.365)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "11117f58-472b-405a-9db2-3cfbccaace99")
 	)
 	(wire
 		(pts
@@ -2030,6 +2062,16 @@
 	)
 	(wire
 		(pts
+			(xy 154.305 47.625) (xy 154.305 51.435)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "36311d95-8f21-427f-8479-1e1e969125c3")
+	)
+	(wire
+		(pts
 			(xy 248.92 126.365) (xy 248.92 130.175)
 		)
 		(stroke
@@ -2070,26 +2112,6 @@
 	)
 	(wire
 		(pts
-			(xy 259.08 126.365) (xy 248.92 126.365)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "496a5496-929b-492b-b9db-e5874ce5f84a")
-	)
-	(wire
-		(pts
-			(xy 240.03 140.335) (xy 243.84 140.335)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "497e7fab-4b6b-4fef-a222-52f25127edd5")
-	)
-	(wire
-		(pts
 			(xy 78.74 31.75) (xy 74.295 31.75)
 		)
 		(stroke
@@ -2097,16 +2119,6 @@
 			(type default)
 		)
 		(uuid "49a43f63-ed6f-460b-9561-a12c98ff00e9")
-	)
-	(wire
-		(pts
-			(xy 235.585 140.335) (xy 240.03 140.335)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "53c958f4-9870-4349-b49a-d8b62efd81fc")
 	)
 	(wire
 		(pts
@@ -2140,6 +2152,26 @@
 	)
 	(wire
 		(pts
+			(xy 154.305 51.435) (xy 154.305 52.705)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "61cb3666-77aa-4f9c-8d27-e2d939646d7a")
+	)
+	(wire
+		(pts
+			(xy 154.305 45.72) (xy 154.305 47.625)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "62d462ec-4aa1-433f-9016-e7b72534968e")
+	)
+	(wire
+		(pts
 			(xy 28.575 31.75) (xy 28.575 34.925)
 		)
 		(stroke
@@ -2167,16 +2199,6 @@
 			(type default)
 		)
 		(uuid "76e89612-42dc-4071-b78b-6dcdf95c50a4")
-	)
-	(wire
-		(pts
-			(xy 154.305 45.72) (xy 154.305 47.625)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "7898b2bf-ca99-4d51-a03d-326734d9f48d")
 	)
 	(wire
 		(pts
@@ -2250,6 +2272,16 @@
 	)
 	(wire
 		(pts
+			(xy 240.665 126.365) (xy 244.475 126.365)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "a55feb9d-7989-445d-89a6-db20bc217c52")
+	)
+	(wire
+		(pts
 			(xy 154.305 38.1) (xy 154.305 40.64)
 		)
 		(stroke
@@ -2257,16 +2289,6 @@
 			(type default)
 		)
 		(uuid "a8abaafd-e54b-485c-a48b-f40fee03789b")
-	)
-	(wire
-		(pts
-			(xy 243.84 140.335) (xy 248.92 140.335)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "b0d2dd1b-458c-4a1c-8b94-1213c0b08b9c")
 	)
 	(wire
 		(pts
@@ -2320,6 +2342,16 @@
 	)
 	(wire
 		(pts
+			(xy 244.475 126.365) (xy 248.92 126.365)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "c8f3036c-3a80-4788-94a0-1c28e43469e7")
+	)
+	(wire
+		(pts
 			(xy 28.575 31.75) (xy 35.56 31.75)
 		)
 		(stroke
@@ -2370,6 +2402,16 @@
 	)
 	(wire
 		(pts
+			(xy 248.92 126.365) (xy 259.08 126.365)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "d6a3ac7f-0e3a-4116-99b3-017ae7e3119f")
+	)
+	(wire
+		(pts
 			(xy 140.335 35.56) (xy 157.48 35.56)
 		)
 		(stroke
@@ -2410,7 +2452,7 @@
 	)
 	(global_label "VRef"
 		(shape input)
-		(at 235.585 140.335 180)
+		(at 236.22 126.365 180)
 		(fields_autoplaced yes)
 		(effects
 			(font
@@ -2418,9 +2460,9 @@
 			)
 			(justify right)
 		)
-		(uuid "6b272bb3-511e-48d5-bfbd-f258936b0683")
+		(uuid "e81c1170-a711-4040-8916-3974256319b4")
 		(property "Intersheetrefs" "${INTERSHEET_REFS}"
-			(at 228.4269 140.335 0)
+			(at 229.0619 126.365 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -2755,7 +2797,7 @@
 	)
 	(symbol
 		(lib_id "power:GND")
-		(at 154.305 47.625 0)
+		(at 154.305 52.705 0)
 		(unit 1)
 		(exclude_from_sim no)
 		(in_bom yes)
@@ -2763,7 +2805,7 @@
 		(dnp no)
 		(uuid "14bb55ef-5994-44a2-bfad-811ade381638")
 		(property "Reference" "#PWR07"
-			(at 154.305 53.975 0)
+			(at 154.305 59.055 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -2772,7 +2814,7 @@
 			)
 		)
 		(property "Value" "GND"
-			(at 158.115 49.53 0)
+			(at 158.115 54.61 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -2780,7 +2822,7 @@
 			)
 		)
 		(property "Footprint" ""
-			(at 154.305 47.625 0)
+			(at 154.305 52.705 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -2789,7 +2831,7 @@
 			)
 		)
 		(property "Datasheet" ""
-			(at 154.305 47.625 0)
+			(at 154.305 52.705 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -2798,7 +2840,7 @@
 			)
 		)
 		(property "Description" "Power symbol creates a global label with name \"GND\" , ground"
-			(at 154.305 47.625 0)
+			(at 154.305 52.705 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -2820,7 +2862,7 @@
 	)
 	(symbol
 		(lib_id "ECE445L:Testpoint")
-		(at 241.935 140.335 0)
+		(at 242.57 126.365 0)
 		(unit 1)
 		(exclude_from_sim no)
 		(in_bom yes)
@@ -2828,7 +2870,7 @@
 		(dnp no)
 		(uuid "296de1a4-dd89-4d02-a09e-c4ae7183955f")
 		(property "Reference" "TP3"
-			(at 234.95 135.255 0)
+			(at 235.585 121.285 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -2837,7 +2879,7 @@
 			)
 		)
 		(property "Value" "+VRef"
-			(at 233.68 137.16 0)
+			(at 234.315 123.19 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -2846,7 +2888,7 @@
 			)
 		)
 		(property "Footprint" "ECE445L:Testpoint_1x02_P2.54mm"
-			(at 241.935 134.62 0)
+			(at 242.57 120.65 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -2855,7 +2897,7 @@
 			)
 		)
 		(property "Datasheet" "~"
-			(at 241.935 140.335 0)
+			(at 242.57 126.365 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -2864,7 +2906,7 @@
 			)
 		)
 		(property "Description" "Testpoint"
-			(at 241.935 140.335 0)
+			(at 242.57 126.365 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -3276,6 +3318,125 @@
 			(project ""
 				(path "/69b823fd-c065-40ff-9bb9-c5835555f3eb/120cc903-6d6c-4a77-ad9c-c9f63dede169"
 					(reference "U1")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "ti_LM4041CILPR:LM4041CILPR")
+		(at 259.08 140.335 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "52e25aaf-1fe7-4cd4-8959-6d3289541e3f")
+		(property "Reference" "U4"
+			(at 261.62 138.4934 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Value" "LM4041CILPR"
+			(at 261.62 141.0334 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Footprint" "ECE445L:ti_LM4041CILPR"
+			(at 259.08 140.335 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify bottom)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" "https://www.ti.com/general/docs/suppproductinfo.tsp?distId=26&gotoUrl=https://www.ti.com/lit/gpn/lm4041a12"
+			(at 259.08 140.335 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" ""
+			(at 259.08 140.335 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Distributor" "Mouser"
+			(at 259.08 140.335 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Manufacturer" "Texas Instruments"
+			(at 259.08 140.335 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "P/N" "LM4041CILPR"
+			(at 259.08 140.335 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "LCSC Part #" ""
+			(at 259.08 140.335 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Cost" "0.78"
+			(at 259.08 140.335 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "2"
+			(uuid "c6effc44-db5c-41f0-86d0-d34974dc6c59")
+		)
+		(pin "1"
+			(uuid "ec942390-190d-4a34-93ae-ab3752a62686")
+		)
+		(pin "3"
+			(uuid "f89b1e68-3fca-498e-a120-a9559de08987")
+		)
+		(instances
+			(project "ECE445L_Lab7"
+				(path "/69b823fd-c065-40ff-9bb9-c5835555f3eb/120cc903-6d6c-4a77-ad9c-c9f63dede169"
+					(reference "U4")
 					(unit 1)
 				)
 			)
@@ -3816,6 +3977,75 @@
 			(project "ECE445L_Lab7"
 				(path "/69b823fd-c065-40ff-9bb9-c5835555f3eb/120cc903-6d6c-4a77-ad9c-c9f63dede169"
 					(reference "#PWR02")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "ECE445L:Testpoint")
+		(at 154.305 49.53 270)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(uuid "a79b5b4b-903b-4bf7-8f3a-f45d30fbc83f")
+		(property "Reference" "TP4"
+			(at 159.385 50.165 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Value" "GND"
+			(at 158.75 48.26 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Footprint" "ECE445L:Testpoint_1x02_P2.54mm"
+			(at 160.02 49.53 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" "~"
+			(at 154.305 49.53 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" "Testpoint"
+			(at 154.305 49.53 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "1f5eef5e-aa9b-4a0e-b221-c8b3858fdf6f")
+		)
+		(pin "2"
+			(uuid "d6241eaa-672b-483d-ad03-23ed67386b33")
+		)
+		(instances
+			(project "ECE445L_Lab7"
+				(path "/69b823fd-c065-40ff-9bb9-c5835555f3eb/120cc903-6d6c-4a77-ad9c-c9f63dede169"
+					(reference "TP4")
 					(unit 1)
 				)
 			)

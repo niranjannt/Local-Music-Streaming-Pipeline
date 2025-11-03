@@ -1,229 +1,28 @@
 Circuit: * C:\Users\ashto\Dev\ECE445L\lab-7-and-10-project-nnat\hw\Filters.asc
 
-Direct Newton iteration failed to find .op point.  (Use ".option noopiter" to skip.)
-Starting Gmin stepping
-Gmin = 10
-Gmin = 1.07374
-Gmin = 0.115292
-Gmin = 0.0123794
-Gmin = 0.00132923
-vernier = 0.5
-Gmin = 0.000223007
-vernier = 0.25
-vernier = 0.125
-vernier = 0.0625
-vernier = 0.03125
-Gmin = 0.00020666
-vernier = 0.015625
-vernier = 0.0078125
-vernier = 0.0104167
-Gmin = 0.000204122
-vernier = 0.0138889
-Gmin = 0.000198023
-vernier = 0.0185185
-vernier = 0.0246913
-Gmin = 0.000188433
-vernier = 0.0329218
-vernier = 0.0438957
-Gmin = 0.000174197
-vernier = 0.0585276
-Gmin = 0.00015339
-vernier = 0.0780367
-vernier = 0.104049
-Gmin = 0.000124648
-vernier = 0.0520245
-vernier = 0.0260122
-vernier = 0.034683
-Gmin = 0.000119636
-vernier = 0.046244
-Gmin = 0.000108181
-vernier = 0.0616586
-vernier = 0.0822114
-vernier = 0.0411057
-Gmin = 9.6574e-05
-vernier = 0.0205529
-vernier = 0.0102764
-vernier = 0.00513821
-Gmin = 9.61998e-05
-vernier = 0.00256911
-vernier = 0.00342548
-Gmin = 9.56455e-05
-vernier = 0.0045673
-vernier = 0.00608973
-Gmin = 9.46052e-05
-vernier = 0.00811964
-vernier = 0.00405982
-Gmin = 9.3603e-05
-vernier = 0.00541309
-vernier = 0.00721745
-Gmin = 9.23249e-05
-vernier = 0.00962327
-Gmin = 9.03495e-05
-vernier = 0.012831
-vernier = 0.017108
-Gmin = 8.71298e-05
-vernier = 0.0228107
-vernier = 0.0304143
-Gmin = 8.22361e-05
-vernier = 0.0405523
-Gmin = 7.50964e-05
-vernier = 0.0540698
-vernier = 0.072093
-Gmin = 6.45061e-05
-vernier = 0.096124
-vernier = 0.128165
-Gmin = 5.06772e-05
-vernier = 0.170887
-Gmin = 3.47547e-05
-vernier = 0.227849
-vernier = 0.303799
-Gmin = 1.8599e-05
-vernier = 0.151899
-vernier = 0.0759497
-vernier = 0.0379749
-vernier = 0.0506331
-Gmin = 1.7519e-05
-vernier = 0.0675108
-Gmin = 1.51304e-05
-vernier = 0.0900144
-vernier = 0.0450072
-vernier = 0.0225036
-Gmin = 1.34601e-05
-vernier = 0.0300048
-vernier = 0.0400064
-Gmin = 1.25298e-05
-vernier = 0.0533418
-Gmin = 1.11575e-05
-vernier = 0.0711224
-vernier = 0.0948299
-Gmin = 9.2334e-06
-vernier = 0.0474149
-vernier = 0.0237075
-vernier = 0.0118537
-vernier = 0.00592687
-vernier = 0.00296343
-vernier = 0.00148172
-vernier = 0.000740858
-vernier = 0.000555644
-vernier = 0.000416733
-Gmin = 9.2334e-06
-Gmin = 0
-Gmin stepping failed
+Error on line 42 : v3 n001 0 v
+	 Unknown parameter "v"
+Error on line 46 : m2 n006 on n008 n008 bss138
+	 Unable to find definition of model ""
+WARNING: Less than two connections to node nc_01.  This node is used by r24.
+Instance "m:m1:1": Width narrower than recommended for a level 3 MOSFET.
+v3: Missing value, assumed 0V @ DC
+Direct Newton iteration for .op point succeeded.
 
-Starting source stepping with srcstepmethod=0
-Source Step = 3.0303%
-vernier = 0.25
-Source Step = 0.520833%
-Source Step = 0.994318%
-Source Step = 1.4678%
-Source Step = 1.94129%
-Source Step = 2.41477%
-vernier = 0.0234375
-Source Step = 3.0303%
-Source Step = 3.74053%
-Source Step = 4.45076%
-Source Step = 5.16098%
-Source Step = 5.87121%
-vernier = 0.0351562
-Source Step = 6.759%
-Source Step = 7.82434%
-Source Step = 8.07736%
-Source Step = 8.14394%
-Source Step = 8.21052%
-Source Step = 8.27711%
-Source Step = 8.34369%
-Source Step = 8.41027%
-vernier = 0.0032959
-Source Step = 8.51015%
-Source Step = 8.61003%
-Source Step = 8.7099%
-Source Step = 8.80978%
-Source Step = 8.90965%
-vernier = 0.00494385
-Source Step = 9.05447%
-Source Step = 9.20429%
-Source Step = 9.3541%
-Source Step = 9.50391%
-Source Step = 9.65373%
-vernier = 0.00741577
-Source Step = 9.86347%
-Source Step = 10.0882%
-Source Step = 10.3129%
-Source Step = 10.5376%
-Source Step = 10.7623%
-vernier = 0.0111237
-Source Step = 11.0657%
-Source Step = 11.4028%
-Source Step = 11.7399%
-Source Step = 12.077%
-Source Step = 12.414%
-vernier = 0.0166855
-Source Step = 12.8522%
-Source Step = 13.3579%
-Source Step = 13.8635%
-Source Step = 14.3691%
-Source Step = 14.8747%
-vernier = 0.0250282
-Source Step = 15.5068%
-Source Step = 16.2652%
-Source Step = 17.0236%
-Source Step = 17.782%
-Source Step = 18.5405%
-vernier = 0.0375423
-Source Step = 19.4506%
-Source Step = 20.5882%
-Source Step = 21.7259%
-Source Step = 22.8635%
-Source Step = 24.0012%
-vernier = 0.0563135
-Source Step = 25.3095%
-Source Step = 27.0159%
-Source Step = 28.7224%
-Source Step = 30.4289%
-Source Step = 32.1354%
-vernier = 0.0844703
-Source Step = 34.0125%
-Source Step = 36.5722%
-Source Step = 39.1319%
-Source Step = 41.6916%
-Source Step = 44.2513%
-vernier = 0.126705
-Source Step = 46.939%
-Source Step = 50.7785%
-Source Step = 54.6181%
-Source Step = 58.4577%
-Source Step = 62.2972%
-Source Step = 66.1368%
-vernier = 0.190058
-Source Step = 71.8961%
-Source Step = 77.6555%
-Source Step = 83.4148%
-Source Step = 86.0785%
-Starting source stepping with srcstepmethod=1
-Source Step = 3.0303%
-Source Step = 33.3333%
-Source Step = 63.6364%
-Source Step = 86.3636%
-Source Step = 87.6539%
-Source stepping failed
-
-Pseudo Transient succeeded in finding the operating point at 1.70832 s.
-
-Date: Thu Oct 30 19:56:22 2025
-Total elapsed time: 30.937 seconds.
+Date: Sat Nov  1 20:16:30 2025
+Total elapsed time: 2.623 seconds.
 
 tnom = 27
 temp = 27
 method = trap
-totiter = 292753
+totiter = 26
 traniter = 0
 tranpoints = 0
 accept = 0
-rejected = 7047
-matrix size = 978
-fillins = 2837
+rejected = 0
+matrix size = 997
+fillins = 1396
 solver = Normal
-Avg thread counts: 4.0/1.2/1.3/1.0
-Matrix Compiler1: 311.36 KB object code size  38.3/15.5/[14.5]
-Matrix Compiler2: 130.74 KB object code size  12.4/12.7/[9.3]
-
+Avg thread counts: 16.0/0.0/16.0/4.9
+Matrix Compiler1:    7278 opcodes
+Matrix Compiler2: 108.60 KB object code size
