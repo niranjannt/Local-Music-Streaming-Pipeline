@@ -75,50 +75,6 @@
 		(layer "F.SilkS")
 		(uuid "24435f8b-d00c-48e6-9e1c-1da94e2cb79a")
 	)
-	(fp_circle
-		(center -10.57 -23.86)
-		(end -10.57 -22.36)
-		(stroke
-			(width 0.1)
-			(type default)
-		)
-		(fill no)
-		(layer "Edge.Cuts")
-		(uuid "390c68ef-dbc4-4071-afa5-e7f9fdf92278")
-	)
-	(fp_circle
-		(center -10.57 22.14)
-		(end -10.57 23.64)
-		(stroke
-			(width 0.1)
-			(type default)
-		)
-		(fill no)
-		(layer "Edge.Cuts")
-		(uuid "08b50743-5a19-4380-bb32-904b5543a559")
-	)
-	(fp_circle
-		(center 12.43 -23.86)
-		(end 12.43 -22.36)
-		(stroke
-			(width 0.1)
-			(type default)
-		)
-		(fill no)
-		(layer "Edge.Cuts")
-		(uuid "53d82059-801a-4d9c-bb25-2e771cc0cc3d")
-	)
-	(fp_circle
-		(center 12.43 22.14)
-		(end 12.43 23.64)
-		(stroke
-			(width 0.1)
-			(type default)
-		)
-		(fill no)
-		(layer "Edge.Cuts")
-		(uuid "74120b0f-9468-4ec8-9734-d651a813945a")
-	)
 	(fp_text user "GPIO18"
 		(at 6.5 -2.5 0)
 		(unlocked yes)

@@ -1744,6 +1744,16 @@
 		)
 		(uuid "56e020e5-9468-40f5-8acd-05bbfdab2c52")
 	)
+	(text "Power Switch"
+		(exclude_from_sim no)
+		(at 166.37 25.4 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+		)
+		(uuid "61dc1e76-45c9-42d8-8333-2afe2b37c0ff")
+	)
 	(text "Output Voltage 5V\n"
 		(exclude_from_sim no)
 		(at 124.46 50.165 0)
@@ -1823,6 +1833,12 @@
 		(uuid "0b17e6da-babc-423c-88e6-6464409b073c")
 	)
 	(junction
+		(at 154.305 51.435)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "21c996cf-c63a-4e34-8629-5e01ccfc1a37")
+	)
+	(junction
 		(at 174.625 35.56)
 		(diameter 0)
 		(color 0 0 0 0)
@@ -1875,6 +1891,12 @@
 		(diameter 0)
 		(color 0 0 0 0)
 		(uuid "b10d3d7f-6780-4a26-8b76-0e6ab91be98b")
+	)
+	(junction
+		(at 154.305 47.625)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "b9c531a5-73fe-4dc8-ae64-3d6799905f72")
 	)
 	(junction
 		(at 28.575 31.75)
@@ -2030,6 +2052,16 @@
 	)
 	(wire
 		(pts
+			(xy 154.305 47.625) (xy 154.305 51.435)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "36311d95-8f21-427f-8479-1e1e969125c3")
+	)
+	(wire
+		(pts
 			(xy 248.92 126.365) (xy 248.92 130.175)
 		)
 		(stroke
@@ -2140,6 +2172,26 @@
 	)
 	(wire
 		(pts
+			(xy 154.305 51.435) (xy 154.305 52.705)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "61cb3666-77aa-4f9c-8d27-e2d939646d7a")
+	)
+	(wire
+		(pts
+			(xy 154.305 45.72) (xy 154.305 47.625)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "62d462ec-4aa1-433f-9016-e7b72534968e")
+	)
+	(wire
+		(pts
 			(xy 28.575 31.75) (xy 28.575 34.925)
 		)
 		(stroke
@@ -2167,16 +2219,6 @@
 			(type default)
 		)
 		(uuid "76e89612-42dc-4071-b78b-6dcdf95c50a4")
-	)
-	(wire
-		(pts
-			(xy 154.305 45.72) (xy 154.305 47.625)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "7898b2bf-ca99-4d51-a03d-326734d9f48d")
 	)
 	(wire
 		(pts
@@ -2755,7 +2797,7 @@
 	)
 	(symbol
 		(lib_id "power:GND")
-		(at 154.305 47.625 0)
+		(at 154.305 52.705 0)
 		(unit 1)
 		(exclude_from_sim no)
 		(in_bom yes)
@@ -2763,7 +2805,7 @@
 		(dnp no)
 		(uuid "14bb55ef-5994-44a2-bfad-811ade381638")
 		(property "Reference" "#PWR07"
-			(at 154.305 53.975 0)
+			(at 154.305 59.055 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -2772,7 +2814,7 @@
 			)
 		)
 		(property "Value" "GND"
-			(at 158.115 49.53 0)
+			(at 158.115 54.61 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -2780,7 +2822,7 @@
 			)
 		)
 		(property "Footprint" ""
-			(at 154.305 47.625 0)
+			(at 154.305 52.705 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -2789,7 +2831,7 @@
 			)
 		)
 		(property "Datasheet" ""
-			(at 154.305 47.625 0)
+			(at 154.305 52.705 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -2798,7 +2840,7 @@
 			)
 		)
 		(property "Description" "Power symbol creates a global label with name \"GND\" , ground"
-			(at 154.305 47.625 0)
+			(at 154.305 52.705 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -3816,6 +3858,75 @@
 			(project "ECE445L_Lab7"
 				(path "/69b823fd-c065-40ff-9bb9-c5835555f3eb/120cc903-6d6c-4a77-ad9c-c9f63dede169"
 					(reference "#PWR02")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "ECE445L:Testpoint")
+		(at 154.305 49.53 270)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(uuid "a79b5b4b-903b-4bf7-8f3a-f45d30fbc83f")
+		(property "Reference" "TP4"
+			(at 159.385 50.165 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Value" "GND"
+			(at 158.75 48.26 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Footprint" "ECE445L:Testpoint_1x02_P2.54mm"
+			(at 160.02 49.53 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" "~"
+			(at 154.305 49.53 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" "Testpoint"
+			(at 154.305 49.53 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "1f5eef5e-aa9b-4a0e-b221-c8b3858fdf6f")
+		)
+		(pin "2"
+			(uuid "d6241eaa-672b-483d-ad03-23ed67386b33")
+		)
+		(instances
+			(project "ECE445L_Lab7"
+				(path "/69b823fd-c065-40ff-9bb9-c5835555f3eb/120cc903-6d6c-4a77-ad9c-c9f63dede169"
+					(reference "TP4")
 					(unit 1)
 				)
 			)
