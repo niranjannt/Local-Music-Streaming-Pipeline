@@ -25,7 +25,6 @@
  */
  
 #include <stdint.h>
-#include "../inc/PLL.h"
 #include "../inc/tm4c123gh6pm.h"
 
 // The #define statement SYSDIV2 in PLL.h

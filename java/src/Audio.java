@@ -37,10 +37,12 @@ public class Audio {
         shiftAmount = audioFormat.getSampleSizeInBits() - 14;
 
         openPort();
+        //serialPort.addEventListener(new PortReader());
         sendSampleRate();
         sendInitData();
-
         serialPort.addEventListener(new PortReader());
+
+
     }
 
     /*
@@ -214,10 +216,12 @@ public class Audio {
     private class PortReader implements SerialPortEventListener {
         @Override
         public void serialEvent(SerialPortEvent serialPortEvent) {
+            System.out.println("Received request");
+
             if (serialPortEvent.isRXCHAR() && serialPortEvent.getEventValue() > 0) {
                 try {
                     byte[] recieved = serialPort.readBytes(1);
-                    if (recieved[0] == 'R') {
+                    if (recieved[0] == 82) {
                         sendSample();
                     }
                 } catch (IOException e) {
@@ -229,7 +233,6 @@ public class Audio {
         private void sendSample() throws IOException {
             byte[] data = new byte[bytesPerSample];
             int bytesRead = audioInputStream.read(data, 0, bytesPerSample);
-
             //turn sample into int form
             int sample = 0;
             for (int j = 0; j < bytesPerSample; j++) {

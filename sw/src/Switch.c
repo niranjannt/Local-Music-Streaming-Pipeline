@@ -26,7 +26,7 @@ void SwitchInit() {
     for(int i = 0; i < 100; i++){}; //delay
     GPIO_PORTF_DIR_R &= ~0x1F;      //set input for pins 0-4
     GPIO_PORTF_DEN_R |= 0x1F;       //set digital enable for pins 0-4
-    Timer0A_Init(SwitchHandler, 800000, 3);
+    //Timer0A_Init(SwitchHandler, 800000, 3);
 }
 
 /*
@@ -38,7 +38,7 @@ static uint8_t SwitchIn() {
 
 static void SwitchHandler() {
     uint8_t switches = SwitchIn();
-    AudioCommandsOut();
+    //AudioCommandsOut();
 }
 
 

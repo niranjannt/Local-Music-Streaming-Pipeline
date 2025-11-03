@@ -2,16 +2,18 @@
 #include "../inc/tm4c123gh6pm.h"
 #include "../inc/ADCSWTrigger.h"
 #include "inc/ST7735.h"
+#include "src/PLL.h"
 
+//Some ChatGPT used for visualizing right bass amplitude
 void ADC_Init(void){
 // write this
 	  SYSCTL_RCGCADC_R |= 0x0001;   // 1) activate ADC0
-  SYSCTL_RCGCGPIO_R |= 0x10;    // 2) activate clock for Port E
-  while((SYSCTL_PRGPIO_R&0x10) != 0x10){};  // 3 for stabilization
-  GPIO_PORTE_DIR_R &= ~0x10;    // 4) make PE4 input
-  GPIO_PORTE_AFSEL_R |= 0x10;   // 5) enable alternate function on PE4
-  GPIO_PORTE_DEN_R &= ~0x10;    // 6) disable digital I/O on PE4
-  GPIO_PORTE_AMSEL_R |= 0x10;   // 7) enable analog functionality on PE4
+  SYSCTL_RCGCGPIO_R |= 0x8;    // 2) activate clock for Port E
+  while((SYSCTL_PRGPIO_R&0x8) != 0x8){};  // 3 for stabilization
+  GPIO_PORTD_DIR_R &= ~1;    // 4) make PD0 input
+  GPIO_PORTD_AFSEL_R |= 1;   // 5) enable alternate function on PD0
+  GPIO_PORTD_DEN_R &= ~1;    // 6) disable digital I/O on PD0
+  GPIO_PORTD_AMSEL_R |= 1;   // 7) enable analog functionality on PD0
 // while((SYSCTL_PRADC_R&0x0001) != 0x0001){}; // good code, but not implemented in simulator
   ADC0_PC_R &= ~0xF;
   ADC0_PC_R |= 0x1;             // 8) configure for 125K samples/sec
@@ -19,7 +21,7 @@ void ADC_Init(void){
   ADC0_ACTSS_R &= ~0x0008;      // 10) disable sample sequencer 3
   ADC0_EMUX_R &= ~0xF000;       // 11) seq3 is software trigger
   ADC0_SSMUX3_R &= ~0x000F;
-  ADC0_SSMUX3_R += 9;           // 12) set channel
+  ADC0_SSMUX3_R += 7;           // 12) set channel
   ADC0_SSCTL3_R = 0x0006;       // 13) no TS0 D0, yes IE0 END0
   ADC0_IM_R &= ~0x0008;         // 14) disable SS3 interrupts
   ADC0_ACTSS_R |= 0x0008;       // 15) enable sample sequencer 3
@@ -56,7 +58,7 @@ void Visualize(void){
   
   //ST7735_DrawFastVLine(xpos, 0, 160, ST7735_BLUE)
 	
-	  uint32_t pos_y= (150*bass_amplitude)/4095;
+	  uint32_t pos_y= (140*bass_amplitude)/4095;
 
 	ST7735_DrawFastVLine(xpos, 0, 160, ST7735_BLACK); 
   ST7735_DrawPixel(xpos, pos_y, ST7735_BLUE);           
@@ -76,13 +78,13 @@ void Visualize(void){
 
 
 int main(void) {
-  PLL_Init(80000000);
+  PLL_Init(Bus80MHz);    // bus clock at 80 MHz
   ST7735_InitR(INITR_REDTAB);
   ST7735_FillScreen(ST7735_BLACK);
   ADC_Init();
   while(1){
 
-bass_amplitude=ADC_In();
+		Visualize();
 
   }
 
