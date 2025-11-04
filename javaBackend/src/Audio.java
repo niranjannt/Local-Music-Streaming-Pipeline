@@ -3,10 +3,8 @@ import javax.sound.sampled.AudioInputStream;
 import java.io.File;
 import java.io.FileInputStream;
 import java.io.IOException;
-import jssc.SerialPort;
-import jssc.SerialPortEvent;
-import jssc.SerialPortEventListener;
-import jssc.SerialPortException;
+
+import jssc.*;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
@@ -31,19 +29,41 @@ public class Audio {
         FileInputStream wavInputStream = new FileInputStream(wavFile);
         setAudioFormat(wavInputStream);
         audioInputStream = new AudioInputStream(wavInputStream, audioFormat, wavFile.length());
-        serialPort = new SerialPort("/dev/cu.usbserial-A106DAXQ");    // Mac
+        //serialPort = new SerialPort("/dev/cu.usbserial-A106DAXQ");    // Mac
+        serialPort = new SerialPort("/dev/cu.usbserial-A50285BI");
         //serialPort = new SerialPort("COM12");                                // Windows
 
-        bytesPerSample = audioFormat.getSampleSizeInBits() / 8;
-        shiftAmount = audioFormat.getSampleSizeInBits() - 14;
-
         openPort();
-        sendSampleRate();
-        sendInitData();
-
-        serialPort.addEventListener(new PortReader());
+        serialPort.addEventListener(new PortReader(), SerialPort.MASK_RXCHAR);
+        send1Data();
+        //sendSampleRate();
+        //sendInitData();
     }
 
+    private void send1Data() throws IOException {
+        channel = false;
+        byte[] data = new byte[bytesPerSample];
+        byte[] outData = new byte[2];
+        for (int i = 0; i < 1000; i++) {
+            //read one sample
+            int bytesRead = audioInputStream.read(data, 0, bytesPerSample);
+
+            //turn sample into int form
+            int sample = 0;
+            for (int j = 0; j < bytesPerSample; j++) {
+                sample |= (data[j] & 0xFF) << (8 * j);
+            }
+
+            //scale down to 14 bits and add header
+            sample = (sample >> shiftAmount) & 0x3FFF;
+            sample |= channel ? 0x8000 : 0x4000;
+            channel = !channel;
+
+            outData[0] = (byte) (sample & 0xFF);
+            outData[1] = (byte) ((sample >> 8) & 0xFF);
+            serialPort.writeBytes(outData);
+        }
+    }
     /*
         Sets the AudioFormat attribute with the data specified in the given WAV file's header
      */
@@ -188,6 +208,7 @@ public class Audio {
         System.out.println("sending init data");
         channel = false;
         byte[] data = new byte[bytesPerSample];
+        byte[] outData = new byte[2];
         for (int i = 0; i < 1000; i++) {
             //read one sample
             int bytesRead = audioInputStream.read(data, 0, bytesPerSample);
@@ -203,10 +224,9 @@ public class Audio {
             sample |= channel ? 0x8000 : 0x4000;
             channel = !channel;
 
-            for (int k = 0; k < bytesPerSample; k++) {
-                data[k] = (byte) ((sample >> (8 * k)) & 0xFF);
-            }
-            serialPort.writeBytes(data);
+            outData[0] = (byte) (sample & 0xFF);
+            outData[1] = (byte) ((sample >> 8) & 0xFF);
+            serialPort.writeBytes(outData);
         }
     }
 
@@ -229,24 +249,28 @@ public class Audio {
         }
 
         private void sendSample() throws IOException {
+            channel = false;
             byte[] data = new byte[bytesPerSample];
-            int bytesRead = audioInputStream.read(data, 0, bytesPerSample);
+            byte[] outData = new byte[2];
+            for (int i = 0; i < 1000; i++) {
+                //read one sample
+                int bytesRead = audioInputStream.read(data, 0, bytesPerSample);
 
-            //turn sample into int form
-            int sample = 0;
-            for (int j = 0; j < bytesPerSample; j++) {
-                sample |= (data[j] & 0xFF) << (8 * j);
+                //turn sample into int form
+                int sample = 0;
+                for (int j = 0; j < bytesPerSample; j++) {
+                    sample |= (data[j] & 0xFF) << (8 * j);
+                }
+
+                //scale down to 14 bits and add header
+                sample = (sample >> shiftAmount) & 0x3FFF;
+                sample |= channel ? 0x8000 : 0x4000;
+                channel = !channel;
+
+                outData[0] = (byte) (sample & 0xFF);
+                outData[1] = (byte) ((sample >> 8) & 0xFF);
+                serialPort.writeBytes(outData);
             }
-
-            //scale down to 14 bits and add header
-            sample = (sample >> shiftAmount) & 0x3FFF;
-            sample |= channel ? 0x8000 : 0x4000;
-            channel = !channel;
-
-            for (int k = 0; k < bytesPerSample; k++) {
-                data[k] = (byte) ((sample >> (8 * k)) & 0xFF);
-            }
-            serialPort.writeBytes(data);
         }
     }
 }
