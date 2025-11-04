@@ -1104,6 +1104,141 @@
 			)
 			(embedded_fonts no)
 		)
+		(symbol "ECE445L:Testpoint"
+			(pin_names
+				(offset 0)
+				(hide yes)
+			)
+			(exclude_from_sim no)
+			(in_bom yes)
+			(on_board yes)
+			(property "Reference" "TP"
+				(at 0 2.794 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Value" "TP"
+				(at 0 -2.286 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Footprint" "ECE445L:Testpoint_1x02_P2.54mm"
+				(at 0 5.715 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "Datasheet" "~"
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "Description" "Testpoint"
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "ki_keywords" "Testpoint"
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "ki_fp_filters" "Jumper* TestPoint*2Pads* TestPoint*Bridge*"
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(symbol "Testpoint_0_1"
+				(arc
+					(start 0.0001 4.4451)
+					(mid 1.3471 3.8871)
+					(end 1.9051 2.5401)
+					(stroke
+						(width 0)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(arc
+					(start -1.905 2.54)
+					(mid -1.347 3.887)
+					(end 0 4.445)
+					(stroke
+						(width 0)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+			)
+			(symbol "Testpoint_1_1"
+				(pin passive line
+					(at -1.905 0 90)
+					(length 2.54)
+					(name "A"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "1"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin passive line
+					(at 1.905 0 90)
+					(length 2.54)
+					(name "B"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "2"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+			)
+			(embedded_fonts no)
+		)
 		(symbol "power:+3V3"
 			(power)
 			(pin_numbers
@@ -1423,6 +1558,18 @@
 		(uuid "538534b1-7261-477f-a5d3-25455f7059c5")
 	)
 	(junction
+		(at 110.49 39.37)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "6691bd04-bebd-47b6-bb83-594f159ab015")
+	)
+	(junction
+		(at 109.855 31.75)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "80a856db-cc65-48dc-9aa4-5fae4b4928ad")
+	)
+	(junction
 		(at 180.34 38.735)
 		(diameter 0)
 		(color 0 0 0 0)
@@ -1626,6 +1773,16 @@
 	)
 	(wire
 		(pts
+			(xy 105.41 39.37) (xy 110.49 39.37)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "5c2e99e6-65fe-4be5-8c78-742089e54d65")
+	)
+	(wire
+		(pts
 			(xy 180.34 55.245) (xy 180.34 64.135)
 		)
 		(stroke
@@ -1706,6 +1863,16 @@
 	)
 	(wire
 		(pts
+			(xy 109.855 31.75) (xy 113.665 31.75)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "7ccc3c9b-f38d-4a6a-ada8-f6017db7e955")
+	)
+	(wire
+		(pts
 			(xy 44.45 73.66) (xy 44.45 76.835)
 		)
 		(stroke
@@ -1743,6 +1910,16 @@
 			(type default)
 		)
 		(uuid "a2840352-b0bc-42e1-a6d4-bb82ca237149")
+	)
+	(wire
+		(pts
+			(xy 110.49 39.37) (xy 114.3 39.37)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "b4a56e56-c7b4-4cae-94a5-1f7e28ea6d65")
 	)
 	(wire
 		(pts
@@ -1833,6 +2010,16 @@
 			(type default)
 		)
 		(uuid "e6e9d217-6aa3-4330-be25-d1bd4f63d451")
+	)
+	(wire
+		(pts
+			(xy 105.41 31.75) (xy 109.855 31.75)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "e8f42a02-3a3c-46ca-a186-8841bda6bf3e")
 	)
 	(wire
 		(pts
@@ -2016,6 +2203,28 @@
 			)
 		)
 	)
+	(global_label "L_AudioOut"
+		(shape input)
+		(at 105.41 39.37 180)
+		(fields_autoplaced yes)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify right)
+		)
+		(uuid "70aefc3b-62e0-4946-a046-1e9d91c9d9fd")
+		(property "Intersheetrefs" "${INTERSHEET_REFS}"
+			(at 92.0835 39.37 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify right)
+				(hide yes)
+			)
+		)
+	)
 	(global_label "PD6"
 		(shape passive)
 		(at 31.75 99.695 270)
@@ -2051,6 +2260,28 @@
 		(uuid "ab3846ff-3ce8-48d1-a746-1f3e6827da3c")
 		(property "Intersheetrefs" "${INTERSHEET_REFS}"
 			(at 127.908 59.055 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify right)
+				(hide yes)
+			)
+		)
+	)
+	(global_label "R_AudioOut"
+		(shape input)
+		(at 105.41 31.75 180)
+		(fields_autoplaced yes)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify right)
+		)
+		(uuid "ca36d48c-0c31-4d92-bcd1-b2d765909319")
+		(property "Intersheetrefs" "${INTERSHEET_REFS}"
+			(at 91.8416 31.75 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -2234,6 +2465,75 @@
 			(project "ECE445L_Lab7"
 				(path "/69b823fd-c065-40ff-9bb9-c5835555f3eb/a500a078-11dc-409b-bff9-a8c35e1dabf8"
 					(reference "#PWR0106")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "ECE445L:Testpoint")
+		(at 111.76 31.75 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(uuid "1912a32a-03ea-4801-9148-298d8a6433b7")
+		(property "Reference" "TP11"
+			(at 116.205 31.115 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Value" "R_Out"
+			(at 114.935 29.21 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Footprint" "ECE445L:Testpoint_1x02_P2.54mm"
+			(at 111.76 26.035 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" "~"
+			(at 111.76 31.75 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" "Testpoint"
+			(at 111.76 31.75 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "2724a86e-64df-4844-8158-af801e92a469")
+		)
+		(pin "2"
+			(uuid "aa4e0d58-45cc-4f53-9194-2e1449c92149")
+		)
+		(instances
+			(project "ECE445L_Lab7"
+				(path "/69b823fd-c065-40ff-9bb9-c5835555f3eb/a500a078-11dc-409b-bff9-a8c35e1dabf8"
+					(reference "TP11")
 					(unit 1)
 				)
 			)
@@ -2803,6 +3103,75 @@
 			(project "ECE445L_Lab7"
 				(path "/69b823fd-c065-40ff-9bb9-c5835555f3eb/a500a078-11dc-409b-bff9-a8c35e1dabf8"
 					(reference "R85")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "ECE445L:Testpoint")
+		(at 112.395 39.37 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(uuid "b3d5fcdf-ad22-42a5-8f9f-8d25c7b2b794")
+		(property "Reference" "TP12"
+			(at 116.84 38.735 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Value" "L_Out"
+			(at 115.57 36.83 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Footprint" "ECE445L:Testpoint_1x02_P2.54mm"
+			(at 112.395 33.655 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" "~"
+			(at 112.395 39.37 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" "Testpoint"
+			(at 112.395 39.37 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "5e1ad618-fabc-4881-9bb4-c04336f06254")
+		)
+		(pin "2"
+			(uuid "c81cd69a-f374-4b06-9e19-d82b4139e219")
+		)
+		(instances
+			(project "ECE445L_Lab7"
+				(path "/69b823fd-c065-40ff-9bb9-c5835555f3eb/a500a078-11dc-409b-bff9-a8c35e1dabf8"
+					(reference "TP12")
 					(unit 1)
 				)
 			)

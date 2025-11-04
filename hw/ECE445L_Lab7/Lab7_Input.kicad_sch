@@ -875,7 +875,7 @@
 		)
 		(uuid "1a64717f-72b6-47dd-8129-151a81894d32")
 	)
-	(text "Distortion\nKnob"
+	(text "Flanger\nDelay\nKnob"
 		(exclude_from_sim no)
 		(at 170.815 18.415 0)
 		(effects
@@ -915,7 +915,7 @@
 		)
 		(uuid "5c03edd9-c0a0-4945-9da9-6b9a814599fb")
 	)
-	(text "Flanger\nKnob"
+	(text "Flanger\nFrequency\nKnob "
 		(exclude_from_sim no)
 		(at 147.32 17.78 0)
 		(effects

@@ -1351,6 +1351,16 @@
 			(embedded_fonts no)
 		)
 	)
+	(text "Changed To MOSFETs\n(Had wrong part number)"
+		(exclude_from_sim no)
+		(at 259.715 162.56 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+		)
+		(uuid "29cc4d1a-655f-46f0-991b-974f67a9d0df")
+	)
 	(text "Variable Gain"
 		(exclude_from_sim no)
 		(at 66.675 62.865 0)
@@ -1360,6 +1370,16 @@
 			)
 		)
 		(uuid "3455bc74-dcdc-4f09-8d1e-b8b89f8c312c")
+	)
+	(text "Changed To MOSFETs\n(Had wrong part number)"
+		(exclude_from_sim no)
+		(at 40.005 77.47 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+		)
+		(uuid "5d1228dd-8656-40eb-b27b-5ea0b054e2c6")
 	)
 	(text "100k Ohm Resistor Dividers : 2 * (0.0165 mA) = 0.033 mA\n200k Ohm Resistor Dividers : 1 * 0.00825 = 0.00825 mA\n10k Ohm Resitor Dividers : 3 * (0.165 mA) = 0.5 mA\n75k Ohm Loads : 1 * (0.044 mA) = 0.044 mA\nOPA2350s : 8 * (7.5 mA) = 60 mA\nTLV5616s : 1 * (1.1mA) = 1.1 mA\n\nTotal : 61.6825 mA"
 		(exclude_from_sim no)
@@ -1381,6 +1401,16 @@
 			)
 		)
 		(uuid "6eb617f7-dd72-40d8-9893-7c0ccbec7d37")
+	)
+	(text "Changed To MOSFETs\n(Had wrong part number)"
+		(exclude_from_sim no)
+		(at 80.645 128.905 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+		)
+		(uuid "7251c228-3c27-481c-af79-f85afcd54e23")
 	)
 	(text "Right Audio Current Consumption\n\nCurrent per 100k Ohm Resitor Divider\n+3V3 / (100k + 100k) = 0.0165 mA\n\nCurrent per 200k Ohm Resistor Divider\n+3V3 / (200k + 200k) = 0.00825 mA\n\nCurrent per 10k Ohm Resitor Divider\n+3V3 / (10k + 10k) = 0.165 mA\n\nCurrent per 75k Load\n+3V3 / 75k = 0.044 mA\n\nQuiescent Current (Per Amplifier - 2x per chip)\n7.5 mA\n\nCurrent Per TLV5616\n1.1 mA\n"
 		(exclude_from_sim no)
@@ -1442,6 +1472,16 @@
 			)
 		)
 		(uuid "a109d86f-ed46-4d34-b3ee-00287c283e61")
+	)
+	(text "Changed To MOSFETs\n(Had wrong part number)"
+		(exclude_from_sim no)
+		(at 40.005 192.405 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+		)
+		(uuid "a1446c8f-f236-42ce-94f1-8980fb62ecd6")
 	)
 	(text "Variable Gain"
 		(exclude_from_sim no)

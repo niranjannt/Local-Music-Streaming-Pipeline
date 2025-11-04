@@ -1035,14 +1035,14 @@
 				(pin input line
 					(at -15.24 26.67 0)
 					(length 2.54)
-					(name "EN"
+					(name "1EN"
 						(effects
 							(font
 								(size 1.27 1.27)
 							)
 						)
 					)
-					(number "1"
+					(number "15"
 						(effects
 							(font
 								(size 1.27 1.27)
@@ -1060,7 +1060,7 @@
 							)
 						)
 					)
-					(number "2"
+					(number "14"
 						(effects
 							(font
 								(size 1.27 1.27)
@@ -1078,7 +1078,7 @@
 							)
 						)
 					)
-					(number "3"
+					(number "13"
 						(effects
 							(font
 								(size 1.27 1.27)
@@ -1096,7 +1096,7 @@
 							)
 						)
 					)
-					(number "4"
+					(number "12"
 						(effects
 							(font
 								(size 1.27 1.27)
@@ -1114,7 +1114,7 @@
 							)
 						)
 					)
-					(number "5"
+					(number "11"
 						(effects
 							(font
 								(size 1.27 1.27)
@@ -1132,7 +1132,7 @@
 							)
 						)
 					)
-					(number "6"
+					(number "10"
 						(effects
 							(font
 								(size 1.27 1.27)
@@ -1150,7 +1150,7 @@
 							)
 						)
 					)
-					(number "7"
+					(number "9"
 						(effects
 							(font
 								(size 1.27 1.27)
@@ -1186,7 +1186,7 @@
 							)
 						)
 					)
-					(number "9"
+					(number "7"
 						(effects
 							(font
 								(size 1.27 1.27)
@@ -1204,7 +1204,7 @@
 							)
 						)
 					)
-					(number "10"
+					(number "6"
 						(effects
 							(font
 								(size 1.27 1.27)
@@ -1222,7 +1222,7 @@
 							)
 						)
 					)
-					(number "11"
+					(number "5"
 						(effects
 							(font
 								(size 1.27 1.27)
@@ -1240,7 +1240,7 @@
 							)
 						)
 					)
-					(number "12"
+					(number "4"
 						(effects
 							(font
 								(size 1.27 1.27)
@@ -1258,7 +1258,7 @@
 							)
 						)
 					)
-					(number "13"
+					(number "3"
 						(effects
 							(font
 								(size 1.27 1.27)
@@ -1276,7 +1276,7 @@
 							)
 						)
 					)
-					(number "14"
+					(number "2"
 						(effects
 							(font
 								(size 1.27 1.27)
@@ -1294,7 +1294,7 @@
 							)
 						)
 					)
-					(number "15"
+					(number "1"
 						(effects
 							(font
 								(size 1.27 1.27)
@@ -1312,7 +1312,7 @@
 							)
 						)
 					)
-					(number "16"
+					(number "30"
 						(effects
 							(font
 								(size 1.27 1.27)
@@ -1330,7 +1330,7 @@
 							)
 						)
 					)
-					(number "17"
+					(number "29"
 						(effects
 							(font
 								(size 1.27 1.27)
@@ -1348,7 +1348,7 @@
 							)
 						)
 					)
-					(number "18"
+					(number "28"
 						(effects
 							(font
 								(size 1.27 1.27)
@@ -1366,7 +1366,7 @@
 							)
 						)
 					)
-					(number "19"
+					(number "27"
 						(effects
 							(font
 								(size 1.27 1.27)
@@ -1384,7 +1384,7 @@
 							)
 						)
 					)
-					(number "20"
+					(number "26"
 						(effects
 							(font
 								(size 1.27 1.27)
@@ -1402,7 +1402,7 @@
 							)
 						)
 					)
-					(number "21"
+					(number "25"
 						(effects
 							(font
 								(size 1.27 1.27)
@@ -1420,7 +1420,7 @@
 							)
 						)
 					)
-					(number "22"
+					(number "24"
 						(effects
 							(font
 								(size 1.27 1.27)
@@ -1456,7 +1456,7 @@
 							)
 						)
 					)
-					(number "24"
+					(number "22"
 						(effects
 							(font
 								(size 1.27 1.27)
@@ -1474,7 +1474,7 @@
 							)
 						)
 					)
-					(number "25"
+					(number "21"
 						(effects
 							(font
 								(size 1.27 1.27)
@@ -1492,7 +1492,7 @@
 							)
 						)
 					)
-					(number "26"
+					(number "20"
 						(effects
 							(font
 								(size 1.27 1.27)
@@ -1510,7 +1510,7 @@
 							)
 						)
 					)
-					(number "27"
+					(number "19"
 						(effects
 							(font
 								(size 1.27 1.27)
@@ -1528,7 +1528,7 @@
 							)
 						)
 					)
-					(number "28"
+					(number "18"
 						(effects
 							(font
 								(size 1.27 1.27)
@@ -1546,7 +1546,7 @@
 							)
 						)
 					)
-					(number "29"
+					(number "17"
 						(effects
 							(font
 								(size 1.27 1.27)
@@ -1564,7 +1564,7 @@
 							)
 						)
 					)
-					(number "30"
+					(number "16"
 						(effects
 							(font
 								(size 1.27 1.27)
