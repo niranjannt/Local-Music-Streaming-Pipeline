@@ -1,0 +1,136 @@
+LTspice 24.1.10 for Windows
+Circuit: C:\Users\Ashton\Dev\ECE445L\lab-7-and-10-project-nnat\hw\VariableGainNonInverting.net
+Start Time: Tue Nov  4 03:24:03 2025
+solver = Normal
+Maximum thread count: 8
+tnom = 27
+temp = 27
+method = modified trap
+Instance "m1:M1": Width narrower than recommended for a level 3 MOSFET.
+Instance "m2:M1": Width narrower than recommended for a level 3 MOSFET.
+Direct Newton iteration failed to find .op point.  (Use ".option noopiter" to skip.)
+Starting Gmin stepping
+Gmin = 10
+Gmin = 1.07374
+Gmin = 0.115292
+Gmin = 0.0123794
+Gmin = 0.00132923
+vernier = 0.5
+Gmin = 0.000223007
+vernier = 0.25
+vernier = 0.125
+vernier = 0.0625
+vernier = 0.03125
+Gmin = 0.00020666
+vernier = 0.015625
+vernier = 0.0078125
+vernier = 0.0104167
+Gmin = 0.000204122
+vernier = 0.0138889
+Gmin = 0.000198023
+vernier = 0.0185185
+vernier = 0.0246913
+Gmin = 0.000188433
+vernier = 0.0329218
+vernier = 0.0438957
+Gmin = 0.000174197
+vernier = 0.0585276
+Gmin = 0.00015339
+vernier = 0.0780367
+vernier = 0.104049
+Gmin = 0.000124648
+vernier = 0.138732
+vernier = 0.184976
+Gmin = 8.98982e-05
+vernier = 0.0924879
+vernier = 0.046244
+vernier = 0.023122
+Gmin = 8.07216e-05
+vernier = 0.011561
+vernier = 0.00578049
+vernier = 0.00289025
+vernier = 0.00144512
+Gmin = 8.1071e-05
+vernier = 0.00192683
+vernier = 0.00256911
+Gmin = 8.06977e-05
+vernier = 0.00342548
+Gmin = 8.00955e-05
+vernier = 0.0045673
+vernier = 0.00608973
+Gmin = 7.9119e-05
+vernier = 0.00811964
+vernier = 0.0108262
+Gmin = 7.75962e-05
+vernier = 0.0144349
+Gmin = 7.51881e-05
+vernier = 0.0192465
+vernier = 0.025662
+Gmin = 7.14077e-05
+vernier = 0.0342161
+vernier = 0.0456214
+Gmin = 6.58101e-05
+vernier = 0.0608285
+Gmin = 5.76625e-05
+vernier = 0.0811047
+vernier = 0.10814
+Gmin = 4.64811e-05
+vernier = 0.144186
+vernier = 0.192248
+Gmin = 3.31023e-05
+vernier = 0.096124
+vernier = 0.048062
+Gmin = 2.74164e-05
+vernier = 0.024031
+vernier = 0.0120155
+vernier = 0.00600775
+vernier = 0.00300387
+Gmin = 2.76005e-05
+vernier = 0.00150194
+vernier = 0.000750968
+vernier = 0.000563226
+vernier = 0.00042242
+Gmin = 2.75872e-05
+Gmin = 0
+Gmin stepping failed
+
+Starting source stepping with srcstepmethod=0
+Source Step = 3.0303%
+vernier = 0.25
+Source Step = 1.70455%
+Source Step = 3.59848%
+Source Step = 5.49242%
+Source Step = 7.38636%
+Source Step = 9.2803%
+vernier = 0.09375
+Source Step = 11.9318%
+Source Step = 14.7727%
+Source Step = 17.6136%
+Source Step = 20.4545%
+Source Step = 23.2955%
+vernier = 0.140625
+Source Step = 27.1307%
+Source Step = 31.392%
+Source Step = 35.6534%
+Source Step = 39.9148%
+Source Step = 44.1761%
+vernier = 0.210938
+Source Step = 49.7159%
+Source Step = 56.108%
+Source Step = 62.5%
+Source Step = 68.892%
+Source Step = 75.2841%
+vernier = 0.316406
+Source Step = 83.2741%
+Source Step = 85.2067%
+Starting source stepping with srcstepmethod=1
+Source Step = 3.0303%
+Source Step = 12.7367%
+Source stepping failed
+
+Pseudo Transient succeeded in finding the operating point at 6.01464 s.
+Total elapsed time: 3.053 seconds.
+
+Files loaded:
+C:\Users\Ashton\Dev\ECE445L\lab-7-and-10-project-nnat\hw\VariableGainNonInverting.net
+

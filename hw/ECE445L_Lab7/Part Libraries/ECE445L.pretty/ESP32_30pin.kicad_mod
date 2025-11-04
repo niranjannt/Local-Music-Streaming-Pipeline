@@ -54,7 +54,7 @@
 		)
 	)
 	(fp_rect
-		(start -13.33 -26.4)
+		(start -13.33 -26.9)
 		(end 14.97 25.1)
 		(stroke
 			(width 0.2)

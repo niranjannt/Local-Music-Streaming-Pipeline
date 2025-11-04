@@ -761,7 +761,7 @@
 			)
 			(embedded_fonts no)
 		)
-		(symbol "ECE445L:HeadphoneJack"
+		(symbol "ECE445L:HeadphoneJack_STX3000"
 			(pin_names
 				(offset 0)
 			)
@@ -786,7 +786,7 @@
 					(justify right)
 				)
 			)
-			(property "Footprint" "ECE445L:Jack_3.5mm_CUI_SJ1-3523N_Horizontal"
+			(property "Footprint" "ECE445L:STX3000"
 				(at -2.54 -17.78 0)
 				(effects
 					(font
@@ -822,7 +822,7 @@
 					(hide yes)
 				)
 			)
-			(symbol "HeadphoneJack_0_0"
+			(symbol "HeadphoneJack_STX3000_0_0"
 				(rectangle
 					(start -2.54 1.27)
 					(end 1.016 -3.81)
@@ -870,7 +870,7 @@
 					)
 				)
 			)
-			(symbol "HeadphoneJack_0_1"
+			(symbol "HeadphoneJack_STX3000_0_1"
 				(polyline
 					(pts
 						(xy -2.54 -6.35) (xy -1.27 -6.35) (xy -1.27 -3.81) (xy -1.27 -8.89)
@@ -884,7 +884,7 @@
 					)
 				)
 			)
-			(symbol "HeadphoneJack_1_1"
+			(symbol "HeadphoneJack_STX3000_1_1"
 				(pin input line
 					(at -7.62 -1.27 0)
 					(length 5.12)
@@ -1239,6 +1239,305 @@
 			)
 			(embedded_fonts no)
 		)
+		(symbol "Transistor_FET:MMBF170"
+			(pin_names
+				(offset 0)
+				(hide yes)
+			)
+			(exclude_from_sim no)
+			(in_bom yes)
+			(on_board yes)
+			(property "Reference" "Q"
+				(at 5.08 1.905 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(justify left)
+				)
+			)
+			(property "Value" "MMBF170"
+				(at 5.08 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(justify left)
+				)
+			)
+			(property "Footprint" "Package_TO_SOT_SMD:SOT-23"
+				(at 5.08 -1.905 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+						(italic yes)
+					)
+					(justify left)
+					(hide yes)
+				)
+			)
+			(property "Datasheet" "https://www.diodes.com/assets/Datasheets/ds30104.pdf"
+				(at 5.08 -3.81 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(justify left)
+					(hide yes)
+				)
+			)
+			(property "Description" "0.5A Id, 60V Vds, N-Channel MOSFET, SOT-23"
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "ki_keywords" "N-Channel MOSFET"
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "ki_fp_filters" "SOT?23*"
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(symbol "MMBF170_0_1"
+				(polyline
+					(pts
+						(xy 0.254 1.905) (xy 0.254 -1.905)
+					)
+					(stroke
+						(width 0.254)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy 0.254 0) (xy -2.54 0)
+					)
+					(stroke
+						(width 0)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy 0.762 2.286) (xy 0.762 1.27)
+					)
+					(stroke
+						(width 0.254)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy 0.762 0.508) (xy 0.762 -0.508)
+					)
+					(stroke
+						(width 0.254)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy 0.762 -1.27) (xy 0.762 -2.286)
+					)
+					(stroke
+						(width 0.254)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy 0.762 -1.778) (xy 3.302 -1.778) (xy 3.302 1.778) (xy 0.762 1.778)
+					)
+					(stroke
+						(width 0)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy 1.016 0) (xy 2.032 0.381) (xy 2.032 -0.381) (xy 1.016 0)
+					)
+					(stroke
+						(width 0)
+						(type default)
+					)
+					(fill
+						(type outline)
+					)
+				)
+				(circle
+					(center 1.651 0)
+					(radius 2.794)
+					(stroke
+						(width 0.254)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy 2.54 2.54) (xy 2.54 1.778)
+					)
+					(stroke
+						(width 0)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(circle
+					(center 2.54 1.778)
+					(radius 0.254)
+					(stroke
+						(width 0)
+						(type default)
+					)
+					(fill
+						(type outline)
+					)
+				)
+				(circle
+					(center 2.54 -1.778)
+					(radius 0.254)
+					(stroke
+						(width 0)
+						(type default)
+					)
+					(fill
+						(type outline)
+					)
+				)
+				(polyline
+					(pts
+						(xy 2.54 -2.54) (xy 2.54 0) (xy 0.762 0)
+					)
+					(stroke
+						(width 0)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy 2.921 0.381) (xy 3.683 0.381)
+					)
+					(stroke
+						(width 0)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy 3.302 0.381) (xy 2.921 -0.254) (xy 3.683 -0.254) (xy 3.302 0.381)
+					)
+					(stroke
+						(width 0)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+			)
+			(symbol "MMBF170_1_1"
+				(pin input line
+					(at -5.08 0 0)
+					(length 2.54)
+					(name "G"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "1"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin passive line
+					(at 2.54 5.08 270)
+					(length 2.54)
+					(name "D"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "3"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin passive line
+					(at 2.54 -5.08 90)
+					(length 2.54)
+					(name "S"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "2"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+			)
+			(embedded_fonts no)
+		)
 		(symbol "power:+3V3"
 			(power)
 			(pin_numbers
@@ -1528,6 +1827,12 @@
 		(uuid "0199dd71-f6a7-43e2-90d3-a81d99e18afd")
 	)
 	(junction
+		(at 118.11 160.02)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "062460d1-aef1-4fcc-b4d5-d918745ca08e")
+	)
+	(junction
 		(at 47.625 43.815)
 		(diameter 0)
 		(color 0 0 0 0)
@@ -1558,10 +1863,22 @@
 		(uuid "538534b1-7261-477f-a5d3-25455f7059c5")
 	)
 	(junction
+		(at 204.47 129.54)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "57557a4f-f70c-4b78-a64e-e636c9a7b7f2")
+	)
+	(junction
 		(at 110.49 39.37)
 		(diameter 0)
 		(color 0 0 0 0)
 		(uuid "6691bd04-bebd-47b6-bb83-594f159ab015")
+	)
+	(junction
+		(at 68.58 160.02)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "76432b19-1602-4d4a-bf64-40b5a493b81e")
 	)
 	(junction
 		(at 109.855 31.75)
@@ -1582,10 +1899,28 @@
 		(uuid "b3c4b024-c3eb-4fb2-ac9f-86caa08ebeb6")
 	)
 	(junction
+		(at 68.58 172.72)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "b8cb46bd-1146-464e-96e1-58408774faed")
+	)
+	(junction
 		(at 47.625 54.61)
 		(diameter 0)
 		(color 0 0 0 0)
 		(uuid "e643d70e-93de-4640-81fd-ba83e2b95354")
+	)
+	(junction
+		(at 204.47 142.24)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "ef904b69-654f-446a-a488-4f5d583a7c39")
+	)
+	(junction
+		(at 254 129.54)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "fd0768b5-6f49-4194-a548-18ab56b580ef")
 	)
 	(no_connect
 		(at 138.43 55.245)
@@ -1600,6 +1935,16 @@
 			(type default)
 		)
 		(uuid "03580f2e-d54c-4802-bac2-30de12a81b53")
+	)
+	(wire
+		(pts
+			(xy 250.19 116.84) (xy 254 116.84)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "03741a38-1e3e-49b9-b7a0-515b1db2c85e")
 	)
 	(wire
 		(pts
@@ -1623,6 +1968,46 @@
 	)
 	(wire
 		(pts
+			(xy 254 129.54) (xy 260.35 129.54)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "0f5ca2c2-6974-4d88-97e5-93f0a24cfbb1")
+	)
+	(wire
+		(pts
+			(xy 59.69 97.155) (xy 59.69 100.33)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "14dbd779-fbc3-405d-a058-12062c7931e5")
+	)
+	(wire
+		(pts
+			(xy 254 129.54) (xy 238.76 129.54)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "18281fd2-50c0-4a04-8ec7-b8f566879053")
+	)
+	(wire
+		(pts
+			(xy 86.36 180.34) (xy 86.36 181.61)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "187b1f07-5493-455a-809d-08264fbfa95c")
+	)
+	(wire
+		(pts
 			(xy 43.18 33.655) (xy 47.625 33.655)
 		)
 		(stroke
@@ -1630,6 +2015,16 @@
 			(type default)
 		)
 		(uuid "1a82883c-1c6a-48ad-99f5-04e2f7ece38b")
+	)
+	(wire
+		(pts
+			(xy 201.93 142.24) (xy 204.47 142.24)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "1bb81609-61dd-438b-b028-b2b6c58f6dbe")
 	)
 	(wire
 		(pts
@@ -1643,6 +2038,16 @@
 	)
 	(wire
 		(pts
+			(xy 222.25 160.02) (xy 222.25 158.75)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "1e0e72f2-6a82-41c3-af4b-95dd6a407822")
+	)
+	(wire
+		(pts
 			(xy 133.35 47.625) (xy 138.43 47.625)
 		)
 		(stroke
@@ -1653,6 +2058,16 @@
 	)
 	(wire
 		(pts
+			(xy 68.58 172.72) (xy 71.12 172.72)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "249fce13-2cc0-4dfe-addd-e4ebaad43bca")
+	)
+	(wire
+		(pts
 			(xy 133.35 62.865) (xy 138.43 62.865)
 		)
 		(stroke
@@ -1660,6 +2075,26 @@
 			(type default)
 		)
 		(uuid "2b7dadb8-7975-467d-b173-5aef3d261bd0")
+	)
+	(wire
+		(pts
+			(xy 204.47 142.24) (xy 207.01 142.24)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "2cd89d79-3533-494a-82bf-c43839abac28")
+	)
+	(wire
+		(pts
+			(xy 222.25 151.13) (xy 222.25 149.86)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "2d2808fa-c496-4baf-b51f-d844830b2be2")
 	)
 	(wire
 		(pts
@@ -1683,6 +2118,56 @@
 	)
 	(wire
 		(pts
+			(xy 59.69 72.39) (xy 59.69 77.47)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "34424ff0-ca86-4cbd-b2c4-6435a4f7f459")
+	)
+	(wire
+		(pts
+			(xy 214.63 129.54) (xy 228.6 129.54)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "35442924-0070-4b16-b024-a2200d59d2a0")
+	)
+	(wire
+		(pts
+			(xy 109.22 154.94) (xy 109.22 181.61)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "37b61e24-e914-4296-94f6-40355f355917")
+	)
+	(wire
+		(pts
+			(xy 204.47 116.84) (xy 207.01 116.84)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "3971a33f-a630-46c9-9ac6-ad6acd3cb8a5")
+	)
+	(wire
+		(pts
+			(xy 97.79 167.64) (xy 97.79 181.61)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "39a5a7ef-7313-4a41-8789-500e6718d561")
+	)
+	(wire
+		(pts
 			(xy 44.45 96.52) (xy 44.45 99.695)
 		)
 		(stroke
@@ -1690,6 +2175,26 @@
 			(type default)
 		)
 		(uuid "3df8e69a-cee2-48bb-a762-318fa51d12a4")
+	)
+	(wire
+		(pts
+			(xy 78.74 147.32) (xy 104.14 147.32)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "3ff33c48-695b-491c-b803-2b424876c48c")
+	)
+	(wire
+		(pts
+			(xy 97.79 191.77) (xy 97.79 189.23)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "46cd2da8-a6df-4bd5-ab1e-2ebadda8549b")
 	)
 	(wire
 		(pts
@@ -1733,6 +2238,16 @@
 	)
 	(wire
 		(pts
+			(xy 66.04 172.72) (xy 68.58 172.72)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "52b8e9c0-b265-491f-a7f8-1d01b8e78311")
+	)
+	(wire
+		(pts
 			(xy 47.625 43.815) (xy 47.625 45.72)
 		)
 		(stroke
@@ -1763,6 +2278,26 @@
 	)
 	(wire
 		(pts
+			(xy 214.63 116.84) (xy 240.03 116.84)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "561ddf4c-74cf-4d33-89ba-6c8e75889631")
+	)
+	(wire
+		(pts
+			(xy 86.36 189.23) (xy 86.36 191.77)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "585e6445-b551-4dc6-93af-eb2437687340")
+	)
+	(wire
+		(pts
 			(xy 38.735 71.12) (xy 38.735 73.66)
 		)
 		(stroke
@@ -1773,6 +2308,26 @@
 	)
 	(wire
 		(pts
+			(xy 204.47 129.54) (xy 204.47 116.84)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "59b8e013-4c3b-4ce1-b3c3-f0a3deb6ab64")
+	)
+	(wire
+		(pts
+			(xy 233.68 160.02) (xy 233.68 158.75)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "5b5a238b-c734-4e6b-b1cc-d96b64e6663c")
+	)
+	(wire
+		(pts
 			(xy 105.41 39.37) (xy 110.49 39.37)
 		)
 		(stroke
@@ -1780,6 +2335,16 @@
 			(type default)
 		)
 		(uuid "5c2e99e6-65fe-4be5-8c78-742089e54d65")
+	)
+	(wire
+		(pts
+			(xy 245.11 158.75) (xy 245.11 160.02)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "5d2ec808-fb9b-4cc5-bf05-6ce3ca2497d7")
 	)
 	(wire
 		(pts
@@ -1813,6 +2378,16 @@
 	)
 	(wire
 		(pts
+			(xy 233.68 137.16) (xy 233.68 151.13)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "6774ad8b-3f3b-4108-bec4-690849097cb5")
+	)
+	(wire
+		(pts
 			(xy 44.45 84.455) (xy 44.45 88.9)
 		)
 		(stroke
@@ -1820,6 +2395,16 @@
 			(type default)
 		)
 		(uuid "6a47f3a5-2601-4549-8199-5cafdf1dcf3c")
+	)
+	(wire
+		(pts
+			(xy 254 142.24) (xy 254 129.54)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "6a500cff-60af-4183-af6c-b4aaaa65c36c")
 	)
 	(wire
 		(pts
@@ -1843,6 +2428,16 @@
 	)
 	(wire
 		(pts
+			(xy 78.74 172.72) (xy 81.28 172.72)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "702f13ee-9024-4b98-89cb-f1b353886f6b")
+	)
+	(wire
+		(pts
 			(xy 31.75 84.455) (xy 31.75 88.9)
 		)
 		(stroke
@@ -1850,6 +2445,36 @@
 			(type default)
 		)
 		(uuid "73883e31-0662-40ec-8b2c-708c0dc6ba36")
+	)
+	(wire
+		(pts
+			(xy 59.69 85.09) (xy 59.69 89.535)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "7571cadd-9cc3-48b5-b5ae-7000bd77c81a")
+	)
+	(wire
+		(pts
+			(xy 68.58 160.02) (xy 71.12 160.02)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "76f04121-eff1-48ee-a52e-63b67d5be022")
+	)
+	(wire
+		(pts
+			(xy 214.63 142.24) (xy 217.17 142.24)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "77175104-515e-4faf-9271-31578092da0e")
 	)
 	(wire
 		(pts
@@ -1873,6 +2498,16 @@
 	)
 	(wire
 		(pts
+			(xy 68.58 147.32) (xy 71.12 147.32)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "80efd345-cdb0-478d-8127-154a82de4d55")
+	)
+	(wire
+		(pts
 			(xy 44.45 73.66) (xy 44.45 76.835)
 		)
 		(stroke
@@ -1893,6 +2528,16 @@
 	)
 	(wire
 		(pts
+			(xy 118.11 160.02) (xy 124.46 160.02)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "8878ff26-0210-444b-ae8c-5fbe533a0cbd")
+	)
+	(wire
+		(pts
 			(xy 47.625 33.655) (xy 57.15 33.655)
 		)
 		(stroke
@@ -1903,6 +2548,56 @@
 	)
 	(wire
 		(pts
+			(xy 118.11 172.72) (xy 118.11 160.02)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "8dc8e059-a393-4a9e-8e9b-e2159170dd9f")
+	)
+	(wire
+		(pts
+			(xy 204.47 142.24) (xy 204.47 129.54)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "92a5260f-1c15-43e7-ba0e-ef5db1d9ed18")
+	)
+	(wire
+		(pts
+			(xy 254 116.84) (xy 254 129.54)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "94e2df3f-f034-4d5a-99b5-54c2621061e8")
+	)
+	(wire
+		(pts
+			(xy 118.11 160.02) (xy 102.87 160.02)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "95b60ad5-0e46-486a-a434-400b72daa0b0")
+	)
+	(wire
+		(pts
+			(xy 78.74 160.02) (xy 92.71 160.02)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "9f6e4105-df0a-4c50-b114-d3558345e7b0")
+	)
+	(wire
+		(pts
 			(xy 133.35 59.055) (xy 138.43 59.055)
 		)
 		(stroke
@@ -1910,6 +2605,46 @@
 			(type default)
 		)
 		(uuid "a2840352-b0bc-42e1-a6d4-bb82ca237149")
+	)
+	(wire
+		(pts
+			(xy 114.3 147.32) (xy 118.11 147.32)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "a3188c3c-a304-4874-ac13-fbeb2212c718")
+	)
+	(wire
+		(pts
+			(xy 68.58 160.02) (xy 68.58 147.32)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "a7be3ec6-ed50-40de-9bc1-73e1d9a9e3a0")
+	)
+	(wire
+		(pts
+			(xy 204.47 129.54) (xy 207.01 129.54)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "a94dbcf7-1b11-4b0a-a862-fea7e70a0d6a")
+	)
+	(wire
+		(pts
+			(xy 68.58 172.72) (xy 68.58 160.02)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "aa06d573-e181-4f48-9f40-8d332319ac0d")
 	)
 	(wire
 		(pts
@@ -1930,6 +2665,26 @@
 			(type default)
 		)
 		(uuid "bc4577ab-e1f0-4bae-b45c-38cca6ff6a9b")
+	)
+	(wire
+		(pts
+			(xy 109.22 189.23) (xy 109.22 191.77)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "bcb78d0f-2eb0-4cb5-a598-1cd20cd5b5bc")
+	)
+	(wire
+		(pts
+			(xy 245.11 124.46) (xy 245.11 151.13)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "beff05d1-ba1f-4bc7-a500-d6a7903875a7")
 	)
 	(wire
 		(pts
@@ -1960,6 +2715,16 @@
 			(type default)
 		)
 		(uuid "d4d6e6e1-9b2a-49d5-88ee-cd09561c4b95")
+	)
+	(wire
+		(pts
+			(xy 91.44 172.72) (xy 118.11 172.72)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "d5d6d7ba-e614-4458-911e-809aabe7194c")
 	)
 	(wire
 		(pts
@@ -2023,6 +2788,16 @@
 	)
 	(wire
 		(pts
+			(xy 227.33 142.24) (xy 254 142.24)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "ede41f76-f411-4118-a282-0bd08a8d30aa")
+	)
+	(wire
+		(pts
 			(xy 180.34 38.735) (xy 180.34 47.625)
 		)
 		(stroke
@@ -2040,6 +2815,16 @@
 			(type default)
 		)
 		(uuid "ef72fc08-96d7-457f-b055-406328bfcb70")
+	)
+	(wire
+		(pts
+			(xy 118.11 147.32) (xy 118.11 160.02)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "f40130cd-555a-40a0-a59f-c72fa284af2d")
 	)
 	(wire
 		(pts
@@ -2093,6 +2878,28 @@
 			)
 		)
 	)
+	(global_label "L_AudioBuf"
+		(shape input)
+		(at 66.04 172.72 180)
+		(fields_autoplaced yes)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify right)
+		)
+		(uuid "16c2da58-a462-4ee2-b121-a18b6daa4255")
+		(property "Intersheetrefs" "${INTERSHEET_REFS}"
+			(at 52.774 172.72 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify right)
+				(hide yes)
+			)
+		)
+	)
 	(global_label "PA5"
 		(shape passive)
 		(at 133.35 47.625 180)
@@ -2137,6 +2944,50 @@
 			)
 		)
 	)
+	(global_label "PC6"
+		(shape passive)
+		(at 245.11 160.02 270)
+		(fields_autoplaced yes)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify right)
+		)
+		(uuid "2d65f857-40d9-479a-bc86-787ef927629f")
+		(property "Intersheetrefs" "${INTERSHEET_REFS}"
+			(at 245.11 165.6434 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify right)
+				(hide yes)
+			)
+		)
+	)
+	(global_label "PC4"
+		(shape passive)
+		(at 86.36 191.77 270)
+		(fields_autoplaced yes)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify right)
+		)
+		(uuid "2e6944c1-2bc1-45b7-87d9-593a6a7f6831")
+		(property "Intersheetrefs" "${INTERSHEET_REFS}"
+			(at 86.36 197.3934 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify right)
+				(hide yes)
+			)
+		)
+	)
 	(global_label "PA2"
 		(shape passive)
 		(at 133.35 43.815 180)
@@ -2159,7 +3010,29 @@
 			)
 		)
 	)
-	(global_label "R_AudioOut"
+	(global_label "PC6"
+		(shape passive)
+		(at 109.22 191.77 270)
+		(fields_autoplaced yes)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify right)
+		)
+		(uuid "57a5b4a2-1595-47dc-b13f-99c76ccbf33d")
+		(property "Intersheetrefs" "${INTERSHEET_REFS}"
+			(at 109.22 197.3934 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify right)
+				(hide yes)
+			)
+		)
+	)
+	(global_label "L_AudioOut"
 		(shape input)
 		(at 31.75 33.655 180)
 		(fields_autoplaced yes)
@@ -2171,7 +3044,7 @@
 		)
 		(uuid "59d99dbd-5f6b-40d9-80f5-bd3f5f5dd682")
 		(property "Intersheetrefs" "${INTERSHEET_REFS}"
-			(at 18.1816 33.655 0)
+			(at 18.4235 33.655 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -2199,6 +3072,28 @@
 					(size 1.27 1.27)
 				)
 				(justify right)
+				(hide yes)
+			)
+		)
+	)
+	(global_label "L_AudioOut"
+		(shape input)
+		(at 124.46 160.02 0)
+		(fields_autoplaced yes)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left)
+		)
+		(uuid "6f85d31c-d5a3-4cfc-a774-808d398bfa51")
+		(property "Intersheetrefs" "${INTERSHEET_REFS}"
+			(at 137.7865 160.02 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
 				(hide yes)
 			)
 		)
@@ -2247,6 +3142,50 @@
 			)
 		)
 	)
+	(global_label "PC5"
+		(shape passive)
+		(at 233.68 160.02 270)
+		(fields_autoplaced yes)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify right)
+		)
+		(uuid "8a08faec-552e-4ce6-b4e4-50c887e9766c")
+		(property "Intersheetrefs" "${INTERSHEET_REFS}"
+			(at 233.68 165.6434 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify right)
+				(hide yes)
+			)
+		)
+	)
+	(global_label "PC5"
+		(shape passive)
+		(at 97.79 191.77 270)
+		(fields_autoplaced yes)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify right)
+		)
+		(uuid "a2762861-55c0-494f-8596-9d288e252c59")
+		(property "Intersheetrefs" "${INTERSHEET_REFS}"
+			(at 97.79 197.3934 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify right)
+				(hide yes)
+			)
+		)
+	)
 	(global_label "PA6"
 		(shape passive)
 		(at 133.35 59.055 180)
@@ -2265,6 +3204,28 @@
 					(size 1.27 1.27)
 				)
 				(justify right)
+				(hide yes)
+			)
+		)
+	)
+	(global_label "R_AudioOut"
+		(shape input)
+		(at 260.35 129.54 0)
+		(fields_autoplaced yes)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left)
+		)
+		(uuid "ab992f3e-dc09-4b05-87b0-718227a4c29d")
+		(property "Intersheetrefs" "${INTERSHEET_REFS}"
+			(at 273.9184 129.54 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
 				(hide yes)
 			)
 		)
@@ -2313,7 +3274,51 @@
 			)
 		)
 	)
-	(global_label "L_AudioOut"
+	(global_label "PC4"
+		(shape passive)
+		(at 222.25 160.02 270)
+		(fields_autoplaced yes)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify right)
+		)
+		(uuid "e738c016-1f0d-4e91-8f9a-3194b94a7b2b")
+		(property "Intersheetrefs" "${INTERSHEET_REFS}"
+			(at 222.25 165.6434 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify right)
+				(hide yes)
+			)
+		)
+	)
+	(global_label "R_AudioBuf"
+		(shape input)
+		(at 201.93 142.24 180)
+		(fields_autoplaced yes)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify right)
+		)
+		(uuid "f9bb0b6b-0554-4a06-accf-32b28e2a4e63")
+		(property "Intersheetrefs" "${INTERSHEET_REFS}"
+			(at 188.4221 142.24 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify right)
+				(hide yes)
+			)
+		)
+	)
+	(global_label "R_AudioOut"
 		(shape input)
 		(at 31.115 54.61 180)
 		(fields_autoplaced yes)
@@ -2325,13 +3330,218 @@
 		)
 		(uuid "fe926eab-bb84-4764-8a5a-6e333b9c9947")
 		(property "Intersheetrefs" "${INTERSHEET_REFS}"
-			(at 17.7885 54.61 0)
+			(at 17.5466 54.61 0)
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
 				(justify right)
 				(hide yes)
+			)
+		)
+	)
+	(symbol
+		(lib_id "Device:R")
+		(at 210.82 129.54 270)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(uuid "01cddb92-cd68-4b71-8be2-751044670062")
+		(property "Reference" "R107"
+			(at 212.725 132.08 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify right)
+			)
+		)
+		(property "Value" "100"
+			(at 212.598 129.54 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify right)
+			)
+		)
+		(property "Footprint" "Resistor_SMD:R_0603_1608Metric_Pad0.98x0.95mm_HandSolder"
+			(at 210.82 127.762 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" "~"
+			(at 210.82 129.54 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" "Resistor"
+			(at 210.82 129.54 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "b4143e4f-d01a-46f5-8220-3105dd0651ee")
+		)
+		(pin "2"
+			(uuid "c3890b0a-efef-47bc-a997-42465b77d399")
+		)
+		(instances
+			(project "ECE445L_Lab7"
+				(path "/69b823fd-c065-40ff-9bb9-c5835555f3eb/a500a078-11dc-409b-bff9-a8c35e1dabf8"
+					(reference "R107")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "Device:R")
+		(at 210.82 142.24 270)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(uuid "0246cbf7-9833-4502-8956-55c4d3b6fdfb")
+		(property "Reference" "R108"
+			(at 212.725 144.78 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify right)
+			)
+		)
+		(property "Value" "75"
+			(at 212.09 142.24 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify right)
+			)
+		)
+		(property "Footprint" "Resistor_SMD:R_0603_1608Metric_Pad0.98x0.95mm_HandSolder"
+			(at 210.82 140.462 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" "~"
+			(at 210.82 142.24 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" "Resistor"
+			(at 210.82 142.24 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "85937df6-f83a-47a7-9065-8bc106d23ed5")
+		)
+		(pin "2"
+			(uuid "a55bbf11-d626-44bd-af18-01eb9203c31b")
+		)
+		(instances
+			(project "ECE445L_Lab7"
+				(path "/69b823fd-c065-40ff-9bb9-c5835555f3eb/a500a078-11dc-409b-bff9-a8c35e1dabf8"
+					(reference "R108")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "Device:R")
+		(at 86.36 185.42 180)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(uuid "03057058-9fcb-435c-b2de-345d5aef2bfa")
+		(property "Reference" "R103"
+			(at 84.455 185.42 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "2k"
+			(at 86.36 185.42 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" "Resistor_SMD:R_0603_1608Metric_Pad0.98x0.95mm_HandSolder"
+			(at 88.138 185.42 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" "~"
+			(at 86.36 185.42 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" "Resistor"
+			(at 86.36 185.42 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "d98ffee8-40dd-4ae4-930f-1c6d7977dd9e")
+		)
+		(pin "2"
+			(uuid "ebf4e48e-13ea-402b-ac3f-c9ef4caebdf0")
+		)
+		(instances
+			(project "ECE445L_Lab7"
+				(path "/69b823fd-c065-40ff-9bb9-c5835555f3eb/a500a078-11dc-409b-bff9-a8c35e1dabf8"
+					(reference "R103")
+					(unit 1)
+				)
 			)
 		)
 	)
@@ -2354,7 +3564,7 @@
 				(justify left)
 			)
 		)
-		(property "Value" "LED"
+		(property "Value" "PD6"
 			(at 35.56 95.5674 0)
 			(effects
 				(font
@@ -2479,7 +3689,7 @@
 		(on_board yes)
 		(dnp no)
 		(uuid "1912a32a-03ea-4801-9148-298d8a6433b7")
-		(property "Reference" "TP11"
+		(property "Reference" "TP13"
 			(at 116.205 31.115 0)
 			(effects
 				(font
@@ -2533,7 +3743,142 @@
 		(instances
 			(project "ECE445L_Lab7"
 				(path "/69b823fd-c065-40ff-9bb9-c5835555f3eb/a500a078-11dc-409b-bff9-a8c35e1dabf8"
-					(reference "TP11")
+					(reference "TP13")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "power:+3V3")
+		(at 59.69 72.39 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(uuid "1988dae9-bf37-4868-b2d9-ca2fcf2d8ed4")
+		(property "Reference" "#PWR0103"
+			(at 59.69 76.2 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Value" "+3V3"
+			(at 59.69 68.834 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" ""
+			(at 59.69 72.39 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" ""
+			(at 59.69 72.39 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" "Power symbol creates a global label with name \"+3V3\""
+			(at 59.69 72.39 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "e105c084-5063-449b-9f32-3dc621a7fc01")
+		)
+		(instances
+			(project "ECE445L_Lab7"
+				(path "/69b823fd-c065-40ff-9bb9-c5835555f3eb/a500a078-11dc-409b-bff9-a8c35e1dabf8"
+					(reference "#PWR0103")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "ECE445L:LED")
+		(at 60.96 93.345 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "1daa4374-4064-4a29-8c27-c7efa3ad971a")
+		(property "Reference" "D5"
+			(at 63.5 93.6624 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Value" "POWER"
+			(at 63.5 96.2024 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Footprint" "ECE445L:LED_D5.0mm"
+			(at 60.96 90.805 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" "https://users.ece.utexas.edu/~valvano/mspm0/HLMP-4700.pdf"
+			(at 60.96 90.805 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" "Light emitting diode"
+			(at 60.96 93.345 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "16399248-7333-4da2-8e88-b415d9f79246")
+		)
+		(pin "2"
+			(uuid "9cb32e48-4639-41bc-9ca3-e0f1812f62e3")
+		)
+		(instances
+			(project "ECE445L_Lab7"
+				(path "/69b823fd-c065-40ff-9bb9-c5835555f3eb/a500a078-11dc-409b-bff9-a8c35e1dabf8"
+					(reference "D5")
 					(unit 1)
 				)
 			)
@@ -2628,6 +3973,73 @@
 		)
 	)
 	(symbol
+		(lib_id "Device:R")
+		(at 245.11 154.94 180)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(uuid "20d0590f-6618-44d7-b9f9-39fbb4d6f993")
+		(property "Reference" "R111"
+			(at 243.205 154.94 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "2k"
+			(at 245.11 154.94 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" "Resistor_SMD:R_0603_1608Metric_Pad0.98x0.95mm_HandSolder"
+			(at 246.888 154.94 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" "~"
+			(at 245.11 154.94 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" "Resistor"
+			(at 245.11 154.94 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "d4d1daf8-2bfa-438d-9ac1-6a9db69746c6")
+		)
+		(pin "2"
+			(uuid "8924ef73-7146-40e0-9f9a-52a10437ccc0")
+		)
+		(instances
+			(project "ECE445L_Lab7"
+				(path "/69b823fd-c065-40ff-9bb9-c5835555f3eb/a500a078-11dc-409b-bff9-a8c35e1dabf8"
+					(reference "R111")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
 		(lib_id "power:+3V3")
 		(at 189.865 35.56 0)
 		(unit 1)
@@ -2693,6 +4105,81 @@
 		)
 	)
 	(symbol
+		(lib_id "Transistor_FET:MMBF170")
+		(at 245.11 119.38 90)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(uuid "2582fa00-7d99-46bd-a387-5c8987844ea4")
+		(property "Reference" "Q18"
+			(at 237.744 122.428 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Value" "MMBF170"
+			(at 241.046 127.762 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Footprint" "Package_TO_SOT_SMD:SOT-23"
+			(at 247.015 114.3 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+					(italic yes)
+				)
+				(justify left)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" "https://www.diodes.com/assets/Datasheets/ds30104.pdf"
+			(at 248.92 114.3 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+				(hide yes)
+			)
+		)
+		(property "Description" "0.5A Id, 60V Vds, N-Channel MOSFET, SOT-23"
+			(at 245.11 119.38 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "f3522478-d881-4aa1-9f62-3ed0ed66c56a")
+		)
+		(pin "2"
+			(uuid "7cf03879-da15-41cd-9b0f-1591cf16dd29")
+		)
+		(pin "3"
+			(uuid "a93a2da5-692f-4481-9174-24c57f71fe90")
+		)
+		(instances
+			(project "ECE445L_Lab7"
+				(path "/69b823fd-c065-40ff-9bb9-c5835555f3eb/a500a078-11dc-409b-bff9-a8c35e1dabf8"
+					(reference "Q18")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
 		(lib_id "ECE445L:C")
 		(at 189.865 51.435 0)
 		(unit 1)
@@ -2701,7 +4188,7 @@
 		(on_board yes)
 		(dnp no)
 		(uuid "370f90d4-7bea-41b4-a618-e5aeb6fc52ef")
-		(property "Reference" "C40"
+		(property "Reference" "C36"
 			(at 190.5 49.53 0)
 			(effects
 				(font
@@ -2755,7 +4242,7 @@
 		(instances
 			(project "ECE445L_Lab7"
 				(path "/69b823fd-c065-40ff-9bb9-c5835555f3eb/a500a078-11dc-409b-bff9-a8c35e1dabf8"
-					(reference "C40")
+					(reference "C36")
 					(unit 1)
 				)
 			)
@@ -2780,7 +4267,7 @@
 				(justify left)
 			)
 		)
-		(property "Value" "LED"
+		(property "Value" "PD7"
 			(at 48.26 95.5674 0)
 			(effects
 				(font
@@ -2832,6 +4319,367 @@
 		)
 	)
 	(symbol
+		(lib_id "Device:R")
+		(at 59.69 81.28 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(uuid "4f70749e-1b61-4ef6-a7c7-9b17f2b9b1f3")
+		(property "Reference" "R99"
+			(at 62.23 79.375 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify right)
+			)
+		)
+		(property "Value" "1.5V"
+			(at 59.69 79.375 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify right)
+			)
+		)
+		(property "Footprint" "Resistor_SMD:R_0603_1608Metric_Pad0.98x0.95mm_HandSolder"
+			(at 57.912 81.28 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" "~"
+			(at 59.69 81.28 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" "Resistor"
+			(at 59.69 81.28 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "00c1819c-be61-467b-90b6-23363047fe57")
+		)
+		(pin "2"
+			(uuid "7b35ba5d-20a8-4408-9e9e-0e78d6a8b73e")
+		)
+		(instances
+			(project "ECE445L_Lab7"
+				(path "/69b823fd-c065-40ff-9bb9-c5835555f3eb/a500a078-11dc-409b-bff9-a8c35e1dabf8"
+					(reference "R99")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "Transistor_FET:MMBF170")
+		(at 86.36 175.26 90)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(uuid "5adc9d72-327e-43e4-b496-99fc74affcaa")
+		(property "Reference" "Q13"
+			(at 78.994 178.308 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Value" "MMBF170"
+			(at 82.296 183.642 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Footprint" "Package_TO_SOT_SMD:SOT-23"
+			(at 88.265 170.18 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+					(italic yes)
+				)
+				(justify left)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" "https://www.diodes.com/assets/Datasheets/ds30104.pdf"
+			(at 90.17 170.18 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+				(hide yes)
+			)
+		)
+		(property "Description" "0.5A Id, 60V Vds, N-Channel MOSFET, SOT-23"
+			(at 86.36 175.26 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "9882601b-8579-47bf-8fc4-50640c9b3b96")
+		)
+		(pin "2"
+			(uuid "ceeaaa34-898f-410b-b2a9-5bf36c110b32")
+		)
+		(pin "3"
+			(uuid "2990726a-f205-4be6-ae10-8496248cd67d")
+		)
+		(instances
+			(project "ECE445L_Lab7"
+				(path "/69b823fd-c065-40ff-9bb9-c5835555f3eb/a500a078-11dc-409b-bff9-a8c35e1dabf8"
+					(reference "Q13")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "Device:R")
+		(at 97.79 185.42 180)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(uuid "67f84646-acd3-4a27-adbb-19fda5ec457a")
+		(property "Reference" "R104"
+			(at 95.885 185.42 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "2k"
+			(at 97.79 185.42 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" "Resistor_SMD:R_0603_1608Metric_Pad0.98x0.95mm_HandSolder"
+			(at 99.568 185.42 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" "~"
+			(at 97.79 185.42 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" "Resistor"
+			(at 97.79 185.42 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "17613c8b-af5f-4546-9912-d03504a9d8c9")
+		)
+		(pin "2"
+			(uuid "936086d6-cfc5-4726-8b5c-82da738a78d4")
+		)
+		(instances
+			(project "ECE445L_Lab7"
+				(path "/69b823fd-c065-40ff-9bb9-c5835555f3eb/a500a078-11dc-409b-bff9-a8c35e1dabf8"
+					(reference "R104")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "Transistor_FET:MMBF170")
+		(at 109.22 149.86 90)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(uuid "6d6b5015-1d7d-4c11-842e-247c14388432")
+		(property "Reference" "Q15"
+			(at 101.854 152.908 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Value" "MMBF170"
+			(at 105.156 158.242 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Footprint" "Package_TO_SOT_SMD:SOT-23"
+			(at 111.125 144.78 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+					(italic yes)
+				)
+				(justify left)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" "https://www.diodes.com/assets/Datasheets/ds30104.pdf"
+			(at 113.03 144.78 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+				(hide yes)
+			)
+		)
+		(property "Description" "0.5A Id, 60V Vds, N-Channel MOSFET, SOT-23"
+			(at 109.22 149.86 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "5f2bfa16-4300-470a-8550-88e0c1229ab3")
+		)
+		(pin "2"
+			(uuid "28bc3af7-9057-4a90-a685-ba21c11fde9d")
+		)
+		(pin "3"
+			(uuid "3756ee95-ca96-44f8-bbc3-d41031b72e6a")
+		)
+		(instances
+			(project "ECE445L_Lab7"
+				(path "/69b823fd-c065-40ff-9bb9-c5835555f3eb/a500a078-11dc-409b-bff9-a8c35e1dabf8"
+					(reference "Q15")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "Transistor_FET:MMBF170")
+		(at 233.68 132.08 90)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(uuid "6e8fe606-4b99-415a-96f5-c1d8b921ac29")
+		(property "Reference" "Q17"
+			(at 226.314 135.128 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Value" "MMBF170"
+			(at 229.616 140.462 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Footprint" "Package_TO_SOT_SMD:SOT-23"
+			(at 235.585 127 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+					(italic yes)
+				)
+				(justify left)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" "https://www.diodes.com/assets/Datasheets/ds30104.pdf"
+			(at 237.49 127 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+				(hide yes)
+			)
+		)
+		(property "Description" "0.5A Id, 60V Vds, N-Channel MOSFET, SOT-23"
+			(at 233.68 132.08 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "672f6d75-acfe-4d7c-892c-23b4ddd3ef9b")
+		)
+		(pin "2"
+			(uuid "e5709b81-c67f-49e3-9108-37612669674e")
+		)
+		(pin "3"
+			(uuid "51d561b5-72b3-4ff2-a319-a277d9058faf")
+		)
+		(instances
+			(project "ECE445L_Lab7"
+				(path "/69b823fd-c065-40ff-9bb9-c5835555f3eb/a500a078-11dc-409b-bff9-a8c35e1dabf8"
+					(reference "Q17")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
 		(lib_id "power:+3V3")
 		(at 38.735 71.12 0)
 		(unit 1)
@@ -2841,7 +4689,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "79fb6a6e-c84b-4153-bac3-a81441faa0c1")
-		(property "Reference" "#PWR032"
+		(property "Reference" "#PWR0102"
 			(at 38.735 74.93 0)
 			(effects
 				(font
@@ -2891,7 +4739,7 @@
 		(instances
 			(project ""
 				(path "/69b823fd-c065-40ff-9bb9-c5835555f3eb/a500a078-11dc-409b-bff9-a8c35e1dabf8"
-					(reference "#PWR032")
+					(reference "#PWR0102")
 					(unit 1)
 				)
 			)
@@ -2906,7 +4754,7 @@
 		(on_board yes)
 		(dnp no)
 		(uuid "7c4a81fe-99e1-4cb5-be20-07fc3c14620d")
-		(property "Reference" "C39"
+		(property "Reference" "C35"
 			(at 180.975 49.53 0)
 			(effects
 				(font
@@ -2960,14 +4808,14 @@
 		(instances
 			(project "ECE445L_Lab7"
 				(path "/69b823fd-c065-40ff-9bb9-c5835555f3eb/a500a078-11dc-409b-bff9-a8c35e1dabf8"
-					(reference "C39")
+					(reference "C35")
 					(unit 1)
 				)
 			)
 		)
 	)
 	(symbol
-		(lib_id "ECE445L:HeadphoneJack")
+		(lib_id "ECE445L:HeadphoneJack_STX3000")
 		(at 67.945 37.465 0)
 		(unit 1)
 		(exclude_from_sim no)
@@ -2976,7 +4824,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "7c818dfd-1638-462c-9c6a-52c475d5abe8")
-		(property "Reference" "J4"
+		(property "Reference" "J3"
 			(at 72.39 42.5449 0)
 			(effects
 				(font
@@ -2994,7 +4842,7 @@
 				(justify left)
 			)
 		)
-		(property "Footprint" "ECE445L:Jack_3.5mm_CUI_SJ1-3523N_Horizontal"
+		(property "Footprint" "ECE445L:STX3000"
 			(at 65.405 55.245 0)
 			(effects
 				(font
@@ -3033,7 +4881,284 @@
 		(instances
 			(project ""
 				(path "/69b823fd-c065-40ff-9bb9-c5835555f3eb/a500a078-11dc-409b-bff9-a8c35e1dabf8"
-					(reference "J4")
+					(reference "J3")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "Device:R")
+		(at 74.93 147.32 90)
+		(mirror x)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(uuid "7deceb46-135e-4e71-83f5-c98937d6b4b5")
+		(property "Reference" "R100"
+			(at 73.025 149.86 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify right)
+			)
+		)
+		(property "Value" "125"
+			(at 73.152 147.32 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify right)
+			)
+		)
+		(property "Footprint" "Resistor_SMD:R_0603_1608Metric_Pad0.98x0.95mm_HandSolder"
+			(at 74.93 145.542 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" "~"
+			(at 74.93 147.32 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" "Resistor"
+			(at 74.93 147.32 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "6ba0f22c-f26e-4415-9d7e-7e53c50aee9a")
+		)
+		(pin "2"
+			(uuid "c8d06ffa-17e8-4fea-8623-57f459727a66")
+		)
+		(instances
+			(project "ECE445L_Lab7"
+				(path "/69b823fd-c065-40ff-9bb9-c5835555f3eb/a500a078-11dc-409b-bff9-a8c35e1dabf8"
+					(reference "R100")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "Device:R")
+		(at 233.68 154.94 180)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(uuid "7e0d7226-89cf-4d7a-985c-61d74812f33b")
+		(property "Reference" "R110"
+			(at 231.775 154.94 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "2k"
+			(at 233.68 154.94 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" "Resistor_SMD:R_0603_1608Metric_Pad0.98x0.95mm_HandSolder"
+			(at 235.458 154.94 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" "~"
+			(at 233.68 154.94 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" "Resistor"
+			(at 233.68 154.94 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "9c0b1e22-8520-483b-aa6d-4f22817aab9e")
+		)
+		(pin "2"
+			(uuid "f64b5a24-2557-4d6b-9deb-ca48789daa40")
+		)
+		(instances
+			(project "ECE445L_Lab7"
+				(path "/69b823fd-c065-40ff-9bb9-c5835555f3eb/a500a078-11dc-409b-bff9-a8c35e1dabf8"
+					(reference "R110")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "Transistor_FET:MMBF170")
+		(at 97.79 162.56 90)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(uuid "83f3f645-7f26-4dee-a897-160fe3e815dd")
+		(property "Reference" "Q14"
+			(at 90.424 165.608 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Value" "MMBF170"
+			(at 93.726 170.942 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Footprint" "Package_TO_SOT_SMD:SOT-23"
+			(at 99.695 157.48 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+					(italic yes)
+				)
+				(justify left)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" "https://www.diodes.com/assets/Datasheets/ds30104.pdf"
+			(at 101.6 157.48 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+				(hide yes)
+			)
+		)
+		(property "Description" "0.5A Id, 60V Vds, N-Channel MOSFET, SOT-23"
+			(at 97.79 162.56 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "d9d14f68-d469-448d-a4a5-976cf4155d11")
+		)
+		(pin "2"
+			(uuid "4468b8c1-6300-4df1-9ffb-5ab109c92140")
+		)
+		(pin "3"
+			(uuid "81bf5f2d-83a7-4aaf-a609-dcef43ae95ee")
+		)
+		(instances
+			(project "ECE445L_Lab7"
+				(path "/69b823fd-c065-40ff-9bb9-c5835555f3eb/a500a078-11dc-409b-bff9-a8c35e1dabf8"
+					(reference "Q14")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "power:GND")
+		(at 59.69 100.33 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(uuid "a34dfc87-b6cb-4706-915a-f96edaf51377")
+		(property "Reference" "#PWR0104"
+			(at 59.69 106.68 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Value" "GND"
+			(at 62.865 103.505 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" ""
+			(at 59.69 100.33 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" ""
+			(at 59.69 100.33 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" "Power symbol creates a global label with name \"GND\" , ground"
+			(at 59.69 100.33 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "e6b40db4-4db0-401b-ad92-98c4a9aee8bc")
+		)
+		(instances
+			(project "ECE445L_Lab7"
+				(path "/69b823fd-c065-40ff-9bb9-c5835555f3eb/a500a078-11dc-409b-bff9-a8c35e1dabf8"
+					(reference "#PWR0104")
 					(unit 1)
 				)
 			)
@@ -3048,7 +5173,7 @@
 		(on_board yes)
 		(dnp no)
 		(uuid "aab48a82-9a6c-45cf-83bf-36e1b0c1dcf5")
-		(property "Reference" "R85"
+		(property "Reference" "R95"
 			(at 34.29 78.74 90)
 			(effects
 				(font
@@ -3102,7 +5227,213 @@
 		(instances
 			(project "ECE445L_Lab7"
 				(path "/69b823fd-c065-40ff-9bb9-c5835555f3eb/a500a078-11dc-409b-bff9-a8c35e1dabf8"
-					(reference "R85")
+					(reference "R95")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "Device:R")
+		(at 74.93 172.72 270)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(uuid "ab932397-7951-433a-95de-f783b5dff03e")
+		(property "Reference" "R102"
+			(at 76.835 175.26 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify right)
+			)
+		)
+		(property "Value" "75"
+			(at 76.2 172.72 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify right)
+			)
+		)
+		(property "Footprint" "Resistor_SMD:R_0603_1608Metric_Pad0.98x0.95mm_HandSolder"
+			(at 74.93 170.942 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" "~"
+			(at 74.93 172.72 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" "Resistor"
+			(at 74.93 172.72 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "0649cc0d-8fba-4e2b-bcfb-92d43b5a79e7")
+		)
+		(pin "2"
+			(uuid "20594ebb-b61e-45fb-9af5-43cbc8be82b4")
+		)
+		(instances
+			(project "ECE445L_Lab7"
+				(path "/69b823fd-c065-40ff-9bb9-c5835555f3eb/a500a078-11dc-409b-bff9-a8c35e1dabf8"
+					(reference "R102")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "Device:R")
+		(at 222.25 154.94 180)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(uuid "ad59c74b-da71-4b89-b4c6-a88a01e5ae62")
+		(property "Reference" "R109"
+			(at 220.345 154.94 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "2k"
+			(at 222.25 154.94 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" "Resistor_SMD:R_0603_1608Metric_Pad0.98x0.95mm_HandSolder"
+			(at 224.028 154.94 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" "~"
+			(at 222.25 154.94 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" "Resistor"
+			(at 222.25 154.94 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "0453eb1b-8617-458f-9019-4716b4b71353")
+		)
+		(pin "2"
+			(uuid "953f03b7-16ce-41ae-a81c-ac00aa30db51")
+		)
+		(instances
+			(project "ECE445L_Lab7"
+				(path "/69b823fd-c065-40ff-9bb9-c5835555f3eb/a500a078-11dc-409b-bff9-a8c35e1dabf8"
+					(reference "R109")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "Device:R")
+		(at 210.82 116.84 270)
+		(mirror x)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(uuid "b07a7d33-668f-4b48-8db3-fbd0b0b5ef75")
+		(property "Reference" "R106"
+			(at 212.725 114.3 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify right)
+			)
+		)
+		(property "Value" "125"
+			(at 212.598 116.84 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify right)
+			)
+		)
+		(property "Footprint" "Resistor_SMD:R_0603_1608Metric_Pad0.98x0.95mm_HandSolder"
+			(at 210.82 118.618 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" "~"
+			(at 210.82 116.84 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" "Resistor"
+			(at 210.82 116.84 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "b1dfe2aa-7fa3-40eb-886b-99d4ff1ca10d")
+		)
+		(pin "2"
+			(uuid "5b8f11f4-2dcd-4b5c-9979-70c938739911")
+		)
+		(instances
+			(project "ECE445L_Lab7"
+				(path "/69b823fd-c065-40ff-9bb9-c5835555f3eb/a500a078-11dc-409b-bff9-a8c35e1dabf8"
+					(reference "R106")
 					(unit 1)
 				)
 			)
@@ -3117,7 +5448,7 @@
 		(on_board yes)
 		(dnp no)
 		(uuid "b3d5fcdf-ad22-42a5-8f9f-8d25c7b2b794")
-		(property "Reference" "TP12"
+		(property "Reference" "TP14"
 			(at 116.84 38.735 0)
 			(effects
 				(font
@@ -3171,7 +5502,7 @@
 		(instances
 			(project "ECE445L_Lab7"
 				(path "/69b823fd-c065-40ff-9bb9-c5835555f3eb/a500a078-11dc-409b-bff9-a8c35e1dabf8"
-					(reference "TP12")
+					(reference "TP14")
 					(unit 1)
 				)
 			)
@@ -3274,7 +5605,7 @@
 		(on_board yes)
 		(dnp no)
 		(uuid "d7c373b9-3b76-4404-88c5-db8e4f8088c6")
-		(property "Reference" "R88"
+		(property "Reference" "R98"
 			(at 46.99 78.74 90)
 			(effects
 				(font
@@ -3328,7 +5659,82 @@
 		(instances
 			(project "ECE445L_Lab7"
 				(path "/69b823fd-c065-40ff-9bb9-c5835555f3eb/a500a078-11dc-409b-bff9-a8c35e1dabf8"
-					(reference "R88")
+					(reference "R98")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "Transistor_FET:MMBF170")
+		(at 222.25 144.78 90)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(uuid "dd3c0020-aea6-495d-8afe-aa65b8f663d0")
+		(property "Reference" "Q16"
+			(at 214.884 147.828 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Value" "MMBF170"
+			(at 218.186 153.162 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Footprint" "Package_TO_SOT_SMD:SOT-23"
+			(at 224.155 139.7 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+					(italic yes)
+				)
+				(justify left)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" "https://www.diodes.com/assets/Datasheets/ds30104.pdf"
+			(at 226.06 139.7 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+				(hide yes)
+			)
+		)
+		(property "Description" "0.5A Id, 60V Vds, N-Channel MOSFET, SOT-23"
+			(at 222.25 144.78 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "7d9f2950-5fe1-40f4-8991-0ceb195ca904")
+		)
+		(pin "2"
+			(uuid "6f0e7d38-26ba-4ee5-b7c3-0d9a7c650f41")
+		)
+		(pin "3"
+			(uuid "19e3b331-5761-4932-b8d5-66f3de411950")
+		)
+		(instances
+			(project "ECE445L_Lab7"
+				(path "/69b823fd-c065-40ff-9bb9-c5835555f3eb/a500a078-11dc-409b-bff9-a8c35e1dabf8"
+					(reference "Q16")
 					(unit 1)
 				)
 			)
@@ -3343,7 +5749,7 @@
 		(on_board yes)
 		(dnp no)
 		(uuid "ea93019d-f808-4bb9-853a-e130c1360f51")
-		(property "Reference" "R87"
+		(property "Reference" "R97"
 			(at 41.275 36.195 90)
 			(effects
 				(font
@@ -3397,7 +5803,74 @@
 		(instances
 			(project "ECE445L_Lab7"
 				(path "/69b823fd-c065-40ff-9bb9-c5835555f3eb/a500a078-11dc-409b-bff9-a8c35e1dabf8"
-					(reference "R87")
+					(reference "R97")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "Device:R")
+		(at 109.22 185.42 180)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(uuid "eaf549c3-40b1-4974-ab0c-50683c881500")
+		(property "Reference" "R105"
+			(at 107.315 185.42 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "2k"
+			(at 109.22 185.42 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" "Resistor_SMD:R_0603_1608Metric_Pad0.98x0.95mm_HandSolder"
+			(at 110.998 185.42 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" "~"
+			(at 109.22 185.42 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" "Resistor"
+			(at 109.22 185.42 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "a6d32460-16b2-40ab-a8d1-e9479faaf551")
+		)
+		(pin "2"
+			(uuid "680b4785-5352-4eaa-beff-c1dc55f4cf78")
+		)
+		(instances
+			(project "ECE445L_Lab7"
+				(path "/69b823fd-c065-40ff-9bb9-c5835555f3eb/a500a078-11dc-409b-bff9-a8c35e1dabf8"
+					(reference "R105")
 					(unit 1)
 				)
 			)
@@ -3412,7 +5885,7 @@
 		(on_board yes)
 		(dnp no)
 		(uuid "f5466c9e-d391-4d04-b031-65c43c64ae9f")
-		(property "Reference" "#PWR0103"
+		(property "Reference" "#PWR0101"
 			(at 38.735 50.8 0)
 			(effects
 				(font
@@ -3462,7 +5935,7 @@
 		(instances
 			(project ""
 				(path "/69b823fd-c065-40ff-9bb9-c5835555f3eb/a500a078-11dc-409b-bff9-a8c35e1dabf8"
-					(reference "#PWR0103")
+					(reference "#PWR0101")
 					(unit 1)
 				)
 			)
@@ -3478,7 +5951,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "f57d29e4-cd1a-4aeb-8cef-192474dca77c")
-		(property "Reference" "U16"
+		(property "Reference" "U15"
 			(at 158.75 31.75 0)
 			(effects
 				(font
@@ -3600,7 +6073,76 @@
 		(instances
 			(project "Lab7"
 				(path "/69b823fd-c065-40ff-9bb9-c5835555f3eb/a500a078-11dc-409b-bff9-a8c35e1dabf8"
-					(reference "U16")
+					(reference "U15")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "Device:R")
+		(at 74.93 160.02 270)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(uuid "f5b00cb2-0ecf-421d-b04f-e5d6df5dbbc1")
+		(property "Reference" "R101"
+			(at 76.835 162.56 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify right)
+			)
+		)
+		(property "Value" "100"
+			(at 76.708 160.02 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify right)
+			)
+		)
+		(property "Footprint" "Resistor_SMD:R_0603_1608Metric_Pad0.98x0.95mm_HandSolder"
+			(at 74.93 158.242 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" "~"
+			(at 74.93 160.02 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" "Resistor"
+			(at 74.93 160.02 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "15d739a7-bdfc-4687-a0d6-da2c6c62d6da")
+		)
+		(pin "2"
+			(uuid "7086bb15-edbf-4b72-818f-86e4559be3ca")
+		)
+		(instances
+			(project "ECE445L_Lab7"
+				(path "/69b823fd-c065-40ff-9bb9-c5835555f3eb/a500a078-11dc-409b-bff9-a8c35e1dabf8"
+					(reference "R101")
 					(unit 1)
 				)
 			)
@@ -3615,7 +6157,7 @@
 		(on_board yes)
 		(dnp no)
 		(uuid "f9778f56-51e2-4862-b395-cba49b01c7b0")
-		(property "Reference" "R86"
+		(property "Reference" "R96"
 			(at 40.64 57.15 90)
 			(effects
 				(font
@@ -3669,7 +6211,7 @@
 		(instances
 			(project "ECE445L_Lab7"
 				(path "/69b823fd-c065-40ff-9bb9-c5835555f3eb/a500a078-11dc-409b-bff9-a8c35e1dabf8"
-					(reference "R86")
+					(reference "R96")
 					(unit 1)
 				)
 			)
