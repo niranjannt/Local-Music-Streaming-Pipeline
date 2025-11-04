@@ -82,6 +82,16 @@
 			(embedded_fonts no)
 		)
 	)
+	(text "Please note, some changes were made since lab7a report due to feedback\nmaking some current calculations incorrect. This will be corrected."
+		(exclude_from_sim no)
+		(at 229.87 162.56 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+		)
+		(uuid "355f5506-8447-4a04-988e-33f07e797359")
+	)
 	(no_connect
 		(at 269.24 46.99)
 		(uuid "16a0fee5-e90f-471d-aef6-7bb265868984")
