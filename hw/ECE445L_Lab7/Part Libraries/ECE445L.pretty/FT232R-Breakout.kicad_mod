@@ -53,7 +53,7 @@
 			)
 		)
 	)
-	(attr smd)
+	(attr through_hole allow_missing_courtyard)
 	(fp_line
 		(start -16.516 -2.993)
 		(end -15.881 -3.628)
