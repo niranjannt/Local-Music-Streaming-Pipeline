@@ -1,5 +1,7 @@
 import javax.sound.sampled.AudioFormat;
 import javax.sound.sampled.AudioInputStream;
+import javax.sound.sampled.AudioSystem;
+import javax.sound.sampled.UnsupportedAudioFileException;
 import java.io.File;
 import java.io.FileInputStream;
 import java.io.IOException;
@@ -22,143 +24,29 @@ public class Audio {
     private final SerialPort serialPort;
     int bytesPerSample;
     int shiftAmount;
-    boolean channel;
 
-    Audio(String path) throws IOException {
+    Audio(String path) throws IOException, UnsupportedAudioFileException {
         File wavFile = new File(path);
-        FileInputStream wavInputStream = new FileInputStream(wavFile);
-        setAudioFormat(wavInputStream);
-        audioInputStream = new AudioInputStream(wavInputStream, audioFormat, wavFile.length());
-        //serialPort = new SerialPort("/dev/cu.usbserial-A106DAXQ");    // Mac
-        serialPort = new SerialPort("/dev/cu.usbserial-A50285BI");
-        //serialPort = new SerialPort("COM12");                                // Windows
+
+        audioInputStream = AudioSystem.getAudioInputStream(wavFile);
+        audioFormat = audioInputStream.getFormat();
+
+        bytesPerSample = audioFormat.getSampleSizeInBits() / 8;
+        shiftAmount = audioFormat.getSampleSizeInBits() - 14;
+
+        System.out.println("Format: " + audioFormat);
+        System.out.println("Channels: " + audioFormat.getChannels());
+        System.out.println("Sample rate: " + audioFormat.getSampleRate());
+        System.out.println("Bytes per sample: " + bytesPerSample);
+
+        //serialPort = new SerialPort("/dev/cu.usbserial-A106DAXQ");         // Mac usbB
+        serialPort = new SerialPort("/dev/cu.usbserial-A50285BI"); // Macro usb calculator one
+        //serialPort = new SerialPort("COM12");                             // Windows
 
         openPort();
-        serialPort.addEventListener(new PortReader(), SerialPort.MASK_RXCHAR);
-        send1Data();
-        //sendSampleRate();
-        //sendInitData();
-    }
+        sendSampleRate();
+        sendInitData();
 
-    private void send1Data() throws IOException {
-        channel = false;
-        byte[] data = new byte[bytesPerSample];
-        byte[] outData = new byte[2];
-        for (int i = 0; i < 1000; i++) {
-            //read one sample
-            int bytesRead = audioInputStream.read(data, 0, bytesPerSample);
-
-            //turn sample into int form
-            int sample = 0;
-            for (int j = 0; j < bytesPerSample; j++) {
-                sample |= (data[j] & 0xFF) << (8 * j);
-            }
-
-            //scale down to 14 bits and add header
-            sample = (sample >> shiftAmount) & 0x3FFF;
-            sample |= channel ? 0x8000 : 0x4000;
-            channel = !channel;
-
-            outData[0] = (byte) (sample & 0xFF);
-            outData[1] = (byte) ((sample >> 8) & 0xFF);
-            serialPort.writeBytes(outData);
-        }
-    }
-    /*
-        Sets the AudioFormat attribute with the data specified in the given WAV file's header
-     */
-    private void setAudioFormat(FileInputStream wavInputStream) throws IOException {
-        byte[] headerArr = new byte[4];
-        byte[] chunkArr = new byte[4];
-
-        //RIFF STRING
-        wavInputStream.read(headerArr, 0, 4);
-        System.out.println(new String(headerArr));
-
-        //FILE SIZE
-        wavInputStream.read(chunkArr, 0, 4);
-        int fileSize = (chunkArr[0]) + ((chunkArr[1] & 0xFF) << 8) + ((chunkArr[2] & 0xFF) << 16) + ((chunkArr[3] & 0xFF) << 24);
-        System.out.println("File size: " + fileSize);
-
-        //WAVE STRING
-        wavInputStream.read(headerArr, 0, 4);
-        System.out.println(new String(headerArr));
-
-        //FMT STRING
-        wavInputStream.read(headerArr, 0, 4);
-        System.out.println(new String(headerArr));
-
-        //SUBCHUNK1
-        wavInputStream.read(chunkArr, 0, 4);
-        int chunk2 = (chunkArr[0]) + ((chunkArr[1] & 0xFF) << 8) + ((chunkArr[2] & 0xFF) << 16) + ((chunkArr[3] & 0xFF) << 24);
-        System.out.println("subChunk1: " + chunk2);
-
-        byte[] formatArr = new byte[2];
-        wavInputStream.read(formatArr, 0,2);
-        int format = (formatArr[0]) + ((formatArr[1] & 0xFF) << 8);
-        AudioFormat.Encoding encoding = null;
-        switch (format) {
-            //TODO CHECK FOR SIGNED/UNSIGNED
-            case 0x01:
-                System.out.println("AudioFormat: PCM");
-                encoding = AudioFormat.Encoding.PCM_SIGNED;
-                break;
-            case 0x03:
-                System.out.println("IEEE float");
-                encoding = AudioFormat.Encoding.PCM_FLOAT;
-                break;
-            case 0x06:
-                System.out.println("8-bit ITU-T G.711 A-law");
-                encoding = AudioFormat.Encoding.ALAW;
-                break;
-            case 0x07:
-                System.out.println("8-bit ITU-T G.711 µ-law");
-                encoding = AudioFormat.Encoding.ULAW;
-                break;
-            default:
-                System.out.println("Unhandled case: " + format);
-        }
-
-        byte[] numChannelsArr = new byte[2];
-        wavInputStream.read(numChannelsArr, 0, 2);
-        int numChannels = (numChannelsArr[0]) + (numChannelsArr[1]);
-        switch (numChannels) {
-            case 1:
-                System.out.println("Mono");
-            case 2:
-                System.out.println("Stereo");
-        }
-
-        byte[] sampleRateArr = new byte[4];
-        wavInputStream.read(sampleRateArr, 0, 4);
-        int sampleRate = ((sampleRateArr[0] & 0xFF) | ((sampleRateArr[1] & 0xFF) << 8)| ((sampleRateArr[2] & 0xFF) << 16) | ((sampleRateArr[3] & 0xFF) << 24));
-        System.out.println("Sample rate: " + sampleRate);
-
-        byte[] byteRateArr = new byte[4];
-        wavInputStream.read(byteRateArr, 0, 4);
-        int byteRate = ((byteRateArr[0] & 0xFF) | ((byteRateArr[1] & 0xFF) << 8)| ((byteRateArr[2] & 0xFF) << 16) | ((byteRateArr[3] & 0xFF) << 24));
-        System.out.println("Byte rate: " + byteRate);
-
-        byte[] blockAlignArr = new byte[2];
-        wavInputStream.read(blockAlignArr, 0, 2);
-        int blockAlign = (blockAlignArr[0]) + (blockAlignArr[1]);
-        System.out.println("Block align: " + blockAlign);
-
-        byte[] BPSArr = new byte[2];
-        wavInputStream.read(BPSArr, 0, 2);
-        int bitsPerSample = (BPSArr[0]) + (BPSArr[1]);
-        System.out.println("Bits per sample: " + bitsPerSample);
-
-        //DATA STRING
-        String dataString = "";
-        while (!dataString.equals("data")) {
-            wavInputStream.read(headerArr, 0, 4);
-            dataString = new String(headerArr);
-        }
-        System.out.println(dataString);
-
-        //for PCM frame rate is equal to sample rate
-        this.audioFormat = new AudioFormat(encoding, sampleRate, bitsPerSample, numChannels, blockAlign, sampleRate, false);
     }
 
     /*
@@ -188,10 +76,11 @@ public class Audio {
         System.out.println("sending sample rate");
         try {
             int frameRate = (int) this.audioFormat.getFrameRate();
-            byte header = (byte) 0xC0;
+            byte header0 = (byte) 0x00;
+            byte header1 = (byte) 0xC0;
             byte byte0 = (byte) (frameRate & 0xFF);
             byte byte1 = (byte) ((frameRate >> 8) & 0xFF);
-            serialPort.writeBytes(new byte[]{header, byte0, byte1});
+            serialPort.writeBytes(new byte[]{header0, header1, byte0, byte1});
         }
         catch (SerialPortException ex) {
             log.error("e: ", ex);
@@ -206,26 +95,34 @@ public class Audio {
      */
     private void sendInitData() throws IOException {
         System.out.println("sending init data");
-        channel = false;
-        byte[] data = new byte[bytesPerSample];
-        byte[] outData = new byte[2];
+        int frameSize = audioFormat.getFrameSize();
+        byte[] data = new byte[frameSize];
+        byte[] outData = new byte[4]; //two 16 bit words - 4 bytes
         for (int i = 0; i < 1000; i++) {
             //read one sample
-            int bytesRead = audioInputStream.read(data, 0, bytesPerSample);
+            int bytesRead = audioInputStream.read(data);
 
             //turn sample into int form
-            int sample = 0;
-            for (int j = 0; j < bytesPerSample; j++) {
-                sample |= (data[j] & 0xFF) << (8 * j);
+            int rightSample = 0;
+            int leftSample = 0;
+            for (int j = 0, k = bytesPerSample; j < frameSize; j++, k++) {
+                rightSample |= (data[j] & 0xFF) << (8 * j);
+                leftSample  |= (data[k] & 0xFF) << (8 * k);
             }
 
-            //scale down to 14 bits and add header
-            sample = (sample >> shiftAmount) & 0x3FFF;
-            sample |= channel ? 0x8000 : 0x4000;
-            channel = !channel;
 
-            outData[0] = (byte) (sample & 0xFF);
-            outData[1] = (byte) ((sample >> 8) & 0xFF);
+            //scale down to 14 bits and add header
+            leftSample = (leftSample >> shiftAmount) & 0x3FFF;
+            rightSample = (rightSample >> shiftAmount) & 0x3FFF;
+
+            leftSample  |= 0x8000;
+            rightSample |= 0x4000;
+
+
+            outData[0] = (byte) (leftSample & 0xFF);
+            outData[1] = (byte) ((leftSample >> 8) & 0xFF);
+            outData[2] = (byte) ((rightSample & 0xFF));
+            outData[3] = (byte) ((rightSample >> 8) & 0xFF);
             serialPort.writeBytes(outData);
         }
     }
@@ -248,29 +145,114 @@ public class Audio {
             }
         }
 
+        /*
+            This function is called whenever an 'R' is received, it sends one
+            frame (a sample for each channel) to the ESP
+         */
         private void sendSample() throws IOException {
-            channel = false;
-            byte[] data = new byte[bytesPerSample];
-            byte[] outData = new byte[2];
-            for (int i = 0; i < 1000; i++) {
-                //read one sample
-                int bytesRead = audioInputStream.read(data, 0, bytesPerSample);
+            int frameSize = audioFormat.getFrameSize();
+            byte[] data = new byte[frameSize];
+            byte[] outData = new byte[4];
 
-                //turn sample into int form
-                int sample = 0;
-                for (int j = 0; j < bytesPerSample; j++) {
-                    sample |= (data[j] & 0xFF) << (8 * j);
-                }
+            //read one frame
+            int bytesRead = audioInputStream.read(data);
 
-                //scale down to 14 bits and add header
-                sample = (sample >> shiftAmount) & 0x3FFF;
-                sample |= channel ? 0x8000 : 0x4000;
-                channel = !channel;
-
-                outData[0] = (byte) (sample & 0xFF);
-                outData[1] = (byte) ((sample >> 8) & 0xFF);
-                serialPort.writeBytes(outData);
+            //turn samples into int form
+            int rightSample = 0;
+            int leftSample = 0;
+            for (int j = 0, k = bytesPerSample; k < frameSize; j++, k++) {
+                rightSample |= (data[j] & 0xFF) << (8 * j);
+                leftSample  |= (data[k] & 0xFF) << (8 * j);
             }
+
+
+            // Scale down to 14 bits
+            leftSample  = (leftSample >> shiftAmount) & 0x3FFF;
+            rightSample = (rightSample >> shiftAmount) & 0x3FFF;
+
+            // Add header
+            leftSample  |= 0x8000;
+            rightSample |= 0x4000;
+
+            // Package
+            outData[0] = (byte) (leftSample & 0xFF);
+            outData[1] = (byte) ((leftSample >> 8) & 0xFF);
+            outData[2] = (byte) ((rightSample & 0xFF));
+            outData[3] = (byte) ((rightSample >> 8) & 0xFF);
+            serialPort.writeBytes(outData);
+        }
+    }
+
+    /*
+        Test function that reads one frame of data
+        Same as the function sendSample but doesn't require port and can be called without event listener
+     */
+    private void printOneFrame() throws IOException {
+        int frameSize = audioFormat.getFrameSize();
+        byte[] data = new byte[frameSize];
+        byte[] outData = new byte[4];
+
+        //read one frame
+        int bytesRead = audioInputStream.read(data);
+
+        //turn samples into int form
+        int rightSample = 0;
+        int leftSample = 0;
+        for (int j = 0, k = bytesPerSample; k < frameSize; j++, k++) {
+            rightSample |= (data[j] & 0xFF) << (8 * j);;
+            leftSample  |= (data[k] & 0xFF) << (8 * j);
+        }
+
+        System.out.println("left Sample raw: 0x" + Integer.toHexString(leftSample));
+        System.out.println("Right Sample raw: 0x" + Integer.toHexString(rightSample));
+
+
+        // Scale down to 14 bits
+        leftSample = (leftSample >> shiftAmount) & 0x3FFF;
+        rightSample = (rightSample >> shiftAmount) & 0x3FFF;
+
+        // Add header
+        leftSample |= 0x8000;
+        rightSample |= 0x4000;
+
+        System.out.println("left Sample final: 0x" + Integer.toHexString(leftSample));
+        System.out.println("Right Sample final: 0x" + Integer.toHexString(rightSample));
+    }
+
+    /*
+        Test function that goes through all data
+        Doesn't need an open port
+     */
+    private void readAllFrames() throws IOException {
+        int frameSize = audioFormat.getFrameSize();
+        byte[] data = new byte[frameSize];
+        byte[] outData = new byte[4];
+
+        //read one frame
+        while (audioInputStream.read(data) != -1) {
+
+            //turn samples into int form
+            int rightSample = 0;
+            int leftSample = 0;
+            for (int j = 0, k = bytesPerSample; k < frameSize; j++, k++) {
+                rightSample |= (data[j] & 0xFF) << (8 * j);
+                leftSample |= (data[k] & 0xFF) << (8 * j);
+            }
+
+            System.out.println("left Sample raw: 0x" + Integer.toHexString(leftSample));
+            System.out.println("Right Sample raw: 0x" + Integer.toHexString(rightSample));
+
+
+            // Scale down to 14 bits
+            leftSample = (leftSample >> shiftAmount) & 0x3FFF;
+            rightSample = (rightSample >> shiftAmount) & 0x3FFF;
+
+            // Add header
+            leftSample |= 0x8000;
+            rightSample |= 0x4000;
+
+            System.out.println("left Sample final: 0x" + Integer.toHexString(leftSample));
+            System.out.println("Right Sample final: 0x" + Integer.toHexString(rightSample));
         }
     }
 }
