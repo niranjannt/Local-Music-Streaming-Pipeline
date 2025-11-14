@@ -7,29 +7,30 @@
 #include "AudioCommands.h"
 
 /*
- * AIN0 - PE3 - Flanger0
- * AIN1 - PE2 - Flanger1
- * AIN2 - PE1 - Disactitortion
- * AIN3 - PE0 - Bass In
- * AIN4 - PD3 - Bass Volume
- * AIN5 - PD2 - Mid Volume
- * AIN6 - PD1 - Treble Volume
- * AIN7 - PD0 - Volume
+ * AIN0 - PE3 - Flanger Freq
+ * AIN1 - PE2 - Tempo
+ * AIN2 - PE1 - Flanger Delay
+ * AIN3 - PE0 - Bass
+ * AIN4 - PD3 - Mid
+ * AIN5 - PD2 - Treble
+ * AIN6 - PD1 - Volume
+ * AIN7 - PD0 - Bass In
+ * AIN9 - PE4 - Delay
  */
 
 static void PotHandler();
 
-void PotInit() {
+void PotInit() { // fix everything below use seq 0 and 3, adc 0.
     //ADC and Clock initializations
     SYSCTL_RCGCADC_R |= 0x00FF;               // 1) activate ADC0-7
     SYSCTL_RCGCGPIO_R |= 0x18;                // 2) activate clock for Port E and Port D
     while((SYSCTL_PRGPIO_R&0x18) != 0x18){};  // 3) for stabilization
 
     //Port E initializations
-    GPIO_PORTE_DIR_R &= ~0x0F;    // 4) make PE0-3 input
-    GPIO_PORTE_AFSEL_R |= 0x0F;   // 5) Set the direction of PE0-3 as input
-    GPIO_PORTE_DEN_R &= ~0x0F;    // 6) Enable alternative function for PE0-3 (Alternative signal rather than GPIO)
-    GPIO_PORTE_AMSEL_R |= 0x0F;   // 7) enable analog functionality on PE0-3
+    GPIO_PORTE_DIR_R &= ~0x1F;    // 4) make PE0-4 input
+    GPIO_PORTE_AFSEL_R |= 0x1F;   // 5) Set the direction of PE0-4 as input
+    GPIO_PORTE_DEN_R &= ~0x1F;    // 6) Enable alternative function for PE0-4 (Alternative signal rather than GPIO)
+    GPIO_PORTE_AMSEL_R |= 0x1F;   // 7) enable analog functionality on PE0-4
 
     //Port D initializations
     GPIO_PORTD_DIR_R &= ~0x0F;    // 4) make PD0-3 input
