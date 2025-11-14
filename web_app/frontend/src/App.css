@@ -1,0 +1,11 @@
+html, body {
+    height: 100%;
+    margin: 0;
+    overflow: hidden; /* prevent page scroll */
+}
+
+.App {
+    display: flex;
+    height: 100vh;
+    background-color: grey;
+}
