@@ -1,7 +1,7 @@
 #include <stdint.h>
 #include "../inc/tm4c123gh6pm.h"
 #include "../inc/ADCSWTrigger.h"
-#include "inc/ST7735.h"
+#include "../inc/ST7735.h"
 
 void ADC_Init(void){
 // write this
@@ -75,7 +75,7 @@ void Visualize(void){
 }
 
 
-int main(void) {
+/*int main(void) {
   PLL_Init(80000000);
   ST7735_InitR(INITR_REDTAB);
   ST7735_FillScreen(ST7735_BLACK);
@@ -87,4 +87,4 @@ bass_amplitude=ADC_In();
   }
 
 
-}
+}*/
