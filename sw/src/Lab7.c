@@ -40,6 +40,7 @@
 #include "../inc/Timer1A.h"
 #include "../inc/Timer2A.h"
 #include "../inc/TLV5616.h"
+#include "AudioCommands.h"
 void DisableInterrupts(void); // Disable interrupts
 void EnableInterrupts(void);  // Enable interrupts
 void WaitForInterrupt(void);  // low power mode
@@ -49,7 +50,7 @@ void WaitForInterrupt(void);  // low power mode
 int main(void){
   DisableInterrupts();
   PLL_Init(Bus80MHz);    // bus clock at 80 MHz
-
+  AudioCommandInit(); // initializes UART, Switches and Potentiometer
   EnableInterrupts();
   while(1){
       UpdateLCD();

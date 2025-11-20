@@ -2,7 +2,7 @@
  * AudioCommands.h
  *
  *  Created on: Oct 26, 2025
- *      Author: Thompson, Nathan
+ *      Author: Thompson
  */
 
 #ifndef AUDIOCOMMANDS_H_
@@ -10,6 +10,7 @@
 
 
 void AudioCommandInit();
+void AudioCommandsHandler();
 void AudioCommandOut();
 
 
