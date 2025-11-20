@@ -19,7 +19,7 @@
  */
 
 
-void PotInit() { // fix everything below use seq 0 and 3, adc 0.
+void PotInit() {
     //ADC and Clock initializations
     SYSCTL_RCGCADC_R |= 0x0002;               // 1) activate ADC1
     SYSCTL_RCGCGPIO_R |= 0x18;                // 2) activate clock for Port E and Port D
@@ -48,7 +48,7 @@ void PotInit() { // fix everything below use seq 0 and 3, adc 0.
     ADC1_SSMUX3_R |= 0x7;   // 12) Sample 1 correlates to Analog input 7 respectively
 
     ADC1_SSMUX0_R &= ~0xFFFFFFFF;
-    ADC1_SSMUX0_R &= 0x96543210; // Samples
+    ADC1_SSMUX0_R &= 0x01234569; // Samples
 
     ADC1_SSCTL3_R = 0x0006;       // 13) no TS0 D0, yes IE0 END0
     ADC1_IM_R &= ~0x9;         // 14) disable SS3 and SS0 interrupts
@@ -59,6 +59,23 @@ void PotInit() { // fix everything below use seq 0 and 3, adc 0.
  * Read in values from potentiometers
  */
 void PotIn(uint32_t data[10]) {
+    ADC1_PSSI_R = 0x0008;            // 1) initiate SS3
+    while((ADC1_RIS_R&0x08)==0){};   // 2) wait for conversion done
+        // if you have an A0-A3 revision number, you need to add an 8 usec wait here
+    data[8] = ADC0_SSFIFO3_R&0xFFF;   // 3) read result
+    ADC1_ISC_R = 0x0008;               // 4) acknowledge completion
+
+    ADC1_PSSI_R = 0x0001;            // 1) initiate SS0
+    while((ADC1_RIS_R&0x01)==0){};   // 2) wait for conversion done
+    data[7] = ADC0_SSFIFO0_R&0xFFF;  // 3) PD0 result
+    data[6] = ADC0_SSFIFO0_R&0xFFF;  // 3) PD1 result
+    data[5] = ADC0_SSFIFO0_R&0xFFF;  // 3) PD2 result
+    data[4] = ADC0_SSFIFO0_R&0xFFF;  // 3) PD3 result
+    data[3] = ADC0_SSFIFO0_R&0xFFF;  // 3) PE3 result
+    data[2] = ADC0_SSFIFO0_R&0xFFF;  // 3) PE2 result
+    data[1] = ADC0_SSFIFO0_R&0xFFF;  // 3) PE1 result
+    data[0] = ADC0_SSFIFO0_R&0xFFF;  // 3) PE0 result
+    ADC1_ISC_R = 0x0001;
 
 }
 

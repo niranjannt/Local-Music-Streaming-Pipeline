@@ -10,6 +10,7 @@
 
 
 void AudioCommandInit();
+void AudioCommandsHandler();
 void AudioCommandOut();
 
 

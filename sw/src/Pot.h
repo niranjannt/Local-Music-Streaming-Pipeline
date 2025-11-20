@@ -11,6 +11,7 @@
 
 
 void PotInit();
+void PotIn(uint32_t data[10]);
 
 
 

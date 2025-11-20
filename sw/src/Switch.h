@@ -9,5 +9,7 @@
 #define SWITCH_H_
     
 void SwitchInit();
+uint32_t SwitchIn();
+
 
 #endif

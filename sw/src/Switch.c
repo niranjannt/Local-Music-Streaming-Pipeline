@@ -7,7 +7,6 @@
 #include "Switch.h"
 #include "../inc/SysTickInts.h"
 #include "../inc/TLV5616.h"
-#include "AudioCommands.h"
 /*
  * PF0 - Pause
  * PF1 - LCDMode
@@ -33,7 +32,7 @@ void SwitchInit() {
 /*
  * Read switch inputs as a bit vector
  */
-static uint32_t SwitchIn() {
+uint32_t SwitchIn() {
     return (GPIO_PORTF_DATA_R & 0x1F) & (GPIO_PORTC_DATA_R & 0x80) & (GPIO_PORTE_DATA_R & 0x20);
 }
 

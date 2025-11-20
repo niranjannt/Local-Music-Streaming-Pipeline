@@ -4,6 +4,9 @@
 #include "../inc/TLV5616.h"
 #include "AudioCommands.h"
 #include "Timers.h"
+#include "../inc/UART.h"
+#include "Switch.h"
+#include "Pot.h"
 
 //Send audio commands through UART
 /*
@@ -32,6 +35,9 @@ void AudioCommandInit() {
     GPIO_PORTB_PCTL_R = (GPIO_PORTA_PCTL_R&0xFFFFFF00)+0x00000011;
     GPIO_PORTB_AMSEL_R &= ~0x03;          // disable analog functionality on PB
 
+    PotInit();
+    SwitchInit();
+
     Timer0A_Init(AudioCommandsHandler, 800000, 3);
 }
 
@@ -41,14 +47,16 @@ void AudioCommandInit() {
 uint8_t index = 0;
 uint32_t data[10];
 
-static void AudioCommandsHandler() {
-    data[0] = SwitchIn();
+void AudioCommandsHandler() {
+    data[9] = SwitchIn();
+    PotIn(data);
     AudioCommandOut();
-    index++;
 }
 
 void AudioCommandOut() {
-
+    for (index = 0; index < 10; index++) {
+        UART_OutUDec(data[index]);
+    }
 }
 
 //-----------------------UART_OutUDec-----------------------
@@ -64,4 +72,13 @@ void UART_OutUDec(uint32_t n){
     n = n%10;
   }
   UART_OutChar(n+'0'); /* n is between 0 and 9 */
+}
+
+//------------UART_OutChar------------
+// Output 8-bit to serial port
+// Input: letter is an 8-bit ASCII character to be transferred
+// Output: none
+void UART_OutChar(char data){
+  while((UART0_FR_R&UART_FR_TXFF) != 0);
+  UART0_DR_R = data;
 }
