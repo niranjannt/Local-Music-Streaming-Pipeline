@@ -2,7 +2,7 @@
  * Pot.h
  *
  *  Created on: Oct 26, 2025
- *      Author: nathan
+ *      Author: Thompson, Nathan
  */
 
 #ifndef POT_H_
