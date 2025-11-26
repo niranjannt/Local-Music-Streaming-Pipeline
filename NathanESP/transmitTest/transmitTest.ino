@@ -1,6 +1,6 @@
 hw_timer_t* dacTimer = NULL;
 static void IRAM_ATTR soundHandler();
-
+static volatile bool output = false;
 void setup() {
   Serial.begin(9600);
   delay(2000);
@@ -9,6 +9,11 @@ void setup() {
   Serial2.begin(2000000, SERIAL_8N1, 16, 17);
   delay(2000);
   Serial.println("Serial2.begin finished");
+
+  RightChannelFifo_Init();
+  LeftChannelFifo_Init();
+  DAC_Init_Left();
+  DAC_Init_Right();
 
   bool waitForSampleRate = true;
   while (waitForSampleRate) {
@@ -20,16 +25,10 @@ void setup() {
   }
 
   TimerInit();
-
-  RightChannelFifo_Init();
-  LeftChannelFifo_Init();
-  DAC_Init_Left();
-  DAC_Init_Right();
 }
 
 void TimerInit() {
   Serial.println("Timer Init");
-  dacTimer = timerBegin(40000000);
   while (Serial2.available() < 2) {}
   Serial.println("Reading sample rate: ");
   uint8_t byte1 = Serial2.read();
@@ -37,6 +36,27 @@ void TimerInit() {
   uint16_t sampleRate = (byte2 << 8) | byte1;
   Serial.println(sampleRate, HEX);
 
+  const int PREFILL_FRAMES = 4096;
+  int got = 0;
+  unsigned long t0 = millis();
+  while (got < PREFILL_FRAMES && millis() - t0 < 5000) {
+    if (Serial2.available() < 4) {
+      Serial2.write('R');    
+      delayMicroseconds(200); 
+    }
+    while (Serial2.available() >= 4) {
+      if (receive()) {
+        got++;
+      } 
+      else {
+        break;
+      }
+    }
+  }
+  Serial.println("Init done");
+  Serial.println(LeftChannelCount());
+
+  dacTimer = timerBegin(40000000);
   timerAttachInterrupt(dacTimer, &soundHandler);
   timerAlarm(dacTimer, (40000000 / sampleRate), true, 0); 
 }
@@ -47,7 +67,9 @@ void changeSampleRate() {
   timerAlarm(dacTimer, (40000000 / sampleRate), true, 0);
 }
 
-const uint16_t Wave[64] = {  
+
+static uint16_t DebugSoundIdx = 0;
+const uint16_t DebugWave[64] = {  
   1024,1122,1219,1314,1407,1495,1580,1658,1731,1797,1855,
   1906,1948,1981,2005,2019,2024,2019,2005,1981,1948,1906,
   1855,1797,1731,1658,1580,1495,1407,1314,1219,1122,1024,
@@ -57,20 +79,28 @@ const uint16_t Wave[64] = {
 };  
 
 
-uint16_t soundIdx = 0;
 static void IRAM_ATTR soundHandler() {
-  // uint16_t leftData;
-  // uint16_t rightData;
+  uint16_t leftData;
+  uint16_t rightData;
 
-  // LeftChannelFifo_Get(&leftData);
-  // RightChannelFifo_Get(&rightData);
-  // DAC_Out_Left(leftData);
-  // Serial2.write("r");
-  DAC_Out_Left(Wave[soundIdx]);
-  soundIdx = (soundIdx + 1) % 64;
+  if (!LeftChannelFifo_Get(&leftData)) {
+    output = false;
+    return;
+  }
+  RightChannelFifo_Get(&rightData);
+  DAC_Out_Left(leftData);
+  output = true;
+
+
+  // Debug Sine Wave :
+  // DAC_Out_Left(DebugWave[debugSoundIdx]);
+  // debugSoundIdx = (debugSoundIdx + 1) % 64;
 }
 
-void receive() {
+bool receive() {
+  if (Serial2.available() < 4) {
+    return false;
+  }
   uint8_t byte1 = Serial2.read();
   uint8_t byte2 = Serial2.read();
   uint8_t byte3 = Serial2.read();
@@ -80,12 +110,36 @@ void receive() {
   uint16_t rightSample = (byte4 << 8) | byte3;
 
   //todo error handling
-  RightChannelFifo_Put(rightSample);
-  LeftChannelFifo_Put(leftSample);
+  if (!RightChannelFifo_Put(rightSample)) {
+    Serial.println("oops1");
+  }
+  if (!LeftChannelFifo_Put(leftSample)) {
+    Serial.println("oops2");
+  }
+  return true;
 }
 
+static unsigned long lastPrint = 0;
+const size_t LOW_WATERMARK = 2048;
+
 void loop() {
- if (Serial2.available() >= 4) {
-  receive();
- }
+
+  // read incoming bytes whenever available
+  while (Serial2.available() >= 4) {
+    if (!receive()) {
+      break;
+    }
+  }
+  // request more when buffer low
+  if (LeftChannelCount() < LOW_WATERMARK) {
+   // Serial.println(LeftChannelCount());
+
+    Serial2.write('B');
+  }
+
+  // occasional debug print
+  if (!output && millis() - lastPrint > 250) {
+    Serial.println("empty");
+    lastPrint = millis();
+  }
 }

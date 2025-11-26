@@ -44,6 +44,7 @@ bool RightChannelFifo_Get(uint16_t* data) {
   }
   *data = RightChannelFifo[FifoGetRight];
   FifoGetRight = (FifoGetRight + 1) & (FIFOSIZE - 1);
+  return true;
 }
 
 
@@ -108,5 +109,12 @@ uint16_t RightChannelisFull(void){
   return ((FifoPutRight + 1) & (FIFOSIZE - 1)) == FifoGetRight;
 }
 
+
+size_t LeftChannelCount() {
+  return (FifoPutLeft - FifoGetLeft) & (FIFOSIZE - 1);
+}
+size_t LeftChannelFree() {
+  return FIFOSIZE - 1 - LeftChannelCount();
+}
 
 
