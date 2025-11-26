@@ -39,13 +39,18 @@ public class Audio {
         System.out.println("Sample rate: " + audioFormat.getSampleRate());
         System.out.println("Bytes per sample: " + bytesPerSample);
 
-        //serialPort = new SerialPort("/dev/cu.usbserial-A106DAXQ");         // Mac usbB
-        serialPort = new SerialPort("/dev/cu.usbserial-A50285BI"); // Macro usb calculator one
+        serialPort = new SerialPort("/dev/cu.usbserial-A106DAXQ");         // Mac usbB
+        //serialPort = new SerialPort("/dev/cu.usbserial-A50285BI"); // Macro usb calculator one
         //serialPort = new SerialPort("COM12");                             // Windows
 
+
         openPort();
+        serialPort.addEventListener(new PortReader(), SerialPort.MASK_RXCHAR);
+        //readAllFrames();
+        //sendSample();
+
         sendSampleRate();
-        sendInitData();
+        //sendInitData();
 
     }
 
@@ -76,11 +81,10 @@ public class Audio {
         System.out.println("sending sample rate");
         try {
             int frameRate = (int) this.audioFormat.getFrameRate();
-            byte header0 = (byte) 0x00;
-            byte header1 = (byte) 0xC0;
+            byte header = (byte) 0xC0;
             byte byte0 = (byte) (frameRate & 0xFF);
             byte byte1 = (byte) ((frameRate >> 8) & 0xFF);
-            serialPort.writeBytes(new byte[]{header0, header1, byte0, byte1});
+            serialPort.writeBytes(new byte[]{header, byte0, byte1});
         }
         catch (SerialPortException ex) {
             log.error("e: ", ex);
@@ -95,35 +99,8 @@ public class Audio {
      */
     private void sendInitData() throws IOException {
         System.out.println("sending init data");
-        int frameSize = audioFormat.getFrameSize();
-        byte[] data = new byte[frameSize];
-        byte[] outData = new byte[4]; //two 16 bit words - 4 bytes
         for (int i = 0; i < 1000; i++) {
-            //read one sample
-            int bytesRead = audioInputStream.read(data);
-
-            //turn sample into int form
-            int rightSample = 0;
-            int leftSample = 0;
-            for (int j = 0, k = bytesPerSample; j < frameSize; j++, k++) {
-                rightSample |= (data[j] & 0xFF) << (8 * j);
-                leftSample  |= (data[k] & 0xFF) << (8 * k);
-            }
-
-
-            //scale down to 14 bits and add header
-            leftSample = (leftSample >> shiftAmount) & 0x3FFF;
-            rightSample = (rightSample >> shiftAmount) & 0x3FFF;
-
-            leftSample  |= 0x8000;
-            rightSample |= 0x4000;
-
-
-            outData[0] = (byte) (leftSample & 0xFF);
-            outData[1] = (byte) ((leftSample >> 8) & 0xFF);
-            outData[2] = (byte) ((rightSample & 0xFF));
-            outData[3] = (byte) ((rightSample >> 8) & 0xFF);
-            serialPort.writeBytes(outData);
+            sendSample();
         }
     }
 
@@ -133,6 +110,7 @@ public class Audio {
     private class PortReader implements SerialPortEventListener {
         @Override
         public void serialEvent(SerialPortEvent serialPortEvent) {
+            System.out.println("received event");
             if (serialPortEvent.isRXCHAR() && serialPortEvent.getEventValue() > 0) {
                 try {
                     byte[] recieved = serialPort.readBytes(1);
@@ -144,43 +122,45 @@ public class Audio {
                 }
             }
         }
+    }
 
-        /*
-            This function is called whenever an 'R' is received, it sends one
-            frame (a sample for each channel) to the ESP
-         */
-        private void sendSample() throws IOException {
-            int frameSize = audioFormat.getFrameSize();
-            byte[] data = new byte[frameSize];
-            byte[] outData = new byte[4];
+    /*
+        This function is called whenever an 'R' is received, it sends one
+        frame (a sample for each channel) to the ESP
+    */
+    private void sendSample() throws IOException {
+        int frameSize = audioFormat.getFrameSize();
+        byte[] data = new byte[frameSize];
+        byte[] outData = new byte[4];
 
-            //read one frame
-            int bytesRead = audioInputStream.read(data);
+        //read one frame
+        int bytesRead = audioInputStream.read(data);
 
-            //turn samples into int form
-            int rightSample = 0;
-            int leftSample = 0;
-            for (int j = 0, k = bytesPerSample; k < frameSize; j++, k++) {
-                rightSample |= (data[j] & 0xFF) << (8 * j);
-                leftSample  |= (data[k] & 0xFF) << (8 * j);
-            }
-
-
-            // Scale down to 14 bits
-            leftSample  = (leftSample >> shiftAmount) & 0x3FFF;
-            rightSample = (rightSample >> shiftAmount) & 0x3FFF;
-
-            // Add header
-            leftSample  |= 0x8000;
-            rightSample |= 0x4000;
-
-            // Package
-            outData[0] = (byte) (leftSample & 0xFF);
-            outData[1] = (byte) ((leftSample >> 8) & 0xFF);
-            outData[2] = (byte) ((rightSample & 0xFF));
-            outData[3] = (byte) ((rightSample >> 8) & 0xFF);
-            serialPort.writeBytes(outData);
+        //turn samples into int form
+        int rightSample = 0;
+        int leftSample = 0;
+        for (int j = 0, k = bytesPerSample; k < frameSize; j++, k++) {
+            rightSample |= (data[j] & 0xFF) << (8 * j);
+            leftSample  |= (data[k] & 0xFF) << (8 * j);
         }
+
+
+        // Scale down to 14 bits
+        leftSample  = (leftSample >> shiftAmount) & 0x3FFF;
+        rightSample = (rightSample >> shiftAmount) & 0x3FFF;
+
+        // Add header
+        leftSample  |= 0x8000;
+        rightSample |= 0x4000;
+        System.out.println("left Sample raw: 0x" + Integer.toHexString(leftSample));
+        System.out.println("Right Sample raw: 0x" + Integer.toHexString(rightSample));
+
+        // Package
+        outData[0] = (byte) (leftSample & 0xFF);
+        outData[1] = (byte) ((leftSample >> 8) & 0xFF);
+        outData[2] = (byte) ((rightSample & 0xFF));
+        outData[3] = (byte) ((rightSample >> 8) & 0xFF);
+        serialPort.writeBytes(outData);
     }
 
     /*

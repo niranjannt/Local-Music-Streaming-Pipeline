@@ -53,66 +53,59 @@ void IRAM_ATTR PeriodicDacOut(){
 
 
 void setSampleRate(uint16_t samplerate){
-dacTimer= timerBegin(40000000);
-if (dacTimer == NULL) {
-    Serial.println("Timer setup failed!");
-} else {
-    Serial.print("Timer configured successfully, pointer = 0x");
-    Serial.println((uintptr_t)dacTimer, HEX);  // prints pointer in hex
-}
-timerAttachInterrupt(dacTimer, &PeriodicDacOut);
-timerAlarm(dacTimer, (40000000/samplerate), true, 0);
-
-
-
-
-
-
+  dacTimer= timerBegin(40000000);
+  if (dacTimer == NULL) {
+      Serial.println("Timer setup failed!");
+  } else {
+      Serial.print("Timer configured successfully, pointer = 0x");
+      Serial.println((uintptr_t)dacTimer, HEX);  // prints pointer in hex
+  }
+  timerAttachInterrupt(dacTimer, &PeriodicDacOut);
+  timerAlarm(dacTimer, (40000000/samplerate), true, 0);
 }
 
 void receivedata(){
-   if(Serial2.available()>=3){ 
-   uint8_t header= Serial2.read();
-  Serial.println(header, HEX);
-  if(header==0xC0){
-  uint8_t lsbsample=Serial2.read();
-  Serial.println(lsbsample, HEX);
- // uint16_t sixteenbit=((uint16_t) (msb<<8) | lsb);
-    uint8_t msbsample=Serial2.read();
-    Serial.println(msbsample, HEX);
-    uint16_t samplerate=((uint16_t) (msbsample<<8) | lsbsample);
-    Serial.println(samplerate, HEX);
-    setSampleRate(samplerate);
+  if(Serial2.available()>=3){ 
+    uint8_t header= Serial2.read();
+    Serial.println(header, HEX);
+    if(header==0xC0){
+      uint8_t lsbsample=Serial2.read();
+      Serial.println(lsbsample, HEX);
+      // uint16_t sixteenbit=((uint16_t) (msb<<8) | lsb);
+      uint8_t msbsample=Serial2.read();
+      Serial.println(msbsample, HEX);
+      uint16_t samplerate=((uint16_t) (msbsample<<8) | lsbsample);
+      Serial.println(samplerate, HEX);
+      setSampleRate(samplerate);
+    }
+    else{
+      uint8_t msbsampledata= Serial2.read();                  
+      uint16_t sampledata= ((uint16_t) (msbsampledata<<8) | header);
+      //Serial.println(sampledata, HEX);
+      uint16_t dataheader = ((sampledata&49152) >> 14);
+      //Serial.println(dataheader, HEX);
+      uint16_t twelvebitdata= ((sampledata & 0x3FFF) >> 2);
+      Serial.println(twelvebitdata, HEX);
+      switch(dataheader){
+        case 0: 
+          stopmusic=true; 
+          break;
+        case 1: 
+          if(!stopmusic){
+            //Serial.println(stopmusic ? "true" : "false");
+            RightChannelFifo_Put(twelvebitdata); 
+          } 
+          break;
+        case 2: 
+          if(!stopmusic){
+            //Serial.println(stopmusic ? "true" : "false"); 
+            LeftChannelFifo_Put(twelvebitdata); 
+          }
+          break;
+        }
+    }
   }
-   
-
-   
-  
-  
-  else{
-     uint8_t msbsampledata= Serial2.read();                  
-     uint16_t sampledata= ((uint16_t) (msbsampledata<<8) | header);
-     //Serial.println(sampledata, HEX);
-     uint16_t dataheader = ((sampledata&49152) >> 14);
-     //Serial.println(dataheader, HEX);
-     uint16_t twelvebitdata= ((sampledata & 0x3FFF) >> 2);
-     Serial.println(twelvebitdata, HEX);
-       switch(dataheader){
-       case 0: stopmusic=true; break;
-       case 1: if(!stopmusic){
-       //Serial.println(stopmusic ? "true" : "false");
-        RightChannelFifo_Put(twelvebitdata); 
-       } 
-       break;
-       case 2: if(!stopmusic){
-       //Serial.println(stopmusic ? "true" : "false"); 
-       LeftChannelFifo_Put(twelvebitdata); 
-       }
-       break;
-  }
-  }
-  }
-    Serial2.write('R');
+  Serial2.write('R');
 }
   //uint16_t header= ((sixteenbit & 49152) >> 14);
  // Serial.println(header, HEX);
@@ -136,8 +129,6 @@ void loop() {
   // put your main code here, to run repeatedly:
  if(Serial2.available()){
     receivedata();
-
-
  }
 //printRightChannelFifo();
 //printLeftChannelFifo();
