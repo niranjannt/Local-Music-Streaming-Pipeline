@@ -13,10 +13,9 @@ void setup() {
   delay(2000);
   Serial.println("Serial2.begin finished");
 
-  //RightChannelFifo_Init();
+  
   LeftChannelFifoInit();
   DAC_Init_Left();
-  //DAC_Init_Right();
 
   bool waitForSampleRate = true;
   while (waitForSampleRate) {
@@ -30,6 +29,26 @@ void setup() {
   TimerInit();
 }
 
+bool fillInit() {
+  if (Serial2.available() < 4) {
+    return false;
+  }
+  uint8_t byte1 = Serial2.read();
+  uint8_t byte2 = Serial2.read();
+  uint8_t byte3 = Serial2.read();
+  uint8_t byte4 = Serial2.read();
+
+  uint16_t leftSample = (byte2 << 8) | byte1;
+  uint16_t rightSample = (byte4 << 8) | byte3;
+
+  //todo error handling
+  if (!LeftChannelFifoPut(queue, leftSample)) {
+    Serial.println("oops2");
+    return false;
+  }
+  return true;
+}
+
 void TimerInit() {
   Serial.println("Timer Init");
   while (Serial2.available() < 2) {}
@@ -39,12 +58,14 @@ void TimerInit() {
   uint16_t sampleRate = (byte2 << 8) | byte1;
   Serial.println(sampleRate, HEX);
 
-  while (LeftChannelFifoCount(queue) < 25500) {
-    if (Serial2.available() == 0) {
+  while (LeftChannelFifoCount(queue) < 25499) {
+    if (Serial2.available() < 4) {
       Serial2.write('I');
     }
     while (Serial2.available() >= 4) {
-      receive();
+      if (!fillInit()) {
+        break;
+      }
     }
   }
   Serial.println("Init done");
@@ -148,6 +169,7 @@ bool receive() {
   return true;
 }
 
+
 static uint16_t prevRequest;
 static uint16_t nextQueueCount = 0;
 static bool serviced = true;
@@ -155,12 +177,12 @@ static bool serviced = true;
 void loop() {
   uint16_t newRequest = request;
   // If we still have more slots to fill and we've already serviced the last request
-  if (nextQueueCount != 25500 && serviced) {
+  if (!nextQueueFull && serviced) {
     Serial2.write('B');
     serviced = false;
   }
   // receive all data
-  while (Serial2.available() >= 4) {
+  while (Serial2.available() >= 4 && !nextQueueFull) {
     if (!receive()) {
       break;
     }
