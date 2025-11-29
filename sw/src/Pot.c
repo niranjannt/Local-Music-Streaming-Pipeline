@@ -62,19 +62,19 @@ void PotIn(uint32_t data[10]) {
     ADC1_PSSI_R = 0x0008;            // 1) initiate SS3
     while((ADC1_RIS_R&0x08)==0){};   // 2) wait for conversion done
         // if you have an A0-A3 revision number, you need to add an 8 usec wait here
-    data[8] = ADC0_SSFIFO3_R&0xFFF;   // 3) read result
+    data[8] = ADC1_SSFIFO3_R&0xFFF;   // 3) read result
     ADC1_ISC_R = 0x0008;               // 4) acknowledge completion
 
     ADC1_PSSI_R = 0x0001;            // 1) initiate SS0
     while((ADC1_RIS_R&0x01)==0){};   // 2) wait for conversion done
-    data[7] = ADC0_SSFIFO0_R&0xFFF;  // 3) PD0 result
-    data[6] = ADC0_SSFIFO0_R&0xFFF;  // 3) PD1 result
-    data[5] = ADC0_SSFIFO0_R&0xFFF;  // 3) PD2 result
-    data[4] = ADC0_SSFIFO0_R&0xFFF;  // 3) PD3 result
-    data[3] = ADC0_SSFIFO0_R&0xFFF;  // 3) PE3 result
-    data[2] = ADC0_SSFIFO0_R&0xFFF;  // 3) PE2 result
-    data[1] = ADC0_SSFIFO0_R&0xFFF;  // 3) PE1 result
-    data[0] = ADC0_SSFIFO0_R&0xFFF;  // 3) PE0 result
+    data[7] = ADC1_SSFIFO0_R&0xFFF;  // 3) PD0 result
+    data[6] = ADC1_SSFIFO0_R&0xFFF;  // 3) PD1 result
+    data[5] = ADC1_SSFIFO0_R&0xFFF;  // 3) PD2 result
+    data[4] = ADC1_SSFIFO0_R&0xFFF;  // 3) PD3 result
+    data[3] = ADC1_SSFIFO0_R&0xFFF;  // 3) PE3 result
+    data[2] = ADC1_SSFIFO0_R&0xFFF;  // 3) PE2 result
+    data[1] = ADC1_SSFIFO0_R&0xFFF;  // 3) PE1 result
+    data[0] = ADC1_SSFIFO0_R&0xFFF;  // 3) PE0 result
     ADC1_ISC_R = 0x0001;
 
 }
