@@ -25,7 +25,7 @@ public class Audio {
     int bytesPerSample;
     int shiftAmount;
 
-    Audio(String path) throws IOException, UnsupportedAudioFileException {
+    Audio(String path) throws IOException, UnsupportedAudioFileException, InterruptedException {
         File wavFile = new File(path);
 
         audioInputStream = AudioSystem.getAudioInputStream(wavFile);
@@ -50,6 +50,9 @@ public class Audio {
         //sendSample();
 
         sendSampleRate();
+//        sendInitData();
+//        Thread.sleep(1000);
+//        sendAllSamples();
         //sendInitData();
 
     }
@@ -110,10 +113,13 @@ public class Audio {
     private class PortReader implements SerialPortEventListener {
         @Override
         public void serialEvent(SerialPortEvent serialPortEvent) {
-            System.out.println("received event");
+           // System.out.println("received event");
             if (serialPortEvent.isRXCHAR() && serialPortEvent.getEventValue() > 0) {
                 try {
                     byte[] recieved = serialPort.readBytes(1);
+                    if (recieved[0] == 'B') {
+                        sendBurst();
+                    }
                     if (recieved[0] == 'R') {
                         sendSample();
                     }
@@ -128,13 +134,15 @@ public class Audio {
         This function is called whenever an 'R' is received, it sends one
         frame (a sample for each channel) to the ESP
     */
-    private void sendSample() throws IOException {
+    private boolean sendSample() throws IOException {
         int frameSize = audioFormat.getFrameSize();
         byte[] data = new byte[frameSize];
         byte[] outData = new byte[4];
 
         //read one frame
-        int bytesRead = audioInputStream.read(data);
+        if (audioInputStream.read(data) == -1) {
+            return false;
+        }
 
         //turn samples into int form
         int rightSample = 0;
@@ -152,8 +160,8 @@ public class Audio {
         // Add header
         leftSample  |= 0x8000;
         rightSample |= 0x4000;
-        System.out.println("left Sample raw: 0x" + Integer.toHexString(leftSample));
-        System.out.println("Right Sample raw: 0x" + Integer.toHexString(rightSample));
+//        System.out.println("left Sample raw: 0x" + Integer.toHexString(leftSample));
+//        System.out.println("Right Sample raw: 0x" + Integer.toHexString(rightSample));
 
         // Package
         outData[0] = (byte) (leftSample & 0xFF);
@@ -161,6 +169,33 @@ public class Audio {
         outData[2] = (byte) ((rightSample & 0xFF));
         outData[3] = (byte) ((rightSample >> 8) & 0xFF);
         serialPort.writeBytes(outData);
+        return true;
+    }
+
+
+    public static void busySleep(long microseconds) {
+        long nanosToWait = microseconds * 1_000; // Convert microseconds to nanoseconds
+        long startTime = System.nanoTime();
+        long elapsedTime;
+
+        do {
+            elapsedTime = System.nanoTime() - startTime;
+        } while (elapsedTime < nanosToWait);
+    }
+
+
+    private void sendAllSamples() throws IOException {
+        boolean streaming = true;
+        while (streaming) {
+            streaming = sendSample();
+            busySleep(5 );
+        }
+    }
+
+    private void sendBurst() throws IOException {
+        for (int i = 0; i < 100; i++) {
+            sendSample();
+        }
     }
 
     /*

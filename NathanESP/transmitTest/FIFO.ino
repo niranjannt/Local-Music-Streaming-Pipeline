@@ -5,8 +5,8 @@
 //        size, buffer, put and get indexes
 #define FIFOSIZE 4096
 uint16_t static RightChannelFifo[FIFOSIZE];
-uint32_t static FifoGetRight;
-uint32_t static FifoPutRight;
+uint32_t static volatile FifoGetRight;
+uint32_t static volatile FifoPutRight;
 
 // *********** Fifo1_Init**********
 // Initializes a software FIFO1 of a
@@ -48,9 +48,9 @@ bool RightChannelFifo_Get(uint16_t* data) {
 }
 
 
-uint16_t static LeftChannelFifo[FIFOSIZE];
-uint32_t static FifoGetLeft;
-uint32_t static FifoPutLeft;
+static uint16_t LeftChannelFifo[FIFOSIZE];
+static uint32_t volatile FifoGetLeft;
+static uint32_t volatile FifoPutLeft;
 
 // *********** Fifo1_Init**********
 // Initializes a software FIFO1 of a
@@ -75,14 +75,12 @@ bool LeftChannelFifo_Put(uint16_t data) {
 }
 
 
-
-
 // *********** Fifo1_Get**********
 // Gets an element from the FIFO1
 // Input: none
 // Output: If the FIFO1 is empty return 0
-//         If the FIFO1 has data, remove it, and return it
-bool LeftChannelFifo_Get(uint16_t* data) {
+// If the FIFO1 has data, remove it, and return it
+bool LeftChannelFifo_Get(volatile uint16_t* data) {
   if (FifoGetLeft == FifoPutLeft) {
     return false;
   }
@@ -105,7 +103,7 @@ bool LeftChannelisFull(void){
   return ((FifoPutLeft + 1) & (FIFOSIZE - 1)) == FifoGetLeft;
 }
 
-uint16_t RightChannelisFull(void){
+bool RightChannelisFull(void){
   return ((FifoPutRight + 1) & (FIFOSIZE - 1)) == FifoGetRight;
 }
 
