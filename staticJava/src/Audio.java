@@ -102,7 +102,7 @@ public class Audio {
      */
     private void sendInitData() throws IOException {
         System.out.println("sending init data");
-        for (int i = 0; i < 1000; i++) {
+        for (int i = 0; i < 200; i++) {
             sendSample();
         }
     }
@@ -122,6 +122,9 @@ public class Audio {
                     }
                     if (recieved[0] == 'R') {
                         sendSample();
+                    }
+                    if (recieved[0] == 'I') {
+                        sendInitData();
                     }
                 } catch (IOException e) {
                     throw new RuntimeException(e);
@@ -174,7 +177,7 @@ public class Audio {
 
 
     private void sendBurst() throws IOException {
-        for (int i = 0; i < 4096; i++) {
+        for (int i = 0; i < 1500; i++) {
             sendSample();
         }
     }

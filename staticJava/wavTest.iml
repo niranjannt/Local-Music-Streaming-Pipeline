@@ -16,15 +16,5 @@
         <SOURCES />
       </library>
     </orderEntry>
-    <orderEntry type="module-library" exported="">
-      <library>
-        <CLASSES>
-          <root url="jar://$MODULE_DIR$/slf4j-simple-2.0.17-javadoc.jar!/" />
-        </CLASSES>
-        <JAVADOC />
-        <SOURCES />
-        <jarDirectory url="jar://$MODULE_DIR$/slf4j-simple-2.0.17-javadoc.jar!/" recursive="false" />
-      </library>
-    </orderEntry>
   </component>
 </module>
