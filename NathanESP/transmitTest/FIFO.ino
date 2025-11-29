@@ -3,7 +3,7 @@
 
 // Declare state variables for FiFo
 //        size, buffer, put and get indexes
-#define FIFOSIZE 4096
+#define FIFOSIZE 32768
 uint16_t static RightChannelFifo[FIFOSIZE];
 uint32_t static volatile FifoGetRight;
 uint32_t static volatile FifoPutRight;

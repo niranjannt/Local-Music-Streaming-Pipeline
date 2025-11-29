@@ -173,27 +173,8 @@ public class Audio {
     }
 
 
-    public static void busySleep(long microseconds) {
-        long nanosToWait = microseconds * 1_000; // Convert microseconds to nanoseconds
-        long startTime = System.nanoTime();
-        long elapsedTime;
-
-        do {
-            elapsedTime = System.nanoTime() - startTime;
-        } while (elapsedTime < nanosToWait);
-    }
-
-
-    private void sendAllSamples() throws IOException {
-        boolean streaming = true;
-        while (streaming) {
-            streaming = sendSample();
-            busySleep(5 );
-        }
-    }
-
     private void sendBurst() throws IOException {
-        for (int i = 0; i < 100; i++) {
+        for (int i = 0; i < 4096; i++) {
             sendSample();
         }
     }

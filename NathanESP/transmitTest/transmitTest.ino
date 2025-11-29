@@ -36,19 +36,13 @@ void TimerInit() {
   uint16_t sampleRate = (byte2 << 8) | byte1;
   Serial.println(sampleRate, HEX);
 
-  const int PREFILL_FRAMES = 4094;
-  unsigned long t0 = millis();
-  while (LeftChannelCount() < PREFILL_FRAMES) {
+  while (LeftChannelCount() < 32767) {
     if (Serial2.available() < 4) {
       Serial2.write('R');
       delayMicroseconds(200);
     }
     while (Serial2.available() >= 4) {
-      if (receive()) {
-        // Serial.println(LeftChannelCount());
-      } else {
-        break;
-      }
+      receive();
     }
   }
   Serial.println("Init done");
@@ -103,6 +97,8 @@ const uint16_t DebugWave[64] = {
 
 static volatile uint16_t nextSample;
 static volatile bool sampleReady = false;
+static uint16_t count = 0;
+static uint16_t request = 0;
 
 void IRAM_ATTR soundHandler() {
   uint16_t data;
@@ -118,6 +114,12 @@ void IRAM_ATTR soundHandler() {
   }
   DAC_Out_Left(DebugWave[debugSoundIdx]);
   debugSoundIdx = (debugSoundIdx + 1) % 64;
+  
+  count++;
+  if (count == 500) {
+    request++;
+    count = 0;
+  }
 }
 
 bool receive() {
@@ -144,17 +146,23 @@ bool receive() {
 
 static unsigned long lastPrint = 0;
 static bool waiting = false;
+static uint16_t prevRequest;
 
 void loop() {
+  uint16_t newRequest = request;
+  if (prevRequest != newRequest)) {
+    prevRequest = newRequest;
+    Serial2.write('B');
+  }
   //if (sampleReady) {
 
   //sampleReady = false;
   //Serial2.write('B');
   //}
   // // read incoming bytes whenever available
-  // if (Serial2.available() >= 4) {
-  //   receive();
-  // }
+  while (Serial2.available() >= 4) {
+    receive();
+  }
   // request more when buffer low
   // if (LeftChannelCount() < 4096) {
   //  // Serial.println(LeftChannelCount());
