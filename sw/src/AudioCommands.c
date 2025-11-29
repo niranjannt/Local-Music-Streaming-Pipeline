@@ -79,6 +79,6 @@ void UART_OutUDec(uint32_t n){
 // Input: letter is an 8-bit ASCII character to be transferred
 // Output: none
 void UART_OutChar(char data){
-  while((UART0_FR_R&UART_FR_TXFF) != 0);
-  UART0_DR_R = data;
+  while((UART1_FR_R&UART_FR_TXFF) != 0);
+  UART1_DR_R = data;
 }
