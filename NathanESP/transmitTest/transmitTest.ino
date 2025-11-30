@@ -2,6 +2,7 @@ hw_timer_t* dacTimer = NULL;
 static void IRAM_ATTR soundHandler();
 static bool queue = false;
 static bool nextQueueFull = false;
+static bool notFastEnough = false;
 
 
 void setup() {
@@ -9,7 +10,7 @@ void setup() {
   delay(2000);
   Serial.println(">>>> setup start");
 
-  Serial2.begin(2000000, SERIAL_8N1, 16, 17);
+  Serial2.begin(3000000, SERIAL_8N1, 16, 17);
   delay(2000);
   Serial.println("Serial2.begin finished");
 
@@ -35,15 +36,15 @@ bool fillInit() {
   }
   uint8_t byte1 = Serial2.read();
   uint8_t byte2 = Serial2.read();
-  uint8_t byte3 = Serial2.read();
-  uint8_t byte4 = Serial2.read();
+  //uint8_t byte3 = Serial2.read();
+  //uint8_t byte4 = Serial2.read();
 
   uint16_t leftSample = (byte2 << 8) | byte1;
-  uint16_t rightSample = (byte4 << 8) | byte3;
+  //uint16_t rightSample = (byte4 << 8) | byte3;
 
   //todo error handling
   if (!LeftChannelFifoPut(queue, leftSample)) {
-    Serial.println("oops2");
+    Serial.println('1');
     return false;
   }
   return true;
@@ -55,14 +56,14 @@ void TimerInit() {
   Serial.println("Reading sample rate: ");
   uint8_t byte1 = Serial2.read();
   uint8_t byte2 = Serial2.read();
-  uint16_t sampleRate = (byte2 << 8) | byte1;
+  uint16_t sampleRate = ((byte2 << 8) | byte1) >> 1;
   Serial.println(sampleRate, HEX);
 
   while (LeftChannelFifoCount(queue) < 25499) {
-    if (Serial2.available() < 4) {
+    if (Serial2.available() < 2) {
       Serial2.write('I');
     }
-    while (Serial2.available() >= 4) {
+    while (Serial2.available() >= 2) {
       if (!fillInit()) {
         break;
       }
@@ -78,7 +79,7 @@ void TimerInit() {
 
 // void changeSampleRate() {
 //   uint16_t sampleRate;
-//.   get sample rate
+//   get sample rate
 //   timerAlarm(dacTimer, (20000000 / sampleRate), true, 0);
 // }
 
@@ -93,77 +94,46 @@ const uint16_t DebugWave[64] = {
   251, 317, 390, 468, 553, 641, 734, 829, 926
 };
 
-
-// static void IRAM_ATTR soundHandler() {
-//   uint16_t leftData;
-//   uint16_t rightData;
-
-//   if (!LeftChannelFifo_Get(&leftData)) {
-//     output = false;
-//     return;
-//   }
-//   if (leftData & 0x20) {
-//     leftData |= 0xC0;
-//   }
-//   else {
-//     leftData &= 0x3F;
-//   }
-//   RightChannelFifo_Get(&rightData);
-//   DAC_Out_Left(leftData >> 4);
-//   output = true;
-
-
-//   // Debug Sine Wave :
-//   // DAC_Out_Left(DebugWave[debugSoundIdx]);
-//   // debugSoundIdx = (debugSoundIdx + 1) % 64;
-// }
-
-static uint16_t count = 0;
-static uint16_t request = 0;
-
 void IRAM_ATTR soundHandler() {
   uint16_t data;
   if (!LeftChannelFifoGet(queue, &data)) {
     //Serial.println("Empty");
-    return;
-  } else {
-    if (data & 0x20) {
-      data |= 0xC0;
-    } else {
-      data &= 0x3F;
-    }
-  }
-  DAC_Out_Left(DebugWave[debugSoundIdx]);
-  debugSoundIdx = (debugSoundIdx + 1) % 64;
-  
-  count++;
-  if (count == 25500) {
     if (nextQueueFull) {
       queue = !queue;
-      count = 0;
       nextQueueFull = false;
     }
     else {
-      Serial.println("Crashing your shit bozo");
-    }
-  }
+      notFastEnough = true;
+    };
+  } 
+  // else {
+  //   if (data & 0x20) {
+  //     data |= 0xC0;
+  //   } else {
+  //     data &= 0x3F;
+  //   }
+  // }
+  // data = data >> 4;
+
+  DAC_Out_Left(DebugWave[debugSoundIdx << 1]);
+  debugSoundIdx = (debugSoundIdx + 1) % 32;
 }
 
 bool receive() {
-  if (Serial2.available() < 4) {
-    return false;
+  if (Serial.available() < 2) {
+    return true;
   }
   uint8_t byte1 = Serial2.read();
   uint8_t byte2 = Serial2.read();
-  uint8_t byte3 = Serial2.read();
-  uint8_t byte4 = Serial2.read();
+  //uint8_t byte3 = Serial2.read();
+  //uint8_t byte4 = Serial2.read();
 
-  uint16_t leftSample = (byte2 << 8) | byte1;
-  uint16_t rightSample = (byte4 << 8) | byte3;
+  //uint16_t leftSample = (byte2 << 8) | byte1;
+  //uint16_t rightSample = (byte4 << 8) | byte3;
 
   //todo error handling
-  if (!LeftChannelFifoPut(!queue, leftSample)) {
-    Serial.println("oops2");
+  if (!LeftChannelFifoPut(!queue, ((byte2 << 8) | byte1))) {
+    //Serial.println('2');
     return false;
   }
   return true;
@@ -175,24 +145,24 @@ static uint16_t nextQueueCount = 0;
 static bool serviced = true;
 
 void loop() {
-  uint16_t newRequest = request;
   // If we still have more slots to fill and we've already serviced the last request
-  if (!nextQueueFull && serviced) {
+  if (!nextQueueFull && !nextQueueFull) {
     Serial2.write('B');
-    serviced = false;
+    while (receive()) {}
+    nextQueueFull = true;
   }
   // receive all data
-  while (Serial2.available() >= 4 && !nextQueueFull) {
-    if (!receive()) {
-      break;
-    }
-    nextQueueCount++;
-    serviced = true;
-  }
-  
-  // Check to see if we're full
-  if (LeftChannelFifoisFull(!queue)) {
-    nextQueueFull = true;
-    nextQueueCount = 0;
+  // while (Serial.available() >= 2 && !nextQueueFull) {
+  //   if (!receive() && LeftChannelFifoisFull(!queue)) {
+  //     nextQueueFull = true;
+  //     break;
+  //   }
+  //   serviced = true;
+  // }
+  // while (!nextQueueFull) {
+  //   nextQueueFull = receive();
+  // }
+  if (notFastEnough) {
+    Serial.println("failed");
   }
 }

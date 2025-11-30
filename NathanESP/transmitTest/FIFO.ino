@@ -26,7 +26,7 @@ void LeftChannelFifoInit() {
 // Input: data is character to be inserted
 // Output: 1 for success, data properly saved
 //         0 for failure, FIFO1 is full
-bool LeftChannelFifoPut(bool queue, uint16_t data) {
+inline bool LeftChannelFifoPut(bool queue, uint16_t data) {
   if (LeftChannelFifoisFull(queue)) {
     return false;
   }
@@ -48,18 +48,18 @@ bool LeftChannelFifoPut(bool queue, uint16_t data) {
 // Input: none
 // Output: If the FIFO1 is empty return 0
 // If the FIFO1 has data, remove it, and return it
-bool LeftChannelFifoGet(bool queue, volatile uint16_t* data) {
+inline bool LeftChannelFifoGet(bool queue, volatile uint16_t* data) {
   if (LeftChannelFifoisEmpty(queue)) {
     return false;
   }
   else if (queue) {
-    front1 = (front1 + 1) % FIFOSIZE;
     *data = LeftChannelFifo1[front1];
+    front1 = (front1 + 1) % FIFOSIZE;
     return true;
   }
   else {
+    *data = LeftChannelFifo2[front2];
     front2 = (front2 + 1) % FIFOSIZE;
-    *data = LeftChannelFifo1[front2];
     return true;
   }
 }
@@ -84,7 +84,7 @@ bool LeftChannelFifoisEmpty(bool queue) {
 }
 
 
-bool LeftChannelFifoisFull(bool queue){
+bool LeftChannelFifoisFull(bool queue) {
   if (queue) {
     return ((rear1 + 1) % FIFOSIZE == front1);
   }
