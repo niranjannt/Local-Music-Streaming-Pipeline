@@ -58,7 +58,7 @@ void PotInit() {
 /*
  * Read in values from potentiometers
  */
-void PotIn(uint32_t data[10]) {
+void PotIn(uint32_t* data) {
     ADC1_PSSI_R = 0x0008;            // 1) initiate SS3
     while((ADC1_RIS_R&0x08)==0){};   // 2) wait for conversion done
         // if you have an A0-A3 revision number, you need to add an 8 usec wait here
@@ -76,6 +76,5 @@ void PotIn(uint32_t data[10]) {
     data[1] = ADC1_SSFIFO0_R&0xFFF;  // 3) PE1 result
     data[0] = ADC1_SSFIFO0_R&0xFFF;  // 3) PE0 result
     ADC1_ISC_R = 0x0001;
-
 }
 
