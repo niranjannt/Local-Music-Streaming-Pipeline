@@ -20,6 +20,10 @@
 
 static void AudioCommandsHandler();
 
+uint8_t index = 0;
+uint32_t data[10];
+uint32_t HEADER = 0xFFFF;
+
 void AudioCommandInit() {
     SYSCTL_RCGCUART_R |= 0x02;            // activate UART1
     SYSCTL_RCGCGPIO_R |= 0x02;            // activate port B
@@ -37,48 +41,34 @@ void AudioCommandInit() {
 
     PotInit();
     SwitchInit();
-
     Timer0A_Init(AudioCommandsHandler, 800000, 3);
 }
 
 /*
  * Send signals to UART
  */
-uint8_t index = 0;
-uint32_t data[10];
+
 
 void AudioCommandsHandler() {
     data[9] = SwitchIn();
-    PotIn(data);
+    PotIn(&data[0]);
     AudioCommandOut();
 }
 
 void AudioCommandOut() {
-    for (index = 0; index < 10; index++) {
-        UART_OutUDec(data[index]);
+    UART_Out(HEADER);
+    for (index = 9; index >= 0; index--) {
+        UART_Out(data[index]);
     }
 }
 
-//-----------------------UART_OutUDec-----------------------
-// Output a 32-bit number in unsigned decimal format
-// Input: 32-bit number to be transferred
-// Output: none
-// Variable format 1-10 digits with no space before or after
-void UART_OutUDec(uint32_t n){
-// This function uses recursion to convert decimal number
-//   of unspecified length as an ASCII string
-  if(n >= 10){
-    UART_OutUDec(n/10);
-    n = n%10;
-  }
-  UART_OutChar(n+'0'); /* n is between 0 and 9 */
+
+void UART_Out(uint32_t n){
+    data = n & 0xFF; // Lower 8 bits of data
+    while((UART1_FR_R&UART_FR_TXFF) != 0);
+    UART1_DR_R = data;
+    data = n >> 8; // Upper 8 bits of data if needed
+    while((UART1_FR_R&UART_FR_TXFF) != 0);
+    UART1_DR_R = data;
 }
 
-//------------UART_OutChar------------
-// Output 8-bit to serial port
-// Input: letter is an 8-bit ASCII character to be transferred
-// Output: none
-void UART_OutChar(char data){
-  while((UART1_FR_R&UART_FR_TXFF) != 0);
-  UART1_DR_R = data;
-}
