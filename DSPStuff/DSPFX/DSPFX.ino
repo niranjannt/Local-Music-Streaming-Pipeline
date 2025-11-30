@@ -54,7 +54,7 @@ void loop() { // assuming left and right samples sent
 
   }
   if (delayFlag) {
-
+    //outputsampledata = delay_process_left_sample(outputsampledata);
   }
   if (reverbFlag) {
     

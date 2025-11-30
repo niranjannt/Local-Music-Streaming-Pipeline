@@ -46,7 +46,7 @@ int16_t flanger_process_right_sample(int16_t input_sample)
 
 	int16_t output_sample;
 	x_circ[1][i2] = input_sample;
-		n = (n+1) % FLANGER_PERIOD;
+		//n = (n+1) % FLANGER_PERIOD;
 
 		float_t x_current;
 		float_t x_delayed;
