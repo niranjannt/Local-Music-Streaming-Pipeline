@@ -24,6 +24,7 @@ public class Audio {
     private final SerialPort serialPort;
     int bytesPerSample;
     int shiftAmount;
+    boolean send;
 
     Audio(String path) throws IOException, UnsupportedAudioFileException, InterruptedException {
         File wavFile = new File(path);
@@ -32,16 +33,16 @@ public class Audio {
         audioFormat = audioInputStream.getFormat();
 
         bytesPerSample = audioFormat.getSampleSizeInBits() / 8;
-        shiftAmount = audioFormat.getSampleSizeInBits() - 14;
+        shiftAmount = audioFormat.getSampleSizeInBits() - 12;
 
         System.out.println("Format: " + audioFormat);
         System.out.println("Channels: " + audioFormat.getChannels());
         System.out.println("Sample rate: " + audioFormat.getSampleRate());
         System.out.println("Bytes per sample: " + bytesPerSample);
 
-        //serialPort = new SerialPort("/dev/cu.usbserial-A106DAXQ");         // Mac usbB
+        serialPort = new SerialPort("/dev/cu.usbserial-A106DAXQ");         // Mac usbB
         //serialPort = new SerialPort("/dev/cu.usbserial-A50285BI"); // Macro usb calculator one
-        serialPort = new SerialPort("COM7");
+        //serialPort = new SerialPort("COM7");
 
 
         openPort();
@@ -64,7 +65,7 @@ public class Audio {
         try {
             this.serialPort.openPort();
             this.serialPort.setParams(
-                    2_000_000,
+                    3_000_000,
                     SerialPort.DATABITS_8,
                     SerialPort.STOPBITS_1,
                     SerialPort.PARITY_NONE);
@@ -101,9 +102,10 @@ public class Audio {
         10 - Left channel data
      */
     private void sendInitData() throws IOException {
-        System.out.println("sending init data");
-        for (int i = 0; i < 200; i++) {
+        send = true;
+        for (int i = 0; i < 2048; i++) {
             sendSample();
+            send = !send;
         }
     }
 
@@ -137,10 +139,10 @@ public class Audio {
         This function is called whenever an 'R' is received, it sends one
         frame (a sample for each channel) to the ESP
     */
-    private boolean sendSample() throws IOException {
+    private boolean sendSample1() throws IOException {
         int frameSize = audioFormat.getFrameSize();
         byte[] data = new byte[frameSize];
-        byte[] outData = new byte[4];
+        byte[] outData = new byte[2];
 
         //read one frame
         if (audioInputStream.read(data) == -1) {
@@ -154,31 +156,68 @@ public class Audio {
             rightSample |= (data[j] & 0xFF) << (8 * j);
             leftSample  |= (data[k] & 0xFF) << (8 * j);
         }
+        leftSample = leftSample >> shiftAmount;
 
 
         // Scale down to 14 bits
-        leftSample  = (leftSample >> shiftAmount) & 0x3FFF;
-        rightSample = (rightSample >> shiftAmount) & 0x3FFF;
-
-        // Add header
-        leftSample  |= 0x8000;
-        rightSample |= 0x4000;
-//        System.out.println("left Sample raw: 0x" + Integer.toHexString(leftSample));
+//        leftSample  = (leftSample >> shiftAmount) & 0x3FFF;
+//        rightSample = (rightSample >> shiftAmount) & 0x3FFF;
+//
+//        // Add header
+//        leftSample  |= 0x8000;
+//        rightSample |= 0x4000;
+//        System.out.println(Integer.toHexString(leftSample));
 //        System.out.println("Right Sample raw: 0x" + Integer.toHexString(rightSample));
 
         // Package
         outData[0] = (byte) (leftSample & 0xFF);
         outData[1] = (byte) ((leftSample >> 8) & 0xFF);
-        outData[2] = (byte) ((rightSample & 0xFF));
-        outData[3] = (byte) ((rightSample >> 8) & 0xFF);
+        //outData[2] = (byte) ((rightSample & 0xFF));
+        //outData[3] = (byte) ((rightSample >> 8) & 0xFF);
         serialPort.writeBytes(outData);
         return true;
     }
 
+    private boolean sendSample() throws IOException {
+        int frameSize = audioFormat.getFrameSize();
+        byte[] data = new byte[frameSize];
+        byte[] outData = new byte[2];
+
+        //read one frame
+        if (audioInputStream.read(data) == -1) {
+            return false;
+        }
+
+        if (!send) {
+            return true;
+        }
+        //turn samples into int form (treating as SIGNED)
+        int leftSample = 0;
+        for (int j = 0; j < bytesPerSample; j++) {
+            leftSample |= (data[j] & 0xFF) << (8 * j);
+        }
+
+        // Scale down to 12 bits (for your DAC which uses 12 bits: 0x0fff mask)
+        // Shift to 12-bit unsigned (0 to 4095)
+        leftSample = leftSample >> shiftAmount;
+        if ((leftSample & 0x0800) > 0) {
+            leftSample |= 0xFFFFF000;
+        }
+        leftSample += 2048; // Convert to unsigned 12-bit centered at 2048
+
+
+        // Package
+        outData[0] = (byte) (leftSample & 0xFF);
+        outData[1] = (byte) ((leftSample >> 8) & 0xFF);
+        serialPort.writeBytes(outData);
+        return true;
+    }
 
     private void sendBurst() throws IOException {
-        for (int i = 0; i < 1500; i++) {
+        send = true;
+        for (int i = 0; i < 10000; i++) {
             sendSample();
+            send = !send;
         }
     }
 
