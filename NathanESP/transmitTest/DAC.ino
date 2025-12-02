@@ -24,7 +24,7 @@ void DAC_Init_Right() {
 void DAC_Out_Left(uint16_t left_channel_data) {
   spiLeft.beginTransaction(SPISettings(10000000, MSBFIRST, SPI_MODE2));
   digitalWrite(LAUDIO_FS, LOW);
-  spiLeft.transfer16(0x4000|(left_channel_data&0x0fff));
+  spiLeft.transfer16(0x4000 | (left_channel_data & 0x0FFF));
   digitalWrite(LAUDIO_FS, HIGH);
   spiLeft.endTransaction();
 }
@@ -32,7 +32,7 @@ void DAC_Out_Left(uint16_t left_channel_data) {
 void DAC_Out_Right(uint16_t right_channel_data) {
   spiRight.beginTransaction(SPISettings(10000000, MSBFIRST, SPI_MODE2));
   digitalWrite(RAUDIO_FS, LOW);
-  spiRight.transfer16(0x4000|(right_channel_data&0x0fff));
+  spiRight.transfer16(right_channel_data);
   digitalWrite(RAUDIO_FS, HIGH);
   spiRight.endTransaction();
 }

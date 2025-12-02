@@ -1,0 +1,242 @@
+//DEBUG METHOD 1
+=== ERRORS FOUND ===
+Sample 0: 63785 (0xF929)
+Sample 1: 64776 (0xFD08)
+Sample 2: 60935 (0xEE07)
+Sample 3: 59143 (0xE707)
+Sample 4: 63751 (0xF907)
+Sample 5: 62216 (0xF308)
+Sample 6: 58631 (0xE507)
+Sample 7: 62983 (0xF607)
+Sample 8: 63751 (0xF907)
+Sample 9: 64263 (0xFB07)
+Sample 10: 61959 (0xF207)
+Sample 11: 60679 (0xED07)
+Sample 12: 59911 (0xEA07)
+Sample 13: 64263 (0xFB07)
+Sample 14: 4871 (0x1307)
+Sample 15: 62728 (0xF508)
+Sample 16: 62471 (0xF407)
+Sample 17: 59143 (0xE707)
+Sample 18: 62471 (0xF407)
+Sample 19: 62472 (0xF408)
+Sample 20: 61447 (0xF007)
+Sample 21: 60423 (0xEC07)
+Sample 22: 64007 (0xFA07)
+Sample 23: 61704 (0xF108)
+Sample 24: 60423 (0xEC07)
+Sample 25: 65287 (0xFF07)
+Sample 26: 63240 (0xF708)
+Sample 27: 60167 (0xEB07)
+Sample 28: 60167 (0xEB07)
+Sample 29: 60423 (0xEC07)
+Sample 30: 63239 (0xF707)
+Sample 31: 64263 (0xFB07)
+Sample 32: 61703 (0xF107)
+Sample 33: 60167 (0xEB07)
+Sample 34: 59911 (0xEA07)
+Sample 35: 64519 (0xFC07)
+Sample 36: 64520 (0xFC08)
+Sample 37: 60423 (0xEC07)
+Sample 38: 60423 (0xEC07)
+Sample 39: 63239 (0xF707)
+Sample 40: 4104 (0x1008)
+Sample 41: 64520 (0xFC08)
+Sample 42: 60935 (0xEE07)
+Sample 43: 62983 (0xF607)
+Sample 44: 7176 (0x1C08)
+Sample 45: 7432 (0x1D08)
+Sample 46: 11528 (0x2D08)
+Sample 47: 10504 (0x2908)
+Sample 48: 11784 (0x2E08)
+Sample 49: 9480 (0x2508)
+Sample 50: 9736 (0x2608)
+Sample 51: 9224 (0x2408)
+Sample 52: 10248 (0x2808)
+Sample 53: 14344 (0x3808)
+Sample 54: 13832 (0x3608)
+Sample 55: 11528 (0x2D08)
+Sample 56: 9480 (0x2508)
+Sample 57: 9992 (0x2708)
+Sample 58: 8456 (0x2108)
+Sample 59: 10248 (0x2808)
+Sample 60: 9736 (0x2608)
+Sample 61: 8456 (0x2108)
+Sample 62: 7432 (0x1D08)
+Sample 63: 9224 (0x2408)
+Sample 64: 11272 (0x2C08)
+Sample 65: 10504 (0x2908)
+Sample 66: 10504 (0x2908)
+Sample 67: 7944 (0x1F08)
+Sample 68: 7688 (0x1E08)
+Sample 69: 10504 (0x2908)
+Sample 70: 10760 (0x2A08)
+Sample 71: 11784 (0x2E08)
+Sample 72: 9736 (0x2608)
+Sample 73: 8712 (0x2208)
+Sample 74: 7944 (0x1F08)
+Sample 75: 10760 (0x2A08)
+Sample 76: 13064 (0x3308)
+Sample 77: 12040 (0x2F08)
+Sample 78: 11528 (0x2D08)
+Sample 79: 7688 (0x1E08)
+Sample 80: 9992 (0x2708)
+Sample 81: 7944 (0x1F08)
+Sample 82: 10504 (0x2908)
+Sample 83: 13320 (0x3408)
+Sample 84: 11528 (0x2D08)
+Sample 85: 10760 (0x2A08)
+Sample 86: 10760 (0x2A08)
+Sample 87: 12040 (0x2F08)
+Sample 88: 12808 (0x3208)
+Sample 89: 11016 (0x2B08)
+Sample 90: 10760 (0x2A08)
+Sample 91: 10248 (0x2808)
+Sample 92: 9480 (0x2508)
+Sample 93: 13064 (0x3308)
+Sample 94: 13576 (0x3508)
+Sample 95: 14088 (0x3708)
+Sample 96: 13320 (0x3408)
+Sample 97: 12808 (0x3208)
+Sample 98: 10248 (0x2808)
+Sample 99: 12552 (0x3108)
+
+//DEBUG METHOD 2
+=== BYTE ANALYSIS ===
+Error 0: byte1=0x8 byte2=0x1E combined=7688 (0x1E08)
+Error 1: byte1=0x8 byte2=0x1A combined=6664 (0x1A08)
+Error 2: byte1=0x8 byte2=0x1E combined=7688 (0x1E08)
+Error 3: byte1=0x8 byte2=0x26 combined=9736 (0x2608)
+Error 4: byte1=0x8 byte2=0x25 combined=9480 (0x2508)
+Error 5: byte1=0x8 byte2=0x27 combined=9992 (0x2708)
+Error 6: byte1=0x8 byte2=0x1C combined=7176 (0x1C08)
+Error 7: byte1=0x8 byte2=0x16 combined=5640 (0x1608)
+Error 8: byte1=0x8 byte2=0x2B combined=11016 (0x2B08)
+Error 9: byte1=0x8 byte2=0x34 combined=13320 (0x3408)
+Error 10: byte1=0x8 byte2=0x30 combined=12296 (0x3008)
+Error 11: byte1=0x8 byte2=0x20 combined=8200 (0x2008)
+Error 12: byte1=0x8 byte2=0x22 combined=8712 (0x2208)
+Error 13: byte1=0x8 byte2=0x1E combined=7688 (0x1E08)
+Error 14: byte1=0x8 byte2=0x27 combined=9992 (0x2708)
+Error 15: byte1=0x8 byte2=0x3E combined=15880 (0x3E08)
+Error 16: byte1=0x8 byte2=0x3A combined=14856 (0x3A08)
+Error 17: byte1=0x8 byte2=0x39 combined=14600 (0x3908)
+Error 18: byte1=0x8 byte2=0x30 combined=12296 (0x3008)
+Error 19: byte1=0x8 byte2=0x2E combined=11784 (0x2E08)
+Error 20: byte1=0x8 byte2=0x27 combined=9992 (0x2708)
+Error 21: byte1=0x8 byte2=0x2E combined=11784 (0x2E08)
+Error 22: byte1=0x8 byte2=0x2F combined=12040 (0x2F08)
+Error 23: byte1=0x8 byte2=0x32 combined=12808 (0x3208)
+Error 24: byte1=0x8 byte2=0x24 combined=9224 (0x2408)
+Error 25: byte1=0x8 byte2=0x20 combined=8200 (0x2008)
+Error 26: byte1=0x8 byte2=0x21 combined=8456 (0x2108)
+Error 27: byte1=0x8 byte2=0x2A combined=10760 (0x2A08)
+Error 28: byte1=0x8 byte2=0x40 combined=16392 (0x4008)
+Error 29: byte1=0x8 byte2=0x3F combined=16136 (0x3F08)
+Error 30: byte1=0x8 byte2=0x3B combined=15112 (0x3B08)
+Error 31: byte1=0x8 byte2=0x20 combined=8200 (0x2008)
+Error 32: byte1=0x8 byte2=0x27 combined=9992 (0x2708)
+Error 33: byte1=0x8 byte2=0x2D combined=11528 (0x2D08)
+Error 34: byte1=0x8 byte2=0x3A combined=14856 (0x3A08)
+Error 35: byte1=0x8 byte2=0x3B combined=15112 (0x3B08)
+Error 36: byte1=0x8 byte2=0x2E combined=11784 (0x2E08)
+Error 37: byte1=0x8 byte2=0x2D combined=11528 (0x2D08)
+Error 38: byte1=0x8 byte2=0x31 combined=12552 (0x3108)
+Error 39: byte1=0x8 byte2=0x39 combined=14600 (0x3908)
+Error 40: byte1=0x8 byte2=0x39 combined=14600 (0x3908)
+Error 41: byte1=0x8 byte2=0x3F combined=16136 (0x3F08)
+Error 42: byte1=0x8 byte2=0x3B combined=15112 (0x3B08)
+Error 43: byte1=0x8 byte2=0x26 combined=9736 (0x2608)
+Error 44: byte1=0x8 byte2=0x31 combined=12552 (0x3108)
+Error 45: byte1=0x8 byte2=0x23 combined=8968 (0x2308)
+Error 46: byte1=0x8 byte2=0x2A combined=10760 (0x2A08)
+Error 47: byte1=0x8 byte2=0x37 combined=14088 (0x3708)
+Error 48: byte1=0x8 byte2=0x32 combined=12808 (0x3208)
+Error 49: byte1=0x8 byte2=0x3B combined=15112 (0x3B08)
+
+// DEBUG 3 - NO INTERRUPTS
+ERROR: 58375 (byte1=0x7 byte2=0xE4)
+ERROR: 55047 (byte1=0x7 byte2=0xD7)
+ERROR: 54023 (byte1=0x7 byte2=0xD3)
+ERROR: 53255 (byte1=0x7 byte2=0xD0)
+ERROR: 55815 (byte1=0x7 byte2=0xDA)
+ERROR: 58631 (byte1=0x7 byte2=0xE5)
+ERROR: 58631 (byte1=0x7 byte2=0xE5)
+ERROR: 59143 (byte1=0x7 byte2=0xE7)
+ERROR: 60423 (byte1=0x7 byte2=0xEC)
+ERROR: 55815 (byte1=0x7 byte2=0xDA)
+ERROR: 56327 (byte1=0x7 byte2=0xDC)
+ERROR: 60679 (byte1=0x7 byte2=0xED)
+ERROR: 57095 (byte1=0x7 byte2=0xDF)
+ERROR: 58119 (byte1=0x7 byte2=0xE3)
+ERROR: 55815 (byte1=0x7 byte2=0xDA)
+ERROR: 55815 (byte1=0x7 byte2=0xDA)
+ERROR: 54279 (byte1=0x7 byte2=0xD4)
+ERROR: 57607 (byte1=0x7 byte2=0xE1)
+
+// DEBUG 4 - NO REQUESTS
+JAVA: instead of using listener just send data continuously
+openPort();
+Thread.sleep(1);
+while (true) {
+    sendSample();
+    Thread.sleep(0, 10);
+}
+//serialPort.addEventListener(new PortReader(), SerialPort.MASK_RXCHAR);
+
+ESP: rx data
+bool receive() {
+  if (Serial2.available() < 2) {
+    return false;
+  }
+  portENTER_CRITICAL(&receiveMux);
+  uint8_t byte1 = Serial2.read();
+  uint8_t byte2 = Serial2.read();
+  portEXIT_CRITICAL(&receiveMux);
+  uint16_t sample = (byte2 << 8) | byte1;
+  if (sample > 4095) {
+    Serial.printf("Error: %d\n", sample);
+  }
+  if (!LeftChannelFifoPut(sample)) {
+    return false;
+  }
+}
+void loop() {
+  while (Serial2.available() >= 2) {
+    receive();
+  }
+}
+
+errors:
+
+Timer Init
+Reading sample rate:
+4B03
+Init done
+0
+Error: 37382
+Error: 37638
+Error: 28678
+Error: 16390
+Error: 4614
+Error: 63238
+Error: 20742
+Error: 44294
+Error: 59910
+Error: 64518
+Error: 63238
+Error: 51718
+Error: 36102
+Error: 36870
+Error: 41990
+Error: 28422
+Error: 8710
+Error: 65286
+Error: 61445
+Error: 59141
+Error: 60421
+Error: 61957
+Error: 58373
+Error: 55557
+Error: 56325
+Error: 51717
