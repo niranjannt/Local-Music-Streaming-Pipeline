@@ -18,9 +18,8 @@
  * Initialize UART
  */
 
-static void AudioCommandsHandler();
 
-uint8_t index = 0;
+int index = 0;
 uint32_t data[10];
 uint32_t HEADER = 0xFFFF;
 
@@ -55,6 +54,15 @@ void AudioCommandsHandler() {
     AudioCommandOut();
 }
 
+void UART_Out(uint32_t n){
+    uint32_t transmit = n & 0xFF; // Lower 8 bits of data
+    while((UART1_FR_R&UART_FR_TXFF) != 0);
+    UART1_DR_R = transmit;
+    transmit = n >> 8; // Upper 8 bits of data if needed
+    while((UART1_FR_R&UART_FR_TXFF) != 0);
+    UART1_DR_R = transmit;
+}
+
 void AudioCommandOut() {
     UART_Out(HEADER);
     for (index = 9; index >= 0; index--) {
@@ -63,12 +71,5 @@ void AudioCommandOut() {
 }
 
 
-void UART_Out(uint32_t n){
-    data = n & 0xFF; // Lower 8 bits of data
-    while((UART1_FR_R&UART_FR_TXFF) != 0);
-    UART1_DR_R = data;
-    data = n >> 8; // Upper 8 bits of data if needed
-    while((UART1_FR_R&UART_FR_TXFF) != 0);
-    UART1_DR_R = data;
-}
+
 
