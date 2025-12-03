@@ -12,9 +12,12 @@ bool tempoFlag;
 void setup() {
   // put your setup code here, to run once:
   ESPUARTsetup();
+
+  // test code
   for (int i = 0; i < 10; i++) {
     inputdata[i] = 0;
   }
+  //
   flangerFlag = false;
   pauseFlag = false;
   distortionFlag = false;
@@ -25,6 +28,12 @@ void setup() {
 void loop() { // assuming left and right samples sent
   //uint16_t outputsampledata = inputsampledata;
   UARTRecieve(&inputdata[0]);
+  // Test Code
+  for (int i = 0; i < 10; i++) {
+    Serial.println(inputdata[i]);
+  }
+
+  //
   if (inputdata[0] & 0x1) { // Pause Button
     pauseFlag = !pauseFlag;
   }
