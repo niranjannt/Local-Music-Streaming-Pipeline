@@ -41,32 +41,20 @@
 #include "../inc/Timer2A.h"
 #include "../inc/TLV5616.h"
 #include "AudioCommands.h"
-#include "Volume.h"
 void DisableInterrupts(void); // Disable interrupts
 void EnableInterrupts(void);  // Enable interrupts
 void WaitForInterrupt(void);  // low power mode
 
-_Bool changeVolumes = 0;
-unsigned bassVol = 0;
-unsigned midVol = 0;
-unsigned trebVol = 0;
-unsigned mainVol = 0;
+
 
 int main(void){
   DisableInterrupts();
   PLL_Init(Bus80MHz);    // bus clock at 80 MHz
   AudioCommandInit(); // initializes UART, Switches and Potentiometer
-  initVolume();
   EnableInterrupts();
   while(1){
       //UpdateLCD();
-      if (changeVolumes) {
-          setBass(bassVol);
-          setMid(midVol);
-          setTreb(trebVol);
-          setVolume(mainVol);
-          changeVolumes = 0;
-      }
+
    }
 }
    
