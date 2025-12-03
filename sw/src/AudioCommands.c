@@ -7,6 +7,7 @@
 #include "../inc/UART.h"
 #include "Switch.h"
 #include "Pot.h"
+#include "Volume.h"
 
 //Send audio commands through UART
 /*
@@ -18,6 +19,11 @@
  * Initialize UART
  */
 
+_Bool changeVolumes = 0;
+unsigned bassVol = 0;
+unsigned midVol = 0;
+unsigned trebVol = 0;
+unsigned mainVol = 0;
 
 
 uint16_t data[10];
@@ -47,6 +53,7 @@ void AudioCommandInit() {
 
     PotInit();
     SwitchInit();
+    initVolume();
     Timer0A_Init(AudioCommandsHandler, 800000, 3);
 }
 
@@ -70,6 +77,23 @@ void AudioCommandsHandler() {
     data[1] = 505;
     data[0] = 7;
     */
+    if (bassVol != (data[0] / 1024)) {
+        bassVol = data[0] / 1024;
+        setBass(bassVol);
+    }
+    if (midVol != (data[4] / 1024)) {
+        midVol = data[4] / 1024;
+        setMid(midVol);
+    }
+    if (trebVol != (data[5] / 1024)) {
+        trebVol = data[5] / 1024;
+        setTreb(trebVol);
+    }
+    if (mainVol != (data[6] / 585)) {
+        mainVol = data[6] / 585;
+        setVolume(mainVol);
+    }
+
     AudioCommandOut();
 }
 

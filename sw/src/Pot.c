@@ -69,13 +69,13 @@ void PotIn(uint16_t* data) {
     ADC1_PSSI_R = 0x0001;            // 1) initiate SS0
     while((ADC1_RIS_R&0x01)==0){};   // 2) wait for conversion done
     data[7] = ADC1_SSFIFO0_R&0xFFF;  // 3) PD0 result
-    data[6] = ADC1_SSFIFO0_R&0xFFF;  // 3) PD1 result
-    data[5] = ADC1_SSFIFO0_R&0xFFF;  // 3) PD2 result
-    data[4] = ADC1_SSFIFO0_R&0xFFF;  // 3) PD3 result
+    data[6] = ADC1_SSFIFO0_R&0xFFF;  // 3) PD1 result Main Volume
+    data[5] = ADC1_SSFIFO0_R&0xFFF;  // 3) PD2 result Treble Vol
+    data[4] = ADC1_SSFIFO0_R&0xFFF;  // 3) PD3 result Mid Vol
     data[3] = ADC1_SSFIFO0_R&0xFFF;  // 3) PE3 result
     data[2] = ADC1_SSFIFO0_R&0xFFF;  // 3) PE2 result
     data[1] = ADC1_SSFIFO0_R&0xFFF;  // 3) PE1 result
-    data[0] = ADC1_SSFIFO0_R&0xFFF;  // 3) PE0 result
+    data[0] = ADC1_SSFIFO0_R&0xFFF;  // 3) PE0 result Bass Vol
     ADC1_ISC_R = 0x0001;
 }
 
