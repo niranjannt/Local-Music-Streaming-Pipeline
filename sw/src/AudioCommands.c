@@ -19,24 +19,31 @@
  */
 
 
-int index = 0;
-uint32_t data[10];
-uint32_t HEADER = 0xFFFF;
+
+uint16_t data[10];
+uint16_t HEADER = 0xFFFF;
 
 void AudioCommandInit() {
-    SYSCTL_RCGCUART_R |= 0x02;            // activate UART1
-    SYSCTL_RCGCGPIO_R |= 0x02;            // activate port B
-    UART1_CTL_R &= ~UART_CTL_UARTEN;      // disable UART
-    UART1_IBRD_R = 43;                    // IBRD = int(80,000,000 / (16 * 115,200)) = int(43.403)
-    UART1_FBRD_R = 26;                    // FBRD = round(0.4028 * 64 ) = 26
-                                          // 8 bit word length (no parity bits, one stop bit, FIFOs)
-    UART1_LCRH_R = (UART_LCRH_WLEN_8|UART_LCRH_FEN);
-    UART1_CTL_R |= UART_CTL_UARTEN;       // enable UART
-    GPIO_PORTB_AFSEL_R |= 0x03;           // enable alt funct on PB1-0
-    GPIO_PORTB_DEN_R |= 0x03;             // enable digital I/O on PB1-0
-                                          // configure PA1-0 as UART
-    GPIO_PORTB_PCTL_R = (GPIO_PORTB_PCTL_R&0xFFFFFF00)+0x00000011;
-    GPIO_PORTB_AMSEL_R &= ~0x03;          // disable analog functionality on PB
+    SYSCTL_RCGCUART_R |= 0x02;      // enable UART1 clock
+    SYSCTL_RCGCGPIO_R |= 0x02;      // enable Port B clock
+    volatile int delay = SYSCTL_RCGCGPIO_R;
+
+    UART1_CTL_R &= ~UART_CTL_UARTEN;  // disable UART1
+
+    // configure PB0, PB1 for UART
+    GPIO_PORTB_AFSEL_R |= 0x03;
+    GPIO_PORTB_DEN_R   |= 0x03;
+    GPIO_PORTB_DIR_R   |= 0x02;
+    GPIO_PORTB_PCTL_R  = (GPIO_PORTB_PCTL_R & 0xFFFFFF00) | 0x00000011;
+    GPIO_PORTB_AMSEL_R &= ~0x03;
+
+    // UART1 settings
+    UART1_IBRD_R = 43;
+    UART1_FBRD_R = 26;
+    UART1_LCRH_R = UART_LCRH_WLEN_8 | UART_LCRH_FEN;
+
+    UART1_CTL_R |= UART_CTL_TXE | UART_CTL_RXE;
+    UART1_CTL_R |= UART_CTL_UARTEN;   // ENABLE LAST
 
     PotInit();
     SwitchInit();
@@ -49,9 +56,9 @@ void AudioCommandInit() {
 
 
 void AudioCommandsHandler() {
-    //data[9] = SwitchIn();
-    //PotIn(&data[0]);
-    // Test Code
+    data[9] = SwitchIn();
+    PotIn(&data[0]);
+    /* Test Code
     data[9] = 800;
     data[8] = 12;
     data[7] = 4095;
@@ -62,22 +69,22 @@ void AudioCommandsHandler() {
     data[2] = 1000;
     data[1] = 505;
     data[0] = 7;
-    //
+    */
     AudioCommandOut();
 }
 
-void UART_Out(uint32_t n){
-    uint32_t transmit = n & 0xFF; // Lower 8 bits of data
+void UART_Out(uint16_t n){
+    uint8_t transmit = (n >> 8) & 0xFF; // Upper 8 bits of data
     while((UART1_FR_R&UART_FR_TXFF) != 0);
     UART1_DR_R = transmit;
-    transmit = (n & 0xF00) >> 8; // Upper 4 bits of data if needed
+    transmit = n & 0xFF; // Lower 8 bits of data
     while((UART1_FR_R&UART_FR_TXFF) != 0);
     UART1_DR_R = transmit;
 }
 
 void AudioCommandOut() {
     UART_Out(HEADER);
-    for (index = 9; index >= 0; index--) {
+    for (int index = 0; index < 10; index++) {
         UART_Out(data[index]);
     }
 }
