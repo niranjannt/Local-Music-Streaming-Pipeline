@@ -3,6 +3,11 @@
 #include "../inc/ADCSWTrigger.h"
 #include "../inc/ST7735.h"
 
+#define SCREENMAXHEIGHT 160
+#define SCREENMAXWIDTH 128
+#define BARWIDTH 4
+
+//Implementing a Scrolling Bar Graph Visualizer (Keeps History of Old Samples)
 void ADC_Init(void){
 // write this
 	  SYSCTL_RCGCADC_R |= 0x0001;   // 1) activate ADC0
@@ -43,28 +48,43 @@ uint32_t result;
 
 
 
+uint16_t pickColor(int16_t amplitude){
+    if(amplitude<=96){
+     return ST7735_MAGENTA;
+    }
+    else if(amplitude<=136){
+    return ST7735_RED;
+    }
+    else{
+     return ST7735_BLUE;
 
-uint32_t bass_amplitude;
+    }
 
-uint32_t xpos;
+}
+int16_t xpos;
 void Visualize(void){
 	
+    //void ST7735_FillRect(int16_t x, int16_t y, int16_t w, int16_t h, uint16_t color) {
+
   
-  
-  bass_amplitude= ADC_In();
+  int16_t bass_amplitude= ADC_In();
   //pos_y= (150*bass_amplitude)/4095;
   
   //ST7735_DrawFastVLine(xpos, 0, 160, ST7735_BLUE)
 	
-	  uint32_t pos_y= (150*bass_amplitude)/4095;
+	  int16_t amplitude= (160*bass_amplitude)/4095;
+	    //void ST7735_FillRect(int16_t x, int16_t y, int16_t w, int16_t h, uint16_t color) {
 
-	ST7735_DrawFastVLine(xpos, 0, 160, ST7735_BLACK); 
-  ST7735_DrawPixel(xpos, pos_y, ST7735_BLUE);           
+      //void ST7735_FillRect(int16_t x, int16_t y, int16_t w, int16_t h, uint16_t color) {
+
+	  ST7735_FillRect(xpos, 0, BARWIDTH, SCREENMAXHEIGHT, ST7735_BLACK);
+
+	  uint16_t color= pickColor(amplitude);
+	
+      ST7735_FillRect(xpos, SCREENMAXHEIGHT-amplitude, BARWIDTH, amplitude, color);
 
 	
-	
-	
-	xpos++;
+	xpos=xpos+BARWIDTH;
 	if(xpos>=128){
 
     xpos=0;
