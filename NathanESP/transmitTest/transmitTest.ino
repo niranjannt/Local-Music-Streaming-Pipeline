@@ -12,7 +12,7 @@ void setup() {
   Serial.println(">>>> setup start");
 
   size_t t = Serial2.setRxBufferSize(16384);
-  Serial2.begin(300000, SERIAL_8N1, 16, 17);
+  Serial2.begin(300000, SERIAL_8N1, 17, 16); //swap tx and rx because ashston is silly 
   delay(2000);
   Serial.println("Serial2.begin finished");
   Serial.printf("Buffer size: %d\n", t);

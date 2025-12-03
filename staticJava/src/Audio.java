@@ -41,9 +41,9 @@ public class Audio {
         System.out.println("Sample rate: " + audioFormat.getSampleRate());
         System.out.println("Bytes per sample: " + bytesPerSample);
 
-        serialPort = new SerialPort("/dev/cu.usbserial-A106DAXQ");         // Mac usbB
+        //serialPort = new SerialPort("/dev/cu.usbserial-A106DAXQ");         // Mac usbB
         //serialPort = new SerialPort("/dev/cu.usbserial-A50285BI"); // Macro usb calculator one
-        //serialPort = new SerialPort("COM7");
+        serialPort = new SerialPort("COM7");
 
 
         openPort();
