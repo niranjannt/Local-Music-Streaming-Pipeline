@@ -51,6 +51,7 @@ void PotInit() {
     ADC1_SSMUX0_R &= 0x01234569; // Samples
 
     ADC1_SSCTL3_R = 0x0006;       // 13) no TS0 D0, yes IE0 END0
+    ADC1_SSCTL0_R = 0x0006;
     ADC1_IM_R &= ~0x9;         // 14) disable SS3 and SS0 interrupts
     ADC1_ACTSS_R |= 0x9;       // 15) enable sample sequencer 3 and 0
 }
@@ -58,7 +59,7 @@ void PotInit() {
 /*
  * Read in values from potentiometers
  */
-void PotIn(uint32_t* data) {
+void PotIn(uint16_t* data) {
     ADC1_PSSI_R = 0x0008;            // 1) initiate SS3
     while((ADC1_RIS_R&0x08)==0){};   // 2) wait for conversion done
         // if you have an A0-A3 revision number, you need to add an 8 usec wait here
