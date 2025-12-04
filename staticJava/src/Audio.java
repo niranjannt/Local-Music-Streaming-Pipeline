@@ -79,9 +79,10 @@ public class Audio {
         try {
             int frameRate = (int) this.audioFormat.getFrameRate();
             byte header = (byte) 0xC0;
+            byte verify = (byte) 0xC0;
             byte byte0 = (byte) (frameRate & 0xFF);
             byte byte1 = (byte) ((frameRate >> 8) & 0xFF);
-            serialPort.writeBytes(new byte[]{header, byte0, byte1});
+            serialPort.writeBytes(new byte[]{header, verify, byte0, byte1});
         }
         catch (SerialPortException ex) {
             log.error("e: ", ex);
