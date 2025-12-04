@@ -141,3 +141,8 @@ RemoteSystemsTempFiles/
 .settings/
 .launches/
 /.metadata/
+
+# Web app
+web_app/.DS_Store 
+web_app/backend/.DS_Store
+
