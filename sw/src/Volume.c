@@ -100,7 +100,8 @@ void setTreb(unsigned input){
         GPIO_PORTB_DATA_R |= (0x80);
         break;
     case 3 :
-        GPIO_PORTB_DATA_R |= (0xC0);
+        GPIO_PORTB_DATA_R &= ~(0x40);
+        GPIO_PORTB_DATA_R |= (0x80);
         break;
     default :
         GPIO_PORTB_DATA_R &= ~(0xC0);
