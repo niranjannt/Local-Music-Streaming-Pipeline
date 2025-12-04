@@ -7,6 +7,7 @@
 #include "../inc/UART.h"
 #include "Switch.h"
 #include "Pot.h"
+#include "Volume.h"
 
 //Send audio commands through UART
 /*
@@ -18,67 +19,100 @@
  * Initialize UART
  */
 
-static void AudioCommandsHandler();
+_Bool changeVolumes = 0;
+unsigned bassVol = 0;
+unsigned midVol = 0;
+unsigned trebVol = 0;
+unsigned mainVol = 0;
+
+
+uint16_t data[10];
+uint16_t HEADER = 0xFFFF;
 
 void AudioCommandInit() {
-    SYSCTL_RCGCUART_R |= 0x02;            // activate UART1
-    SYSCTL_RCGCGPIO_R |= 0x02;            // activate port B
-    UART1_CTL_R &= ~UART_CTL_UARTEN;      // disable UART
-    UART1_IBRD_R = 43;                    // IBRD = int(80,000,000 / (16 * 115,200)) = int(43.403)
-    UART1_FBRD_R = 26;                    // FBRD = round(0.4028 * 64 ) = 26
-                                          // 8 bit word length (no parity bits, one stop bit, FIFOs)
-    UART1_LCRH_R = (UART_LCRH_WLEN_8|UART_LCRH_FEN);
-    UART1_CTL_R |= UART_CTL_UARTEN;       // enable UART
-    GPIO_PORTB_AFSEL_R |= 0x03;           // enable alt funct on PB1-0
-    GPIO_PORTB_DEN_R |= 0x03;             // enable digital I/O on PB1-0
-                                          // configure PA1-0 as UART
-    GPIO_PORTB_PCTL_R = (GPIO_PORTA_PCTL_R&0xFFFFFF00)+0x00000011;
-    GPIO_PORTB_AMSEL_R &= ~0x03;          // disable analog functionality on PB
+    SYSCTL_RCGCUART_R |= 0x02;      // enable UART1 clock
+    SYSCTL_RCGCGPIO_R |= 0x02;      // enable Port B clock
+    volatile int delay = SYSCTL_RCGCGPIO_R;
+
+    UART1_CTL_R &= ~UART_CTL_UARTEN;  // disable UART1
+
+    // configure PB0, PB1 for UART
+    GPIO_PORTB_AFSEL_R |= 0x03;
+    GPIO_PORTB_DEN_R   |= 0x03;
+    GPIO_PORTB_DIR_R   |= 0x02;
+    GPIO_PORTB_PCTL_R  = (GPIO_PORTB_PCTL_R & 0xFFFFFF00) | 0x00000011;
+    GPIO_PORTB_AMSEL_R &= ~0x03;
+
+    // UART1 settings
+    UART1_IBRD_R = 43;
+    UART1_FBRD_R = 26;
+    UART1_LCRH_R = UART_LCRH_WLEN_8 | UART_LCRH_FEN;
+
+    UART1_CTL_R |= UART_CTL_TXE | UART_CTL_RXE;
+    UART1_CTL_R |= UART_CTL_UARTEN;   // ENABLE LAST
 
     PotInit();
     SwitchInit();
-
+    initVolume();
     Timer0A_Init(AudioCommandsHandler, 800000, 3);
 }
 
 /*
  * Send signals to UART
  */
-uint8_t index = 0;
-uint32_t data[10];
+
 
 void AudioCommandsHandler() {
     data[9] = SwitchIn();
-    PotIn(data);
+    PotIn(&data[0]);
+    /* Test Code
+    data[9] = 800;
+    data[8] = 12;
+    data[7] = 4095;
+    data[6] = 404;
+    data[5] = 0;
+    data[4] = 2400;
+    data[3] = 1206;
+    data[2] = 1000;
+    data[1] = 505;
+    data[0] = 7;
+    */
+    if (bassVol != (data[0] / 1024)) {
+        bassVol = data[0] / 1024;
+        setBass(bassVol);
+    }
+    if (midVol != (data[1] / 1024)) {
+        midVol = data[1] / 1024;
+        setMid(midVol);
+    }
+    if (trebVol != (data[2] / 1024)) {
+        trebVol = data[2] / 1024;
+        setTreb(trebVol);
+    }
+    if (mainVol != (data[3] / 585)) {
+        mainVol = data[3] / 585;
+        setVolume(mainVol);
+    }
+
     AudioCommandOut();
 }
 
+void UART_Out(uint16_t n){
+    uint8_t transmit = (n >> 8) & 0xFF; // Upper 8 bits of data
+    while((UART1_FR_R&UART_FR_TXFF) != 0);
+    UART1_DR_R = transmit;
+    transmit = n & 0xFF; // Lower 8 bits of data
+    while((UART1_FR_R&UART_FR_TXFF) != 0);
+    UART1_DR_R = transmit;
+}
+
 void AudioCommandOut() {
-    for (index = 0; index < 10; index++) {
-        UART_OutUDec(data[index]);
+    UART_Out(HEADER);
+    for (int index = 0; index < 10; index++) {
+        UART_Out(data[index]);
     }
 }
 
-//-----------------------UART_OutUDec-----------------------
-// Output a 32-bit number in unsigned decimal format
-// Input: 32-bit number to be transferred
-// Output: none
-// Variable format 1-10 digits with no space before or after
-void UART_OutUDec(uint32_t n){
-// This function uses recursion to convert decimal number
-//   of unspecified length as an ASCII string
-  if(n >= 10){
-    UART_OutUDec(n/10);
-    n = n%10;
-  }
-  UART_OutChar(n+'0'); /* n is between 0 and 9 */
-}
 
-//------------UART_OutChar------------
-// Output 8-bit to serial port
-// Input: letter is an 8-bit ASCII character to be transferred
-// Output: none
-void UART_OutChar(char data){
-  while((UART0_FR_R&UART_FR_TXFF) != 0);
-  UART0_DR_R = data;
-}
+
+
