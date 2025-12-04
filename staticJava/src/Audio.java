@@ -47,14 +47,8 @@ public class Audio {
 
 
         openPort();
-//        Thread.sleep(1);
-//        while (true) {
-//            sendSample();
-//            Thread.sleep(0, 10);
-//        }
         serialPort.addEventListener(new PortReader(), SerialPort.MASK_RXCHAR);
         sendSampleRate();
-        //readAllFrames();
     }
 
     /*
@@ -248,7 +242,7 @@ public class Audio {
         int rightSample = 0;
         int leftSample = 0;
         for (int j = 0, k = bytesPerSample; k < frameSize; j++, k++) {
-            rightSample |= (data[j] & 0xFF) << (8 * j);;
+            rightSample |= (data[j] & 0xFF) << (8 * j);
             leftSample  |= (data[k] & 0xFF) << (8 * j);
         }
 
