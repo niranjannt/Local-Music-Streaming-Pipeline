@@ -81,16 +81,16 @@ void AudioCommandsHandler() {
         bassVol = data[0] / 1024;
         setBass(bassVol);
     }
-    if (midVol != (data[4] / 1024)) {
-        midVol = data[4] / 1024;
+    if (midVol != (data[1] / 1024)) {
+        midVol = data[1] / 1024;
         setMid(midVol);
     }
-    if (trebVol != (data[5] / 1024)) {
-        trebVol = data[5] / 1024;
+    if (trebVol != (data[2] / 1024)) {
+        trebVol = data[2] / 1024;
         setTreb(trebVol);
     }
-    if (mainVol != (data[6] / 585)) {
-        mainVol = data[6] / 585;
+    if (mainVol != (data[3] / 585)) {
+        mainVol = data[3] / 585;
         setVolume(mainVol);
     }
 

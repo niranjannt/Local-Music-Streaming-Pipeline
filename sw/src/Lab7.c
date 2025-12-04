@@ -51,8 +51,8 @@ int main(void){
   DisableInterrupts();
   PLL_Init(Bus80MHz);    // bus clock at 80 MHz
   AudioCommandInit(); // initializes UART, Switches and Potentiometer
-  EnableInterrupts();
   ADC_Init();
+  EnableInterrupts();
   ST7735_InitR(INITR_REDTAB);     // Start up display.
 
 

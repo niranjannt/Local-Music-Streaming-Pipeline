@@ -35,7 +35,8 @@ void initVolume() {
 
     GPIO_PORTC_DIR_R |= 0x70;         // PC4, PC5, PC6
     GPIO_PORTC_DEN_R |= 0x70;
-    GPIO_PORTC_DATA_R |= 0x70;
+    GPIO_PORTC_DATA_R &= ~(0x30);
+    GPIO_PORTC_DATA_R |= (0x40);
 }
 
 
@@ -47,12 +48,12 @@ void setBass(unsigned input){
         GPIO_PORTB_DATA_R &= ~(0x0C);
         break;
     case 1 :
-        GPIO_PORTB_DATA_R &= ~(0x04);
-        GPIO_PORTB_DATA_R |= (0x08);
-        break;
-    case 2 :
         GPIO_PORTB_DATA_R &= ~(0x08);
         GPIO_PORTB_DATA_R |= (0x04);
+        break;
+    case 2 :
+        GPIO_PORTB_DATA_R &= ~(0x04);
+        GPIO_PORTB_DATA_R |= (0x08);
         break;
     case 3 :
         GPIO_PORTB_DATA_R |= (0x0C);
@@ -69,12 +70,12 @@ void setMid(unsigned input){
         GPIO_PORTB_DATA_R &= ~(0x30);
         break;
     case 1 : // 1024 - 2046
-        GPIO_PORTB_DATA_R &= ~(0x10);
-        GPIO_PORTB_DATA_R |= (0x20);
-        break;
-    case 2 : // 2047 - 3069
         GPIO_PORTB_DATA_R &= ~(0x20);
         GPIO_PORTB_DATA_R |= (0x10);
+        break;
+    case 2 : // 2047 - 3069
+        GPIO_PORTB_DATA_R &= ~(0x10);
+        GPIO_PORTB_DATA_R |= (0x20);
         break;
     case 3 : // 3070 - 4095
         GPIO_PORTB_DATA_R |= (0x30);
@@ -91,12 +92,12 @@ void setTreb(unsigned input){
         GPIO_PORTB_DATA_R &= ~(0xC0);
         break;
     case 1 :
-        GPIO_PORTB_DATA_R &= ~(0x40);
-        GPIO_PORTB_DATA_R |= (0x80);
-        break;
-    case 2 :
         GPIO_PORTB_DATA_R &= ~(0x80);
         GPIO_PORTB_DATA_R |= (0x40);
+        break;
+    case 2 :
+        GPIO_PORTB_DATA_R &= ~(0x40);
+        GPIO_PORTB_DATA_R |= (0x80);
         break;
     case 3 :
         GPIO_PORTB_DATA_R |= (0xC0);
