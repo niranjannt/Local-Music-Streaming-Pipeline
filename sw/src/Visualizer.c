@@ -10,7 +10,7 @@
 //Implementing a Scrolling Bar Graph Visualizer (Keeps History of Old Samples)
 void ADC_Init(void){
 // write this
-	  SYSCTL_RCGCADC_R |= 0x0001;   // 1) activate ADC0
+      SYSCTL_RCGCADC_R |= 0x0001;   // 1) activate ADC0
   SYSCTL_RCGCGPIO_R |= 0x10;    // 2) activate clock for Port E
   while((SYSCTL_PRGPIO_R&0x10) != 0x10){};  // 3 for stabilization
   GPIO_PORTE_DIR_R &= ~0x10;    // 4) make PE4 input
@@ -48,50 +48,38 @@ uint32_t result;
 
 
 
-uint16_t pickColor(int16_t amplitude){
-    if(amplitude<=96){
-     return ST7735_MAGENTA;
-    }
-    else if(amplitude<=136){
-    return ST7735_RED;
-    }
-    else{
-     return ST7735_BLUE;
 
-    }
-
-}
-int16_t xpos;
+uint16_t xpos=0;
 void Visualize(void){
-	
+
     //void ST7735_FillRect(int16_t x, int16_t y, int16_t w, int16_t h, uint16_t color) {
 
-  
-  int16_t bass_amplitude= ADC_In();
+
+  uint16_t bass_amplitude= ADC_In();
   //pos_y= (150*bass_amplitude)/4095;
-  
+
   //ST7735_DrawFastVLine(xpos, 0, 160, ST7735_BLUE)
-	
-	  int16_t amplitude= (160*bass_amplitude)/4095;
-	    //void ST7735_FillRect(int16_t x, int16_t y, int16_t w, int16_t h, uint16_t color) {
+
+      uint16_t amplitude= (160*bass_amplitude)/4095;
+        //void ST7735_FillRect(int16_t x, int16_t y, int16_t w, int16_t h, uint16_t color) {
 
       //void ST7735_FillRect(int16_t x, int16_t y, int16_t w, int16_t h, uint16_t color) {
 
-	  ST7735_FillRect(xpos, 0, BARWIDTH, SCREENMAXHEIGHT, ST7735_BLACK);
+      ST7735_FillRect(xpos, 0, BARWIDTH, SCREENMAXHEIGHT, ST7735_BLACK);
 
-	  uint16_t color= pickColor(amplitude);
-	
-      ST7735_FillRect(xpos, SCREENMAXHEIGHT-amplitude, BARWIDTH, amplitude, color);
+      //uint16_t color= pickColor(amplitude);
 
-	
-	xpos=xpos+BARWIDTH;
-	if(xpos>=128){
+      ST7735_FillRect(xpos, SCREENMAXHEIGHT-amplitude, BARWIDTH, amplitude, ST7735_MAGENTA);
+
+
+    xpos=xpos+BARWIDTH;
+    if(xpos>=128){
 
     xpos=0;
   }
-	
-	
-	
+
+
+
 }
 
 
@@ -108,3 +96,5 @@ bass_amplitude=ADC_In();
 
 
 }*/
+
+

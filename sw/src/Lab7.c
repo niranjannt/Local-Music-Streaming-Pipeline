@@ -44,16 +44,21 @@
 void DisableInterrupts(void); // Disable interrupts
 void EnableInterrupts(void);  // Enable interrupts
 void WaitForInterrupt(void);  // low power mode
-
-
+void Visualize(void);
+void ADC_Init(void);
 
 int main(void){
   DisableInterrupts();
   PLL_Init(Bus80MHz);    // bus clock at 80 MHz
   AudioCommandInit(); // initializes UART, Switches and Potentiometer
   EnableInterrupts();
+  ADC_Init();
+  ST7735_InitR(INITR_REDTAB);     // Start up display.
+
+
   while(1){
-      UpdateLCD();
+    //UpdateLCD();
+      Visualize();
    }
 }
    
