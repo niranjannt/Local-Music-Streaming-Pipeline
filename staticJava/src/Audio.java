@@ -43,7 +43,7 @@ public class Audio {
 
         //serialPort = new SerialPort("/dev/cu.usbserial-A106DAXQ");         // Mac usbB
         //serialPort = new SerialPort("/dev/cu.usbserial-A50285BI"); // Macro usb calculator one
-        serialPort = new SerialPort("COM7");
+        serialPort = new SerialPort("COM10");
 
 
         openPort();
