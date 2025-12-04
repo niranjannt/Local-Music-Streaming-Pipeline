@@ -1,56 +1,57 @@
-bool foundHEADER;
-uint32_t HEADER;
-
 void ESPUARTsetup() {
-  HEADER = 0xFFFF;
-  foundHEADER = false;
   // Code for testing 
-  Serial2.begin(2400, SERIAL_8N1, 16, 17);
-  Serial.begin(9600);
+  //Serial2.begin(115200, SERIAL_8N1, 16, 17);
+  Serial.begin(115200, SERIAL_8N1);
   //
   //Serial0.begin(9600);
 }
 
-// Test function, should recieve TM4C data[9] first, then descend. So TM4C data[9] is ESP data[0].
-void UARTRecieve(uint32_t* data) {
-  uint32_t header2compare = 0;
-  if (foundHEADER) {
-    while (Serial2.available() < 20) {}
-    for (int i = 0; i < 10; i++) {
-      data[i] = Serial2.read();
-      data[i] = data[i] + (Serial2.read() << 8);
+bool UARTReceive(uint16_t* data) {
+    static int state = 0;
+    static uint16_t temp;
+
+    while (Serial.available()) {
+        //Serial.println("Available Data");
+        uint8_t b = Serial.read();
+
+        switch (state) {
+
+        case 0:   // first header byte
+            //Serial.println("Case 0");
+            if (b == 0xFF) state = 1;
+            break;
+
+        case 1:   // second header byte
+            //Serial.println("Case 1");
+            if (b == 0xFF) {
+                state = 2;
+            } else {
+                state = 0;
+            }
+            break;
+
+        case 2:   // receiving payload MSB
+            //Serial.println("Case 2");
+            temp = b << 8;
+            state = 3;
+            break;
+
+        case 3:   // receiving payload LSB
+            //Serial.println("Case 3");
+            static int idx = 0;
+            temp |= b;
+            temp &= 0xFFF;
+            data[idx++] = temp;
+
+            if (idx == 10) {
+                idx = 0;
+                state = 0;
+                return true;      // PACKET COMPLETE
+            }
+            state = 2;
+            break;
+        }
     }
-    Serial.println("Received Data");
-    foundHEADER = false;
-  }
-  else { // finding header
-    while (Serial2.available() < 2) {}
-    header2compare = Serial2.read();
-    header2compare = header2compare + (Serial2.read() << 8);
-    if (header2compare == HEADER) {
-      foundHEADER = true;
-    }
-  }
+
+    return false;
 }
-
-
-/*
-void UARTRecieve(uint32_t* data) {
-  uint32_t header2compare = 0;
-  if (foundHEADER) {
-    while (Serial0.available() < 20) {}
-    for (int i = 0; i < 10; i++) {
-      data[i] = Serial0.read();
-      data[i] = data[i] + (Serial0.read() << 8);
-    }
-    foundHEADER = false;
-  }
-  else { // finding header
-    while (Serial0.available() < 2) {}
-    header2compare = Serial0.read();
-    header2compare = header2compare + (Serial0.read() << 8);
-    if (header2compare == HEADER) {
-      foundHEADER = true;
-    }
-  }
-}*/

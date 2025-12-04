@@ -32,7 +32,7 @@ void SwitchInit() {
 /*
  * Read switch inputs as a bit vector
  */
-uint32_t SwitchIn() {
+uint16_t SwitchIn() {
     return (GPIO_PORTF_DATA_R & 0x1F) & (GPIO_PORTC_DATA_R & 0x80) & (GPIO_PORTE_DATA_R & 0x20);
     // F - 1, 2, 4, 8, 16 C - 128 E - 32
 }

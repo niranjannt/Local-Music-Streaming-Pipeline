@@ -15,7 +15,7 @@
 // *****LCD graphics, and I/O with SDC***************
 // Backlight (pin 10) connected to +3.3 V
 // MISO (pin 9) connected to PA4 (SSIRx for SDC)
-// SCK (pin 8) connected to PA2 (SSI0Clk)
+/+/ SCK (pin 8) connected to PA2 (SSI0Clk)
 // MOSI (pin 7) connected to PA5 (SSI0Tx)
 // TFT_CS (pin 6) connected to PA3 (SSI0Fss)
 // CARD_CS (pin 5) connected to PD7 (CS for SDC)
@@ -59,6 +59,8 @@ int main(void){
   while(1){
     //UpdateLCD();
       Visualize();
+      //UpdateLCD();
+
    }
 }
    
