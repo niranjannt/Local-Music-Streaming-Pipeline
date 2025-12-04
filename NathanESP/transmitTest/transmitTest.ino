@@ -12,14 +12,14 @@ void setup() {
   Serial.println(">>>> setup start");
 
   size_t t = Serial2.setRxBufferSize(16384);
-  Serial2.begin(300000, SERIAL_8N1, 16, 17);
+  Serial2.begin(300000, SERIAL_8N1, 17, 16); //TX2 and RX2
   delay(2000);
   Serial.println("Serial2.begin finished");
   Serial.printf("Buffer size: %d\n", t);
 
   
-  LeftChannelFifoInit();
   DAC_Init_Left();
+  DAC_Init_Right();
   Serial.println("Waiting for sample rate");
  
   bool waitForSampleRate = true;
@@ -27,24 +27,21 @@ void setup() {
     uint8_t header;
     if (Serial2.available()) {
       header = Serial2.read();
-      Serial.println(header, HEX);
+      //Serial.println(header, HEX);
       waitForSampleRate = !(header == 0xC0);
+      if (!waitForSampleRate) {
+        header = Serial2.read();
+        waitForSampleRate = !(header == 0xC0);
+      }
     }
   }
 
-  TimerInit();
+  TimerSet();
 }
 
-void TimerInit() {
-  Serial.println("Timer Init");
-  while (Serial2.available() < 2) {}
-  Serial.println("Reading sample rate: ");
-  uint8_t byte1 = Serial2.read();
-  uint8_t byte2 = Serial2.read();
-  uint16_t sampleRate = ((byte2 << 8) | byte1) / 3;
-  Serial.println(sampleRate, HEX);
-
-  while (LeftChannelFifoCount(playQueue) < 25499) {
+void InitData() {
+  FifoInit();
+  while (FifoCount(playQueue) < 25499) {
     if (Serial2.available() < 2) {
       Serial2.write('I');
     }
@@ -55,18 +52,35 @@ void TimerInit() {
     }
   }
   Serial.println("Init done");
-  Serial.println(LeftChannelFifoCount(playQueue));
+  Serial.println(FifoCount(playQueue));
+}
+
+void TimerSet() {
+  Serial.println("Timer Init");
+  while (Serial2.available() < 2) {}
+  Serial.println("Reading sample rate: ");
+  uint8_t byte1 = Serial2.read();
+  uint8_t byte2 = Serial2.read();
+  uint16_t sampleRate = ((byte2 << 8) | byte1) / 3;
+  Serial.println(sampleRate, HEX);
+
+  InitData();
 
   dacTimer = timerBegin(20000000);
   timerAttachInterrupt(dacTimer, &soundHandler);
   timerAlarm(dacTimer, (20000000 / sampleRate), true, 0);
 }
 
-// void changeSampleRate() {
-//   uint16_t sampleRate;
-//   get sample rate
-//   timerAlarm(dacTimer, (20000000 / sampleRate), true, 0);
-// }
+void changeTrack() {
+  uint8_t byte1 = Serial2.read();
+  uint8_t byte2 = Serial2.read();
+  uint16_t sampleRate = ((byte2 << 8) | byte1) / 3;
+  Serial2.flush();
+
+  InitData();
+  
+  timerAlarm(dacTimer, (20000000 / sampleRate), true, 0);
+}
 
 
 static uint16_t debugSoundIdx = 0;
@@ -82,12 +96,11 @@ const uint16_t DebugWave[64] = {
 static uint16_t lastSample;
 void IRAM_ATTR soundHandler() {
   uint16_t data;
-  if (!LeftChannelFifoGet(playQueue, &data)) {
-    //Serial.println("Empty");
+  if (!FifoGet(playQueue, &data)) {
     if (refilled) {
       playQueue = !playQueue;
       refilled = false;
-      LeftChannelFifoGet(playQueue, &data);
+      FifoGet(playQueue, &data);
     }
     else {
       data = lastSample;
@@ -97,13 +110,10 @@ void IRAM_ATTR soundHandler() {
   else {
     lastSample = data;
   }
-  // if (!LeftChannelFifoGet(queue, &data)) {
-  //   data = 2048;
-  //   notFastEnough = true;
-  // }
-   DAC_Out_Left(data);
-   //DAC_Out_Left(DebugWave[debugSoundIdx << 1]);
-   //debugSoundIdx = (debugSoundIdx + 1) % 32;
+
+  DAC_Out_Left(data);
+  //DAC_Out_Left(DebugWave[debugSoundIdx << 1]);
+  //debugSoundIdx = (debugSoundIdx + 1) % 32;
 }
 
 bool receive(bool fillQueue) {
@@ -114,11 +124,23 @@ bool receive(bool fillQueue) {
   uint8_t byte1 = Serial2.read(); 
   uint8_t byte2 = Serial2.read(); 
   uint16_t sample = (byte2 << 8) | byte1;
+  if (sample == 0xC0) {
+    uint8_t verify = Serial2.read();
+    if (verify == 0xC0) {
+      timerStop(dacTimer);
+      changeTrack();
+      return false;
+    }
+    else {
+      Serial2.read(); // Throw next sample away to rebalance
+    }
+  }
   if (sample > 4096) {
     sample = (byte1 << 8) | byte2;
   }
   
-  if (!LeftChannelFifoPut(fillQueue, sample)) {
+  if (!FifoPut(fillQueue, sample)) {
+    refilled = true;
     return false;
   }
   
@@ -130,5 +152,4 @@ void loop() {
 
   while (receive(fillQueue));
 
-  refilled = true;
 }
