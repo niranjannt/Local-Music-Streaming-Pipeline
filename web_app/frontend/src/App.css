@@ -9,3 +9,79 @@ html, body {
     height: 100vh;
     background-color: grey;
 }
+
+
+.musicPlayer {
+    width: 65%;
+    display: grid;
+    grid-template-rows: 500px 300px;
+}
+
+.imageDiv {
+    max-height: 500px;
+    display: flex;
+    justify-content: center;
+    padding-top: 30px;
+}
+
+.coverImage {
+    max-height: 100%;
+    object-fit: cover;
+}
+
+.controls {
+    display: flex;
+    padding-top: 20px;
+    justify-content: center;
+    gap: 20px;
+}
+
+.iconButton {
+    background-color: transparent;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    width: 100px;
+    height: 100px;
+}
+
+.iconButton img {
+    width: 80px;
+    height: 80px;
+    object-fit: contain;
+}
+
+.iconButton:hover {
+    background-color: darkgray;
+}
+
+.SongScroller {
+    width: 35%;
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+    overflow-y: auto;
+    padding-right: 2px;
+    padding-left: 50px;
+}
+
+.songButton {
+    height: 50px;
+    text-align: left;
+    background-color: rgba(70, 99, 108, 0.27);
+    transition: transform 0.2s ease;
+    transform-origin: center right;
+}
+
+.songButton:hover {
+    transform: scale(1.1);
+}
+
+.songButton:active {
+    transform: scale(1.1);
+}
+
+.activeSong {
+    transform: scale(1.1);
+    background-color: rgba(70, 99, 108, 0.5);
+}
