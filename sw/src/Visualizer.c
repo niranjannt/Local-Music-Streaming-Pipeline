@@ -8,6 +8,7 @@
 #define BARWIDTH 4
 
 //Implementing a Scrolling Bar Graph Visualizer (Keeps History of Old Samples)
+//Right Bass Analog Input is PD0
 void ADC_Init(void){
 // write this
       SYSCTL_RCGCADC_R |= 0x0001;   // 1) activate ADC0
@@ -31,6 +32,8 @@ void ADC_Init(void){
 
 
 }
+//Right Bass Analog Input is PD0
+
 int32_t ADC_In(void){
 uint32_t result;
 
