@@ -67,7 +67,7 @@ Our system streams music from a web interface to an **ESP32-Devkit-V1** and outp
 
 ---
 
-[Watch the demo video here!](Embedded-Lab-Final-Project-Demo.mp4)
+## [Download a demo video of the project here!](Embedded-Lab-Final-Project-Demo.mp4)
 
 ## Acknowledgements
 
