@@ -13,10 +13,10 @@ void ADC_Init(void){
       SYSCTL_RCGCADC_R |= 0x0001;   // 1) activate ADC0
   SYSCTL_RCGCGPIO_R |= 0x08;    // 2) activate clock for Port D
   while((SYSCTL_PRGPIO_R&0x08) != 0x08){};  // 3 for stabilization
-  GPIO_PORTE_DIR_R &= ~0x01;    // 4) make PD0 input
-  GPIO_PORTE_AFSEL_R |= 0x01;   // 5) enable alternate function on PD0
-  GPIO_PORTE_DEN_R &= ~0x01;    // 6) disable digital I/O on PD0
-  GPIO_PORTE_AMSEL_R |= 0x01;   // 7) enable analog functionality on PD0
+  GPIO_PORTD_DIR_R &= ~0x01;    // 4) make PE4 input
+  GPIO_PORTD_AFSEL_R |= 0x01;   // 5) enable alternate function on PE4
+  GPIO_PORTD_DEN_R &= ~0x01;    // 6) disable digital I/O on PE4
+  GPIO_PORTD_AMSEL_R |= 0x01;   // 7) enable analog functionality on PE4
 // while((SYSCTL_PRADC_R&0x0001) != 0x0001){}; // good code, but not implemented in simulator
   ADC0_PC_R &= ~0xF;
   ADC0_PC_R |= 0x1;             // 8) configure for 125K samples/sec
@@ -69,7 +69,7 @@ void Visualize(void){
 
       //uint16_t color= pickColor(amplitude);
 
-      ST7735_FillRect(xpos, SCREENMAXHEIGHT, BARWIDTH, amplitude, ST7735_MAGENTA);
+      ST7735_FillRect(xpos, SCREENMAXHEIGHT-amplitude, BARWIDTH, amplitude, ST7735_MAGENTA);
 
 
     xpos=xpos+BARWIDTH;
@@ -96,5 +96,3 @@ bass_amplitude=ADC_In();
 
 
 }*/
-
-
