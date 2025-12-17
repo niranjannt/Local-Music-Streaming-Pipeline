@@ -195,7 +195,7 @@ void ST7735_DrawFastHLine(int16_t x, int16_t y, int16_t w, uint16_t color);
 // Output: none
 void ST7735_FillScreen(uint16_t color);
 
-
+uint16_t pickColor(uint16_t amplitude);
 //------------ST7735_FillRect------------
 // Draw a filled rectangle at the given coordinates with the given width, height, and color.
 // Requires (11 + 2*w*h) bytes of transmission (assuming image fully on screen)
