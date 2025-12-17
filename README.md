@@ -67,6 +67,8 @@ Our system streams music from a web interface to an **ESP32-Devkit-V1** and outp
 
 ---
 
+[Watch the demo video here!](Embedded-Lab-Final-Project-Demo.mp4)
+
 ## Acknowledgements
 
 This project was completed as part of **ECE 445L: Embedded Design Laboratory** at **UT Austin**.
