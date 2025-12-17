@@ -1,4 +1,4 @@
-# Embedded Music Streaming Pipeline (ECE 445L Final Project)
+# Local Music Streaming Pipeline (ECE 445L Final Project)
 
 This repository contains the final project for **Embedded Design Laboratory (ECE 445L)** at **UT Austin**, developed by Niranjan Telkikar, Ashton Knecht, Thompson Truong, and Nathan DeLaRosa. The project implements a music-streaming pipeline using local WAV files, combining frontend/backend software with embedded hardware.
 
