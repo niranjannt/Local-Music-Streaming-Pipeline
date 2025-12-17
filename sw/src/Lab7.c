@@ -44,6 +44,12 @@
 void DisableInterrupts(void); // Disable interrupts
 void EnableInterrupts(void);  // Enable interrupts
 void WaitForInterrupt(void);  // low power mode
+
+_Bool changeVolumes = 1;
+unsigned bassVol = 0;
+unsigned midVol = 0;
+unsigned trebVol = 0;
+unsigned mainVol = 0;
 void Visualize(void);
 void ADC_Init(void);
 

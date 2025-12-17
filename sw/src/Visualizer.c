@@ -11,6 +11,14 @@
 //Right Bass Analog Input is PD0
 void ADC_Init(void){
 // write this
+	  SYSCTL_RCGCADC_R |= 0x0001;   // 1) activate ADC0
+  SYSCTL_RCGCGPIO_R |= 0x10;    // 2) activate clock for Port E
+  SYSCTL_RCGCGPIO_R |= 0x08;    // 2) activate clock for Port D
+  while((SYSCTL_PRGPIO_R&0x10) != 0x10){};  // 3 for stabilization
+  GPIO_PORTE_DIR_R &= ~0x10;    // 4) make PE4 input
+  GPIO_PORTE_AFSEL_R |= 0x10;   // 5) enable alternate function on PE4
+  GPIO_PORTE_DEN_R &= ~0x10;    // 6) disable digital I/O on PE4
+  GPIO_PORTE_AMSEL_R |= 0x10;   // 7) enable analog functionality on PE4
       SYSCTL_RCGCADC_R |= 0x0001;   // 1) activate ADC0
   SYSCTL_RCGCGPIO_R |= 0x08;    // 2) activate clock for Port D
   while((SYSCTL_PRGPIO_R&0x08) != 0x08){};  // 3 for stabilization
@@ -29,6 +37,9 @@ void ADC_Init(void){
   ADC0_SSCTL3_R = 0x0006;       // 13) no TS0 D0, yes IE0 END0
   ADC0_IM_R &= ~0x0008;         // 14) disable SS3 interrupts
   ADC0_ACTSS_R |= 0x0008;       // 15) enable sample sequencer 3
+
+  GPIO_PORTD_DIR_R &= ~0x01;
+
 
 
 }
