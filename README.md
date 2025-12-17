@@ -25,7 +25,7 @@ Our system streams music from a web interface to an **ESP32-Devkit-V1** and outp
 
 - **Thompson Truong**:  
   - Designed the enclosure and circular potentiometers for analog and digital filter control.  
-  - Developed ESP-IDF code for digital filters and analog filters on the TM4C.
+  - Developed ESP-IDF code for digital filters on the ESP32 and analog filters on the TM4C.
 
 - **Nathan DeLaRosa**:  
   - Implemented audio playback and backend/frontend for the web interface.  
